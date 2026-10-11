@@ -432,13 +432,13 @@ function openDepo(){document.getElementById('overlay').innerHTML=`<div class="sh
 function renderBoard(){
   const sbUrl=P.storyboardImage?`producoes/${P.path}/${P.storyboardImage}`:'';
   const shareCard=sbUrl?`<div class="card"><h3>Storyboard completo</h3><p class="hint" style="margin:0 0 4px">As 9 cenas numa imagem só, pronta para mandar pelo WhatsApp.</p>
-    <div class="row2"><button class="btn" data-act="sbshare">Compartilhar storyboard</button><a class="btn ghost" href="${sbUrl}" target="_blank" rel="noopener" style="text-decoration:none">Ver imagem</a></div></div>`:'';
-  document.getElementById('tab-board').innerHTML=shareCard+roteiroHTML()+depoHTML()+P.scenes.map(sc=>{
+    <div class="row2"><button class="btn ghost" data-act="sbshare">Compartilhar storyboard</button><a class="btn ghost" href="${sbUrl}" target="_blank" rel="noopener" style="text-decoration:none">Ver imagem</a></div></div>`:'';
+  document.getElementById('tab-board').innerHTML=roteiroHTML()+depoHTML()+P.scenes.map(sc=>{
     const items=P.shots.filter(s=>s.scenes.includes(sc.n)), st=stats(items);
     return `<div class="scene">
       <div class="frame"><svg viewBox="0 0 90 160" aria-hidden="true">${sc.svg}${SAFE}</svg>${sc.ost?`<div class="ost">${esc(sc.ost)}</div>`:''}</div>
       <div style="min-width:0"><div class="sc-head"><span class="sc-num" style="color:${sc.color}">${pad(sc.n)}</span><span class="sc-tc">${esc(sc.tc)} · ${st.d}/${st.t}</span></div>
-      <div class="sc-title">${esc(sc.title)}</div><p class="sc-desc">${esc(sc.desc)}</p>${miniList(items)}</div></div>`}).join('');
+      <div class="sc-title">${esc(sc.title)}</div><p class="sc-desc">${esc(sc.desc)}</p>${miniList(items)}</div></div>`}).join('')+shareCard;
 }
 
 /* ---------- sun ---------- */
