@@ -78,6 +78,11 @@ h1 .sw{font-size:12px;color:var(--faint)}
 .tags{display:flex;gap:6px;flex-wrap:wrap;padding-left:36px;margin-top:3px}
 .tag{font-family:var(--f-mono);font-size:11px;padding:2px 7px;border-radius:5px;background:var(--surface-2);color:var(--muted)}
 .tag.a{background:#3A3216;color:var(--gold)}
+.tag.dual{background:#1E3236;color:#8FD3D3}
+.dualnote{font-size:12.5px;color:#8FD3D3;padding-left:36px}
+.mini .dl{font-family:var(--f-mono);font-size:10px;color:#8FD3D3;background:#1E3236;border-radius:4px;padding:1px 5px;flex:none;margin-left:6px}
+.quote{font-family:var(--f-serif);font-size:19px;line-height:1.25;padding:8px 0;border-bottom:1px solid var(--line)}
+.qlist{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:14px}
 .tag.note{background:#24302A;color:var(--done)}
 .more{padding:0 0 14px 42px;display:flex;flex-direction:column;gap:10px}
 .takes{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
@@ -294,7 +299,7 @@ function renderHeader(){
 /* ---------- shared bits ---------- */
 const lensOf=s=>s.lens&&s.lens[0]!=='—'?s.lens[0]:'';
 function miniList(items){
-  return `<div class="mini">${items.map(s=>`<button class="${S.done[s.id]?'done':''}" data-act="toggle" data-id="${s.id}" aria-pressed="${!!S.done[s.id]}"><span class="mbox">${CHECK}</span><span class="c">${s.id}</span><span class="t">${esc(s.title)}${s.pri==='A'?'':' <span style="color:var(--faint)">· extra</span>'}</span>${lensOf(s)?`<span class="l">${esc(lensOf(s))}</span>`:''}</button>`).join('')}</div>`;
+  return `<div class="mini">${items.map(s=>`<button class="${S.done[s.id]?'done':''}" data-act="toggle" data-id="${s.id}" aria-pressed="${!!S.done[s.id]}"><span class="mbox">${CHECK}</span><span class="c">${s.id}</span><span class="t">${esc(s.title)}${s.pri==='A'?'':' <span style="color:var(--faint)">· extra</span>'}</span>${s.dual?'<span class="dl">9:16+16:9</span>':''}${lensOf(s)?`<span class="l">${esc(lensOf(s))}</span>`:''}</button>`).join('')}</div>`;
 }
 
 /* ---------- ordem do dia ---------- */
@@ -312,7 +317,7 @@ function renderDia(){
       else if(nm>=t&&pendA){cls=' late';badge=`<span class="badge late">${pendA} pendente${pendA>1?'s':''}</span>`}}
     html+=`<div class="blk${cls}"><div class="bhead"><span class="btime">${esc(b.t)}</span>${badge}</div>
       <div class="btitle">${esc(b.title)}</div><p class="bnote">${esc(b.note)}${b.lens?` <span style="color:var(--gold)">Lentes: ${esc(b.lens)}.</span>`:''}</p>
-      ${items.length?miniList(items):''}</div>`;
+      ${items.length?miniList(items):''}${b.shots.includes('E1')&&P.depoimento?'<button class="btn sm ghost" data-act="depo" style="margin:6px 0 8px">Perguntas do depoimento</button>':''}</div>`;
   }
   document.getElementById('tab-dia').innerHTML=html;
 }
@@ -328,12 +333,14 @@ function shotRow(s){
         <span class="stop"><span class="code">${s.id}</span><span class="stitle">${esc(s.title)}</span></span>
         <span class="sframe">${esc(s.frame)}</span>
         ${s.lens?`<span class="lens"><b>Lente</b>${esc(s.lens[0])} · ${esc(s.lens[1])}</span>`:''}
-        <span class="tags"><span class="tag${s.pri==='A'?' a':''}">${s.pri==='A'?'indispensável':'extra'}</span><span class="tag">${sc}</span>${takes?`<span class="tag">${takes} take${takes>1?'s':''}</span>`:''}${S.good[s.id]?`<span class="tag note">bom: take ${S.good[s.id]}</span>`:''}${note?'<span class="tag note">nota</span>':''}</span>
+        ${s.dual?`<span class="dualnote">9:16 + 16:9 · ${esc(s.dual)}</span>`:''}
+        <span class="tags">${s.dual?'<span class="tag dual">9:16 + 16:9</span>':''}<span class="tag${s.pri==='A'?' a':''}">${s.pri==='A'?'indispensável':'extra'}</span><span class="tag">${sc}</span>${takes?`<span class="tag">${takes} take${takes>1?'s':''}</span>`:''}${S.good[s.id]?`<span class="tag note">bom: take ${S.good[s.id]}</span>`:''}${note?'<span class="tag note">nota</span>':''}</span>
       </button>
     </div>
     ${open?`<div class="more">
       <div class="takes">Takes <button class="step" data-act="minus" aria-label="Menos um take">−</button><output>${takes}</output><button class="step" data-act="plus" aria-label="Mais um take">+</button>
         <button class="btn sm ghost" data-act="slate" style="margin-left:auto">Claquete</button></div>
+      ${s.id==='E1'&&P.depoimento?'<button class="btn sm ghost" data-act="depo">Perguntas do depoimento</button>':''}
       <label class="f" for="note-${s.id}">Nota (take bom, timecode, refazer…)
       <textarea id="note-${s.id}" data-act="note" placeholder="Ex.: take 3 é o bom, cartão B">${esc(note)}</textarea></label>
     </div>`:''}
@@ -341,12 +348,13 @@ function shotRow(s){
 }
 function renderPlanos(){
   const f=PREFS.filter;
-  const filters=[['todos','Todos'],['pendentes','Pendentes'],['A','Indispensáveis'],...P.groups.map(g=>[g.id,g.short])];
+  const filters=[['todos','Todos'],['pendentes','Pendentes'],['A','Indispensáveis'],['dual','9:16 + 16:9'],...P.groups.map(g=>[g.id,g.short])];
   let list=P.shots;
   if(f==='pendentes') list=list.filter(s=>!S.done[s.id]);
   else if(f==='A') list=list.filter(s=>s.pri==='A');
+  else if(f==='dual') list=list.filter(s=>s.dual);
   else if(P.groups.some(g=>g.id===f)) list=list.filter(s=>s.g===f);
-  let html=`<div class="chips" role="group" aria-label="Filtro">${filters.map(([k,l])=>`<button class="chip" data-filter="${k}" aria-pressed="${f===k}">${esc(l)}</button>`).join('')}</div>`;
+  let html=(f==='dual'&&P.framingTip?`<div class="light" style="background:#1E3236;color:#CDEDED"><b style="color:#8FD3D3">Planos-chave nos dois formatos.</b> ${esc(P.framingTip)}</div>`:'')+`<div class="chips" role="group" aria-label="Filtro">${filters.map(([k,l])=>`<button class="chip" data-filter="${k}" aria-pressed="${f===k}">${esc(l)}</button>`).join('')}</div>`;
   for(const g of P.groups){
     const items=list.filter(s=>s.g===g.id); if(!items.length) continue;
     const st=stats(P.shots.filter(s=>s.g===g.id));
@@ -357,9 +365,25 @@ function renderPlanos(){
   document.getElementById('tab-planos').innerHTML=html;
 }
 
+/* ---------- roteiro e depoimento ---------- */
+function depoHTML(){
+  const D=P.depoimento; if(!D) return '';
+  return `<div class="card"><h3>Depoimento</h3><p class="hint" style="margin:0 0 10px">${esc(D.objetivo)}</p>
+    <div class="eyebrow" style="margin:6px 0 8px">Perguntas</div><ol class="qlist">${D.perguntas.map(q=>`<li>${esc(q)}</li>`).join('')}</ol>
+    <div class="eyebrow" style="margin:16px 0 8px">Ideias que queremos ouvir</div><ul class="qlist">${D.ideias.map(q=>`<li>${esc(q)}</li>`).join('')}</ul>
+    <div class="eyebrow" style="margin:16px 0 8px">Na hora de gravar</div><ul class="qlist" style="color:var(--muted)">${D.dicas.map(q=>`<li>${esc(q)}</li>`).join('')}</ul></div>`;
+}
+function roteiroHTML(){
+  const R=P.roteiro; if(!R) return '';
+  return `<div class="card"><h3>Frases do roteiro</h3><p class="hint" style="margin:0 0 4px">Textos de tela, na ordem do vídeo. O depoimento deve conversar com eles.</p>
+    ${R.telas.map(t=>`<div class="quote">${esc(t)}</div>`).join('')}
+    ${R.alternativasFinais?.length?`<div class="eyebrow" style="margin:14px 0 4px">Alternativas para a frase final</div>${R.alternativasFinais.map(t=>`<div class="quote" style="font-size:16px;color:var(--muted)">${esc(t)}</div>`).join('')}`:''}</div>`;
+}
+function openDepo(){document.getElementById('overlay').innerHTML=`<div class="sheet" data-act="closeov"><div class="panel" role="dialog" aria-label="Depoimento">${depoHTML()}${roteiroHTML()}<button class="btn ghost" data-act="closeov">Fechar</button></div></div>`}
+
 /* ---------- storyboard ---------- */
 function renderBoard(){
-  document.getElementById('tab-board').innerHTML=P.scenes.map(sc=>{
+  document.getElementById('tab-board').innerHTML=roteiroHTML()+depoHTML()+P.scenes.map(sc=>{
     const items=P.shots.filter(s=>s.scenes.includes(sc.n)), st=stats(items);
     return `<div class="scene">
       <div class="frame"><svg viewBox="0 0 90 160" aria-hidden="true">${sc.svg}${SAFE}</svg>${sc.ost?`<div class="ost">${esc(sc.ost)}</div>`:''}</div>
@@ -486,7 +510,7 @@ function report(){
   let r=`SET TOOL · ${P.project||''} — ${P.title}\nRelatório ${d.toLocaleDateString('pt-BR')} ${d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}\nGravados: ${dn}/${t}\n`;
   for(const g of P.groups){const items=P.shots.filter(s=>s.g===g.id), st=stats(items);
     r+=`\n${g.name} (${st.d}/${st.t})\n`;
-    for(const s of items) r+=`${S.done[s.id]?'[x]':'[ ]'} ${s.id} ${s.title}${lensOf(s)?` · ${lensOf(s)}`:''}${S.takes[s.id]?` · ${S.takes[s.id]} takes`:''}${S.good[s.id]?` · bom: take ${S.good[s.id]}`:''}${S.notes[s.id]?` · ${S.notes[s.id].replace(/\n/g,' ')}`:''}\n`;}
+    for(const s of items) r+=`${S.done[s.id]?'[x]':'[ ]'} ${s.id} ${s.title}${s.dual?' · 9:16+16:9':''}${lensOf(s)?` · ${lensOf(s)}`:''}${S.takes[s.id]?` · ${S.takes[s.id]} takes`:''}${S.good[s.id]?` · bom: take ${S.good[s.id]}`:''}${S.notes[s.id]?` · ${S.notes[s.id].replace(/\n/g,' ')}`:''}\n`;}
   return r;
 }
 function renderFim(){
@@ -570,6 +594,7 @@ document.addEventListener('click',async e=>{
     case 'closeov': document.getElementById('overlay').innerHTML=''; break;
     case 'pick': document.getElementById('overlay').innerHTML=''; if(b.dataset.slug!==P.path){try{await openProd(b.dataset.slug)}catch(err){toast('Não consegui abrir essa produção')}} break;
     case 'slate': openSlate(id); break;
+    case 'depo': openDepo(); break;
     case 'closeslate': SLATE=null; renderSlate(); render(); break;
     case 'slatemin': SLATE.take=Math.max(1,SLATE.take-1); renderSlate(); break;
     case 'slatenext': S.takes[SLATE.id]=Math.max(S.takes[SLATE.id]||0,SLATE.take); SLATE.take++; save(); renderSlate(); break;

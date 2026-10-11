@@ -130,7 +130,8 @@
    "lens": [
     "Sigma 18–35",
     "em 18–24 mm no RS2"
-   ]
+   ],
+   "dual": "Ato 1: abertura de costas com o Olho no horizonte"
   },
   {
    "id": "A6",
@@ -242,7 +243,8 @@
    "lens": [
     "Sigma 18–35",
     "em 18–24 mm no RS2"
-   ]
+   ],
+   "dual": "Ato 2: corrida até a primeira obra"
   },
   {
    "id": "B7",
@@ -270,7 +272,8 @@
    "lens": [
     "Sigma 18–35",
     "em 35 mm; o modo de alta taxa recorta o sensor e aperta o quadro"
-   ]
+   ],
+   "dual": "Ato 2: o primeiro toque, momento-chave"
   },
   {
    "id": "B9",
@@ -410,7 +413,8 @@
    "lens": [
     "Sigma 18–35",
     "geral em 24 mm; o close pede uma segunda câmera com a Zeiss 50"
-   ]
+   ],
+   "dual": "Ato 3: encontro com a mãe"
   },
   {
    "id": "B19",
@@ -424,7 +428,8 @@
    "lens": [
     "Zeiss 50",
     "close; médio com a Sigma em 35 mm"
-   ]
+   ],
+   "dual": "Ato 3: abraço, clímax emocional"
   },
   {
    "id": "B20",
@@ -478,7 +483,8 @@
    "lens": [
     "Sigma 18–35",
     "em 18–24 mm, Olho no quadro"
-   ]
+   ],
+   "dual": "Final: criança olha o MON antes da tela final"
   },
   {
    "id": "C3",
@@ -520,7 +526,8 @@
    "lens": [
     "Neo 2",
     "câmera do drone"
-   ]
+   ],
+   "dual": "Final: subida até o Olho"
   },
   {
    "id": "D2",
@@ -624,7 +631,7 @@
    "id": "E4",
    "g": "E",
    "title": "Planos-chave reenquadrados em 16:9",
-   "frame": "Revisar A5, B6, B18, D1 na horizontal",
+   "frame": "Conferir os planos marcados com 9:16 + 16:9",
    "scenes": [],
    "pri": "B",
    "lens": [
@@ -1120,5 +1127,47 @@
   }
  ],
  "reports": [],
- "produtora": "Bridge Films"
+ "produtora": "Bridge Films",
+ "framingTip": "Enquadre para 9:16 com o assunto no centro e deixe ar nas laterais para o 16:9. Se a ação permitir, grave uma passada de cada formato.",
+ "roteiro": {
+  "telas": [
+   "O que é arte?",
+   "Às vezes, a arte está esperando para ser encontrada.",
+   "ART HUNTER · Um mapa. Um jardim. Obras para tocar, atravessar e experimentar.",
+   "Talvez arte seja isso.",
+   "Alguns caminhos cabem num mapa. Mas atravessam o mundo.",
+   "O Art Hunter levou o MON à final do ICOM COMMS AWARDS 2026 · Best Audience Engagement Initiative",
+   "A arte estava ali, esperando. Bastava chegar perto."
+  ],
+  "alternativasFinais": [
+   "Quando a arte chega perto, ninguém volta igual.",
+   "Alguns encontros com a arte acontecem num jardim. E ficam para a vida inteira.",
+   "Toda grande descoberta começa com um primeiro passo. E alguns ficam com a gente para sempre."
+  ]
+ },
+ "depoimento": {
+  "objetivo": "Um pai ou uma mãe conta o que viu no filho durante a atividade. Entra só na versão case 16:9, antes da subida até o Olho (entre as cenas 06 e 07). Precisamos de 10 a 15 segundos que funcionem sozinhos.",
+  "ideias": [
+   "A criança chegando perto da arte pela primeira vez",
+   "A surpresa de poder tocar e atravessar as obras",
+   "O mapa como jogo: procurar, achar, marcar",
+   "Um gesto ou fala da criança que o pai/mãe não esperava",
+   "A sensação de que a arte deixou de ser distante"
+  ],
+  "perguntas": [
+   "O que você viu no seu filho hoje que te surpreendeu?",
+   "Como foi o momento em que ele encontrou a primeira obra?",
+   "O que mudou entre a chegada e agora, no fim da atividade?",
+   "Teve alguma coisa que ele disse ou fez que você vai lembrar?",
+   "Antes de hoje, como era a relação dele com museu e arte?",
+   "Se tivesse que contar para outra família o que foi o Art Hunter, o que você diria?"
+  ],
+  "dicas": [
+   "Peça que repita a pergunta na resposta: \"O que eu vi no meu filho foi…\"",
+   "Não entregue frases prontas; deixe a pessoa falar com as próprias palavras",
+   "Respostas curtas funcionam melhor; peça para contar de novo de forma mais direta se ficar longo",
+   "Grave a criança por perto ou em b-roll (E2) para cobrir os cortes",
+   "Lapela, sombra e fundo do jardim desfocado"
+  ]
+ }
 }
