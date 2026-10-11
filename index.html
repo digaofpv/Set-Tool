@@ -83,6 +83,13 @@ h1 .sw{font-size:12px;color:var(--faint)}
 .mini .dl{font-family:var(--f-mono);font-size:10px;color:#8FD3D3;background:#1E3236;border-radius:4px;padding:1px 5px;flex:none;margin-left:6px}
 .quote{font-family:var(--f-serif);font-size:19px;line-height:1.25;padding:8px 0;border-bottom:1px solid var(--line)}
 .qlist{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:14px}
+.info{width:36px;height:36px;flex:none;border-radius:10px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.info svg{width:18px;height:18px}
+.dsec{margin-top:14px}
+.dsec .k{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.dsec p{margin:0;font-size:14.5px;line-height:1.5}
+.dsc{display:grid;grid-template-columns:96px 1fr;gap:14px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.dsc .frame{width:96px}
 .tag.note{background:#24302A;color:var(--done)}
 .more{padding:0 0 14px 42px;display:flex;flex-direction:column;gap:10px}
 .takes{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
@@ -336,10 +343,12 @@ function shotRow(s){
         ${s.dual?`<span class="dualnote">9:16 + 16:9 · ${esc(s.dual)}</span>`:''}
         <span class="tags">${s.dual?'<span class="tag dual">9:16 + 16:9</span>':''}<span class="tag${s.pri==='A'?' a':''}">${s.pri==='A'?'indispensável':'extra'}</span><span class="tag">${sc}</span>${takes?`<span class="tag">${takes} take${takes>1?'s':''}</span>`:''}${S.good[s.id]?`<span class="tag note">bom: take ${S.good[s.id]}</span>`:''}${note?'<span class="tag note">nota</span>':''}</span>
       </button>
+      <button class="info" data-act="detail" aria-label="Detalhamento de ${s.id}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></button>
     </div>
     ${open?`<div class="more">
       <div class="takes">Takes <button class="step" data-act="minus" aria-label="Menos um take">−</button><output>${takes}</output><button class="step" data-act="plus" aria-label="Mais um take">+</button>
         <button class="btn sm ghost" data-act="slate" style="margin-left:auto">Claquete</button></div>
+      <button class="btn sm ghost" data-act="detail">Detalhamento</button>
       ${s.id==='E1'&&P.depoimento?'<button class="btn sm ghost" data-act="depo">Perguntas do depoimento</button>':''}
       <label class="f" for="note-${s.id}">Nota (take bom, timecode, refazer…)
       <textarea id="note-${s.id}" data-act="note" placeholder="Ex.: take 3 é o bom, cartão B">${esc(note)}</textarea></label>
@@ -378,6 +387,28 @@ function roteiroHTML(){
   return `<div class="card"><h3>Frases do roteiro</h3><p class="hint" style="margin:0 0 4px">Textos de tela, na ordem do vídeo. O depoimento deve conversar com eles.</p>
     ${R.telas.map(t=>`<div class="quote">${esc(t)}</div>`).join('')}
     ${R.alternativasFinais?.length?`<div class="eyebrow" style="margin:14px 0 4px">Alternativas para a frase final</div>${R.alternativasFinais.map(t=>`<div class="quote" style="font-size:16px;color:var(--muted)">${esc(t)}</div>`).join('')}`:''}</div>`;
+}
+function openDetail(id){
+  const s=shotById(id); if(!s) return;
+  const g=P.groups.find(x=>x.id===s.g), blk=P.day.find(b=>b.shots.includes(id));
+  const scenes=s.scenes.map(n=>P.scenes.find(c=>c.n===n)).filter(Boolean);
+  const sec=(k,v)=>v?`<div class="dsec"><div class="k">${k}</div><p>${v}</p></div>`:'';
+  document.getElementById('overlay').innerHTML=`<div class="sheet" data-act="closeov"><div class="panel" role="dialog" aria-label="Detalhamento ${s.id}">
+    <div class="eyebrow">${esc(g?.name||'')} · ${s.pri==='A'?'indispensável':'extra'}</div>
+    <h3 style="margin:4px 0 0;font-family:var(--f-display);font-size:21px;line-height:1.2"><span style="font-family:var(--f-mono);font-size:14px;color:var(--muted);margin-right:6px">${s.id}</span>${esc(s.title)}</h3>
+    ${s.dual?`<div class="tags" style="padding-left:0;margin-top:8px"><span class="tag dual">9:16 + 16:9</span></div>`:''}
+    ${sec('Enquadramento e movimento',esc(s.frame))}
+    ${s.lens?sec('Lente',`${esc(s.lens[0])} · ${esc(s.lens[1])}`):''}
+    ${s.dual?sec('Por que nos dois formatos',`${esc(s.dual)}. ${esc(P.framingTip||'')}`):''}
+    ${blk?sec('Quando',`${esc(blk.t)} · ${esc(blk.title)}`):''}
+    ${scenes.map(c=>`<div class="dsc"><div class="frame"><svg viewBox="0 0 90 160" aria-hidden="true">${c.svg}${SAFE}</svg></div>
+      <div style="min-width:0"><div class="sc-head"><span class="sc-num" style="color:${c.color};font-size:22px">${pad(c.n)}</span><span class="sc-tc">${esc(c.tc)}</span></div>
+      <div class="sc-title">${esc(c.title)}</div>
+      ${sec('Cena',esc(c.detalhe||c.desc))}${sec('Texto na tela',esc(c.texto||c.ost))}${sec('Som',esc(c.som))}
+      ${c.adaptacao?`<div class="light" style="margin-top:12px">${esc(c.adaptacao)}</div>`:''}</div></div>`).join('')}
+    ${!scenes.length?'<p class="hint">Plano extra, sem cena fixa no roteiro.</p>':''}
+    ${S.notes[id]?sec('Sua nota',esc(S.notes[id])):''}
+    <button class="btn ghost" data-act="closeov">Fechar</button></div></div>`;
 }
 function openDepo(){document.getElementById('overlay').innerHTML=`<div class="sheet" data-act="closeov"><div class="panel" role="dialog" aria-label="Depoimento">${depoHTML()}${roteiroHTML()}<button class="btn ghost" data-act="closeov">Fechar</button></div></div>`}
 
@@ -595,6 +626,7 @@ document.addEventListener('click',async e=>{
     case 'pick': document.getElementById('overlay').innerHTML=''; if(b.dataset.slug!==P.path){try{await openProd(b.dataset.slug)}catch(err){toast('Não consegui abrir essa produção')}} break;
     case 'slate': openSlate(id); break;
     case 'depo': openDepo(); break;
+    case 'detail': openDetail(id); break;
     case 'closeslate': SLATE=null; renderSlate(); render(); break;
     case 'slatemin': SLATE.take=Math.max(1,SLATE.take-1); renderSlate(); break;
     case 'slatenext': S.takes[SLATE.id]=Math.max(S.takes[SLATE.id]||0,SLATE.take); SLATE.take++; save(); renderSlate(); break;

@@ -727,7 +727,11 @@
    "color": "var(--dawn)",
    "desc": "Orvalho em primeiro plano, luz dourada, Olho desfocado ao fundo.",
    "ost": "",
-   "svg": "<rect width=\"90\" height=\"160\" fill=\"#F4D3A0\"/><rect width=\"90\" height=\"40\" fill=\"#F0C489\"/><circle cx=\"64\" cy=\"46\" r=\"13\" fill=\"#FBE3B0\"/><circle cx=\"64\" cy=\"46\" r=\"8\" fill=\"#FFF4DA\"/><path d=\"M0 92 Q12 82 22 90 Q32 80 44 88 Q58 78 70 88 Q80 82 90 88 V104 H0 Z\" fill=\"#C9A06A\" opacity=\".6\"/><ellipse cx=\"30\" cy=\"80\" rx=\"15\" ry=\"6\" fill=\"#9E7B52\" opacity=\".5\"/><rect x=\"27.5\" y=\"85\" width=\"5\" height=\"16\" fill=\"#9E7B52\" opacity=\".5\"/><path d=\"M0 104 Q45 96 90 104 V160 H0 Z\" fill=\"#4F6A40\"/><path d=\"M6 160 L9 124 M12 160 L17 118 M19 160 L20 128 M64 160 L69 120 M72 160 L76 126 M80 160 L85 122\" stroke=\"#34482A\" stroke-width=\"2.2\" stroke-linecap=\"round\"/>"
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#F4D3A0\"/><rect width=\"90\" height=\"40\" fill=\"#F0C489\"/><circle cx=\"64\" cy=\"46\" r=\"13\" fill=\"#FBE3B0\"/><circle cx=\"64\" cy=\"46\" r=\"8\" fill=\"#FFF4DA\"/><path d=\"M0 92 Q12 82 22 90 Q32 80 44 88 Q58 78 70 88 Q80 82 90 88 V104 H0 Z\" fill=\"#C9A06A\" opacity=\".6\"/><ellipse cx=\"30\" cy=\"80\" rx=\"15\" ry=\"6\" fill=\"#9E7B52\" opacity=\".5\"/><rect x=\"27.5\" y=\"85\" width=\"5\" height=\"16\" fill=\"#9E7B52\" opacity=\".5\"/><path d=\"M0 104 Q45 96 90 104 V160 H0 Z\" fill=\"#4F6A40\"/><path d=\"M6 160 L9 124 M12 160 L17 118 M19 160 L20 128 M64 160 L69 120 M72 160 L76 126 M80 160 L85 122\" stroke=\"#34482A\" stroke-width=\"2.2\" stroke-linecap=\"round\"/>",
+   "detalhe": "Amanhecer nos jardins do MON. Orvalho na grama, luz dourada e o Olho ao fundo, fora de foco. Abertura calma, com tempo para o espectador entrar no clima.",
+   "texto": "Sem texto.",
+   "som": "Piano suave, notas espaçadas. Passarinhos.",
+   "adaptacao": "Às 10h não haverá orvalho: use o borrifador numa área de sombra (A1, A2) e busque contraluz para lembrar a luz dourada."
   },
   {
    "n": 2,
@@ -736,7 +740,11 @@
    "color": "var(--dawn)",
    "desc": "Mão pequena segura a de um adulto; caminham de costas.",
    "ost": "O que é arte?",
-   "svg": "<rect width=\"90\" height=\"160\" fill=\"#F4D3A0\"/><circle cx=\"76\" cy=\"58\" r=\"10\" fill=\"#FBE3B0\"/><rect y=\"112\" width=\"90\" height=\"48\" fill=\"#4F6A40\"/><circle cx=\"54\" cy=\"46\" r=\"6.5\" fill=\"#2A2620\"/><rect x=\"47.5\" y=\"53\" width=\"13\" height=\"35\" rx=\"5\" fill=\"#2A2620\"/><path d=\"M51 87 L49 114 M57 87 L59 114\" stroke=\"#2A2620\" stroke-width=\"4.2\" stroke-linecap=\"round\"/><path d=\"M49 60 L41 80\" stroke=\"#2A2620\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"36\" cy=\"78\" r=\"5\" fill=\"#2A2620\"/><rect x=\"31.5\" y=\"83\" width=\"9\" height=\"20\" rx=\"4\" fill=\"#2A2620\"/><path d=\"M34 102 L33 114 M38 102 L39 114 M39 87 L41 80\" stroke=\"#2A2620\" stroke-width=\"3\" stroke-linecap=\"round\"/>"
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#F4D3A0\"/><circle cx=\"76\" cy=\"58\" r=\"10\" fill=\"#FBE3B0\"/><rect y=\"112\" width=\"90\" height=\"48\" fill=\"#4F6A40\"/><circle cx=\"54\" cy=\"46\" r=\"6.5\" fill=\"#2A2620\"/><rect x=\"47.5\" y=\"53\" width=\"13\" height=\"35\" rx=\"5\" fill=\"#2A2620\"/><path d=\"M51 87 L49 114 M57 87 L59 114\" stroke=\"#2A2620\" stroke-width=\"4.2\" stroke-linecap=\"round\"/><path d=\"M49 60 L41 80\" stroke=\"#2A2620\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"36\" cy=\"78\" r=\"5\" fill=\"#2A2620\"/><rect x=\"31.5\" y=\"83\" width=\"9\" height=\"20\" rx=\"4\" fill=\"#2A2620\"/><path d=\"M34 102 L33 114 M38 102 L39 114 M39 87 L41 80\" stroke=\"#2A2620\" stroke-width=\"3\" stroke-linecap=\"round\"/>",
+   "detalhe": "Uma mão pequena segura a mão de um adulto. Os dois caminham pelo jardim, filmados de costas, com a câmera na altura da criança.",
+   "texto": "O que é arte?",
+   "som": "Piano. Passos na grama.",
+   "adaptacao": "Sol alto: prefira caminhos com sombra de árvores ou contraluz para não achatar a imagem."
   },
   {
    "n": 3,
@@ -745,7 +753,11 @@
    "color": "var(--day)",
    "desc": "Recebe o mapa, abre com as duas mãos e procura o primeiro ponto.",
    "ost": "",
-   "svg": "<rect width=\"90\" height=\"160\" fill=\"#CFE3D8\"/><rect x=\"16\" y=\"54\" width=\"58\" height=\"46\" rx=\"1.5\" fill=\"#FFF8E8\" stroke=\"#2A2620\" stroke-width=\".8\"/><path d=\"M22 92 Q32 70 45 80 T68 64\" fill=\"none\" stroke=\"#E08A6E\" stroke-width=\"1.2\" stroke-dasharray=\"1.8 1.8\"/><circle cx=\"22\" cy=\"92\" r=\"2.4\" fill=\"#8DB27A\"/><circle cx=\"45\" cy=\"80\" r=\"3\" fill=\"#E9B04E\"/><circle cx=\"68\" cy=\"64\" r=\"2.4\" fill=\"#6FA8A8\"/><path d=\"M16 64 Q7 66 6 77 Q6 88 16 90 Z M74 64 Q83 66 84 77 Q84 88 74 90 Z\" fill=\"#E8B48F\"/><path d=\"M38 132 Q38 116 42 104 Q44 99 46 104 L46 82 Q47 78 49 82 L50 104 Q54 112 52 132 Z\" fill=\"#E8B48F\"/>"
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#CFE3D8\"/><rect x=\"16\" y=\"54\" width=\"58\" height=\"46\" rx=\"1.5\" fill=\"#FFF8E8\" stroke=\"#2A2620\" stroke-width=\".8\"/><path d=\"M22 92 Q32 70 45 80 T68 64\" fill=\"none\" stroke=\"#E08A6E\" stroke-width=\"1.2\" stroke-dasharray=\"1.8 1.8\"/><circle cx=\"22\" cy=\"92\" r=\"2.4\" fill=\"#8DB27A\"/><circle cx=\"45\" cy=\"80\" r=\"3\" fill=\"#E9B04E\"/><circle cx=\"68\" cy=\"64\" r=\"2.4\" fill=\"#6FA8A8\"/><path d=\"M16 64 Q7 66 6 77 Q6 88 16 90 Z M74 64 Q83 66 84 77 Q84 88 74 90 Z\" fill=\"#E8B48F\"/><path d=\"M38 132 Q38 116 42 104 Q44 99 46 104 L46 82 Q47 78 49 82 L50 104 Q54 112 52 132 Z\" fill=\"#E8B48F\"/>",
+   "detalhe": "A criança recebe o mapa ilustrado de um educador de jaleco amarelo. Abre o mapa com as duas mãos e procura, com o dedo, o primeiro ponto.",
+   "texto": "Sem texto.",
+   "som": "Som do papel do mapa se abrindo, em primeiro plano.",
+   "adaptacao": ""
   },
   {
    "n": 4,
@@ -754,7 +766,11 @@
    "color": "var(--day)",
    "desc": "Corre até a obra, para, hesita e então toca.",
    "ost": "Às vezes, a arte está esperando para ser encontrada.",
-   "svg": "<rect width=\"90\" height=\"160\" fill=\"#CFE3D8\"/><rect y=\"108\" width=\"90\" height=\"52\" fill=\"#4E6B3E\"/><path d=\"M56 62 Q72 54 77 72 Q80 88 66 96 Q50 100 48 84 Z\" fill=\"#E9B04E\"/><rect x=\"57\" y=\"96\" width=\"16\" height=\"14\" fill=\"#D8D2C2\"/><circle cx=\"26\" cy=\"80\" r=\"5\" fill=\"#2A2620\"/><path d=\"M26 85 L30 100\" stroke=\"#2A2620\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M30 100 L22 112 M30 100 L38 110 M27 89 L18 94 M27 89 L37 86\" stroke=\"#2A2620\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>"
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#CFE3D8\"/><rect y=\"108\" width=\"90\" height=\"52\" fill=\"#4E6B3E\"/><path d=\"M56 62 Q72 54 77 72 Q80 88 66 96 Q50 100 48 84 Z\" fill=\"#E9B04E\"/><rect x=\"57\" y=\"96\" width=\"16\" height=\"14\" fill=\"#D8D2C2\"/><circle cx=\"26\" cy=\"80\" r=\"5\" fill=\"#2A2620\"/><path d=\"M26 85 L30 100\" stroke=\"#2A2620\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M30 100 L22 112 M30 100 L38 110 M27 89 L18 94 M27 89 L37 86\" stroke=\"#2A2620\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>",
+   "detalhe": "A criança olha do mapa para o jardim, encontra a primeira obra e corre até ela. Para em frente à obra, hesita e então toca. O toque é o primeiro momento-chave do vídeo.",
+   "texto": "Às vezes, a arte está esperando para ser encontrada.",
+   "som": "Trilha e som ambiente.",
+   "adaptacao": "Confirme antes com o educativo quais obras podem ser tocadas e como."
   },
   {
    "n": 5,
@@ -763,7 +779,11 @@
    "color": "var(--day)",
    "desc": "Montagem: texturas, obras táteis, instalação, famílias com mapas.",
    "ost": "ART HUNTER · Um mapa. Um jardim.",
-   "svg": "<rect width=\"90\" height=\"160\" fill=\"#4E6B3E\"/><rect width=\"90\" height=\"96\" fill=\"#D8CBB0\"/><g fill=\"#8A7A5C\"><circle cx=\"10\" cy=\"12\" r=\"2.2\"/><circle cx=\"24\" cy=\"10\" r=\"2.2\"/><circle cx=\"38\" cy=\"14\" r=\"2.2\"/><circle cx=\"52\" cy=\"10\" r=\"2.2\"/><circle cx=\"66\" cy=\"13\" r=\"2.2\"/><circle cx=\"80\" cy=\"10\" r=\"2.2\"/><circle cx=\"16\" cy=\"28\" r=\"2.2\"/><circle cx=\"46\" cy=\"29\" r=\"2.2\"/><circle cx=\"74\" cy=\"29\" r=\"2.2\"/><circle cx=\"10\" cy=\"44\" r=\"2.2\"/><circle cx=\"80\" cy=\"42\" r=\"2.2\"/></g><path d=\"M34 104 L36 60 Q38 54 41 60 L42 50 Q44 45 47 51 L48 54 Q50 49 53 55 L55 76 Q57 70 60 74 L58 92 Q56 104 46 108 Z\" fill=\"#E8B48F\"/>"
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#4E6B3E\"/><rect width=\"90\" height=\"96\" fill=\"#D8CBB0\"/><g fill=\"#8A7A5C\"><circle cx=\"10\" cy=\"12\" r=\"2.2\"/><circle cx=\"24\" cy=\"10\" r=\"2.2\"/><circle cx=\"38\" cy=\"14\" r=\"2.2\"/><circle cx=\"52\" cy=\"10\" r=\"2.2\"/><circle cx=\"66\" cy=\"13\" r=\"2.2\"/><circle cx=\"80\" cy=\"10\" r=\"2.2\"/><circle cx=\"16\" cy=\"28\" r=\"2.2\"/><circle cx=\"46\" cy=\"29\" r=\"2.2\"/><circle cx=\"74\" cy=\"29\" r=\"2.2\"/><circle cx=\"10\" cy=\"44\" r=\"2.2\"/><circle cx=\"80\" cy=\"42\" r=\"2.2\"/></g><path d=\"M34 104 L36 60 Q38 54 41 60 L42 50 Q44 45 47 51 L48 54 Q50 49 53 55 L55 76 Q57 70 60 74 L58 92 Q56 104 46 108 Z\" fill=\"#E8B48F\"/>",
+   "detalhe": "Sequência delicada da criança interagindo com as obras: mãos tocando texturas, o corpo atravessando uma instalação, a criança brincando dentro de uma obra. Famílias correm com os mapas e apontam obras distantes. Mãos em obras táteis, pensadas para pessoas cegas. Educativo de jaleco amarelo com o público. O adulto acompanha, emocionado.",
+   "texto": "ART HUNTER · Um mapa. Um jardim. Obras para tocar, atravessar e experimentar.",
+   "som": "Trilha e som ambiente: passos, vento, mãos nas obras.",
+   "adaptacao": ""
   },
   {
    "n": 6,
@@ -772,7 +792,11 @@
    "color": "var(--day)",
    "desc": "Marca a obra e corre até a mãe; olham juntas e se abraçam.",
    "ost": "Talvez arte seja isso.",
-   "svg": "<rect width=\"90\" height=\"160\" fill=\"#DDE8D6\"/><rect y=\"112\" width=\"90\" height=\"48\" fill=\"#4E6B3E\"/><circle cx=\"60\" cy=\"72\" r=\"6.5\" fill=\"#2A2620\"/><path d=\"M60 79 Q63 94 55 104\" stroke=\"#2A2620\" stroke-width=\"7\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M55 104 L67 106 L68 114 M58 86 L47 89\" stroke=\"#2A2620\" stroke-width=\"3.4\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"38\" cy=\"80\" r=\"5\" fill=\"#2A2620\"/><rect x=\"33.5\" y=\"85\" width=\"9\" height=\"19\" rx=\"4\" fill=\"#2A2620\"/><path d=\"M36 103 L35 114 M40 103 L41 114\" stroke=\"#2A2620\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"24\" y=\"88\" width=\"9\" height=\"7\" fill=\"#FFF8E8\"/>"
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#DDE8D6\"/><rect y=\"112\" width=\"90\" height=\"48\" fill=\"#4E6B3E\"/><circle cx=\"60\" cy=\"72\" r=\"6.5\" fill=\"#2A2620\"/><path d=\"M60 79 Q63 94 55 104\" stroke=\"#2A2620\" stroke-width=\"7\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M55 104 L67 106 L68 114 M58 86 L47 89\" stroke=\"#2A2620\" stroke-width=\"3.4\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"38\" cy=\"80\" r=\"5\" fill=\"#2A2620\"/><rect x=\"33.5\" y=\"85\" width=\"9\" height=\"19\" rx=\"4\" fill=\"#2A2620\"/><path d=\"M36 103 L35 114 M40 103 L41 114\" stroke=\"#2A2620\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"24\" y=\"88\" width=\"9\" height=\"7\" fill=\"#FFF8E8\"/>",
+   "detalhe": "A criança marca no mapa a obra que acabou de explorar e corre até a mãe para mostrar. A mãe se agacha e olha com atenção. As duas sorriem e se abraçam. Vale filmar uma família real, sem roteiro, e esperar o momento acontecer.",
+   "texto": "Talvez arte seja isso.",
+   "som": "Só a trilha. Pausa de um segundo antes do texto.",
+   "adaptacao": "Na versão case 16:9, o depoimento do pai ou da mãe entra logo depois desta cena."
   },
   {
    "n": 7,
@@ -781,7 +805,11 @@
    "color": "var(--dusk)",
    "desc": "Câmera sobe dos jardins até o Olho no pôr do sol.",
    "ost": "Alguns caminhos cabem num mapa.",
-   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E8A17C\"/><circle cx=\"50\" cy=\"52\" r=\"16\" fill=\"#F7C98B\"/><ellipse cx=\"50\" cy=\"60\" rx=\"26\" ry=\"10.5\" fill=\"#2A2620\"/><rect x=\"46\" y=\"70\" width=\"8\" height=\"40\" fill=\"#2A2620\"/><rect y=\"110\" width=\"90\" height=\"50\" fill=\"#3C4636\"/><path d=\"M12 104 L12 74 M8 80 L12 74 L16 80\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linecap=\"round\" fill=\"none\"/>"
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E8A17C\"/><circle cx=\"50\" cy=\"52\" r=\"16\" fill=\"#F7C98B\"/><ellipse cx=\"50\" cy=\"60\" rx=\"26\" ry=\"10.5\" fill=\"#2A2620\"/><rect x=\"46\" y=\"70\" width=\"8\" height=\"40\" fill=\"#2A2620\"/><rect y=\"110\" width=\"90\" height=\"50\" fill=\"#3C4636\"/><path d=\"M12 104 L12 74 M8 80 L12 74 L16 80\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linecap=\"round\" fill=\"none\"/>",
+   "detalhe": "A câmera sobe lentamente dos jardins até o Olho, iluminado pelo pôr do sol. É o ponto emocional do vídeo.",
+   "texto": "Alguns caminhos cabem num mapa. Mas atravessam o mundo.",
+   "som": "O piano ganha cordas.",
+   "adaptacao": "Amanhã a subida será de dia (D1, 10:00). O pôr do sol fica para o pickup opcional (D4), já coberto pelo SARPAS até 23:59."
   },
   {
    "n": 8,
@@ -790,7 +818,11 @@
    "color": "var(--aerial)",
    "desc": "Zenitais ao entardecer; transição do mapa para o aéreo. Lettering ICOM.",
    "ost": "ICOM COMMS AWARDS 2026",
-   "svg": "<rect width=\"90\" height=\"160\" fill=\"#5F7F4E\"/><path d=\"M-4 26 Q28 44 42 70 T96 112\" fill=\"none\" stroke=\"#E8DCC0\" stroke-width=\"5\"/><path d=\"M-4 98 Q40 80 96 50\" fill=\"none\" stroke=\"#E8DCC0\" stroke-width=\"4\"/><rect x=\"46\" y=\"12\" width=\"38\" height=\"24\" rx=\"2\" fill=\"#9CC3C9\"/><ellipse cx=\"65\" cy=\"24\" rx=\"14\" ry=\"6\" fill=\"#2A2620\"/><g fill=\"#3F5A35\"><circle cx=\"14\" cy=\"60\" r=\"7\"/><circle cx=\"76\" cy=\"80\" r=\"6.5\"/><circle cx=\"22\" cy=\"118\" r=\"6\"/></g>"
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#5F7F4E\"/><path d=\"M-4 26 Q28 44 42 70 T96 112\" fill=\"none\" stroke=\"#E8DCC0\" stroke-width=\"5\"/><path d=\"M-4 98 Q40 80 96 50\" fill=\"none\" stroke=\"#E8DCC0\" stroke-width=\"4\"/><rect x=\"46\" y=\"12\" width=\"38\" height=\"24\" rx=\"2\" fill=\"#9CC3C9\"/><ellipse cx=\"65\" cy=\"24\" rx=\"14\" ry=\"6\" fill=\"#2A2620\"/><g fill=\"#3F5A35\"><circle cx=\"14\" cy=\"60\" r=\"7\"/><circle cx=\"76\" cy=\"80\" r=\"6.5\"/><circle cx=\"22\" cy=\"118\" r=\"6\"/></g>",
+   "detalhe": "Planos aéreos do MON ao entardecer. Vistos de cima, os jardins lembram o próprio mapa ilustrado, com famílias pequenas nos caminhos. Se possível, transição da ilustração do mapa (B21) para a imagem aérea real.",
+   "texto": "O Art Hunter levou o MON à final do ICOM COMMS AWARDS 2026 · Best Audience Engagement Initiative",
+   "som": "Trilha em seu ponto mais alto.",
+   "adaptacao": "Zenitais no meio da manhã e dentro de 30 m do prédio (perfil Entorno de Estrutura). Alinhe a orientação com a do mapa."
   },
   {
    "n": 9,
@@ -799,7 +831,11 @@
    "color": "var(--dusk)",
    "desc": "Dobra o mapa e olha para o MON. Corte para a tela final.",
    "ost": "Bastava chegar perto.",
-   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E8A17C\"/><circle cx=\"70\" cy=\"62\" r=\"8\" fill=\"#F7C98B\"/><ellipse cx=\"58\" cy=\"54\" rx=\"14\" ry=\"5.5\" fill=\"#2A2620\"/><rect x=\"55.5\" y=\"59\" width=\"5\" height=\"22\" fill=\"#2A2620\"/><rect y=\"81\" width=\"90\" height=\"79\" fill=\"#3C4636\"/><circle cx=\"26\" cy=\"94\" r=\"5.5\" fill=\"#1C1F1A\"/><rect x=\"21\" y=\"99\" width=\"10\" height=\"20\" rx=\"4\" fill=\"#1C1F1A\"/><path d=\"M23.5 118 L22.5 130 M28.5 118 L29.5 130\" stroke=\"#1C1F1A\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"31\" y=\"104\" width=\"6\" height=\"5\" fill=\"#FFF8E8\"/>"
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E8A17C\"/><circle cx=\"70\" cy=\"62\" r=\"8\" fill=\"#F7C98B\"/><ellipse cx=\"58\" cy=\"54\" rx=\"14\" ry=\"5.5\" fill=\"#2A2620\"/><rect x=\"55.5\" y=\"59\" width=\"5\" height=\"22\" fill=\"#2A2620\"/><rect y=\"81\" width=\"90\" height=\"79\" fill=\"#3C4636\"/><circle cx=\"26\" cy=\"94\" r=\"5.5\" fill=\"#1C1F1A\"/><rect x=\"21\" y=\"99\" width=\"10\" height=\"20\" rx=\"4\" fill=\"#1C1F1A\"/><path d=\"M23.5 118 L22.5 130 M28.5 118 L29.5 130\" stroke=\"#1C1F1A\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"31\" y=\"104\" width=\"6\" height=\"5\" fill=\"#FFF8E8\"/>",
+   "detalhe": "Último plano: a criança, de volta ao jardim, dobra o mapa e olha para o MON. Corte para a tela final.",
+   "texto": "A arte estava ali, esperando. Bastava chegar perto. · Tela final: logo MON · A arte amplia o olhar.",
+   "som": "Trilha se encerra suavemente.",
+   "adaptacao": "Sol alto: posicione a criança em contraluz em relação ao museu."
   }
  ],
  "day": [
