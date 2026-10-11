@@ -1,0 +1,1123 @@
+{
+ "slug": "art-hunter-mon",
+ "title": "Onde a arte nos leva",
+ "client": "Museu Oscar Niemeyer",
+ "project": "Art Hunter",
+ "date": "2026-10-12",
+ "window": {
+  "from": "10:00",
+  "to": "12:00"
+ },
+ "location": {
+  "name": "Jardins do Museu Oscar Niemeyer",
+  "address": "R. Mal. Hermes, 999, Centro Cívico, Curitiba – PR",
+  "lat": -25.4101,
+  "lon": -49.267,
+  "tz": -3
+ },
+ "format": "9:16 principal · 16:9 versão case",
+ "lightNote": "<b>Sol alto entre 10h e 12h.</b> Coloque a criança em contraluz, use a sombra das árvores e ND forte (6–7 stops em f/2). O clima dourado do roteiro entra na cor.",
+ "groups": [
+  {
+   "id": "A",
+   "name": "Amanhecer",
+   "short": "Amanhecer",
+   "sub": "Luz dourada · primeira hora",
+   "color": "var(--dawn)"
+  },
+  {
+   "id": "B",
+   "name": "Dia: a atividade",
+   "short": "Dia",
+   "sub": "Famílias reais · 2 câmeras",
+   "color": "var(--day)"
+  },
+  {
+   "id": "C",
+   "name": "Entardecer: chão",
+   "short": "Entardecer",
+   "sub": "Mesma família e figurino da manhã",
+   "color": "var(--dusk)"
+  },
+  {
+   "id": "D",
+   "name": "Aéreos",
+   "short": "Aéreos",
+   "sub": "Neo 2 · VLOS · até 30 m do prédio",
+   "color": "var(--aerial)"
+  },
+  {
+   "id": "E",
+   "name": "Versão case 16:9",
+   "short": "Case 16:9",
+   "sub": "Depoimento entre as cenas 06 e 07",
+   "color": "#C9CCC4"
+  },
+  {
+   "id": "S",
+   "name": "Som direto e ambiente",
+   "short": "Som",
+   "sub": "Sons reais em primeiro plano",
+   "color": "var(--sound)"
+  }
+ ],
+ "shots": [
+  {
+   "id": "A1",
+   "g": "A",
+   "title": "Orvalho na grama, gotas contra a luz",
+   "frame": "Macro, tele, foco raso; fixo ou slider",
+   "scenes": [
+    1
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2 no foco mínimo (45 cm); recorte em post para chegar mais perto"
+   ]
+  },
+  {
+   "id": "A2",
+   "g": "A",
+   "title": "Jardim com o Olho ao fundo fora de foco",
+   "frame": "Geral, tele, foco no primeiro plano; rack focus opcional",
+   "scenes": [
+    1
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/1.4–2, foco no orvalho; recorte do 6K faz o papel da tele"
+   ]
+  },
+  {
+   "id": "A3",
+   "g": "A",
+   "title": "Raios de sol entre árvores",
+   "frame": "Geral, contraluz; fixo",
+   "scenes": [
+    1
+   ],
+   "pri": "B",
+   "lens": [
+    "Sigma 18–35",
+    "em 18 mm, contraluz; use o flare a favor"
+   ]
+  },
+  {
+   "id": "A4",
+   "g": "A",
+   "title": "Mão pequena segura a mão do adulto",
+   "frame": "Detalhe das mãos, altura da criança; gimbal",
+   "scenes": [
+    2
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "em 35 mm f/2 no RS2"
+   ]
+  },
+  {
+   "id": "A5",
+   "g": "A",
+   "title": "Criança e adulto caminham de costas",
+   "frame": "Médio/geral de costas, Olho no horizonte; gimbal",
+   "scenes": [
+    2
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "em 18–24 mm no RS2"
+   ]
+  },
+  {
+   "id": "A6",
+   "g": "A",
+   "title": "Pés na grama molhada",
+   "frame": "Detalhe rente ao chão; travelling lateral",
+   "scenes": [
+    2
+   ],
+   "pri": "B",
+   "lens": [
+    "Tokina 11–16",
+    "em 11–14 mm, RS2 em modo baixo"
+   ]
+  },
+  {
+   "id": "A7",
+   "g": "A",
+   "title": "Dupla de lado, silhueta contra o sol",
+   "frame": "Geral lateral, contraluz; travelling",
+   "scenes": [
+    2
+   ],
+   "pri": "B",
+   "lens": [
+    "Sigma 18–35",
+    "em 35 mm no RS2"
+   ]
+  },
+  {
+   "id": "B1",
+   "g": "B",
+   "title": "Educador de jaleco amarelo entrega o mapa",
+   "frame": "Médio, altura da criança; fixo",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "em 24–35 mm"
+   ]
+  },
+  {
+   "id": "B2",
+   "g": "B",
+   "title": "Criança abre o mapa com as duas mãos",
+   "frame": "Detalhe frontal das mãos e do papel",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2"
+   ]
+  },
+  {
+   "id": "B3",
+   "g": "B",
+   "title": "Dedo procura o primeiro ponto no mapa",
+   "frame": "POV / sobre o ombro; push-in leve",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "em 24 mm, sobre o ombro"
+   ]
+  },
+  {
+   "id": "B4",
+   "g": "B",
+   "title": "Rosto concentrado no mapa",
+   "frame": "Close, contraplano de B3",
+   "scenes": [
+    3
+   ],
+   "pri": "B",
+   "lens": [
+    "Zeiss 50",
+    "f/1.4–2"
+   ]
+  },
+  {
+   "id": "B5",
+   "g": "B",
+   "title": "Olha do mapa para o jardim e acha a obra",
+   "frame": "Close do rosto → ponto de vista dela",
+   "scenes": [
+    4
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "rosto; obra no ponto de vista dela com a Sigma em 35 mm"
+   ]
+  },
+  {
+   "id": "B6",
+   "g": "B",
+   "title": "Corre até a obra",
+   "frame": "Travelling lateral + de frente vindo para a câmera",
+   "scenes": [
+    4
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "em 18–24 mm no RS2"
+   ]
+  },
+  {
+   "id": "B7",
+   "g": "B",
+   "title": "Para em frente à obra, hesita",
+   "frame": "Médio de trás, obra grande no quadro",
+   "scenes": [
+    4
+   ],
+   "pri": "A",
+   "lens": [
+    "Tokina 11–16",
+    "em 16 mm, obra grande no quadro"
+   ]
+  },
+  {
+   "id": "B8",
+   "g": "B",
+   "title": "A mão toca a obra pela primeira vez",
+   "frame": "Detalhe, foco raso; alta taxa de quadros",
+   "scenes": [
+    4
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "em 35 mm; o modo de alta taxa recorta o sensor e aperta o quadro"
+   ]
+  },
+  {
+   "id": "B9",
+   "g": "B",
+   "title": "Mãos explorando texturas",
+   "frame": "Detalhes em 3–4 obras diferentes",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2"
+   ]
+  },
+  {
+   "id": "B10",
+   "g": "B",
+   "title": "Mãos em obras táteis",
+   "frame": "Detalhe, de preferência com usuário real",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2"
+   ]
+  },
+  {
+   "id": "B11",
+   "g": "B",
+   "title": "Corpo atravessando uma instalação",
+   "frame": "Câmera do outro lado esperando ela sair",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Tokina 11–16",
+    "em 11–14 mm"
+   ]
+  },
+  {
+   "id": "B12",
+   "g": "B",
+   "title": "Criança brincando dentro de uma obra",
+   "frame": "Médio, ângulo baixo",
+   "scenes": [
+    5
+   ],
+   "pri": "B",
+   "lens": [
+    "Tokina 11–16",
+    "ângulo baixo"
+   ]
+  },
+  {
+   "id": "B13",
+   "g": "B",
+   "title": "Famílias correndo com mapas",
+   "frame": "Geral, tele comprimindo os caminhos",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "sem tele no kit: 50 mm + recorte do 6K"
+   ]
+  },
+  {
+   "id": "B14",
+   "g": "B",
+   "title": "Crianças apontando obras distantes",
+   "frame": "Médio de costas, braço estendido",
+   "scenes": [
+    5
+   ],
+   "pri": "B",
+   "lens": [
+    "Sigma 18–35",
+    "em 24–35 mm"
+   ]
+  },
+  {
+   "id": "B15",
+   "g": "B",
+   "title": "Equipe do educativo com o público",
+   "frame": "Médio, jaleco amarelo visível",
+   "scenes": [
+    5
+   ],
+   "pri": "B",
+   "lens": [
+    "Sigma 18–35",
+    "em 35 mm"
+   ]
+  },
+  {
+   "id": "B16",
+   "g": "B",
+   "title": "Adulto acompanhando, emocionado",
+   "frame": "Close de reação, tele à distância",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "à distância + recorte do 6K"
+   ]
+  },
+  {
+   "id": "B17",
+   "g": "B",
+   "title": "Marca no mapa a obra explorada",
+   "frame": "Detalhe da caneta no mapa",
+   "scenes": [
+    6
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2"
+   ]
+  },
+  {
+   "id": "B18",
+   "g": "B",
+   "title": "Corre até a mãe; mãe se agacha e olha",
+   "frame": "2 câmeras (geral + tele); sem roteiro",
+   "scenes": [
+    6
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "geral em 24 mm; o close pede uma segunda câmera com a Zeiss 50"
+   ]
+  },
+  {
+   "id": "B19",
+   "g": "B",
+   "title": "Sorriem e se abraçam",
+   "frame": "Close do abraço + médio; manter rodando",
+   "scenes": [
+    6
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "close; médio com a Sigma em 35 mm"
+   ]
+  },
+  {
+   "id": "B20",
+   "g": "B",
+   "title": "Copinhos de sorvete Art Hunter",
+   "frame": "Detalhe do produto + criança recebendo",
+   "scenes": [],
+   "pri": "B",
+   "lens": [
+    "Zeiss 50",
+    "f/2"
+   ]
+  },
+  {
+   "id": "B21",
+   "g": "B",
+   "title": "Mapa ilustrado chapado (transição)",
+   "frame": "Top-down centrado, luz uniforme, sem reflexo",
+   "scenes": [
+    8
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "em 35 mm f/5.6, menos distorção no top-down"
+   ]
+  },
+  {
+   "id": "C1",
+   "g": "C",
+   "title": "Criança dobra o mapa",
+   "frame": "Detalhe das mãos dobrando; fixo",
+   "scenes": [
+    9
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2"
+   ]
+  },
+  {
+   "id": "C2",
+   "g": "C",
+   "title": "Criança de costas olhando o MON",
+   "frame": "Médio/geral de costas, Olho no quadro",
+   "scenes": [
+    9
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "em 18–24 mm, Olho no quadro"
+   ]
+  },
+  {
+   "id": "C3",
+   "g": "C",
+   "title": "Rosto da criança olhando o museu",
+   "frame": "Close, contraluz suave",
+   "scenes": [
+    9
+   ],
+   "pri": "B",
+   "lens": [
+    "Zeiss 50",
+    "f/1.4–2"
+   ]
+  },
+  {
+   "id": "C4",
+   "g": "C",
+   "title": "Subida jardim → Olho sem drone",
+   "frame": "Grua/pedestal, do gramado ao Olho",
+   "scenes": [
+    7
+   ],
+   "pri": "B",
+   "lens": [
+    "Sigma 18–35",
+    "em 18 mm no RS2 subindo; o drone (D1) cobre este plano"
+   ]
+  },
+  {
+   "id": "D1",
+   "g": "D",
+   "title": "Subida vertical até o Olho no pôr do sol",
+   "frame": "Rise lento contínuo; 3 tomadas em velocidades diferentes",
+   "scenes": [
+    7
+   ],
+   "pri": "A",
+   "lens": [
+    "Neo 2",
+    "câmera do drone"
+   ]
+  },
+  {
+   "id": "D2",
+   "g": "D",
+   "title": "Zenital dos jardins com famílias",
+   "frame": "Mesma orientação do mapa (casar com B21)",
+   "scenes": [
+    8
+   ],
+   "pri": "A",
+   "lens": [
+    "Neo 2",
+    "câmera do drone"
+   ]
+  },
+  {
+   "id": "D3",
+   "g": "D",
+   "title": "Zenital subindo",
+   "frame": "Jardim encolhe e vira mapa",
+   "scenes": [
+    8
+   ],
+   "pri": "A",
+   "lens": [
+    "Neo 2",
+    "câmera do drone"
+   ]
+  },
+  {
+   "id": "D4",
+   "g": "D",
+   "title": "Órbita no Olho ao entardecer",
+   "frame": "Órbita lenta, altura do Olho",
+   "scenes": [
+    8
+   ],
+   "pri": "B",
+   "lens": [
+    "Neo 2",
+    "câmera do drone"
+   ]
+  },
+  {
+   "id": "D5",
+   "g": "D",
+   "title": "Reveal do MON e jardins",
+   "frame": "Recuo + subida, de baixo das árvores",
+   "scenes": [
+    8
+   ],
+   "pri": "B",
+   "lens": [
+    "Neo 2",
+    "câmera do drone"
+   ]
+  },
+  {
+   "id": "E1",
+   "g": "E",
+   "title": "Depoimento de pai/mãe",
+   "frame": "Médio fechado + close; lapela + boom",
+   "scenes": [
+    6,
+    7
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "close; médio com a Sigma em 35 mm"
+   ]
+  },
+  {
+   "id": "E2",
+   "g": "E",
+   "title": "B-roll do depoente com o filho",
+   "frame": "Médio, cobre cortes do depoimento",
+   "scenes": [
+    6,
+    7
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "em 24–35 mm"
+   ]
+  },
+  {
+   "id": "E3",
+   "g": "E",
+   "title": "Pilha de mapas (apoio para dados)",
+   "frame": "Detalhe e médio; espaço para lettering",
+   "scenes": [],
+   "pri": "B",
+   "lens": [
+    "Zeiss 50",
+    "f/2.8"
+   ]
+  },
+  {
+   "id": "E4",
+   "g": "E",
+   "title": "Planos-chave reenquadrados em 16:9",
+   "frame": "Revisar A5, B6, B18, D1 na horizontal",
+   "scenes": [],
+   "pri": "B",
+   "lens": [
+    "—",
+    "a mesma lente do plano original"
+   ]
+  },
+  {
+   "id": "S1",
+   "g": "S",
+   "title": "Passarinhos ao amanhecer",
+   "frame": "Ambiente estéreo, 2 min, sem equipe falando",
+   "scenes": [
+    1,
+    2
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "S2",
+   "g": "S",
+   "title": "Passos na grama",
+   "frame": "Foley de perto, adulto e criança separados",
+   "scenes": [
+    2,
+    4
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "S3",
+   "g": "S",
+   "title": "Papel do mapa abrindo",
+   "frame": "Foley em close, várias tomadas",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "S4",
+   "g": "S",
+   "title": "Mapa sendo dobrado",
+   "frame": "Foley em close",
+   "scenes": [
+    9
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "S5",
+   "g": "S",
+   "title": "Vento nas árvores",
+   "frame": "Ambiente, 2 min, protetor de vento",
+   "scenes": [
+    5,
+    7
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "S6",
+   "g": "S",
+   "title": "Mãos tocando as obras",
+   "frame": "Foley de perto em cada obra tátil",
+   "scenes": [
+    4,
+    5
+   ],
+   "pri": "B",
+   "lens": null
+  },
+  {
+   "id": "S7",
+   "g": "S",
+   "title": "Room tone de cada locação",
+   "frame": "1 min de silêncio por ponto",
+   "scenes": [],
+   "pri": "A",
+   "lens": null
+  }
+ ],
+ "scenes": [
+  {
+   "n": 1,
+   "tc": "0:00–0:04",
+   "title": "Amanhecer no jardim",
+   "color": "var(--dawn)",
+   "desc": "Orvalho em primeiro plano, luz dourada, Olho desfocado ao fundo.",
+   "ost": "",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#F4D3A0\"/><rect width=\"90\" height=\"40\" fill=\"#F0C489\"/><circle cx=\"64\" cy=\"46\" r=\"13\" fill=\"#FBE3B0\"/><circle cx=\"64\" cy=\"46\" r=\"8\" fill=\"#FFF4DA\"/><path d=\"M0 92 Q12 82 22 90 Q32 80 44 88 Q58 78 70 88 Q80 82 90 88 V104 H0 Z\" fill=\"#C9A06A\" opacity=\".6\"/><ellipse cx=\"30\" cy=\"80\" rx=\"15\" ry=\"6\" fill=\"#9E7B52\" opacity=\".5\"/><rect x=\"27.5\" y=\"85\" width=\"5\" height=\"16\" fill=\"#9E7B52\" opacity=\".5\"/><path d=\"M0 104 Q45 96 90 104 V160 H0 Z\" fill=\"#4F6A40\"/><path d=\"M6 160 L9 124 M12 160 L17 118 M19 160 L20 128 M64 160 L69 120 M72 160 L76 126 M80 160 L85 122\" stroke=\"#34482A\" stroke-width=\"2.2\" stroke-linecap=\"round\"/>"
+  },
+  {
+   "n": 2,
+   "tc": "0:04–0:10",
+   "title": "Mãos dadas",
+   "color": "var(--dawn)",
+   "desc": "Mão pequena segura a de um adulto; caminham de costas.",
+   "ost": "O que é arte?",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#F4D3A0\"/><circle cx=\"76\" cy=\"58\" r=\"10\" fill=\"#FBE3B0\"/><rect y=\"112\" width=\"90\" height=\"48\" fill=\"#4F6A40\"/><circle cx=\"54\" cy=\"46\" r=\"6.5\" fill=\"#2A2620\"/><rect x=\"47.5\" y=\"53\" width=\"13\" height=\"35\" rx=\"5\" fill=\"#2A2620\"/><path d=\"M51 87 L49 114 M57 87 L59 114\" stroke=\"#2A2620\" stroke-width=\"4.2\" stroke-linecap=\"round\"/><path d=\"M49 60 L41 80\" stroke=\"#2A2620\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"36\" cy=\"78\" r=\"5\" fill=\"#2A2620\"/><rect x=\"31.5\" y=\"83\" width=\"9\" height=\"20\" rx=\"4\" fill=\"#2A2620\"/><path d=\"M34 102 L33 114 M38 102 L39 114 M39 87 L41 80\" stroke=\"#2A2620\" stroke-width=\"3\" stroke-linecap=\"round\"/>"
+  },
+  {
+   "n": 3,
+   "tc": "0:10–0:16",
+   "title": "O mapa",
+   "color": "var(--day)",
+   "desc": "Recebe o mapa, abre com as duas mãos e procura o primeiro ponto.",
+   "ost": "",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#CFE3D8\"/><rect x=\"16\" y=\"54\" width=\"58\" height=\"46\" rx=\"1.5\" fill=\"#FFF8E8\" stroke=\"#2A2620\" stroke-width=\".8\"/><path d=\"M22 92 Q32 70 45 80 T68 64\" fill=\"none\" stroke=\"#E08A6E\" stroke-width=\"1.2\" stroke-dasharray=\"1.8 1.8\"/><circle cx=\"22\" cy=\"92\" r=\"2.4\" fill=\"#8DB27A\"/><circle cx=\"45\" cy=\"80\" r=\"3\" fill=\"#E9B04E\"/><circle cx=\"68\" cy=\"64\" r=\"2.4\" fill=\"#6FA8A8\"/><path d=\"M16 64 Q7 66 6 77 Q6 88 16 90 Z M74 64 Q83 66 84 77 Q84 88 74 90 Z\" fill=\"#E8B48F\"/><path d=\"M38 132 Q38 116 42 104 Q44 99 46 104 L46 82 Q47 78 49 82 L50 104 Q54 112 52 132 Z\" fill=\"#E8B48F\"/>"
+  },
+  {
+   "n": 4,
+   "tc": "0:16–0:26",
+   "title": "A primeira obra",
+   "color": "var(--day)",
+   "desc": "Corre até a obra, para, hesita e então toca.",
+   "ost": "Às vezes, a arte está esperando para ser encontrada.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#CFE3D8\"/><rect y=\"108\" width=\"90\" height=\"52\" fill=\"#4E6B3E\"/><path d=\"M56 62 Q72 54 77 72 Q80 88 66 96 Q50 100 48 84 Z\" fill=\"#E9B04E\"/><rect x=\"57\" y=\"96\" width=\"16\" height=\"14\" fill=\"#D8D2C2\"/><circle cx=\"26\" cy=\"80\" r=\"5\" fill=\"#2A2620\"/><path d=\"M26 85 L30 100\" stroke=\"#2A2620\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M30 100 L22 112 M30 100 L38 110 M27 89 L18 94 M27 89 L37 86\" stroke=\"#2A2620\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>"
+  },
+  {
+   "n": 5,
+   "tc": "0:26–0:36",
+   "title": "Brincar com a arte",
+   "color": "var(--day)",
+   "desc": "Montagem: texturas, obras táteis, instalação, famílias com mapas.",
+   "ost": "ART HUNTER · Um mapa. Um jardim.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#4E6B3E\"/><rect width=\"90\" height=\"96\" fill=\"#D8CBB0\"/><g fill=\"#8A7A5C\"><circle cx=\"10\" cy=\"12\" r=\"2.2\"/><circle cx=\"24\" cy=\"10\" r=\"2.2\"/><circle cx=\"38\" cy=\"14\" r=\"2.2\"/><circle cx=\"52\" cy=\"10\" r=\"2.2\"/><circle cx=\"66\" cy=\"13\" r=\"2.2\"/><circle cx=\"80\" cy=\"10\" r=\"2.2\"/><circle cx=\"16\" cy=\"28\" r=\"2.2\"/><circle cx=\"46\" cy=\"29\" r=\"2.2\"/><circle cx=\"74\" cy=\"29\" r=\"2.2\"/><circle cx=\"10\" cy=\"44\" r=\"2.2\"/><circle cx=\"80\" cy=\"42\" r=\"2.2\"/></g><path d=\"M34 104 L36 60 Q38 54 41 60 L42 50 Q44 45 47 51 L48 54 Q50 49 53 55 L55 76 Q57 70 60 74 L58 92 Q56 104 46 108 Z\" fill=\"#E8B48F\"/>"
+  },
+  {
+   "n": 6,
+   "tc": "0:36–0:44",
+   "title": "Mostrar para a mãe",
+   "color": "var(--day)",
+   "desc": "Marca a obra e corre até a mãe; olham juntas e se abraçam.",
+   "ost": "Talvez arte seja isso.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#DDE8D6\"/><rect y=\"112\" width=\"90\" height=\"48\" fill=\"#4E6B3E\"/><circle cx=\"60\" cy=\"72\" r=\"6.5\" fill=\"#2A2620\"/><path d=\"M60 79 Q63 94 55 104\" stroke=\"#2A2620\" stroke-width=\"7\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M55 104 L67 106 L68 114 M58 86 L47 89\" stroke=\"#2A2620\" stroke-width=\"3.4\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"38\" cy=\"80\" r=\"5\" fill=\"#2A2620\"/><rect x=\"33.5\" y=\"85\" width=\"9\" height=\"19\" rx=\"4\" fill=\"#2A2620\"/><path d=\"M36 103 L35 114 M40 103 L41 114\" stroke=\"#2A2620\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"24\" y=\"88\" width=\"9\" height=\"7\" fill=\"#FFF8E8\"/>"
+  },
+  {
+   "n": 7,
+   "tc": "0:44–0:50",
+   "title": "Subida até o Olho",
+   "color": "var(--dusk)",
+   "desc": "Câmera sobe dos jardins até o Olho no pôr do sol.",
+   "ost": "Alguns caminhos cabem num mapa.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E8A17C\"/><circle cx=\"50\" cy=\"52\" r=\"16\" fill=\"#F7C98B\"/><ellipse cx=\"50\" cy=\"60\" rx=\"26\" ry=\"10.5\" fill=\"#2A2620\"/><rect x=\"46\" y=\"70\" width=\"8\" height=\"40\" fill=\"#2A2620\"/><rect y=\"110\" width=\"90\" height=\"50\" fill=\"#3C4636\"/><path d=\"M12 104 L12 74 M8 80 L12 74 L16 80\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linecap=\"round\" fill=\"none\"/>"
+  },
+  {
+   "n": 8,
+   "tc": "0:50–1:00",
+   "title": "O jardim vira mapa",
+   "color": "var(--aerial)",
+   "desc": "Zenitais ao entardecer; transição do mapa para o aéreo. Lettering ICOM.",
+   "ost": "ICOM COMMS AWARDS 2026",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#5F7F4E\"/><path d=\"M-4 26 Q28 44 42 70 T96 112\" fill=\"none\" stroke=\"#E8DCC0\" stroke-width=\"5\"/><path d=\"M-4 98 Q40 80 96 50\" fill=\"none\" stroke=\"#E8DCC0\" stroke-width=\"4\"/><rect x=\"46\" y=\"12\" width=\"38\" height=\"24\" rx=\"2\" fill=\"#9CC3C9\"/><ellipse cx=\"65\" cy=\"24\" rx=\"14\" ry=\"6\" fill=\"#2A2620\"/><g fill=\"#3F5A35\"><circle cx=\"14\" cy=\"60\" r=\"7\"/><circle cx=\"76\" cy=\"80\" r=\"6.5\"/><circle cx=\"22\" cy=\"118\" r=\"6\"/></g>"
+  },
+  {
+   "n": 9,
+   "tc": "1:00–1:08",
+   "title": "Dobrar o mapa",
+   "color": "var(--dusk)",
+   "desc": "Dobra o mapa e olha para o MON. Corte para a tela final.",
+   "ost": "Bastava chegar perto.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E8A17C\"/><circle cx=\"70\" cy=\"62\" r=\"8\" fill=\"#F7C98B\"/><ellipse cx=\"58\" cy=\"54\" rx=\"14\" ry=\"5.5\" fill=\"#2A2620\"/><rect x=\"55.5\" y=\"59\" width=\"5\" height=\"22\" fill=\"#2A2620\"/><rect y=\"81\" width=\"90\" height=\"79\" fill=\"#3C4636\"/><circle cx=\"26\" cy=\"94\" r=\"5.5\" fill=\"#1C1F1A\"/><rect x=\"21\" y=\"99\" width=\"10\" height=\"20\" rx=\"4\" fill=\"#1C1F1A\"/><path d=\"M23.5 118 L22.5 130 M28.5 118 L29.5 130\" stroke=\"#1C1F1A\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"31\" y=\"104\" width=\"6\" height=\"5\" fill=\"#FFF8E8\"/>"
+  }
+ ],
+ "day": [
+  {
+   "t": "09:15–10:00",
+   "title": "Preparação",
+   "note": "Montar a Pocket com a Sigma e o ND, balancear o RS2, checklist do drone, briefing com a família e o MON, termos de anuência assinados.",
+   "shots": [],
+   "from": "09:15",
+   "to": "10:00"
+  },
+  {
+   "t": "10:00–10:15",
+   "title": "Aéreos com o Neo 2",
+   "note": "Antes do movimento no jardim. Até 30 m do prédio e 5 m acima do topo. Família de produção nos caminhos para o zenital.",
+   "lens": "Neo 2",
+   "shots": [
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "from": "10:00",
+   "to": "10:15"
+  },
+  {
+   "t": "10:15–10:35",
+   "title": "Chegada e o mapa",
+   "note": "Comece no RS2 com a Sigma; termine fixo com a Zeiss nos detalhes do mapa.",
+   "lens": "Sigma → Zeiss",
+   "shots": [
+    "A5",
+    "A4",
+    "B1",
+    "B3",
+    "B2",
+    "B4",
+    "S3"
+   ],
+   "from": "10:15",
+   "to": "10:35"
+  },
+  {
+   "t": "10:35–11:05",
+   "title": "A primeira obra e a brincadeira",
+   "note": "Bloco mais longo. Sigma no gimbal para a corrida, Tokina nas instalações, Zeiss nos detalhes de mãos e reações.",
+   "lens": "Sigma → Tokina → Zeiss",
+   "shots": [
+    "B6",
+    "B8",
+    "B7",
+    "B11",
+    "B5",
+    "B9",
+    "B10",
+    "B13",
+    "B16",
+    "S2",
+    "S6"
+   ],
+   "from": "10:35",
+   "to": "11:05"
+  },
+  {
+   "t": "11:05–11:25",
+   "title": "Mostrar para a mãe",
+   "note": "Momento espontâneo: deixe rodando. Com uma câmera só, faça o geral primeiro e repita a ação para o close.",
+   "lens": "Sigma + Zeiss",
+   "shots": [
+    "B18",
+    "B17",
+    "B19",
+    "B14",
+    "B15"
+   ],
+   "from": "11:05",
+   "to": "11:25"
+  },
+  {
+   "t": "11:25–11:45",
+   "title": "Fechamento e depoimento",
+   "note": "Criança dobra o mapa e olha o MON. Depoimento na sombra, com lapela.",
+   "lens": "Zeiss + Sigma",
+   "shots": [
+    "C1",
+    "C2",
+    "C3",
+    "S4",
+    "E1",
+    "E2"
+   ],
+   "from": "11:25",
+   "to": "11:45"
+  },
+  {
+   "t": "11:45–12:00",
+   "title": "Margem e detalhes",
+   "note": "Orvalho com borrifador numa área de sombra, sorvete, ambiente e room tone. Use para refazer o que faltou.",
+   "lens": "Zeiss",
+   "shots": [
+    "A1",
+    "A2",
+    "B20",
+    "S5",
+    "S7"
+   ],
+   "from": "11:45",
+   "to": "12:00"
+  },
+  {
+   "t": "Se sobrar tempo",
+   "title": "Extras e pickup do entardecer",
+   "note": "Só se a janela permitir. O SARPAS vale até 23:59, então a subida no pôr do sol (D4) pode virar um pickup rápido às 17:30. B21 pode sair do arquivo da arte do mapa.",
+   "shots": [
+    "A3",
+    "A6",
+    "A7",
+    "B12",
+    "D4",
+    "D5",
+    "C4",
+    "S1",
+    "B21",
+    "E3",
+    "E4"
+   ],
+   "extra": true
+  }
+ ],
+ "equip": [
+  {
+   "g": "Câmera e lentes",
+   "items": [
+    [
+     "cam",
+     "Blackmagic Pocket 6K",
+     "Sensor Super 35: some ~1,5× à lente (50 mm vira ~78 mm)"
+    ],
+    [
+     "bat",
+     "Baterias LP-E6 extras",
+     "A Pocket 6K consome rápido; leve várias carregadas"
+    ],
+    [
+     "midia",
+     "Mídia (CFast 2.0, SD UHS-II ou SSD USB-C)",
+     "Conferir espaço para dois turnos"
+    ],
+    [
+     "sig",
+     "Sigma 18–35 f/1.8",
+     "Lente de trabalho: gimbal, médios e gerais"
+    ],
+    [
+     "zei",
+     "Zeiss Planar 50 f/1.4",
+     "Detalhes, closes e “tele” com recorte do 6K"
+    ],
+    [
+     "tok",
+     "Tokina 11–16 f/2.8",
+     "Instalações, obras grandes, ângulo baixo"
+    ],
+    [
+     "nd",
+     "Filtros ND (82, 77 e 58 mm ou anéis adaptadores)",
+     "A Pocket 6K não tem ND interno: sem ND não dá para abrir f/1.4–2 de dia"
+    ]
+   ]
+  },
+  {
+   "g": "Estabilização e apoio",
+   "items": [
+    [
+     "rs2",
+     "DJI Ronin RS2 + baterias",
+     "Balancear com a Sigma, a mais pesada"
+    ],
+    [
+     "tri",
+     "Tripé",
+     "Planos fixos, depoimento e mapa top-down (B21)"
+    ],
+    [
+     "sli",
+     "Slider (opcional)",
+     "Orvalho e jardim (A1, A2)"
+    ],
+    [
+     "bor",
+     "Borrifador de água",
+     "Orvalho nas plantas para A1 e A2, já que às 10h não haverá orvalho"
+    ],
+    [
+     "sol",
+     "Para-sol de monitor e óculos escuros",
+     "Ler a tela da câmera e do controle no sol do meio-dia"
+    ]
+   ]
+  },
+  {
+   "g": "Drone",
+   "items": [
+    [
+     "neo",
+     "DJI Neo 2 + controle com transceptor O4",
+     "Voo em VLOS"
+    ],
+    [
+     "neob",
+     "Baterias do Neo 2 carregadas",
+     "~17 min cada com protetor de hélice"
+    ],
+    [
+     "docs",
+     "APR impressa + SARPAS BBI943R7I",
+     "Mostrar ao MON se pedirem"
+    ]
+   ]
+  },
+  {
+   "g": "Faltando no kit",
+   "gap": true,
+   "items": [
+    [
+     "cam2",
+     "Segunda câmera",
+     "B18, B19 e o depoimento (E1) pedem duas câmeras"
+    ],
+    [
+     "aud",
+     "Gravador + lapela + boom",
+     "Depoimento e sons do bloco S"
+    ],
+    [
+     "tele",
+     "Lente tele (opcional)",
+     "A2, B13 e B16 ficam com 50 mm + recorte"
+    ]
+   ]
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Responsável do MON",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "Segurança do MON",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "Observador do drone",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "SAMU",
+   "name": "",
+   "phone": "192"
+  },
+  {
+   "role": "Corpo de Bombeiros",
+   "name": "",
+   "phone": "193"
+  },
+  {
+   "role": "Polícia Militar",
+   "name": "",
+   "phone": "190"
+  }
+ ],
+ "docs": [
+  {
+   "id": "sarpas",
+   "title": "Autorização SARPAS",
+   "org": "DECEA",
+   "number": "BBI943R7I",
+   "valid": "2026-10-12",
+   "detail": "VLOS, até 60 m, perfil Entorno de Estrutura, 12/10 das 00:00 às 23:59"
+  },
+  {
+   "id": "apr",
+   "title": "APR – Voo de drone no MON",
+   "org": "Produção",
+   "number": "",
+   "valid": "2026-10-12",
+   "detail": "Análise preliminar de risco para apresentar ao MON",
+   "url": "https://claude.ai/code/artifact/e2fa37b7-5f23-40d3-b3ca-c2be6676068d"
+  },
+  {
+   "id": "mon",
+   "title": "Autorização do MON",
+   "org": "Museu Oscar Niemeyer",
+   "number": "",
+   "valid": "",
+   "detail": "Confirmação por escrito da filmagem e do voo"
+  },
+  {
+   "id": "anuencia",
+   "title": "Termos de anuência",
+   "org": "Participantes",
+   "number": "",
+   "valid": "",
+   "detail": "Um por adulto; responsável assina pelas crianças"
+  },
+  {
+   "id": "imagem",
+   "title": "Autorizações de uso de imagem",
+   "org": "Participantes",
+   "number": "",
+   "valid": "",
+   "detail": "Responsáveis de todas as crianças filmadas"
+  }
+ ],
+ "links": [
+  {
+   "title": "Storyboard (canvas)",
+   "url": "https://claude.ai/artifact/Ky7sWJvSqEXbVWGxN1Qoa2"
+  },
+  {
+   "title": "Autorizações de voo · documento",
+   "url": "https://claude.ai/code/artifact/66e38a17-5a74-4e59-a3fe-2eb23c8f5641"
+  }
+ ],
+ "reports": []
+}

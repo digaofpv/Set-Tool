@@ -1,0 +1,21 @@
+{
+ "piloto": {
+  "nome": "Rodrigo Marchioro Foggiatto",
+  "funcao": "Piloto remoto de drone e operador de câmera"
+ },
+ "docs": [
+  {"id": "anac", "title": "Avaliação Teórica de Piloto de Drone", "org": "ANAC", "number": "", "issued": "2026-07-09", "valid": "", "detail": "Declaração de aprovação na avaliação teórica"},
+  {"id": "sisant-neo2", "title": "Certidão SISANT · DJI Neo 2", "org": "ANAC", "number": "PP-198109155", "valid": "2028-10-05", "detail": "Cadastro da aeronave"},
+  {"id": "reta", "title": "Seguro RETA Drone", "org": "Allseg Seguradora", "number": "1009700003906", "valid": "2027-10-05", "detail": "Responsabilidade civil, vigência a partir de 05/10/2026"}
+ ],
+ "equipamento": {
+  "cameras": ["Blackmagic Pocket Cinema Camera 6K", "Blackmagic URSA Broadcast G2", "Sony A7 IV", "Panasonic Lumix S1H"],
+  "lentes": ["Sigma 18–35 mm f/1.8", "Zeiss Planar 50 mm f/1.4", "Tokina 11–16 mm f/2.8"],
+  "estabilizacao": ["DJI Ronin RS2"],
+  "drones": ["DJI Neo 2 (151 g)", "DJI Neo", "BetaFPV Pavo20 Pro com DJI O4", "Tinywhoop 50 g"]
+ },
+ "presetsMidia": [
+  {"nome": "DJI Neo 2 · 4K (máx. 80 Mb/s)", "mbps": 80},
+  {"nome": "Personalizado", "mbps": 0}
+ ]
+}
