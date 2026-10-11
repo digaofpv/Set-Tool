@@ -1206,5 +1206,17 @@
    "Lapela, sombra e fundo do jardim desfocado"
   ]
  },
- "storyboardImage": "storyboard.jpg"
+ "storyboardImage": "storyboard.jpg",
+ "dayNotes": [
+  "Segunda-feira e feriado nacional (Nossa Senhora Aparecida): confirmar com o MON se o museu abre e quem acompanha a gravação.",
+  "Chegada às 09:15 para montar câmera, balancear o RS2, fazer o checklist do drone e o briefing.",
+  "SARPAS BBI943R7I aprovado para 12/10, das 00:00 às 23:59, VLOS até 60 m, perfil Entorno de Estrutura.",
+  "Drone até 30 m do prédio e no máximo 5 m acima do topo; voos das 10:00 às 10:15, antes do jardim encher.",
+  "Levar a APR impressa, termos de anuência e autorizações de imagem assinados."
+ ],
+ "droneBlock": {
+  "from": "10:00",
+  "to": "10:15",
+  "maxWindKmh": 38
+ }
 }

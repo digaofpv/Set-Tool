@@ -298,7 +298,7 @@ async function boot(){
 }
 async function openProd(path){
   const meta=PRODS.find(p=>p.path===path);
-  P=await getJSON(`producoes/${path}/producao.json`); P.path=path;
+  P=await getJSON(`producoes/${path}/producao.json`); P.path=path; WX.data=null; WX.at=null;
   PT=await getJSON(`producoes/${meta.ptSlug}/produtora.json`).catch(()=>({nome:meta.produtora,contatos:[]}));
   PREFS.slug=path;loadState();save();render();
   if(S.setCode) syncStart(S.setCode); else syncStop();
@@ -466,6 +466,72 @@ function sunDay(iso,lat,lon,tz){
 }
 const dir=az=>['N','NE','L','SE','S','SO','O','NO'][Math.round(az/45)%8];
 
+
+/* ---------- previsão do tempo (Open-Meteo, sem chave) ---------- */
+const WX={data:null,at:null,loading:false,err:''};
+const WMO=c=>c===0?'Céu limpo':c<=1?'Quase limpo':c===2?'Parcialmente nublado':c===3?'Nublado':(c===45||c===48)?'Neblina':c<=57?'Garoa':c<=67?'Chuva':c<=77?'Neve':c<=82?'Pancadas de chuva':'Trovoadas';
+function wxKey(){return 'settool:wx:'+P.path}
+async function loadWeather(force){
+  if(!P||!P.location) return;
+  const cached=store.get(wxKey(),null);
+  if(cached&&!WX.data){WX.data=cached.data;WX.at=cached.at}
+  if(WX.loading) return;
+  if(!force&&WX.at&&Date.now()-WX.at<30*60000) return;
+  WX.loading=true;WX.err='';
+  const L=P.location;
+  const url=`https://api.open-meteo.com/v1/forecast?latitude=${L.lat}&longitude=${L.lon}&hourly=temperature_2m,apparent_temperature,precipitation_probability,precipitation,weather_code,cloud_cover,wind_speed_10m,wind_gusts_10m,wind_direction_10m,uv_index,relative_humidity_2m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,uv_index_max,weather_code&timezone=America%2FSao_Paulo&start_date=${P.date}&end_date=${P.date}&wind_speed_unit=kmh`;
+  try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(j.error)throw new Error(j.reason||'erro');
+    WX.data=j;WX.at=Date.now();store.set(wxKey(),{data:j,at:WX.at})}
+  catch(e){WX.err=navigator.onLine?'Previsão indisponível para esta data ou sem resposta do serviço.':'Sem internet.'}
+  WX.loading=false; if(PREFS.tab==='set') softRender();
+}
+const card16=d=>['N','NE','L','SE','S','SO','O','NO'][Math.round(d/45)%8];
+function wxCard(){
+  const h=WX.data?.hourly, dd=WX.data?.daily;
+  const upd=WX.at?`atualizada às ${new Date(WX.at).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`:'';
+  if(!h||!h.time?.length){
+    return `<div class="card"><h3>Previsão do tempo <span class="count">${fmtDate(P.date)}</span></h3><p class="hint" style="margin:0">${WX.loading?'Buscando previsão…':(WX.err||'A previsão aparece até 16 dias antes da gravação.')}</p><button class="btn sm ghost" data-act="wxreload" style="margin-top:10px">Atualizar</button></div>`;
+  }
+  const w0=mins(P.window.from), w1=mins(P.window.to);
+  const idx=h.time.map((t,i)=>({i,m:Number(t.slice(11,13))*60})).filter(x=>x.m>=w0-60&&x.m<=w1);
+  const inWin=idx.filter(x=>x.m>=w0-0&&x.m<w1);
+  const maxOf=(arr,k)=>Math.max(...arr.map(x=>h[k][x.i]??0));
+  const gust=maxOf(inWin,'wind_gusts_10m'), wind=maxOf(inWin,'wind_speed_10m'), rainP=maxOf(inWin,'precipitation_probability'), uv=maxOf(inWin,'uv_index'), cloud=Math.round(inWin.reduce((a,x)=>a+(h.cloud_cover[x.i]||0),0)/Math.max(1,inWin.length));
+  const lim=P.droneBlock?.maxWindKmh||38;
+  let drone,dc;
+  if(gust>=lim||rainP>=60){drone='Não voar: rajadas ou chuva acima do limite';dc='var(--bad)'}
+  else if(gust>=25||rainP>=35){drone='Atenção: voar baixo, voos curtos, conferir no local';dc='var(--gold)'}
+  else{drone='Condições boas para o Neo 2';dc='var(--done)'}
+  const light=cloud>=70?'Céu fechado: luz difusa, ND mais leve':cloud>=35?'Nuvens variando: a exposição pode mudar entre takes':'Sol direto: ND forte e contraluz';
+  const rows=idx.map(x=>{const i=x.i;const hh=h.time[i].slice(11,16);const inside=x.m>=w0&&x.m<w1;
+    return `<tr style="${inside?'':'color:var(--faint)'}"><td>${hh}</td><td>${Math.round(h.temperature_2m[i])}°</td><td>${h.precipitation_probability[i]??'—'}%</td><td>${Math.round(h.wind_speed_10m[i])}/${Math.round(h.wind_gusts_10m[i])}</td><td>${card16(h.wind_direction_10m[i])}</td><td>${h.cloud_cover[i]}%</td><td>${Math.round(h.uv_index[i]??0)}</td></tr>`}).join('');
+  return `<div class="card"><h3>Previsão do tempo <span class="count">${upd}</span></h3>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px"><div><div class="big">${dd?Math.round(dd.temperature_2m_min[0])+'° / '+Math.round(dd.temperature_2m_max[0])+'°':''}</div><div class="hint" style="margin:2px 0 0">${dd?WMO(dd.weather_code[0]):''} · chuva até ${dd?dd.precipitation_probability_max[0]:'—'}% no dia</div></div></div>
+    <div class="sun" style="margin-top:12px">
+      <div><div class="k">Drone (${P.window.from}–${P.window.to})</div><div class="v" style="font-size:14px;color:${dc};font-family:var(--f-body);font-weight:700">${drone}</div></div>
+      <div><div class="k">Vento máx. / rajada</div><div class="v">${Math.round(wind)}/${Math.round(gust)} km/h</div></div>
+      <div><div class="k">Chuva na janela</div><div class="v">até ${rainP}%</div></div>
+      <div><div class="k">Índice UV máx.</div><div class="v">${Math.round(uv)}${uv>=8?' · alto':''}</div></div>
+    </div>
+    <p class="hint" style="color:var(--fg)">${light}.${uv>=6?' Protetor solar e água para a equipe e a família.':''}</p>
+    <div style="overflow-x:auto;margin-top:8px"><table style="width:100%;border-collapse:collapse;font-family:var(--f-mono);font-size:12.5px;font-variant-numeric:tabular-nums">
+      <thead><tr style="color:var(--muted);text-align:left"><th style="padding:4px 6px 4px 0">Hora</th><th>Temp</th><th>Chuva</th><th>Vento/raj.</th><th>Dir.</th><th>Nuvens</th><th>UV</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    <p class="hint">Vento em km/h. Limite do Neo 2: 38 km/h (10,7 m/s); acima de 25 km/h, voe baixo e com cautela. Fonte: Open-Meteo.</p>
+    <button class="btn sm ghost" data-act="wxreload">Atualizar previsão</button></div>`;
+}
+function dayCard(){
+  if(!P.dayNotes?.length) return '';
+  const [y,m,d]=P.date.split('-').map(Number);
+  const wd=new Date(y,m-1,d).toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
+  const days=Math.round((new Date(y,m-1,d)-new Date(new Date().toDateString()))/86400000);
+  const when=days===0?'hoje':days===1?'amanhã':days>1?`em ${days} dias`:`há ${-days} dias`;
+  return `<div class="card"><h3>Dia da gravação <span class="count">${when}</span></h3>
+    <div class="big" style="font-size:22px">${wd.charAt(0).toUpperCase()+wd.slice(1)}</div>
+    <div class="hint" style="margin:2px 0 10px">${esc(P.location.name)} · ${P.window.from}–${P.window.to}</div>
+    <ul class="qlist">${P.dayNotes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></div>`;
+}
+
 /* ---------- set tools ---------- */
 function renderSet(){
   const L=P.location, sd=sunDay(P.date,L.lat,L.lon,L.tz);
@@ -478,7 +544,8 @@ function renderSet(){
   const cardMin=mbps&&gb?Math.floor(gb*8000/mbps/60):null;
   const batTotal=(Number(S.batMin)||0)*(Number(S.batQty)||0);
   const winLen=w1-w0;
-  let html=syncCard()+`<div class="card"><h3>Claquete</h3><p class="hint" style="margin:0 0 4px">Cena, plano e take em letras grandes para marcar o início de cada plano. O take bom vai direto para a nota do plano.</p>
+  loadWeather();
+  let html=dayCard()+wxCard()+syncCard()+`<div class="card"><h3>Claquete</h3><p class="hint" style="margin:0 0 4px">Cena, plano e take em letras grandes para marcar o início de cada plano. O take bom vai direto para a nota do plano.</p>
     <button class="btn" data-act="slate">Abrir claquete</button></div>`;
   html+=`<div class="card"><h3>Sol do dia <span class="count">${fmtDate(P.date)}</span></h3>
     <div class="sun">
@@ -753,6 +820,7 @@ document.addEventListener('click',async e=>{
     case 'pick': document.getElementById('overlay').innerHTML=''; if(b.dataset.slug!==P.path){try{await openProd(b.dataset.slug)}catch(err){toast('Não consegui abrir essa produção')}} break;
     case 'slate': openSlate(id); break;
     case 'depo': openDepo(); break;
+    case 'wxreload': loadWeather(true); render(); break;
     case 'sbshare': {const url=`producoes/${P.path}/${P.storyboardImage}`; const name=`Storyboard - ${P.project||P.title}.jpg`;
       try{const blob=await (await fetch(url)).blob(); const file=new File([blob],name,{type:'image/jpeg'});
         if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:`Storyboard · ${P.title}`,text:`Storyboard · ${P.project||''} · ${P.title}`})}
