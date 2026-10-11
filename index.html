@@ -285,7 +285,10 @@ async function boot(){
     [INDEX,KIT]=await Promise.all([getJSON('producoes/index.json'),getJSON('kit.json').catch(()=>({docs:[],presetsMidia:[]}))]);
     if(!INDEX.produtoras) INDEX={produtoras:[{slug:'bridge-films',nome:'Bridge Films',producoes:INDEX.producoes||[]}]};
     PRODS=INDEX.produtoras.flatMap(pt=>pt.producoes.map(p=>({...p,path:pt.slug+'/'+p.slug,ptSlug:pt.slug,produtora:pt.nome})));
-    const path=PRODS.some(p=>p.path===PREFS.slug)?PREFS.slug:PRODS[0].path;
+    const qs=new URLSearchParams(location.search); const qp=qs.get('p'), qset=qs.get('set');
+    const path=(qp&&PRODS.some(p=>p.path===qp))?qp:(PRODS.some(p=>p.path===PREFS.slug)?PREFS.slug:PRODS[0].path);
+    if(qset&&qset.length>=12){const k='settool:'+path;const st=store.get(k,{});st.setCode=qset.toLowerCase();store.set(k,st);PREFS.tab='set';}
+    if(qp||qset) history.replaceState(null,'',location.pathname);
     await openProd(path);
   }catch(e){
     document.getElementById('tab-dia').innerHTML=`<div class="card"><h3>Não consegui carregar os dados</h3><p class="hint">Abra o app uma vez com internet para ele guardar a produção no aparelho. Detalhe: ${esc(e.message)}</p></div>`;
@@ -297,6 +300,7 @@ async function openProd(path){
   P=await getJSON(`producoes/${path}/producao.json`); P.path=path;
   PT=await getJSON(`producoes/${meta.ptSlug}/produtora.json`).catch(()=>({nome:meta.produtora,contatos:[]}));
   PREFS.slug=path;loadState();save();render();
+  if(S.setCode) syncStart(S.setCode); else syncStop();
 }
 
 /* ---------- header ---------- */
@@ -309,7 +313,7 @@ function renderHeader(){
   const pendA=P.shots.filter(s=>s.pri==='A'&&!S.done[s.id]).length;
   const a=document.getElementById('alert');
   a.className='alert'+(pendA?'':' ok');
-  a.textContent=pendA?`${d} de ${t} gravados · ${pendA} indispensáveis pendentes`:`${d} de ${t} gravados · indispensáveis completos`;
+  a.innerHTML=esc(pendA?`${d} de ${t} gravados · ${pendA} indispensáveis pendentes`:`${d} de ${t} gravados · indispensáveis completos`)+(S.setCode?`<br><span style="font-weight:500">${syncBadge()}</span>`:'');
 }
 
 /* ---------- shared bits ---------- */
@@ -481,7 +485,7 @@ function renderSet(){
   const cardMin=mbps&&gb?Math.floor(gb*8000/mbps/60):null;
   const batTotal=(Number(S.batMin)||0)*(Number(S.batQty)||0);
   const winLen=w1-w0;
-  let html=`<div class="card"><h3>Claquete</h3><p class="hint" style="margin:0 0 4px">Cena, plano e take em letras grandes para marcar o início de cada plano. O take bom vai direto para a nota do plano.</p>
+  let html=syncCard()+`<div class="card"><h3>Claquete</h3><p class="hint" style="margin:0 0 4px">Cena, plano e take em letras grandes para marcar o início de cada plano. O take bom vai direto para a nota do plano.</p>
     <button class="btn" data-act="slate">Abrir claquete</button></div>`;
   html+=`<div class="card"><h3>Sol do dia <span class="count">${fmtDate(P.date)}</span></h3>
     <div class="sun">
@@ -614,6 +618,112 @@ function renderSlate(){
   </div>`;
 }
 
+
+/* ---------- sincronização da equipe (Firebase) ---------- */
+const FB_V='10.14.1';
+const FB_CFG={apiKey:"AIzaSyA3nN-iGSRMuqg2bs6y4JMudD5fDkrYmj8",authDomain:"set-tool-7e2df.firebaseapp.com",projectId:"set-tool-7e2df",storageBucket:"set-tool-7e2df.firebasestorage.app",messagingSenderId:"9646632908",appId:"1:9646632908:web:2f21943b266a9df273b769"};
+const SYNC={on:false,status:'off',err:'',code:null,uid:null,devices:[],unsubs:[],timers:{},fs:null,db:null,auth:null,beat:null,pendingRender:false,started:false};
+const deviceName=()=>PREFS.device||'Aparelho sem nome';
+function genCode(){const a='abcdefghjkmnpqrstuvwxyz23456789';let r='';const b=new Uint32Array(10);crypto.getRandomValues(b);b.forEach(x=>r+=a[x%a.length]);return (P.slug||'set').slice(0,14)+'-'+r}
+function inviteLink(){const u=new URL(location.href.split('?')[0].split('#')[0]);u.searchParams.set('p',P.path);u.searchParams.set('set',SYNC.code||S.setCode);return u.toString()}
+function softRender(){const a=document.activeElement;if(a&&(a.tagName==='TEXTAREA'||(a.tagName==='INPUT'&&a.type!=='checkbox'))){SYNC.pendingRender=true;return}render()}
+async function syncLoad(){
+  if(SYNC.fs) return;
+  const base=`https://www.gstatic.com/firebasejs/${FB_V}/`;
+  const [appM,authM,fs]=await Promise.all([import(base+'firebase-app.js'),import(base+'firebase-auth.js'),import(base+'firebase-firestore.js')]);
+  const app=appM.initializeApp(FB_CFG);
+  let db; try{db=fs.initializeFirestore(app,{localCache:fs.persistentLocalCache({tabManager:fs.persistentMultipleTabManager()})})}catch(e){db=fs.getFirestore(app)}
+  SYNC.fs=fs;SYNC.db=db;SYNC.auth=authM.getAuth(app);SYNC.authM=authM;
+}
+function syncStop(){SYNC.unsubs.forEach(u=>{try{u()}catch(e){}});SYNC.unsubs=[];clearInterval(SYNC.beat);SYNC.on=false;SYNC.code=null;SYNC.devices=[];SYNC.status='off'}
+async function syncAuth(){
+  const A=SYNC.authM;
+  const user=await new Promise(res=>{const un=A.onAuthStateChanged(SYNC.auth,u=>{un();res(u)})});
+  if(user) return user;
+  return (await A.signInAnonymously(SYNC.auth)).user;
+}
+async function syncStart(code){
+  if(!code||code.length<12||!P) return;
+  syncStop(); SYNC.code=code; SYNC.on=true; SYNC.status='conectando'; SYNC.err=''; softRender();
+  try{
+    await syncLoad();
+    const user=await syncAuth(); SYNC.uid=user.uid;
+    if(SYNC.code!==code) return;
+    const fs=SYNC.fs, db=SYNC.db;
+    let first=true;
+    SYNC.unsubs.push(fs.onSnapshot(fs.collection(db,'sets',code,'marks'),{includeMetadataChanges:true},snap=>{
+      const remote=new Set();
+      snap.forEach(d=>{remote.add(d.id);applyRemote(d.id,d.data())});
+      if(first){first=false;const local=new Set([...Object.keys(S.done),...Object.keys(S.takes),...Object.keys(S.notes),...Object.keys(S.good)]);local.forEach(id=>{if(!remote.has(id))pushShot(id,true)})}
+      SYNC.status=snap.metadata.fromCache?'offline':'ok'; save(); softRender();
+    },err=>{SYNC.status='erro';SYNC.err=err.code||err.message;softRender()}));
+    let firstEq=true;
+    SYNC.unsubs.push(fs.onSnapshot(fs.collection(db,'sets',code,'eq'),snap=>{
+      const remote=new Set();
+      snap.forEach(d=>{remote.add(d.id);if(d.data().v)S.eq[d.id]=true;else delete S.eq[d.id]});
+      if(firstEq){firstEq=false;Object.keys(S.eq).forEach(k=>{if(!remote.has(k))pushEq(k)})}
+      save(); softRender();
+    },()=>{}));
+    const devRef=fs.doc(db,'sets',code,'devices',SYNC.uid);
+    const beat=()=>fs.setDoc(devRef,{name:deviceName(),at:fs.serverTimestamp()},{merge:true}).catch(()=>{});
+    beat(); SYNC.beat=setInterval(beat,60000);
+    SYNC.unsubs.push(fs.onSnapshot(fs.collection(db,'sets',code,'devices'),snap=>{
+      const now=Date.now(); SYNC.devices=[];
+      snap.forEach(d=>{const v=d.data();const t=v.at?.toMillis?v.at.toMillis():now;if(now-t<180000)SYNC.devices.push({name:v.name||'Aparelho',me:d.id===SYNC.uid})});
+      softRender();
+    },()=>{}));
+  }catch(e){const code=e.code||e.message||'';SYNC.status=(!navigator.onLine||/network|unavailable|offline/i.test(code))?'offline':'erro';SYNC.err=code;softRender()}
+}
+setInterval(()=>{if(S&&S.setCode&&(SYNC.status==='offline'||SYNC.status==='erro')&&navigator.onLine)syncStart(S.setCode)},30000);
+function applyRemote(id,v){
+  if(v.done)S.done[id]=true;else delete S.done[id];
+  if(v.takes)S.takes[id]=v.takes;else delete S.takes[id];
+  if(v.good)S.good[id]=v.good;else delete S.good[id];
+  const typing=document.activeElement&&document.activeElement.id===`note-${id}`;
+  if(!typing){if(v.note)S.notes[id]=v.note;else delete S.notes[id]}
+}
+function pushShot(id,now){
+  if(!SYNC.on||!SYNC.fs||!SYNC.uid) return;
+  clearTimeout(SYNC.timers[id]);
+  const go=()=>{const fs=SYNC.fs;fs.setDoc(fs.doc(SYNC.db,'sets',SYNC.code,'marks',id),{done:!!S.done[id],takes:S.takes[id]||0,good:S.good[id]||null,note:S.notes[id]||'',by:deviceName(),at:fs.serverTimestamp()}).catch(e=>{SYNC.status='erro';SYNC.err=e.code||e.message;softRender()})};
+  if(now) go(); else SYNC.timers[id]=setTimeout(go,500);
+}
+function pushEq(k){if(!SYNC.on||!SYNC.fs||!SYNC.uid)return;const fs=SYNC.fs;fs.setDoc(fs.doc(SYNC.db,'sets',SYNC.code,'eq',k),{v:!!S.eq[k],by:deviceName(),at:fs.serverTimestamp()}).catch(()=>{})}
+window.addEventListener('online',()=>{if(S&&S.setCode&&(SYNC.status==='erro'||SYNC.status==='offline'))syncStart(S.setCode)});
+function syncBadge(){
+  if(!S||!S.setCode) return '';
+  const n=SYNC.devices.length;
+  const map={ok:['var(--done)',`sincronizado · ${n} aparelho${n===1?'':'s'}`],offline:['var(--gold)','sem sinal · envia quando voltar'],conectando:['var(--muted)','conectando…'],erro:['var(--bad)','erro na sincronização'],off:['var(--faint)','sincronização parada']};
+  const [c,t]=map[SYNC.status]||map.off;
+  return `<span style="color:${c}">● ${t}</span>`;
+}
+function syncCard(){
+  if(!S.setCode){
+    return `<div class="card"><h3>Sincronização da equipe</h3>
+      <p class="hint" style="margin:0 0 10px">Marcações, takes, notas e checklist aparecem em todos os aparelhos do set em tempo real. Sem sinal, o app continua funcionando e envia tudo quando a conexão voltar.</p>
+      <label class="f" for="devName">Nome deste aparelho<input id="devName" type="text" data-pref="device" value="${esc(PREFS.device||'')}" placeholder="Ex.: iPhone Rodrigo"></label>
+      <button class="btn" data-act="synccreate">Criar set para esta produção</button>
+      <div class="row2" style="margin-top:12px;align-items:flex-end"><label class="f" for="joinCode">Ou entre com um código<input id="joinCode" type="text" autocapitalize="off" autocomplete="off" placeholder="art-hunter-mon-xxxxxxxxxx"></label><button class="btn sm ghost" data-act="syncjoin" style="min-height:46px">Entrar</button></div></div>`;
+  }
+  const n=SYNC.devices.length;
+  return `<div class="card"><h3>Sincronização da equipe <span class="count">${syncBadge()}</span></h3>
+    ${SYNC.status==='erro'?`<p class="hint" style="color:var(--bad);margin:0 0 8px">Não consegui sincronizar (${esc(SYNC.err)}). As marcações continuam salvas neste aparelho.</p><button class="btn sm ghost" data-act="syncretry">Tentar de novo</button>`:''}
+    <dl class="kv" style="margin-top:8px"><dt>Este aparelho</dt><dd>${esc(deviceName())}</dd><dt>No set agora</dt><dd>${n?SYNC.devices.map(d=>esc(d.name)+(d.me?' (este)':'')).join(', '):'—'}</dd><dt>Código</dt><dd class="dnum" style="word-break:break-all">${esc(S.setCode)}</dd></dl>
+    <div id="qr" style="background:#fff;border-radius:12px;padding:12px;width:204px;height:204px;margin:14px auto 0"></div>
+    <p class="hint" style="text-align:center">Aponte a câmera de outro iPhone para entrar neste set.</p>
+    <button class="btn" data-act="syncshare">Compartilhar convite</button>
+    <label class="f" for="devName2" style="margin-top:12px">Nome deste aparelho<input id="devName2" type="text" data-pref="device" value="${esc(PREFS.device||'')}" placeholder="Ex.: iPhone Rodrigo"></label>
+    <button class="btn ghost" data-act="syncleave">Sair do set neste aparelho</button></div>`;
+}
+let qrLib=null;
+function drawQR(){
+  const el=document.getElementById('qr'); if(!el||!S.setCode) return;
+  const draw=()=>{el.innerHTML='';try{new QRCode(el,{text:inviteLink(),width:180,height:180,colorDark:'#000000',colorLight:'#ffffff'})}catch(e){el.textContent='QR indisponível'}};
+  if(window.QRCode) return draw();
+  if(!qrLib){qrLib=new Promise((res,rej)=>{const sc=document.createElement('script');sc.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';sc.onload=res;sc.onerror=rej;document.head.appendChild(sc)})}
+  qrLib.then(draw).catch(()=>{el.style.height='auto';el.style.color='#000';el.textContent='Sem internet para gerar o QR. Use o código acima.'});
+}
+
 /* ---------- render + events ---------- */
 const TABS=['dia','planos','board','set','docs','fim'];
 function render(){
@@ -621,6 +731,7 @@ function render(){
   renderHeader();
   for(const t of TABS){document.getElementById('tab-'+t).hidden=PREFS.tab!==t;document.getElementById('b-'+t).setAttribute('aria-selected',PREFS.tab===t)}
   ({dia:renderDia,planos:renderPlanos,board:renderBoard,set:renderSet,docs:renderDocs,fim:renderFim})[PREFS.tab]();
+  if(PREFS.tab==='set') drawQR();
   if(PREFS.tab==='dia'&&!scrolledNow){const el=document.getElementById('blkNow');if(el){scrolledNow=true;setTimeout(()=>el.scrollIntoView({block:'start',behavior:'smooth'}),50)}}
 }
 function copyText(txt,okMsg,selectEl){
@@ -634,26 +745,32 @@ document.addEventListener('click',async e=>{
   const act=b.dataset.act, id=b.dataset.id||b.closest('[data-id]')?.dataset.id;
   if(act==='closeov'&&e.target!==b&&b.classList.contains('sheet')) return;
   switch(act){
-    case 'toggle': S.done[id]=!S.done[id]; if(!S.done[id]) delete S.done[id]; save(); render(); break;
+    case 'toggle': S.done[id]=!S.done[id]; if(!S.done[id]) delete S.done[id]; save(); pushShot(id,true); render(); break;
     case 'open': UI.open=UI.open===id?null:id; render(); break;
-    case 'plus': S.takes[id]=(S.takes[id]||0)+1; save(); render(); break;
-    case 'minus': S.takes[id]=Math.max(0,(S.takes[id]||0)-1); if(!S.takes[id]) delete S.takes[id]; save(); render(); break;
-    case 'eq': {const k=b.dataset.eq; S.eq[k]=!S.eq[k]; if(!S.eq[k]) delete S.eq[k]; save(); render(); break}
+    case 'plus': S.takes[id]=(S.takes[id]||0)+1; save(); pushShot(id); render(); break;
+    case 'minus': S.takes[id]=Math.max(0,(S.takes[id]||0)-1); if(!S.takes[id]) delete S.takes[id]; save(); pushShot(id); render(); break;
+    case 'eq': {const k=b.dataset.eq; S.eq[k]=!S.eq[k]; if(!S.eq[k]) delete S.eq[k]; save(); pushEq(k); render(); break}
     case 'copyrep': copyText(report(),'Relatório copiado',document.getElementById('rep')); break;
     case 'copy': copyText(b.dataset.text,'Número copiado'); break;
     case 'askreset': UI.confirmReset=true; render(); break;
     case 'cancel': UI.confirmReset=false; render(); break;
-    case 'reset': S.done={};S.notes={};S.takes={};S.good={};S.eq={};UI.confirmReset=false;save();render();toast('Marcações apagadas'); break;
+    case 'reset': {const ids=new Set([...Object.keys(S.done),...Object.keys(S.takes),...Object.keys(S.notes),...Object.keys(S.good)]);const eqs=Object.keys(S.eq);S.done={};S.notes={};S.takes={};S.good={};S.eq={};UI.confirmReset=false;save();ids.forEach(x=>pushShot(x,true));eqs.forEach(pushEq);render();toast(S.setCode?'Marcações apagadas em todos os aparelhos':'Marcações apagadas'); break}
     case 'prods': if(INDEX) renderProds(); break;
     case 'closeov': document.getElementById('overlay').innerHTML=''; break;
     case 'pick': document.getElementById('overlay').innerHTML=''; if(b.dataset.slug!==P.path){try{await openProd(b.dataset.slug)}catch(err){toast('Não consegui abrir essa produção')}} break;
     case 'slate': openSlate(id); break;
     case 'depo': openDepo(); break;
+    case 'synccreate': if(!PREFS.device){toast('Dê um nome a este aparelho');document.getElementById('devName')?.focus();break} S.setCode=genCode(); save(); syncStart(S.setCode); toast('Set criado'); break;
+    case 'syncjoin': {const c=(document.getElementById('joinCode')?.value||'').trim().toLowerCase(); if(c.length<12){toast('Código inválido');break} if(!PREFS.device)PREFS.device='Aparelho'; S.setCode=c; save(); syncStart(c); toast('Entrando no set…'); break}
+    case 'syncretry': syncStart(S.setCode); break;
+    case 'syncleave': syncStop(); delete S.setCode; save(); render(); toast('Este aparelho saiu do set'); break;
+    case 'syncshare': {const url=inviteLink(); const text=`Set Tool · ${P.project||P.title}: entre no set pelo link`;
+      if(navigator.share){navigator.share({title:'Set Tool',text,url}).catch(()=>{})} else copyText(url,'Link copiado'); break}
     case 'detail': openDetail(id); break;
     case 'closeslate': SLATE=null; renderSlate(); render(); break;
     case 'slatemin': SLATE.take=Math.max(1,SLATE.take-1); renderSlate(); break;
-    case 'slatenext': S.takes[SLATE.id]=Math.max(S.takes[SLATE.id]||0,SLATE.take); SLATE.take++; save(); renderSlate(); break;
-    case 'slategood': {const sid=SLATE.id,tk=SLATE.take; S.takes[sid]=Math.max(S.takes[sid]||0,tk); S.good[sid]=tk; S.done[sid]=true; save(); toast(`${sid}: take ${tk} marcado como bom`); SLATE=null; renderSlate(); render(); break}
+    case 'slatenext': S.takes[SLATE.id]=Math.max(S.takes[SLATE.id]||0,SLATE.take); SLATE.take++; save(); pushShot(SLATE.id); renderSlate(); break;
+    case 'slategood': {const sid=SLATE.id,tk=SLATE.take; S.takes[sid]=Math.max(S.takes[sid]||0,tk); S.good[sid]=tk; S.done[sid]=true; save(); pushShot(sid,true); toast(`${sid}: take ${tk} marcado como bom`); SLATE=null; renderSlate(); render(); break}
     case 'docopen': {const rec=await idb.get(b.dataset.key).catch(()=>null); if(!rec){toast('Arquivo não encontrado');break}
       const url=URL.createObjectURL(rec.blob); const a=document.createElement('a'); a.href=url; a.target='_blank'; a.rel='noopener'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(url),60000); break}
     case 'docdel': try{await idb.del(b.dataset.key);FILEKEYS.delete(b.dataset.key);toast('Arquivo removido')}catch(err){toast('Não consegui remover')} render(); break;
@@ -661,12 +778,14 @@ document.addEventListener('click',async e=>{
 });
 document.addEventListener('input',e=>{
   const t=e.target;
-  if(t.dataset.act==='note'){const id=t.closest('[data-id]').dataset.id; if(t.value) S.notes[id]=t.value; else delete S.notes[id]; save()}
+  if(t.dataset.act==='note'){const id=t.closest('[data-id]').dataset.id; if(t.value) S.notes[id]=t.value; else delete S.notes[id]; save(); pushShot(id)}
+  if(t.dataset.pref==='device'){PREFS.device=t.value.trim();save()}
   if(t.dataset.field==='card'){S.card=t.value;save()}
 });
 document.addEventListener('change',async e=>{
   const t=e.target;
-  if(t.dataset.act==='note') render();
+  if(t.dataset.act==='note'||SYNC.pendingRender){SYNC.pendingRender=false;render()}
+  if(t.dataset.pref==='device'&&SYNC.on){syncStart(S.setCode)}
   if(t.dataset.field&&t.dataset.field!=='card'){S[t.dataset.field]=t.value; save(); render()}
   if(t.dataset.act==='slateshot'){SLATE={id:t.value,take:(S.takes[t.value]||0)+1};renderSlate()}
   if(t.dataset.act==='docfile'&&t.files[0]){const file=t.files[0];

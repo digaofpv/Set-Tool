@@ -33,6 +33,23 @@ producoes/<produtora>/<producao>/relatorios/      relatórios de fim do dia
 2. No set, marque os planos, conte takes e use a claquete. As marcações ficam salvas no aparelho.
 3. No fim do dia, copie o relatório na aba Fim e cole na conversa. O Claude salva em `relatorios/` e atualiza o histórico.
 
+## Sincronização da equipe
+
+Na aba Set, crie um set para a produção e compartilhe o convite (link ou QR). Marcações, takes, take bom, notas e checklist de equipamento aparecem em todos os aparelhos em tempo real, pelo Firebase (projeto `set-tool-7e2df`). Sem sinal, o app continua funcionando e envia tudo quando a conexão volta. Cada plano é salvo separadamente, então dois aparelhos podem marcar ao mesmo tempo.
+
+Regras do Firestore usadas:
+
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /sets/{setId}/{document=**} {
+      allow read, write: if request.auth != null && setId.size() >= 12;
+    }
+  }
+}
+```
+
 ## Privacidade
 
-O repositório é público. Ele guarda apenas números e validades dos documentos; os arquivos (PDFs, fotos) anexados na aba Docs ficam só no aparelho, sem passar pelo GitHub. Não coloque CPF, endereço pessoal ou cópias de documentos nos arquivos JSON.
+O repositório é público. Os dados do Firebase (marcações e notas) só são acessíveis a quem tem o código do set. Ele guarda apenas números e validades dos documentos; os arquivos (PDFs, fotos) anexados na aba Docs ficam só no aparelho, sem passar pelo GitHub. Não coloque CPF, endereço pessoal ou cópias de documentos nos arquivos JSON.
