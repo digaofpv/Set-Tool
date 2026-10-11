@@ -103,6 +103,15 @@ label.f{display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--
 .mini button{display:flex;gap:8px;align-items:center;text-align:left;padding:7px 0;font-size:13.5px;min-height:38px;width:100%}
 .mbox{width:20px;height:20px;border-radius:6px;border:2px solid var(--faint);flex:none;display:flex;align-items:center;justify-content:center}
 .mbox svg{width:12px;height:12px;opacity:0}
+.mrow{display:flex;align-items:center;gap:4px}
+.mini .mrow>button:first-child{flex:1;min-width:0;width:auto}
+.mini .minfo{width:34px;min-height:34px;padding:0;justify-content:center}
+.minfo{width:34px;height:34px;flex:none;border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--faint)}
+.minfo svg{width:17px;height:17px}
+.next{background:var(--surface);border:1px solid var(--gold);border-radius:14px;padding:14px;margin-top:14px}
+.next .ttl{font-family:var(--f-display);font-weight:700;font-size:19px;line-height:1.2;margin:4px 0 2px}
+.next .acts{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;margin-top:12px}
+.next .acts .btn{margin:0;min-height:52px}
 .mini .done .mbox{background:var(--done);border-color:var(--done)}
 .mini .done .mbox svg{opacity:1}
 .mini .done .t{color:var(--muted);text-decoration:line-through}
@@ -306,14 +315,26 @@ function renderHeader(){
 /* ---------- shared bits ---------- */
 const lensOf=s=>s.lens&&s.lens[0]!=='—'?s.lens[0]:'';
 function miniList(items){
-  return `<div class="mini">${items.map(s=>`<button class="${S.done[s.id]?'done':''}" data-act="toggle" data-id="${s.id}" aria-pressed="${!!S.done[s.id]}"><span class="mbox">${CHECK}</span><span class="c">${s.id}</span><span class="t">${esc(s.title)}${s.pri==='A'?'':' <span style="color:var(--faint)">· extra</span>'}</span>${s.dual?'<span class="dl">9:16+16:9</span>':''}${lensOf(s)?`<span class="l">${esc(lensOf(s))}</span>`:''}</button>`).join('')}</div>`;
+  return `<div class="mini">${items.map(s=>`<div class="mrow${S.done[s.id]?' done':''}"><button data-act="toggle" data-id="${s.id}" aria-pressed="${!!S.done[s.id]}"><span class="mbox">${CHECK}</span><span class="c">${s.id}</span><span class="t">${esc(s.title)}${s.pri==='A'?'':' <span style="color:var(--faint)">· extra</span>'}</span>${s.dual?'<span class="dl">9:16+16:9</span>':''}${lensOf(s)?`<span class="l">${esc(lensOf(s))}</span>`:''}</button><button class="minfo" data-act="detail" data-id="${s.id}" aria-label="Detalhamento de ${s.id}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></button></div>`).join('')}</div>`;
 }
 
 /* ---------- ordem do dia ---------- */
 function renderDia(){
   const now=new Date(), nm=now.getHours()*60+now.getMinutes();
   const today=`${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}`===P.date;
-  let html=P.lightNote?`<div class="light">${P.lightNote}</div>`:'';
+  let html='';
+  // próximo plano: bloco atual (ou o primeiro com pendências) e seu primeiro plano pendente
+  const timed=P.day.filter(b=>b.shots.length);
+  let cur=today?timed.find(b=>b.from&&nm>=mins(b.from)&&nm<mins(b.to)):null;
+  const hasPend=b=>b.shots.some(x=>!S.done[x]);
+  if(!cur||!hasPend(cur)) cur=timed.find(b=>!b.extra&&hasPend(b))||timed.find(hasPend);
+  if(cur){const nx=shotById(cur.shots.find(x=>!S.done[x]));const left=cur.shots.filter(x=>!S.done[x]).length;
+    html+=`<div class="next"><div class="bhead"><span class="eyebrow" style="color:var(--gold)">Próximo plano</span><span class="count">${esc(cur.t)} · faltam ${left}</span></div>
+      <div class="ttl"><span style="font-family:var(--f-mono);font-size:14px;color:var(--muted);margin-right:6px">${nx.id}</span>${esc(nx.title)}</div>
+      <div class="bnote" style="margin:0">${esc(nx.frame)}${lensOf(nx)?` · <span style="color:var(--gold)">${esc(lensOf(nx))}</span>`:''}${nx.dual?' · <span style="color:#8FD3D3">9:16 + 16:9</span>':''}</div>
+      <div class="acts"><button class="btn" data-act="toggle" data-id="${nx.id}">Gravado ✓</button><button class="btn ghost" data-act="detail" data-id="${nx.id}">Detalhes</button><button class="btn ghost" data-act="slate" data-id="${nx.id}">Claquete</button></div></div>`;
+  } else html+=`<div class="next"><span class="eyebrow" style="color:var(--done)">Tudo gravado</span><div class="ttl">Nenhum plano pendente</div></div>`;
+  html+=P.lightNote?`<div class="light">${P.lightNote}</div>`:'';
   for(const b of P.day){
     const items=b.shots.map(shotById).filter(Boolean);
     const st=stats(items), pendA=items.filter(s=>s.pri==='A'&&!S.done[s.id]).length;
@@ -322,12 +343,13 @@ function renderDia(){
     else if(today&&b.from){const f=mins(b.from),t=mins(b.to);
       if(nm>=f&&nm<t){cls=' now';badge='<span class="badge now">agora</span>'}
       else if(nm>=t&&pendA){cls=' late';badge=`<span class="badge late">${pendA} pendente${pendA>1?'s':''}</span>`}}
-    html+=`<div class="blk${cls}"><div class="bhead"><span class="btime">${esc(b.t)}</span>${badge}</div>
+    html+=`<div class="blk${cls}" ${cls===' now'?'id="blkNow"':''}><div class="bhead"><span class="btime">${esc(b.t)}</span>${badge}</div>
       <div class="btitle">${esc(b.title)}</div><p class="bnote">${esc(b.note)}${b.lens?` <span style="color:var(--gold)">Lentes: ${esc(b.lens)}.</span>`:''}</p>
       ${items.length?miniList(items):''}${b.shots.includes('E1')&&P.depoimento?'<button class="btn sm ghost" data-act="depo" style="margin:6px 0 8px">Perguntas do depoimento</button>':''}</div>`;
   }
   document.getElementById('tab-dia').innerHTML=html;
 }
+let scrolledNow=false;
 
 /* ---------- planos ---------- */
 function shotRow(s){
@@ -599,6 +621,7 @@ function render(){
   renderHeader();
   for(const t of TABS){document.getElementById('tab-'+t).hidden=PREFS.tab!==t;document.getElementById('b-'+t).setAttribute('aria-selected',PREFS.tab===t)}
   ({dia:renderDia,planos:renderPlanos,board:renderBoard,set:renderSet,docs:renderDocs,fim:renderFim})[PREFS.tab]();
+  if(PREFS.tab==='dia'&&!scrolledNow){const el=document.getElementById('blkNow');if(el){scrolledNow=true;setTimeout(()=>el.scrollIntoView({block:'start',behavior:'smooth'}),50)}}
 }
 function copyText(txt,okMsg,selectEl){
   const fb=()=>{if(selectEl){const r=document.createRange();r.selectNodeContents(selectEl);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);toast('Texto selecionado: toque em Copiar')}else toast('Não foi possível copiar')};
