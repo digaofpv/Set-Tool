@@ -262,6 +262,7 @@ async function getJSON(u){const r=await fetch(u,{cache:'no-cache'});if(!r.ok)thr
 async function boot(){
   try{
     [INDEX,KIT]=await Promise.all([getJSON('producoes/index.json'),getJSON('kit.json').catch(()=>({docs:[],presetsMidia:[]}))]);
+    if(!INDEX.produtoras) INDEX={produtoras:[{slug:'bridge-films',nome:'Bridge Films',producoes:INDEX.producoes||[]}]};
     PRODS=INDEX.produtoras.flatMap(pt=>pt.producoes.map(p=>({...p,path:pt.slug+'/'+p.slug,ptSlug:pt.slug,produtora:pt.nome})));
     const path=PRODS.some(p=>p.path===PREFS.slug)?PREFS.slug:PRODS[0].path;
     await openProd(path);
@@ -593,7 +594,11 @@ document.addEventListener('change',async e=>{
 });
 setInterval(()=>{if(PREFS.tab==='dia'||PREFS.tab==='set')render()},60000);
 boot();
-try{if('serviceWorker' in navigator&&location.protocol==='https:'&&!/claude/.test(location.hostname))navigator.serviceWorker.register('sw.js').catch(()=>{})}catch(e){}
+try{if('serviceWorker' in navigator&&location.protocol==='https:'&&!/claude/.test(location.hostname)){
+  const hadController=!!navigator.serviceWorker.controller; let reloaded=false;
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{if(hadController&&!reloaded){reloaded=true;location.reload()}});
+  navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});
+}}catch(e){}
 </script>
 </body>
 </html>
