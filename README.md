@@ -21,14 +21,15 @@ No iPhone: Safari → Compartilhar → Adicionar à Tela de Início. Depois do p
 ```
 index.html                 app
 kit.json                   piloto, documentos permanentes, equipamento e bitrates
-producoes/index.json       lista de produções
-producoes/<slug>/producao.json   planos, cenas, ordem do dia, equipamento, contatos e documentos
-producoes/<slug>/relatorios/     relatórios de fim do dia
+producoes/index.json                              produtoras e suas produções
+producoes/<produtora>/produtora.json              contatos e notas da produtora
+producoes/<produtora>/<producao>/producao.json    planos, cenas, ordem do dia, equipamento, contatos e documentos
+producoes/<produtora>/<producao>/relatorios/      relatórios de fim do dia
 ```
 
 ## Fluxo com o Claude
 
-1. Mande o roteiro para o Claude. Ele cria `producoes/<slug>/producao.json` e acrescenta a produção em `producoes/index.json`.
+1. Mande o roteiro para o Claude, dizendo a produtora. Ele cria `producoes/<produtora>/<producao>/producao.json` e acrescenta a produção em `producoes/index.json`.
 2. No set, marque os planos, conte takes e use a claquete. As marcações ficam salvas no aparelho.
 3. No fim do dia, copie o relatório na aba Fim e cole na conversa. O Claude salva em `relatorios/` e atualiza o histórico.
 

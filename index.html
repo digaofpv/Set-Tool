@@ -240,9 +240,9 @@ const mins=h=>{const [a,b]=h.split(':').map(Number);return a*60+b};
 /* ---------- storage ---------- */
 const store={get(k,f){try{const v=localStorage.getItem(k);return v?JSON.parse(v):f}catch(e){return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let PREFS=store.get('settool:prefs',{slug:null,tab:'dia',filter:'todos'});
-let INDEX=null, KIT=null, P=null, S=null, UI={open:null,confirmReset:false};
-function stateKey(){return 'settool:'+P.slug}
-function loadState(){S=Object.assign({done:{},notes:{},takes:{},good:{},eq:{},card:'',batMin:'',batQty:'',cardGb:'',preset:0,custom:''},store.get(stateKey(),{}))}
+let INDEX=null, PRODS=[], PT=null, KIT=null, P=null, S=null, UI={open:null,confirmReset:false};
+function stateKey(){return 'settool:'+P.path}
+function loadState(){const old=store.get('settool:'+P.slug,null);if(old&&!store.get(stateKey(),null))store.set(stateKey(),old);S=Object.assign({done:{},notes:{},takes:{},good:{},eq:{},card:'',batMin:'',batQty:'',cardGb:'',preset:0,custom:''},store.get(stateKey(),{}))}
 function save(){store.set(stateKey(),S);store.set('settool:prefs',PREFS)}
 
 /* files for docs (IndexedDB, stays on this device) */
@@ -262,16 +262,19 @@ async function getJSON(u){const r=await fetch(u,{cache:'no-cache'});if(!r.ok)thr
 async function boot(){
   try{
     [INDEX,KIT]=await Promise.all([getJSON('producoes/index.json'),getJSON('kit.json').catch(()=>({docs:[],presetsMidia:[]}))]);
-    const slug=(PREFS.slug&&INDEX.producoes.some(p=>p.slug===PREFS.slug))?PREFS.slug:INDEX.producoes[0].slug;
-    await openProd(slug);
+    PRODS=INDEX.produtoras.flatMap(pt=>pt.producoes.map(p=>({...p,path:pt.slug+'/'+p.slug,ptSlug:pt.slug,produtora:pt.nome})));
+    const path=PRODS.some(p=>p.path===PREFS.slug)?PREFS.slug:PRODS[0].path;
+    await openProd(path);
   }catch(e){
     document.getElementById('tab-dia').innerHTML=`<div class="card"><h3>Não consegui carregar os dados</h3><p class="hint">Abra o app uma vez com internet para ele guardar a produção no aparelho. Detalhe: ${esc(e.message)}</p></div>`;
   }
   try{FILEKEYS=new Set(await idb.keys())}catch(e){}
 }
-async function openProd(slug){
-  P=await getJSON(`producoes/${slug}/producao.json`);
-  PREFS.slug=slug;loadState();save();render();
+async function openProd(path){
+  const meta=PRODS.find(p=>p.path===path);
+  P=await getJSON(`producoes/${path}/producao.json`); P.path=path;
+  PT=await getJSON(`producoes/${meta.ptSlug}/produtora.json`).catch(()=>({nome:meta.produtora,contatos:[]}));
+  PREFS.slug=path;loadState();save();render();
 }
 
 /* ---------- header ---------- */
@@ -279,7 +282,7 @@ function renderHeader(){
   const {d,t}=stats(P.shots);
   document.getElementById('pct').textContent=Math.round(d/t*100)+'%';
   document.getElementById('ringArc').setAttribute('stroke-dashoffset',(138.2*(1-d/t)).toFixed(1));
-  document.getElementById('hEyebrow').textContent=`${P.client} · ${fmtDate(P.date)}`;
+  document.getElementById('hEyebrow').textContent=`${PT?.nome||P.produtora||''} · ${P.client} · ${fmtDate(P.date)}`;
   document.getElementById('hTitle').textContent=P.title;
   const pendA=P.shots.filter(s=>s.pri==='A'&&!S.done[s.id]).length;
   const a=document.getElementById('alert');
@@ -458,6 +461,7 @@ function renderDocs(){
   const L=P.location, sar=(P.docs||[]).find(d=>d.id==='sarpas');
   let html=`<div class="card"><h3>Ficha da produção</h3><dl class="kv">
     <dt>Projeto</dt><dd>${esc(P.project||'')} · ${esc(P.title)}</dd>
+    <dt>Produtora</dt><dd>${esc(PT?.nome||'')}</dd>
     <dt>Cliente</dt><dd>${esc(P.client)}</dd>
     <dt>Local</dt><dd>${esc(L.name)}<br><span style="color:var(--muted)">${esc(L.address)}</span></dd>
     <dt>Data</dt><dd>${fmtDate(P.date)}, ${P.window.from}–${P.window.to}</dd>
@@ -465,8 +469,9 @@ function renderDocs(){
     ${sar?`<dt>SARPAS</dt><dd class="dnum">${esc(sar.number)}</dd>`:''}
     <dt>Piloto</dt><dd>${esc(KIT.piloto?.nome||'')}</dd></dl>
     <a class="btn ghost" href="https://maps.apple.com/?ll=${L.lat},${L.lon}&q=${encodeURIComponent(L.name)}" target="_blank" rel="noopener">Abrir no Mapas</a></div>`;
-  html+=`<div class="card"><h3>Contatos</h3>${(P.contacts||[]).map(c=>`<div class="contact"><span><b>${esc(c.role)}</b>${c.name?`<br><span style="color:var(--muted)">${esc(c.name)}</span>`:''}</span>${c.phone?`<span class="ph">${esc(c.phone)}</span>`:'<span style="color:var(--faint);font-size:12.5px">preencher</span>'}</div>`).join('')}
-    <p class="hint">Os contatos ficam no producao.json desta gravação.</p></div>`;
+  const contacts=[...(PT?.contatos||[]).map(c=>({...c,role:`${PT.nome} · ${c.role}`})),...(P.contacts||[])];
+  html+=`<div class="card"><h3>Contatos</h3>${contacts.map(c=>`<div class="contact"><span><b>${esc(c.role)}</b>${c.name?`<br><span style="color:var(--muted)">${esc(c.name)}</span>`:''}</span>${c.phone?`<span class="ph">${esc(c.phone)}</span>`:'<span style="color:var(--faint);font-size:12.5px">preencher</span>'}</div>`).join('')}
+    <p class="hint">Contatos da produtora ficam em produtora.json; os desta gravação, no producao.json.</p></div>`;
   html+=`<div class="card"><h3>Documentos da gravação</h3>${(P.docs||[]).map(d=>docCard(d,P.slug)).join('')}</div>`;
   html+=`<div class="card"><h3>Piloto e aeronaves</h3>${(KIT.docs||[]).map(d=>docCard(d,'kit')).join('')}
     <p class="hint">Os arquivos anexados ficam só neste aparelho e abrem sem internet. O repositório guarda apenas números e validades.</p></div>`;
@@ -492,7 +497,7 @@ function renderFim(){
   html+=`<div class="card"><h3>Relatório do dia</h3><pre class="report" id="rep">${esc(report())}</pre>
     <button class="btn" data-act="copyrep">Copiar relatório</button>
     <p class="hint">Cole no WhatsApp da equipe. Para guardar no histórico desta produção, cole na conversa com o Claude.</p></div>`;
-  html+=`<div class="card"><h3>Histórico <span class="count">${(P.reports||[]).length}</span></h3>${(P.reports||[]).length?P.reports.map(r=>`<a class="btn ghost" href="producoes/${P.slug}/relatorios/${esc(r.file)}" target="_blank" rel="noopener">${fmtDate(r.date)} · ${esc(r.summary||r.file)}</a>`).join(''):'<p class="hint" style="margin:0">Nenhum relatório salvo ainda.</p>'}</div>`;
+  html+=`<div class="card"><h3>Histórico <span class="count">${(P.reports||[]).length}</span></h3>${(P.reports||[]).length?P.reports.map(r=>`<a class="btn ghost" href="producoes/${P.path}/relatorios/${esc(r.file)}" target="_blank" rel="noopener">${fmtDate(r.date)} · ${esc(r.summary||r.file)}</a>`).join(''):'<p class="hint" style="margin:0">Nenhum relatório salvo ainda.</p>'}</div>`;
   html+=`<div class="card"><h3>Recomeçar</h3><p class="hint" style="margin:0">Apaga marcações, takes, notas e checklist desta produção neste aparelho.</p>
     ${UI.confirmReset?`<div class="confirm"><button class="btn ghost" data-act="cancel">Cancelar</button><button class="btn danger" data-act="reset">Apagar tudo</button></div>`:`<button class="btn ghost" data-act="askreset">Limpar marcações</button>`}</div>`;
   document.getElementById('tab-fim').innerHTML=html;
@@ -502,8 +507,9 @@ function renderFim(){
 function renderProds(){
   document.getElementById('overlay').innerHTML=`<div class="sheet" data-act="closeov"><div class="panel" role="dialog" aria-label="Produções">
     <div class="eyebrow">Set Tool</div><h3 style="margin:4px 0 0;font-family:var(--f-display);font-size:20px">Produções</h3>
-    ${INDEX.producoes.map(p=>`<button class="prod" data-act="pick" data-slug="${p.slug}" aria-current="${p.slug===P.slug}"><div style="font-weight:700">${esc(p.title)}</div><div class="hint" style="margin:2px 0 0">${esc(p.client)} · ${fmtDate(p.date)} · ${esc(p.status||'')}</div></button>`).join('')}
-    <p class="hint">Produção nova: mande o roteiro para o Claude, que cria a pasta e ela aparece aqui.</p>
+    ${INDEX.produtoras.map(pt=>`<div class="eyebrow" style="margin-top:18px">${esc(pt.nome)} · ${pt.producoes.length} produç${pt.producoes.length>1?'ões':'ão'}</div>
+      ${[...pt.producoes].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(p=>{const path=pt.slug+'/'+p.slug;return `<button class="prod" data-act="pick" data-slug="${path}" aria-current="${path===P.path}"><div style="font-weight:700">${esc(p.project?p.project+' · ':'')}${esc(p.title)}</div><div class="hint" style="margin:2px 0 0">${esc(p.client)} · ${fmtDate(p.date)} · ${esc(p.status||'')}</div></button>`}).join('')}`).join('')}
+    <p class="hint">Produção nova: mande o roteiro para o Claude, dizendo a produtora. Ele cria a pasta e ela aparece aqui.</p>
     <button class="btn ghost" data-act="closeov">Fechar</button></div></div>`;
 }
 let SLATE=null;
@@ -561,7 +567,7 @@ document.addEventListener('click',async e=>{
     case 'reset': S.done={};S.notes={};S.takes={};S.good={};S.eq={};UI.confirmReset=false;save();render();toast('Marcações apagadas'); break;
     case 'prods': if(INDEX) renderProds(); break;
     case 'closeov': document.getElementById('overlay').innerHTML=''; break;
-    case 'pick': document.getElementById('overlay').innerHTML=''; if(b.dataset.slug!==P.slug){try{await openProd(b.dataset.slug)}catch(err){toast('Não consegui abrir essa produção')}} break;
+    case 'pick': document.getElementById('overlay').innerHTML=''; if(b.dataset.slug!==P.path){try{await openProd(b.dataset.slug)}catch(err){toast('Não consegui abrir essa produção')}} break;
     case 'slate': openSlate(id); break;
     case 'closeslate': SLATE=null; renderSlate(); render(); break;
     case 'slatemin': SLATE.take=Math.max(1,SLATE.take-1); renderSlate(); break;
