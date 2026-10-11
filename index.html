@@ -283,7 +283,7 @@ const stats=list=>({d:list.filter(s=>S.done[s.id]).length,t:list.length});
 async function getJSON(u){const r=await fetch(u,{cache:'no-cache'});if(!r.ok)throw new Error(u+' '+r.status);return r.json()}
 async function boot(){
   try{
-    [INDEX,KIT]=await Promise.all([getJSON('producoes/index.json'),getJSON('kit.json').catch(()=>({docs:[],presetsMidia:[]}))]);
+    [INDEX,KIT]=await Promise.all([getJSON('producoes/index.json'),getJSON('kit.json').catch(()=>({docs:[],cameraProfiles:[],midias:[],baterias:[]}))]);
     if(!INDEX.produtoras) INDEX={produtoras:[{slug:'bridge-films',nome:'Bridge Films',producoes:INDEX.producoes||[]}]};
     PRODS=INDEX.produtoras.flatMap(pt=>pt.producoes.map(p=>({...p,path:pt.slug+'/'+p.slug,ptSlug:pt.slug,produtora:pt.nome})));
     const qs=new URLSearchParams(location.search); const qp=qs.get('p'), qset=qs.get('set');
@@ -532,17 +532,52 @@ function dayCard(){
     <ul class="qlist">${P.dayNotes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></div>`;
 }
 
+
+/* ---------- mídia e bateria ---------- */
+function mediaCard(winLen){
+  const cams=KIT.cameraProfiles||[]; if(!cams.length) return '';
+  const cam=cams.find(c=>c.id===S.cam)||cams[0];
+  const modo=cam.modos.find(m=>m.res===S.res)||cam.modos[0];
+  const codecs=Object.keys(modo.codecs);
+  const codec=codecs.includes(S.codec)?S.codec:(codecs.includes('BRAW 8:1')?'BRAW 8:1':codecs[0]);
+  const fps=Number(S.fps)||24;
+  const mbs=cam.fpsBase?modo.codecs[codec]*fps/cam.fpsBase:modo.codecs[codec];
+  const midia=cam.midia||(KIT.midias||[])[0]||{nome:'Mídia',gb:0};
+  const gb=Number(S.cardGb)||midia.gb;
+  const minutes=mbs?Math.floor(gb*1000/mbs/60):null;
+  const usePct=minutes?Math.round(winLen/minutes*100):null;
+  const bat=(KIT.baterias||[])[0]||{nome:'Bateria',wh:0};
+  const qty=Number(S.batQty)||1, watts=Number(S.batW)||cam.consumoW||20;
+  const runMin=bat.wh&&cam.consumoW?Math.floor(bat.wh*0.85/watts*60):null;
+  const total=runMin?runMin*qty:null;
+  const hm=m=>`${Math.floor(m/60)}h ${pad(m%60)}min`;
+  return `<div class="card"><h3>Mídia e bateria</h3>
+    <label class="f" for="camSel">Câmera<select id="camSel" data-field="cam">${cams.map(c=>`<option value="${c.id}" ${c.id===cam.id?'selected':''}>${esc(c.nome)}</option>`).join('')}</select></label>
+    <label class="f" for="resSel" style="margin-top:10px">Resolução<select id="resSel" data-field="res">${cam.modos.map(m=>`<option ${m.res===modo.res?'selected':''}>${esc(m.res)}</option>`).join('')}</select></label>
+    <div class="row2" style="margin-top:10px"><label class="f" for="codecSel">Codec<select id="codecSel" data-field="codec">${codecs.map(c=>`<option ${c===codec?'selected':''}>${esc(c)}</option>`).join('')}</select></label>
+    ${cam.fpsBase?`<label class="f" for="fps" style="flex:0 0 92px">Quadros/s<input id="fps" type="number" inputmode="decimal" data-field="fps" value="${esc(S.fps||24)}"></label>`:''}</div>
+    <label class="f" for="cardGb" style="margin-top:10px">${esc(midia.nome)} (GB)<input id="cardGb" type="number" inputmode="decimal" data-field="cardGb" value="${esc(S.cardGb||midia.gb)}"></label>
+    <div class="sun" style="margin-top:12px">
+      <div><div class="k">Taxa de dados</div><div class="v">${mbs?mbs.toFixed(mbs<20?1:0):'—'} MB/s</div></div>
+      <div><div class="k">Cabe na mídia</div><div class="v">${minutes==null?'—':hm(minutes)}</div></div>
+    </div>
+    ${usePct!=null?`<p class="hint" style="color:${usePct>=90?'var(--bad)':'var(--fg)'}">Gravando sem parar a janela inteira (${winLen} min), você usaria ${usePct}% da mídia.${usePct>=90?' Leve uma segunda mídia ou descarregue no intervalo.':''}</p>`:''}
+    ${cam.consumoW?`<div class="row2" style="margin-top:14px"><label class="f" for="batQty">${esc(bat.nome)} (qtd.)<input id="batQty" type="number" inputmode="numeric" data-field="batQty" value="${esc(S.batQty||1)}"></label>
+    <label class="f" for="batW">Consumo (W)<input id="batW" type="number" inputmode="decimal" data-field="batW" value="${esc(S.batW||cam.consumoW)}"></label></div>
+    <div class="sun" style="margin-top:12px">
+      <div><div class="k">Por bateria (${bat.wh} Wh)</div><div class="v">${runMin?hm(runMin):'—'}</div></div>
+      <div><div class="k">Total vs. janela</div><div class="v" style="color:${total>=winLen?'var(--done)':'var(--bad)'}">${total?hm(total):'—'}</div></div>
+    </div>
+    <p class="hint">Autonomia estimada: ${bat.wh} Wh × 85% de aproveitamento ÷ consumo. ${esc(cam.nome)} com SSD pela USB-C fica perto de ${cam.consumoW} W; ajuste o consumo com o que você mede no set.</p>`:''}
+    <p class="hint">${esc(cam.fonte)}.</p></div>`;
+}
+
 /* ---------- set tools ---------- */
 function renderSet(){
   const L=P.location, sd=sunDay(P.date,L.lat,L.lon,L.tz);
   const w0=mins(P.window.from), w1=mins(P.window.to);
   const pos0=sunPos(sd.t0+w0*60000,L.lat,L.lon), pos1=sunPos(sd.t0+w1*60000,L.lat,L.lon);
   const now=new Date(); const pn=sunPos(now.getTime(),L.lat,L.lon);
-  const presets=(KIT.presetsMidia||[]);
-  const pr=presets[S.preset]||{mbps:0};
-  const mbps=pr.mbps||Number(S.custom)||0, gb=Number(S.cardGb)||0;
-  const cardMin=mbps&&gb?Math.floor(gb*8000/mbps/60):null;
-  const batTotal=(Number(S.batMin)||0)*(Number(S.batQty)||0);
   const winLen=w1-w0;
   loadWeather();
   let html=dayCard()+wxCard()+syncCard()+`<div class="card"><h3>Claquete</h3><p class="hint" style="margin:0 0 4px">Cena, plano e take em letras grandes para marcar o início de cada plano. O take bom vai direto para a nota do plano.</p>
@@ -559,15 +594,7 @@ function renderSet(){
       <dt>Meio-dia solar</dt><dd>${sd.noon}, altura máxima de ${Math.round(sd.maxEl)}°</dd>
       <dt>Agora</dt><dd>${pn.el>0?`sol a ${Math.round(pn.el)}°, vindo do ${dir(pn.az)} (${Math.round(pn.az)}°)`:'sol abaixo do horizonte'}</dd>
     </dl><p class="hint">Calculado para ${esc(L.name)}. Golden hour aqui é o sol entre −4° e 6° de altura.</p></div>`;
-  html+=`<div class="card"><h3>Mídia e bateria</h3>
-    <div class="row2"><label class="f" for="cardGb">Cartão (GB)<input id="cardGb" type="number" inputmode="decimal" data-field="cardGb" value="${esc(S.cardGb)}" placeholder="256"></label>
-    <label class="f" for="preset">Formato<select id="preset" data-field="preset">${presets.map((p,i)=>`<option value="${i}" ${String(S.preset)===String(i)?'selected':''}>${esc(p.nome)}</option>`).join('')}</select></label></div>
-    ${!pr.mbps?`<label class="f" for="custom" style="margin-top:10px">Bitrate (Mb/s)<input id="custom" type="number" inputmode="decimal" data-field="custom" value="${esc(S.custom)}" placeholder="Ex.: 400"></label>`:''}
-    <div style="margin-top:12px"><div class="eyebrow">Cabe no cartão</div><div class="big">${cardMin==null?'—':`${Math.floor(cardMin/60)}h ${pad(cardMin%60)}min`}</div></div>
-    <div class="row2" style="margin-top:14px"><label class="f" for="batQty">Baterias<input id="batQty" type="number" inputmode="numeric" data-field="batQty" value="${esc(S.batQty)}" placeholder="4"></label>
-    <label class="f" for="batMin">Minutos por bateria<input id="batMin" type="number" inputmode="numeric" data-field="batMin" value="${esc(S.batMin)}" placeholder="Seu uso real"></label></div>
-    <div style="margin-top:12px"><div class="eyebrow">Autonomia total vs. janela de ${winLen} min</div><div class="big" style="color:${batTotal?(batTotal>=winLen?'var(--done)':'var(--bad)'):'var(--fg)'}">${batTotal?`${batTotal} min`:'—'}</div></div>
-    <p class="hint">Os bitrates dos formatos ficam no kit.json; dá para incluir os da Pocket 6K e das outras câmeras.</p></div>`;
+  html+=mediaCard(winLen);
   html+=`<div class="group"><div class="ghead"><h2>Equipamento</h2></div></div>`;
   for(const grp of P.equip){
     const st={d:grp.items.filter(i=>S.eq[i[0]]).length,t:grp.items.length};
@@ -852,7 +879,7 @@ document.addEventListener('change',async e=>{
   const t=e.target;
   if(t.dataset.act==='note'||SYNC.pendingRender){SYNC.pendingRender=false;render()}
   if(t.dataset.pref==='device'&&SYNC.on){syncStart(S.setCode)}
-  if(t.dataset.field&&t.dataset.field!=='card'){S[t.dataset.field]=t.value; save(); render()}
+  if(t.dataset.field&&t.dataset.field!=='card'){S[t.dataset.field]=t.value; if(t.dataset.field==='cam'){delete S.res;delete S.codec;delete S.cardGb} if(t.dataset.field==='res')delete S.codec; save(); render()}
   if(t.dataset.act==='slateshot'){SLATE={id:t.value,take:(S.takes[t.value]||0)+1};renderSlate()}
   if(t.dataset.act==='docfile'&&t.files[0]){const file=t.files[0];
     try{await idb.put(t.dataset.key,{name:file.name,type:file.type,blob:file});FILEKEYS.add(t.dataset.key);toast('Arquivo guardado neste aparelho')}catch(err){toast('Não consegui guardar o arquivo')} render()}

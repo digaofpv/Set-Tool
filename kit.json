@@ -4,18 +4,193 @@
   "funcao": "Piloto remoto de drone e operador de câmera"
  },
  "docs": [
-  {"id": "anac", "title": "Avaliação Teórica de Piloto de Drone", "org": "ANAC", "number": "", "issued": "2026-07-09", "valid": "", "detail": "Declaração de aprovação na avaliação teórica"},
-  {"id": "sisant-neo2", "title": "Certidão SISANT · DJI Neo 2", "org": "ANAC", "number": "PP-198109155", "valid": "2028-10-05", "detail": "Cadastro da aeronave"},
-  {"id": "reta", "title": "Seguro RETA Drone", "org": "Allseg Seguradora", "number": "1009700003906", "valid": "2027-10-05", "detail": "Responsabilidade civil, vigência a partir de 05/10/2026"}
+  {
+   "id": "anac",
+   "title": "Avaliação Teórica de Piloto de Drone",
+   "org": "ANAC",
+   "number": "",
+   "issued": "2026-07-09",
+   "valid": "",
+   "detail": "Declaração de aprovação na avaliação teórica"
+  },
+  {
+   "id": "sisant-neo2",
+   "title": "Certidão SISANT · DJI Neo 2",
+   "org": "ANAC",
+   "number": "PP-198109155",
+   "valid": "2028-10-05",
+   "detail": "Cadastro da aeronave"
+  },
+  {
+   "id": "reta",
+   "title": "Seguro RETA Drone",
+   "org": "Allseg Seguradora",
+   "number": "1009700003906",
+   "valid": "2027-10-05",
+   "detail": "Responsabilidade civil, vigência a partir de 05/10/2026"
+  }
  ],
  "equipamento": {
-  "cameras": ["Blackmagic Pocket Cinema Camera 6K", "Blackmagic URSA Broadcast G2", "Sony A7 IV", "Panasonic Lumix S1H"],
-  "lentes": ["Sigma 18–35 mm f/1.8", "Zeiss Planar 50 mm f/1.4", "Tokina 11–16 mm f/2.8"],
-  "estabilizacao": ["DJI Ronin RS2"],
-  "drones": ["DJI Neo 2 (151 g)", "DJI Neo", "BetaFPV Pavo20 Pro com DJI O4", "Tinywhoop 50 g"]
+  "cameras": [
+   "Blackmagic Pocket Cinema Camera 6K",
+   "Blackmagic URSA Broadcast G2",
+   "Sony A7 IV",
+   "Panasonic Lumix S1H"
+  ],
+  "lentes": [
+   "Sigma 18–35 mm f/1.8",
+   "Zeiss Planar 50 mm f/1.4",
+   "Tokina 11–16 mm f/2.8"
+  ],
+  "estabilizacao": [
+   "DJI Ronin RS2"
+  ],
+  "drones": [
+   "DJI Neo 2 (151 g)",
+   "DJI Neo",
+   "BetaFPV Pavo20 Pro com DJI O4",
+   "Tinywhoop 50 g"
+  ]
  },
- "presetsMidia": [
-  {"nome": "DJI Neo 2 · 4K (máx. 80 Mb/s)", "mbps": 80},
-  {"nome": "Personalizado", "mbps": 0}
+ "cameraProfiles": [
+  {
+   "id": "bmpcc6k",
+   "nome": "Blackmagic Pocket 6K",
+   "fpsBase": 30,
+   "fonte": "Blackmagic Design, taxas em MB/s a 30 fps (Q = valor de pico)",
+   "consumoW": 20,
+   "modos": [
+    {
+     "res": "6K 6144×3456",
+     "codecs": {
+      "BRAW 3:1": 323,
+      "BRAW 5:1": 194,
+      "BRAW 8:1": 121,
+      "BRAW 12:1": 81,
+      "BRAW Q0 (pico)": 483,
+      "BRAW Q1 (pico)": 387,
+      "BRAW Q3 (pico)": 277,
+      "BRAW Q5 (pico)": 162
+     }
+    },
+    {
+     "res": "6K 2.4:1 6144×2560",
+     "codecs": {
+      "BRAW 3:1": 240,
+      "BRAW 5:1": 144,
+      "BRAW 8:1": 90,
+      "BRAW 12:1": 60,
+      "BRAW Q0 (pico)": 359,
+      "BRAW Q1 (pico)": 287,
+      "BRAW Q3 (pico)": 205,
+      "BRAW Q5 (pico)": 120
+     }
+    },
+    {
+     "res": "5.7K 17:9 5744×3024",
+     "codecs": {
+      "BRAW 3:1": 264,
+      "BRAW 5:1": 159,
+      "BRAW 8:1": 100,
+      "BRAW 12:1": 67,
+      "BRAW Q0 (pico)": 396,
+      "BRAW Q1 (pico)": 317,
+      "BRAW Q3 (pico)": 227,
+      "BRAW Q5 (pico)": 133
+     }
+    },
+    {
+     "res": "4K DCI 4096×2160",
+     "codecs": {
+      "BRAW 3:1": 136,
+      "BRAW 5:1": 82,
+      "BRAW 8:1": 51,
+      "BRAW 12:1": 35,
+      "BRAW Q0 (pico)": 203,
+      "BRAW Q1 (pico)": 163,
+      "BRAW Q3 (pico)": 116,
+      "BRAW Q5 (pico)": 68,
+      "ProRes 422 HQ": 117.88,
+      "ProRes 422": 78.63,
+      "ProRes 422 LT": 54.63,
+      "ProRes Proxy": 24.25
+     }
+    },
+    {
+     "res": "UHD 3840×2160",
+     "codecs": {
+      "ProRes 422 HQ": 110,
+      "ProRes 422": 73.6,
+      "ProRes 422 LT": 51,
+      "ProRes Proxy": 22.4
+     }
+    },
+    {
+     "res": "3.7K 6:5 anamórfico 3728×3104",
+     "codecs": {
+      "BRAW 3:1": 177,
+      "BRAW 5:1": 106,
+      "BRAW 8:1": 67,
+      "BRAW 12:1": 45,
+      "BRAW Q0 (pico)": 265,
+      "BRAW Q1 (pico)": 212,
+      "BRAW Q3 (pico)": 152,
+      "BRAW Q5 (pico)": 89
+     }
+    },
+    {
+     "res": "2.8K 17:9 2880×1512",
+     "codecs": {
+      "BRAW 3:1": 67,
+      "BRAW 5:1": 41,
+      "BRAW 8:1": 26,
+      "BRAW 12:1": 17,
+      "BRAW Q0 (pico)": 101,
+      "BRAW Q1 (pico)": 81,
+      "BRAW Q3 (pico)": 58,
+      "BRAW Q5 (pico)": 34
+     }
+    },
+    {
+     "res": "Full HD 1920×1080",
+     "codecs": {
+      "ProRes 422 HQ": 27.5,
+      "ProRes 422": 18.4,
+      "ProRes 422 LT": 12.75,
+      "ProRes Proxy": 5.6
+     }
+    }
+   ]
+  },
+  {
+   "id": "neo2",
+   "nome": "DJI Neo 2",
+   "fpsBase": null,
+   "fonte": "DJI, bitrate máximo de 80 Mb/s",
+   "modos": [
+    {
+     "res": "4K",
+     "codecs": {
+      "Vídeo (máx. 80 Mb/s)": 10
+     }
+    }
+   ],
+   "midia": {
+    "nome": "Memória interna",
+    "gb": 49
+   }
+  }
+ ],
+ "midias": [
+  {
+   "nome": "SSD 500 GB",
+   "gb": 500
+  }
+ ],
+ "baterias": [
+  {
+   "nome": "V-mount BP95",
+   "wh": 95
+  }
  ]
 }
