@@ -327,17 +327,6 @@ function renderDia(){
   const now=new Date(), nm=now.getHours()*60+now.getMinutes();
   const today=`${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}`===P.date;
   let html='';
-  // próximo plano: bloco atual (ou o primeiro com pendências) e seu primeiro plano pendente
-  const timed=P.day.filter(b=>b.shots.length);
-  let cur=today?timed.find(b=>b.from&&nm>=mins(b.from)&&nm<mins(b.to)):null;
-  const hasPend=b=>b.shots.some(x=>!S.done[x]);
-  if(!cur||!hasPend(cur)) cur=timed.find(b=>!b.extra&&hasPend(b))||timed.find(hasPend);
-  if(cur){const nx=shotById(cur.shots.find(x=>!S.done[x]));const left=cur.shots.filter(x=>!S.done[x]).length;
-    html+=`<div class="next"><div class="bhead"><span class="eyebrow" style="color:var(--gold)">Próximo plano</span><span class="count">${esc(cur.t)} · faltam ${left}</span></div>
-      <div class="ttl"><span style="font-family:var(--f-mono);font-size:14px;color:var(--muted);margin-right:6px">${nx.id}</span>${esc(nx.title)}</div>
-      <div class="bnote" style="margin:0">${esc(nx.frame)}${lensOf(nx)?` · <span style="color:var(--gold)">${esc(lensOf(nx))}</span>`:''}${nx.dual?' · <span style="color:#8FD3D3">9:16 + 16:9</span>':''}</div>
-      <div class="acts"><button class="btn" data-act="toggle" data-id="${nx.id}">Gravado ✓</button><button class="btn ghost" data-act="detail" data-id="${nx.id}">Detalhes</button><button class="btn ghost" data-act="slate" data-id="${nx.id}">Claquete</button></div></div>`;
-  } else html+=`<div class="next"><span class="eyebrow" style="color:var(--done)">Tudo gravado</span><div class="ttl">Nenhum plano pendente</div></div>`;
   html+=P.lightNote?`<div class="light">${P.lightNote}</div>`:'';
   for(const b of P.day){
     const items=b.shots.map(shotById).filter(Boolean);
