@@ -8,6 +8,7 @@ Crie `producoes/<produtora>/<producao>/producao.json` (use `bridge-films/art-hun
 
 - `shots`, `groups`, `scenes` (com `svg` no estilo grafite do storyboard atual, `detalhe`, `texto`, `som`), `day`, `equip`, `lens` por plano e `dual` nos planos-chave 9:16 + 16:9
 - `roteiro` (frases de tela) e `depoimento` quando houver entrevista
+- **`entregas`**: todos os vídeos e versões que o roteiro define (formato, duração, versão, itens obrigatórios como legendas, tela final e lettering, `shots` necessários para cada entrega e `pendencias` como cortes de minutagem ou textos a definir). Só o que está no roteiro; o que faltar vira pendência.
 - `dayNotes`, `docs`, `contacts`, `location` (lat/lon) e `window`
 - **`planejamento`**: análise de quantas diárias o roteiro pede, independente do tempo disponível na ordem do dia, para programar a pré-produção. Considere janelas de luz, momentos espontâneos, aéreos, depoimentos, som e reserva de clima. Campos: `recomendado`, `minimo`, `disponivel`, `resumo`, `blocos` (bloco, planos, tempo, luz, nota), `totalCaptacao`, `diarias` (titulo, horario, itens), `riscos`.
 - `storyboard.jpg` gerado com as cenas, para o botão de compartilhar.

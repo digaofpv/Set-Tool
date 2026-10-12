@@ -1295,5 +1295,82 @@
    "Feriados e horário de funcionamento do MON limitam o acesso cedo e no fim do dia",
    "Com uma diária só, os aéreos e os planos de chão do pôr do sol precisam de duas equipes"
   ]
- }
+ },
+ "entregas": [
+  {
+   "titulo": "Vídeo principal",
+   "formato": "Vertical 9:16",
+   "duracao": "45 s",
+   "versao": "Versão B: só texto na tela, sem narração",
+   "itens": [
+    "Textos de tela em tipografia delicada, uma frase por vez",
+    "Trilha: piano solo, cordas a partir da subida até o Olho",
+    "Tela final: logo MON · A arte amplia o olhar."
+   ],
+   "shots": [
+    "A1",
+    "A2",
+    "A4",
+    "A5",
+    "B1",
+    "B2",
+    "B3",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9",
+    "B10",
+    "B11",
+    "B13",
+    "B16",
+    "B17",
+    "B18",
+    "B19",
+    "B21",
+    "C1",
+    "C2",
+    "D1",
+    "D2",
+    "D3",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S7"
+   ],
+   "pendencias": [
+    "A minutagem da Versão B soma 68 s: cortar cerca de 23 s para chegar aos 45 s",
+    "Escolher a frase final entre a original e as 3 alternativas do roteiro"
+   ]
+  },
+  {
+   "titulo": "Versão case",
+   "formato": "Horizontal 16:9",
+   "duracao": "cerca de 45 s",
+   "versao": "Mesma estrutura, com depoimento antes da virada",
+   "itens": [
+    "Legendas em inglês",
+    "Depoimento curto de pai ou mãe sobre o que viu no filho, antes da subida até o Olho",
+    "Lettering discreto com dados do projeto (mapas distribuídos, famílias participantes), se houver",
+    "Tela final: logo MON · A arte amplia o olhar."
+   ],
+   "shots": [
+    "A5",
+    "B6",
+    "B8",
+    "B18",
+    "B19",
+    "C2",
+    "D1",
+    "E1",
+    "E2"
+   ],
+   "pendencias": [
+    "Pedir ao MON os números do projeto para o lettering",
+    "Tradução das frases de tela e do depoimento para as legendas"
+   ]
+  }
+ ]
 }

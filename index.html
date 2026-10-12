@@ -624,6 +624,23 @@ function renderSet(){
   document.getElementById('tab-set').innerHTML=html;
 }
 
+
+/* ---------- entregas definidas no roteiro ---------- */
+function entregasCard(){
+  const E=P.entregas; if(!E?.length) return '';
+  return `<div class="card"><h3>Entregas <span class="count">${E.length} ${E.length>1?'vídeos':'vídeo'}</span></h3>
+    ${E.map((e,i)=>{const items=(e.shots||[]).map(shotById).filter(Boolean);const st=stats(items);const pend=items.filter(x=>!S.done[x.id]);
+      return `<div class="doc" style="${i?'':'padding-top:0'}">
+        <div class="dtop"><span class="dtitle">${esc(e.titulo)}</span><span class="badge ${st.d===st.t&&st.t?'ok':'warn'}">${esc(e.formato)} · ${esc(e.duracao)}</span></div>
+        <div class="dmeta">${esc(e.versao)}</div>
+        <ul class="qlist" style="margin:6px 0 0;font-size:13.5px">${e.itens.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+        ${items.length?`<div style="margin-top:10px"><div class="bhead"><span class="eyebrow">Planos necessários</span><span class="count">${st.d}/${st.t}</span></div>
+          <div class="bar" style="margin-top:6px"><i style="width:${st.d/st.t*100}%;background:var(--done)"></i></div>
+          ${pend.length?`<div class="hint" style="margin:4px 0 0">Faltam: ${pend.map(x=>x.id).join(', ')}</div>`:'<div class="hint" style="margin:4px 0 0;color:var(--done)">Todos gravados</div>'}</div>`:''}
+        ${e.pendencias?.length?`<div class="eyebrow" style="margin:10px 0 4px;color:var(--gold)">Pendências</div><ul class="qlist" style="font-size:13px;color:var(--muted)">${e.pendencias.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+      </div>`}).join('')}</div>`;
+}
+
 /* ---------- docs ---------- */
 function validity(iso){
   if(!iso) return '';
@@ -655,6 +672,7 @@ function renderDocs(){
     ${sar?`<dt>SARPAS</dt><dd class="dnum">${esc(sar.number)}</dd>`:''}
     <dt>Piloto</dt><dd>${esc(KIT.piloto?.nome||'')}</dd></dl>
     <a class="btn ghost" href="https://maps.apple.com/?ll=${L.lat},${L.lon}&q=${encodeURIComponent(L.name)}" target="_blank" rel="noopener">Abrir no Mapas</a></div>`;
+  html+=entregasCard();
   const contacts=[...(PT?.contatos||[]).map(c=>({...c,role:`${PT.nome} · ${c.role}`})),...(P.contacts||[])];
   html+=`<div class="card"><h3>Contatos</h3>${contacts.map(c=>`<div class="contact"><span><b>${esc(c.role)}</b>${c.name?`<br><span style="color:var(--muted)">${esc(c.name)}</span>`:''}</span>${c.phone?`<span class="ph">${esc(c.phone)}</span>`:'<span style="color:var(--faint);font-size:12.5px">preencher</span>'}</div>`).join('')}
     <p class="hint">Contatos da produtora ficam em produtora.json; os desta gravação, no producao.json.</p></div>`;
@@ -669,6 +687,7 @@ function renderDocs(){
 function report(){
   const d=new Date(), {d:dn,t}=stats(P.shots);
   let r=`SET TOOL · ${P.project||''} — ${P.title}\nRelatório ${d.toLocaleDateString('pt-BR')} ${d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}\nGravados: ${dn}/${t}\n`;
+  if(P.entregas?.length){r+='\nEntregas\n';for(const e of P.entregas){const it=(e.shots||[]).map(shotById).filter(Boolean),st=stats(it);r+=`${e.titulo} (${e.formato}, ${e.duracao}): ${st.d}/${st.t} planos${st.d<st.t?' · faltam '+it.filter(x=>!S.done[x.id]).map(x=>x.id).join(', '):''}\n`}}
   for(const g of P.groups){const items=P.shots.filter(s=>s.g===g.id), st=stats(items);
     r+=`\n${g.name} (${st.d}/${st.t})\n`;
     for(const s of items) r+=`${S.done[s.id]?'[x]':'[ ]'} ${s.id} ${s.title}${s.dual?' · 9:16+16:9':''}${lensOf(s)?` · ${lensOf(s)}`:''}${S.takes[s.id]?` · ${S.takes[s.id]} takes`:''}${S.good[s.id]?` · bom: take ${S.good[s.id]}`:''}${S.notes[s.id]?` · ${S.notes[s.id].replace(/\n/g,' ')}`:''}\n`;}
