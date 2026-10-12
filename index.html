@@ -134,6 +134,12 @@ label.f{display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--
 .light{background:#2B2614;border-radius:12px;padding:12px 14px;margin-top:14px;font-size:13px;color:#E9DDB4}
 .light b{color:var(--gold)}
 
+.scene.wide{grid-template-columns:1fr}
+.frame.wide{width:100%;aspect-ratio:16/9}
+.dsc.wide{grid-template-columns:1fr}
+.dsc.wide .frame{width:100%}
+.tag.match{background:#2E2440;color:#C9B3F0}
+.dayhead{font-family:var(--f-display);font-weight:800;font-size:18px;margin:26px 0 2px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .scene{display:grid;grid-template-columns:112px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
 .frame{width:112px;aspect-ratio:9/16;max-width:100%;border-radius:8px;overflow:hidden;position:relative}
 .frame svg{width:100%;height:100%;display:block}
@@ -253,6 +259,9 @@ nav button[aria-selected="true"]{color:var(--gold);background:var(--surface-2)}
 
 <script>
 const CHECK='<svg viewBox="0 0 16 16" fill="none" stroke="#141613" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg>';
+const SAFE16='<rect x="8" y="4.5" width="144" height="81" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width=".4" stroke-dasharray="2 2"/>';
+const isWide=()=>P&&P.aspect==='16:9';
+const frameSvg=svg=>isWide()?`<svg viewBox="0 0 160 90" aria-hidden="true">${svg}${SAFE16}</svg>`:`<svg viewBox="0 0 90 160" aria-hidden="true">${svg}${SAFE}</svg>`;
 const SAFE='<rect x="6" y="12" width="78" height="118" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width=".5" stroke-dasharray="2 2"/>';
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const pad=n=>String(n).padStart(2,'0');
@@ -298,7 +307,8 @@ async function boot(){
 }
 async function openProd(path){
   const meta=PRODS.find(p=>p.path===path);
-  P=await getJSON(`producoes/${path}/producao.json`); P.path=path; WX.data=null; WX.at=null; WX.lastTry=0;
+  P=await getJSON(`producoes/${path}/producao.json`); P.path=path;
+  if(P.diarias?.length){const t=new Date();const ti=`${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`;let i=P.diarias.findIndex(x=>x.date===ti);if(i<0)i=P.diarias.findIndex(x=>x.date>ti);if(i<0)i=0;applyDiaria(i)} WX.data=null; WX.at=null; WX.lastTry=0;
   PT=await getJSON(`producoes/${meta.ptSlug}/produtora.json`).catch(()=>({nome:meta.produtora,contatos:[]}));
   PREFS.slug=path;loadState();save();render();
   if(S.setCode) syncStart(S.setCode); else syncStop();
@@ -320,16 +330,20 @@ function renderHeader(){
 /* ---------- shared bits ---------- */
 const lensOf=s=>s.lens&&s.lens[0]!=='—'?s.lens[0]:'';
 function miniList(items){
-  return `<div class="mini">${items.map(s=>`<div class="mrow${S.done[s.id]?' done':''}"><button data-act="toggle" data-id="${s.id}" aria-pressed="${!!S.done[s.id]}"><span class="mbox">${CHECK}</span><span class="c">${s.id}</span><span class="t">${esc(s.title)}${s.pri==='A'?'':' <span style="color:var(--faint)">· extra</span>'}</span>${s.dual?'<span class="dl">9:16+16:9</span>':''}${lensOf(s)?`<span class="l">${esc(lensOf(s))}</span>`:''}</button><button class="minfo" data-act="detail" data-id="${s.id}" aria-label="Detalhamento de ${s.id}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></button></div>`).join('')}</div>`;
+  return `<div class="mini">${items.map(s=>`<div class="mrow${S.done[s.id]?' done':''}"><button data-act="toggle" data-id="${s.id}" aria-pressed="${!!S.done[s.id]}"><span class="mbox">${CHECK}</span><span class="c">${s.id}</span><span class="t">${esc(s.title)}${s.pri==='A'?'':' <span style="color:var(--faint)">· extra</span>'}</span>${s.match?'<span class="dl" style="background:#2E2440;color:#C9B3F0">MATCH</span>':''}${s.dual?'<span class="dl">9:16+16:9</span>':''}${lensOf(s)?`<span class="l">${esc(lensOf(s))}</span>`:''}</button><button class="minfo" data-act="detail" data-id="${s.id}" aria-label="Detalhamento de ${s.id}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></button></div>`).join('')}</div>`;
 }
 
 /* ---------- ordem do dia ---------- */
 function renderDia(){
   const now=new Date(), nm=now.getHours()*60+now.getMinutes();
-  const today=`${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}`===P.date;
-  let html='';
+  const todayIso=`${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}`;
+  let html='', lastDate=null;
   html+=P.lightNote?`<div class="light">${P.lightNote}</div>`:'';
   for(const b of P.day){
+    const today=(b.date||P.date)===todayIso;
+    if(b.date&&b.date!==lastDate){lastDate=b.date;const dd=(P.diarias||[]).find(x=>x.date===b.date);const bl=P.day.filter(x=>x.date===b.date).flatMap(x=>x.shots).map(shotById).filter(Boolean);const s2=stats(bl);
+      const [yy,mm,dd2]=b.date.split('-').map(Number);const wd=new Date(yy,mm-1,dd2).toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'});
+      html+=`<div class="dayhead"><span>${esc(dd?.label||'Diária')}</span><span class="count">${wd} · ${s2.d}/${s2.t}</span></div>`}
     const items=b.shots.map(shotById).filter(Boolean);
     const st=stats(items), pendA=items.filter(s=>s.pri==='A'&&!S.done[s.id]).length;
     let cls='',badge=items.length?`<span class="count">${st.d}/${st.t}</span>`:'';
@@ -356,8 +370,8 @@ function shotRow(s){
         <span class="stop"><span class="code">${s.id}</span><span class="stitle">${esc(s.title)}</span></span>
         <span class="sframe">${esc(s.frame)}</span>
         ${s.lens?`<span class="lens"><b>Lente</b>${esc(s.lens[0])} · ${esc(s.lens[1])}</span>`:''}
-        ${s.dual?`<span class="dualnote">9:16 + 16:9 · ${esc(s.dual)}</span>`:''}
-        <span class="tags">${s.dual?'<span class="tag dual">9:16 + 16:9</span>':''}<span class="tag${s.pri==='A'?' a':''}">${s.pri==='A'?'indispensável':'extra'}</span><span class="tag">${sc}</span>${takes?`<span class="tag">${takes} take${takes>1?'s':''}</span>`:''}${S.good[s.id]?`<span class="tag note">bom: take ${S.good[s.id]}</span>`:''}${note?'<span class="tag note">nota</span>':''}</span>
+        ${s.dual?`<span class="dualnote">9:16 + 16:9 · ${esc(s.dual)}</span>`:''}${s.match?`<span class="dualnote" style="color:#C9B3F0">Matchcut com ${esc(s.match)}</span>`:''}${!s.lens&&P.lensNote?`<span class="lens" style="color:var(--faint)"><b>Lente</b>${esc(P.lensNote)}</span>`:''}
+        <span class="tags">${s.match?'<span class="tag match">matchcut</span>':''}${s.dual?'<span class="tag dual">9:16 + 16:9</span>':''}<span class="tag${s.pri==='A'?' a':''}">${s.pri==='A'?'indispensável':'extra'}</span><span class="tag">${sc}</span>${takes?`<span class="tag">${takes} take${takes>1?'s':''}</span>`:''}${S.good[s.id]?`<span class="tag note">bom: take ${S.good[s.id]}</span>`:''}${note?'<span class="tag note">nota</span>':''}</span>
       </button>
       <button class="info" data-act="detail" aria-label="Detalhamento de ${s.id}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></button>
     </div>
@@ -415,9 +429,10 @@ function openDetail(id){
     ${s.dual?`<div class="tags" style="padding-left:0;margin-top:8px"><span class="tag dual">9:16 + 16:9</span></div>`:''}
     ${sec('Enquadramento e movimento',esc(s.frame))}
     ${s.lens?sec('Lente',`${esc(s.lens[0])} · ${esc(s.lens[1])}`):''}
+    ${s.match?sec('Matchcut',`Casa com ${esc(s.match)}. ${esc(P.framingTip||'')}`):''}
     ${s.dual?sec('Por que nos dois formatos',`${esc(s.dual)}. ${esc(P.framingTip||'')}`):''}
-    ${blk?sec('Quando',`${esc(blk.t)} · ${esc(blk.title)}`):''}
-    ${scenes.map(c=>`<div class="dsc"><div class="frame"><svg viewBox="0 0 90 160" aria-hidden="true">${c.svg}${SAFE}</svg></div>
+    ${blk?sec('Quando',`${blk.date?fmtDate(blk.date)+' · ':''}${esc(blk.t)} · ${esc(blk.title)}`):''}
+    ${scenes.map(c=>`<div class="dsc${isWide()?' wide':''}"><div class="frame${isWide()?' wide':''}">${frameSvg(c.svg)}</div>
       <div style="min-width:0"><div class="sc-head"><span class="sc-num" style="color:${c.color};font-size:22px">${pad(c.n)}</span><span class="sc-tc">${esc(c.tc)}</span></div>
       <div class="sc-title">${esc(c.title)}</div>
       ${sec('Cena',esc(c.detalhe||c.desc))}${sec('Texto na tela',esc(c.texto||c.ost))}${sec('Som',esc(c.som))}
@@ -435,8 +450,8 @@ function renderBoard(){
     <div class="row2"><button class="btn ghost" data-act="sbshare">Compartilhar storyboard</button><a class="btn ghost" href="${sbUrl}" target="_blank" rel="noopener" style="text-decoration:none">Ver imagem</a></div></div>`:'';
   document.getElementById('tab-board').innerHTML=roteiroHTML()+depoHTML()+P.scenes.map(sc=>{
     const items=P.shots.filter(s=>s.scenes.includes(sc.n)), st=stats(items);
-    return `<div class="scene">
-      <div class="frame"><svg viewBox="0 0 90 160" aria-hidden="true">${sc.svg}${SAFE}</svg>${sc.ost?`<div class="ost">${esc(sc.ost)}</div>`:''}</div>
+    return `<div class="scene${isWide()?' wide':''}">
+      <div class="frame${isWide()?' wide':''}">${frameSvg(sc.svg)}${sc.ost?`<div class="ost">${esc(sc.ost)}</div>`:''}</div>
       <div style="min-width:0"><div class="sc-head"><span class="sc-num" style="color:${sc.color}">${pad(sc.n)}</span><span class="sc-tc">${esc(sc.tc)} · ${st.d}/${st.t}</span></div>
       <div class="sc-title">${esc(sc.title)}</div><p class="sc-desc">${esc(sc.desc)}</p>${miniList(items)}</div></div>`}).join('')+shareCard;
 }
@@ -527,7 +542,7 @@ function dayCard(){
   const wd=new Date(y,m-1,d).toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
   const days=Math.round((new Date(y,m-1,d)-new Date(new Date().toDateString()))/86400000);
   const when=days===0?'hoje':days===1?'amanhã':days>1?`em ${days} dias`:`há ${-days} dias`;
-  return `<div class="card"><h3>Dia da gravação <span class="count">${when}</span></h3>
+  return `<div class="card"><h3>${esc(P.diarias?P.diarias[P.diaIdx].label:'Dia da gravação')} <span class="count">${when}</span></h3>
     <div class="big" style="font-size:22px">${wd.charAt(0).toUpperCase()+wd.slice(1)}</div>
     <div class="hint" style="margin:2px 0 10px">${esc(P.location.name)} · ${P.window.from}–${P.window.to}</div>
     <ul class="qlist">${P.dayNotes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></div>`;
@@ -589,6 +604,8 @@ function planCard(){
   </details>`;
 }
 
+function applyDiaria(i){const d=P.diarias[i];P.diaIdx=i;P.date=d.date;P.window=d.window;P.location=d.location;if(d.notes)P.dayNotes=d.notes;if(typeof WX!=='undefined'){WX.data=null;WX.at=null;WX.lastTry=0}}
+function diariaChips(){if(!P.diarias||P.diarias.length<2)return '';return `<div class="chips" role="group" aria-label="Diária">${P.diarias.map((d,i)=>`<button class="chip" data-act="diaria" data-i="${i}" aria-pressed="${P.diaIdx===i}">${esc(d.label)} · ${fmtDate(d.date).slice(0,5)}</button>`).join('')}</div>`}
 /* ---------- set tools ---------- */
 function renderSet(){
   const L=P.location, sd=sunDay(P.date,L.lat,L.lon,L.tz);
@@ -597,7 +614,7 @@ function renderSet(){
   const now=new Date(); const pn=sunPos(now.getTime(),L.lat,L.lon);
   const winLen=w1-w0;
   loadWeather();
-  let html=dayCard()+wxCard()+planCard()+syncCard()+`<div class="card"><h3>Claquete</h3><p class="hint" style="margin:0 0 4px">Cena, plano e take em letras grandes para marcar o início de cada plano. O take bom vai direto para a nota do plano.</p>
+  let html=diariaChips()+dayCard()+wxCard()+planCard()+syncCard()+`<div class="card"><h3>Claquete</h3><p class="hint" style="margin:0 0 4px">Cena, plano e take em letras grandes para marcar o início de cada plano. O take bom vai direto para a nota do plano.</p>
     <button class="btn" data-act="slate">Abrir claquete</button></div>`;
   html+=`<div class="card"><h3>Sol do dia <span class="count">${fmtDate(P.date)}</span></h3>
     <div class="sun">
@@ -620,7 +637,7 @@ function renderSet(){
       ${grp.items.map(([id,t,d])=>`<button class="eq${S.eq[id]?' done':''}${grp.gap?' gap':''}" data-act="eq" data-eq="${id}" aria-pressed="${!!S.eq[id]}"><span class="check">${CHECK}</span><span><span class="t">${esc(t)}</span><span class="d">${esc(d)}</span></span></button>`).join('')}</div>`;
   }
   const counts={};P.shots.forEach(s=>{const k=lensOf(s);if(k)counts[k]=(counts[k]||0)+1});
-  html+=`<div class="card"><h3>Lentes por plano</h3><dl class="kv">${Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<dt>${esc(k)}</dt><dd>${v} planos</dd>`).join('')}</dl></div>`;
+  if(Object.keys(counts).length) html+=`<div class="card"><h3>Lentes por plano</h3><dl class="kv">${Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<dt>${esc(k)}</dt><dd>${v} planos</dd>`).join('')}</dl></div>`;
   document.getElementById('tab-set').innerHTML=html;
 }
 
@@ -667,7 +684,8 @@ function renderDocs(){
     <dt>Produtora</dt><dd>${esc(PT?.nome||'')}</dd>
     <dt>Cliente</dt><dd>${esc(P.client)}</dd>
     <dt>Local</dt><dd>${esc(L.name)}<br><span style="color:var(--muted)">${esc(L.address)}</span></dd>
-    <dt>Data</dt><dd>${fmtDate(P.date)}, ${P.window.from}–${P.window.to}</dd>
+    <dt>Data</dt><dd>${P.diarias?P.diarias.map(d=>`${fmtDate(d.date)}, ${d.window.from}–${d.window.to}`).join('<br>'):`${fmtDate(P.date)}, ${P.window.from}–${P.window.to}`}</dd>
+    ${P.fonte?`<dt>Fonte</dt><dd style="color:var(--muted)">${esc(P.fonte)}</dd>`:''}
     ${P.format?`<dt>Formato</dt><dd>${esc(P.format)}</dd>`:''}
     ${sar?`<dt>SARPAS</dt><dd class="dnum">${esc(sar.number)}</dd>`:''}
     <dt>Piloto</dt><dd>${esc(KIT.piloto?.nome||'')}</dd></dl>
@@ -889,6 +907,7 @@ document.addEventListener('click',async e=>{
     case 'pick': document.getElementById('overlay').innerHTML=''; if(b.dataset.slug!==P.path){try{await openProd(b.dataset.slug)}catch(err){toast('Não consegui abrir essa produção')}} break;
     case 'slate': openSlate(id); break;
     case 'depo': openDepo(); break;
+    case 'diaria': applyDiaria(Number(b.dataset.i)); render(); break;
     case 'wxreload': loadWeather(true); render(); break;
     case 'sbshare': {const url=`producoes/${P.path}/${P.storyboardImage}`; const name=`Storyboard - ${P.project||P.title}.jpg`;
       try{const blob=await (await fetch(url)).blob(); const file=new File([blob],name,{type:'image/jpeg'});

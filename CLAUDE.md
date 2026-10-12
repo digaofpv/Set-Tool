@@ -13,6 +13,10 @@ Crie `producoes/<produtora>/<producao>/producao.json` (use `bridge-films/art-hun
 - **`planejamento`**: análise de quantas diárias o roteiro pede, independente do tempo disponível na ordem do dia, para programar a pré-produção. Considere janelas de luz, momentos espontâneos, aéreos, depoimentos, som e reserva de clima. Campos: `recomendado`, `minimo`, `disponivel`, `resumo`, `blocos` (bloco, planos, tempo, luz, nota), `totalCaptacao`, `diarias` (titulo, horario, itens), `riscos`.
 - `storyboard.jpg` gerado com as cenas, para o botão de compartilhar.
 
+## Quando só houver Ordem do Dia (sem roteiro)
+
+Gere a produção do mesmo jeito, usando os blocos e descrições da OD como planos. Use `diarias` (data, label, window, location, notes) e `date` em cada bloco de `day` quando houver mais de uma diária, `aspect` para o formato do storyboard ("16:9" ou o padrão 9:16), `match` nos planos que formam matchcut, `lensNote` quando a OD não define lentes e `fonte` explicando de onde os dados vieram. O que a OD não define (texto de tela, trilha, formato, duração) vira pendência nas `entregas`, e incoerências da OD vão para as notas dos blocos.
+
 ## Ao mudar o app
 
 Suba a versão do cache em `sw.js` (`settool-vN`) a cada mudança em `index.html`, para o iPhone receber a atualização.

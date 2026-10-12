@@ -13,6 +13,20 @@
      "status": "em gravação"
     }
    ]
+  },
+  {
+   "slug": "catalunya-filmes",
+   "nome": "Catalunya Filmes",
+   "producoes": [
+    {
+     "slug": "volvo-day-night",
+     "title": "FH 100 Anos · Day + Night",
+     "project": "Volvo",
+     "client": "Volvo",
+     "date": "2026-10-07",
+     "status": "gravado"
+    }
+   ]
   }
  ]
 }

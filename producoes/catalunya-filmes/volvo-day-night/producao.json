@@ -1,0 +1,1026 @@
+{
+ "slug": "volvo-day-night",
+ "title": "FH 100 Anos · Day + Night",
+ "project": "Volvo",
+ "client": "Volvo",
+ "produtora": "Catalunya Filmes",
+ "aspect": "16:9",
+ "date": "2026-10-07",
+ "window": {
+  "from": "08:15",
+  "to": "19:00"
+ },
+ "location": {
+  "name": "Volvo · Pista de teste",
+  "address": "R. Lodovico Kaminski, 75, Cidade Industrial, Curitiba – PR (integração na Av. Juscelino Kubitschek de Oliveira, 2600)",
+  "lat": -25.4748,
+  "lon": -49.359,
+  "tz": -3
+ },
+ "diarias": [
+  {
+   "date": "2026-10-07",
+   "label": "Diária 1 · Pista de teste",
+   "window": {
+    "from": "08:15",
+    "to": "19:00"
+   },
+   "location": {
+    "name": "Volvo · Pista de teste",
+    "address": "R. Lodovico Kaminski, 75, Cidade Industrial, Curitiba – PR (integração na Av. Juscelino Kubitschek de Oliveira, 2600)",
+    "lat": -25.4748,
+    "lon": -49.359,
+    "tz": -3
+   },
+   "notes": [
+    "Integração às 08:15 na Volvo Group (Av. JK, 2600); a gravação é na Casa do Cliente.",
+    "Chegada geral 09:30 · almoço 11:15 · roda câmera 12:45 · corta câmera 19:00.",
+    "Bloco Night: pôr do sol às 18:20 e céu escuro só depois de 18:44. Sobram cerca de 15 minutos de noite real antes do corta câmera."
+   ]
+  },
+  {
+   "date": "2026-10-09",
+   "label": "Diária 2 · Plenária",
+   "window": {
+    "from": "07:00",
+    "to": "17:30"
+   },
+   "location": {
+    "name": "Volvo · Casa do Cliente (plenária)",
+    "address": "R. Lodovico Kaminski, 75, Cidade Industrial, Curitiba – PR",
+    "lat": -25.4748,
+    "lon": -49.359,
+    "tz": -3
+   },
+   "notes": [
+    "Chegada geral 07:00 · clientes 08:15 · roda câmera 08:30 · almoço 12:30 · corta câmera 17:30.",
+    "Plenária em blackout para as silhuetas; testar a projeção do logo no chão antes de rodar.",
+    "Os dois caminhões ficam na plenária: preto de manhã (lado motorista), branco à tarde (lado passageiro)."
+   ]
+  }
+ ],
+ "format": "Não definido na OD",
+ "lensNote": "A OD não define lentes; combine com o DOP.",
+ "fonte": "Gerada só a partir das Ordens do Dia de 07/10 (v1) e 09/10. Não há roteiro: textos de tela, trilha e duração não estão definidos.",
+ "lightNote": "<b>Gerada a partir da Ordem do Dia.</b> Sem roteiro, a ordem das cenas no storyboard é uma leitura da OD. Confirme com a direção.",
+ "framingTip": "Matchcuts dependem de repetir posição, altura e lente entre os planos-par. Anote os dados de câmera no primeiro plano de cada par.",
+ "groups": [
+  {
+   "id": "J",
+   "name": "Filme Jeseniel",
+   "short": "Jeseniel",
+   "sub": "07/10 · Pista de teste (Cimentão) · 2 câmeras",
+   "color": "#C9CCC4"
+  },
+  {
+   "id": "W",
+   "name": "Caminhão branco na pista (Day)",
+   "short": "Pista Day",
+   "sub": "07/10 · Câmera car · FH 100 Anos Day",
+   "color": "var(--day)"
+  },
+  {
+   "id": "L",
+   "name": "Day + Night lado a lado",
+   "short": "Lado a lado",
+   "sub": "07/10 · Câmera car · os dois FH 100 Anos",
+   "color": "var(--dusk)"
+  },
+  {
+   "id": "K",
+   "name": "Caminhão preto na pista (Night)",
+   "short": "Pista Night",
+   "sub": "07/10 · Câmera car · FH 100 Anos Night",
+   "color": "#7F93C2"
+  },
+  {
+   "id": "P",
+   "name": "Plenária · caminhão preto",
+   "short": "Plenária preto",
+   "sub": "09/10 · Casa do Cliente · lado motorista",
+   "color": "#9A9A92"
+  },
+  {
+   "id": "B",
+   "name": "Plenária · caminhão branco",
+   "short": "Plenária branco",
+   "sub": "09/10 · Casa do Cliente · lado passageiro",
+   "color": "#E6E1D4"
+  },
+  {
+   "id": "I",
+   "name": "Internas",
+   "short": "Internas",
+   "sub": "09/10 · Detalhes da cabine do caminhão branco",
+   "color": "var(--sound)"
+  }
+ ],
+ "shots": [
+  {
+   "id": "J1",
+   "g": "J",
+   "title": "Cenas do bloco de texto do Jeseniel",
+   "frame": "2 câmeras · FH 100 Anos (branco + preto), VM B100, FM 8x2 · elenco: Jeseniel",
+   "scenes": [],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "J2",
+   "g": "J",
+   "title": "Cobertura dos caminhões rodando",
+   "frame": "2 câmeras · VM B100 e FM 8x2",
+   "scenes": [],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "W1",
+   "g": "W",
+   "title": "Frontal 100%, depois ultrapassa o câmera car",
+   "frame": "Câmera car · frontal centralizado; estabilizar antes da ultrapassagem",
+   "scenes": [
+    7,
+    8
+   ],
+   "pri": "A",
+   "lens": null,
+   "match": "K1 (matchcut com o preto) e B6 (vem da plenária)"
+  },
+  {
+   "id": "W2",
+   "g": "W",
+   "title": "Detalhe da testeira com árvores passando",
+   "frame": "Câmera car · detalhe",
+   "scenes": [
+    8
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "W3",
+   "g": "W",
+   "title": "Detalhe do adesivo da porta",
+   "frame": "Câmera car · detalhe",
+   "scenes": [
+    8
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "W4",
+   "g": "W",
+   "title": "Detalhe dos faróis e iron mark",
+   "frame": "Câmera car · detalhe",
+   "scenes": [
+    8
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "W5",
+   "g": "W",
+   "title": "3/4 frontal com câmera mais baixa",
+   "frame": "Câmera car · câmera baixa",
+   "scenes": [
+    8
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "L1",
+   "g": "L",
+   "title": "Day + Night rodando lado a lado",
+   "frame": "Câmera car · os dois FH 100 Anos",
+   "scenes": [
+    9
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "K1",
+   "g": "K",
+   "title": "Frontal 100%, depois ultrapassa o câmera car",
+   "frame": "Câmera car · mesmo enquadramento do W1",
+   "scenes": [
+    10
+   ],
+   "pri": "A",
+   "lens": null,
+   "match": "W1 (matchcut com o branco)"
+  },
+  {
+   "id": "K2",
+   "g": "K",
+   "title": "Detalhe da testeira com árvores passando",
+   "frame": "Câmera car · detalhe",
+   "scenes": [
+    10
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "K3",
+   "g": "K",
+   "title": "Detalhe do adesivo da porta",
+   "frame": "Câmera car · detalhe",
+   "scenes": [
+    10
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "K4",
+   "g": "K",
+   "title": "Detalhe dos faróis e iron mark",
+   "frame": "Câmera car · detalhe",
+   "scenes": [
+    10
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "K5",
+   "g": "K",
+   "title": "Frontal 100% para matchcut (repetição)",
+   "frame": "A OD diz \"matchcut com caminhão preto\"; confirmar se é com o branco",
+   "scenes": [
+    10
+   ],
+   "pri": "B",
+   "lens": null
+  },
+  {
+   "id": "K6",
+   "g": "K",
+   "title": "3/4 frontal com câmera mais baixa",
+   "frame": "Câmera car · câmera baixa",
+   "scenes": [
+    10
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "P1",
+   "g": "P",
+   "title": "Silhueta surge na escuridão",
+   "frame": "Lado motorista · travelling in + tilt up",
+   "scenes": [
+    1
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "P2",
+   "g": "P",
+   "title": "Farol frontal acende",
+   "frame": "Lado motorista · travelling in + tilt up",
+   "scenes": [
+    2
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "P3",
+   "g": "P",
+   "title": "Testeira acende com o logo de 100 anos",
+   "frame": "3/4 motorista · contra-plongée",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "P4",
+   "g": "P",
+   "title": "Porta abre e projeta o logo de 100 anos no chão",
+   "frame": "Lado motorista · travelling in + tilt up",
+   "scenes": [
+    4
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "P5",
+   "g": "P",
+   "title": "Plano aberto: luz frontal quebra a silhueta",
+   "frame": "Travelling in · faróis + testeira acesos",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": null,
+   "match": "B5 (matchcut preto → branco)"
+  },
+  {
+   "id": "P6",
+   "g": "P",
+   "title": "Câmera baixa, 3/4 com retrovisores e testeira",
+   "frame": "Contra-plongée · caminhão iluminado",
+   "scenes": [
+    6
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "P7",
+   "g": "P",
+   "title": "Cenas diversas de design",
+   "frame": "Caminhão iluminado",
+   "scenes": [
+    6
+   ],
+   "pri": "B",
+   "lens": null
+  },
+  {
+   "id": "B1",
+   "g": "B",
+   "title": "Porta abre e projeta o logo de 100 anos no chão",
+   "frame": "Lado passageiro · travelling in + tilt up",
+   "scenes": [
+    4
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "B2",
+   "g": "B",
+   "title": "Farol frontal acende",
+   "frame": "Lado passageiro · travelling in + tilt up",
+   "scenes": [
+    2
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "B3",
+   "g": "B",
+   "title": "Testeira acende com o logo de 100 anos",
+   "frame": "3/4 passageiro · contra-plongée",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "B4",
+   "g": "B",
+   "title": "Câmera baixa, 3/4 com retrovisores e testeira",
+   "frame": "Contra-plongée · caminhão iluminado",
+   "scenes": [
+    6
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "B5",
+   "g": "B",
+   "title": "Plano aberto: luz frontal quebra a silhueta",
+   "frame": "Travelling in · faróis + testeira acesos",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": null,
+   "match": "P5 (matchcut preto → branco)"
+  },
+  {
+   "id": "B6",
+   "g": "B",
+   "title": "Frontal em travelling out para matchcut com a pista",
+   "frame": "Plano amplo frontal · travelling out",
+   "scenes": [
+    7
+   ],
+   "pri": "A",
+   "lens": null,
+   "match": "W1 (plenária → pista de dia)"
+  },
+  {
+   "id": "B7",
+   "g": "B",
+   "title": "Cenas diversas de design",
+   "frame": "Caminhão iluminado",
+   "scenes": [
+    6
+   ],
+   "pri": "B",
+   "lens": null
+  },
+  {
+   "id": "B8",
+   "g": "B",
+   "title": "Farol aceso e chão luminoso de 100 anos no degrau da porta",
+   "frame": "Um mesmo movimento de câmera revela os dois",
+   "scenes": [
+    4,
+    2
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "I1",
+   "g": "I",
+   "title": "Detalhe dos bancos e etiqueta 100 anos",
+   "frame": "Detalhe interno",
+   "scenes": [
+    11
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "I2",
+   "g": "I",
+   "title": "Costuras brancas e LED do painel",
+   "frame": "Detalhe interno",
+   "scenes": [
+    11
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "I3",
+   "g": "I",
+   "title": "Cortina personalizada",
+   "frame": "Detalhe interno",
+   "scenes": [
+    11
+   ],
+   "pri": "A",
+   "lens": null
+  }
+ ],
+ "scenes": [
+  {
+   "n": 1,
+   "tc": "Plenária · INT",
+   "title": "Silhueta na escuridão",
+   "color": "#7F93C2",
+   "desc": "Durante o passeio de câmera, surge uma silhueta distante na escuridão da plenária. Dá para ver que é um caminhão, mas não o design nem a cor.",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#0B0B0A\"/><path d=\"M0 62 L160 62 L160 90 L0 90 Z\" fill=\"#141413\"/><path d=\"M0 62 L160 62\" stroke=\"#24241F\" stroke-width=\".5\"/><ellipse cx=\"92\" cy=\"56\" rx=\"40\" ry=\"26\" fill=\"#1A1A18\"/><g transform=\"translate(92 70)\"><rect x=\"-18.05\" y=\"-6.6499999999999995\" width=\"7.6\" height=\"6.6499999999999995\" rx=\"1.14\" fill=\"#111\"/><rect x=\"10.45\" y=\"-6.6499999999999995\" width=\"7.6\" height=\"6.6499999999999995\" rx=\"1.14\" fill=\"#111\"/><path d=\"M-19.0 -7.6 L-18.429999999999996 -39.9 Q-18.05 -43.699999999999996 -14.25 -43.699999999999996 L14.25 -43.699999999999996 Q18.05 -43.699999999999996 18.429999999999996 -39.9 L19.0 -7.6 Z\" fill=\"#121211\" stroke=\"#2E2E2A\" stroke-width=\"0.475\"/><rect x=\"-14.25\" y=\"-42.559999999999995\" width=\"28.5\" height=\"3.04\" rx=\"0.76\" fill=\"#3A3A37\"/><path d=\"M-16.15 -38.475 L16.15 -38.475 L17.099999999999998 -26.599999999999998 L-17.099999999999998 -26.599999999999998 Z\" fill=\"#0A0A09\"/><path d=\"M-11.399999999999999 -37.525 L-3.8 -37.525 L-8.549999999999999 -27.549999999999997 L-14.25 -27.549999999999997 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-10.45\" y=\"-24.7\" width=\"20.9\" height=\"13.299999999999999\" rx=\"0.95\" fill=\"#1A1A19\" stroke=\"#2E2E2A\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-22.8\" y2=\"-22.8\" stroke=\"#2E2E2A\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-20.3\" y2=\"-20.3\" stroke=\"#2E2E2A\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-17.9\" y2=\"-17.9\" stroke=\"#2E2E2A\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-15.4\" y2=\"-15.4\" stroke=\"#2E2E2A\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-12.9\" y2=\"-12.9\" stroke=\"#2E2E2A\" stroke-width=\"0.33249999999999996\"/><line x1=\"-10.45\" y1=\"-12.35\" x2=\"10.45\" y2=\"-23.75\" stroke=\"#8C8C86\" stroke-width=\"0.855\"/><circle cx=\"0\" cy=\"-18.05\" r=\"2.28\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"0.76\"/><path d=\"M-11.399999999999999 -14.25 L-18.05 -14.25 L-18.05 -9.975 L-11.399999999999999 -9.975 Z\" fill=\"#3B3B38\" stroke=\"#2E2E2A\" stroke-width=\"0.285\"/><path d=\"M-11.875 -15.579999999999998 L-17.67 -15.579999999999998\" stroke=\"#444\" stroke-width=\"0.76\"/><path d=\"M11.399999999999999 -14.25 L18.05 -14.25 L18.05 -9.975 L11.399999999999999 -9.975 Z\" fill=\"#3B3B38\" stroke=\"#2E2E2A\" stroke-width=\"0.285\"/><path d=\"M11.875 -15.579999999999998 L17.67 -15.579999999999998\" stroke=\"#444\" stroke-width=\"0.76\"/><rect x=\"-19.0\" y=\"-8.549999999999999\" width=\"38.0\" height=\"2.8499999999999996\" fill=\"#151514\"/><rect x=\"-23.275\" y=\"-37.05\" width=\"2.8499999999999996\" height=\"8.549999999999999\" rx=\"0.76\" fill=\"#121211\" stroke=\"#2E2E2A\" stroke-width=\"0.38\"/><rect x=\"20.425\" y=\"-37.05\" width=\"2.8499999999999996\" height=\"8.549999999999999\" rx=\"0.76\" fill=\"#121211\" stroke=\"#2E2E2A\" stroke-width=\"0.38\"/></g><path d=\"M73 27 Q92 23 110 27\" fill=\"none\" stroke=\"#5C5C55\" stroke-width=\".6\" opacity=\".7\"/><path d=\"M22 78 L40 70\" fill=\"none\" stroke=\"#1E1E1C\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 78 L40 70\" fill=\"none\" stroke=\"#E2A400\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polygon points=\"38.5,67 43.5,68.6 40.2,72.7\" fill=\"#E2A400\" stroke=\"#1E1E1C\" stroke-width=\".6\" stroke-linejoin=\"round\"/><path d=\"M30 40 L30 24\" fill=\"none\" stroke=\"#1E1E1C\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 40 L30 24\" fill=\"none\" stroke=\"#E2A400\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polygon points=\"27,24 30,19 33,24\" fill=\"#E2A400\" stroke=\"#1E1E1C\" stroke-width=\".6\" stroke-linejoin=\"round\"/><rect x=\"8\" y=\"4.6\" width=\"76.8\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG · TRAVELLING IN + TILT UP</text>",
+   "detalhe": "Durante o passeio de câmera, surge uma silhueta distante na escuridão da plenária. Dá para ver que é um caminhão, mas não o design nem a cor.",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 2,
+   "tc": "Plenária · INT",
+   "title": "O farol acende",
+   "color": "#7F93C2",
+   "desc": "A escuridão é quebrada pelo design do farol frontal se acendendo. Também vale para o farol aceso junto do chão luminoso no degrau da porta (B8).",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#0B0B0A\"/><path d=\"M0 62 L160 62 L160 90 L0 90 Z\" fill=\"#141413\"/><path d=\"M0 62 L160 62\" stroke=\"#24241F\" stroke-width=\".5\"/><ellipse cx=\"78\" cy=\"48\" rx=\"66.0\" ry=\"46.2\" fill=\"#FFE7A3\" opacity=\"0.07\"/><ellipse cx=\"78\" cy=\"48\" rx=\"44.0\" ry=\"30.8\" fill=\"#FFE7A3\" opacity=\"0.25\"/><ellipse cx=\"78\" cy=\"48\" rx=\"26.4\" ry=\"18.5\" fill=\"#FFE7A3\" opacity=\"0.39\"/><rect x=\"50\" y=\"36\" width=\"58\" height=\"26\" rx=\"3\" fill=\"#232321\" stroke=\"#3E3E3A\" stroke-width=\".6\"/><path d=\"M56 42 L100 42 L100 56 L56 56 Z\" fill=\"#FFF6DA\"/><path d=\"M58 39.5 L98 39.5\" stroke=\"#FFE7A3\" stroke-width=\"2\"/><path d=\"M62 44 L94 44 L94 54 L62 54 Z\" fill=\"#FFFFFF\" opacity=\".75\"/><path d=\"M108 30 L140 18 M108 50 L150 50\" stroke=\"#FFE7A3\" stroke-width=\".5\" opacity=\".4\"/><rect x=\"8\" y=\"4.6\" width=\"48.2\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PD · FAROL ACENDE</text>",
+   "detalhe": "A escuridão é quebrada pelo design do farol frontal se acendendo. Também vale para o farol aceso junto do chão luminoso no degrau da porta (B8).",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 3,
+   "tc": "Plenária · INT",
+   "title": "Testeira 100 anos",
+   "color": "#7F93C2",
+   "desc": "A testeira do caminhão se acende, revelando o logo de 100 anos. Câmera em contra-plongée, 3/4.",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#0B0B0A\"/><path d=\"M0 62 L160 62 L160 90 L0 90 Z\" fill=\"#141413\"/><path d=\"M0 62 L160 62\" stroke=\"#24241F\" stroke-width=\".5\"/><ellipse cx=\"80\" cy=\"22\" rx=\"54.0\" ry=\"37.8\" fill=\"#FFE7A3\" opacity=\"0.04\"/><ellipse cx=\"80\" cy=\"22\" rx=\"36.0\" ry=\"25.2\" fill=\"#FFE7A3\" opacity=\"0.14\"/><ellipse cx=\"80\" cy=\"22\" rx=\"21.6\" ry=\"15.1\" fill=\"#FFE7A3\" opacity=\"0.23\"/><g transform=\"translate(80 104)\"><rect x=\"-33.25\" y=\"-12.25\" width=\"14.0\" height=\"12.25\" rx=\"2.1\" fill=\"#111\"/><rect x=\"19.25\" y=\"-12.25\" width=\"14.0\" height=\"12.25\" rx=\"2.1\" fill=\"#111\"/><path d=\"M-35.0 -14.0 L-33.949999999999996 -73.5 Q-33.25 -80.5 -26.25 -80.5 L26.25 -80.5 Q33.25 -80.5 33.949999999999996 -73.5 L35.0 -14.0 Z\" fill=\"#1C1C1A\" stroke=\"#36362F\" stroke-width=\"0.875\"/><rect x=\"-26.25\" y=\"-78.39999999999999\" width=\"52.5\" height=\"5.6000000000000005\" rx=\"1.4000000000000001\" fill=\"#E2A400\"/><text x=\"0\" y=\"-74.02499999999999\" text-anchor=\"middle\" font-family=\"Archivo,Arial,sans-serif\" font-weight=\"800\" font-size=\"4.55\" fill=\"#1E1E1C\">100</text><path d=\"M-29.75 -70.875 L29.75 -70.875 L31.5 -49.0 L-31.5 -49.0 Z\" fill=\"#0B0B0A\"/><path d=\"M-21.0 -69.125 L-7.0 -69.125 L-15.75 -50.75 L-26.25 -50.75 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-19.25\" y=\"-45.5\" width=\"38.5\" height=\"24.5\" rx=\"1.75\" fill=\"#1A1A19\" stroke=\"#36362F\" stroke-width=\"0.6124999999999999\"/><line x1=\"-17.5\" x2=\"17.5\" y1=\"-42.0\" y2=\"-42.0\" stroke=\"#36362F\" stroke-width=\"0.6124999999999999\"/><line x1=\"-17.5\" x2=\"17.5\" y1=\"-37.4\" y2=\"-37.4\" stroke=\"#36362F\" stroke-width=\"0.6124999999999999\"/><line x1=\"-17.5\" x2=\"17.5\" y1=\"-32.9\" y2=\"-32.9\" stroke=\"#36362F\" stroke-width=\"0.6124999999999999\"/><line x1=\"-17.5\" x2=\"17.5\" y1=\"-28.3\" y2=\"-28.3\" stroke=\"#36362F\" stroke-width=\"0.6124999999999999\"/><line x1=\"-17.5\" x2=\"17.5\" y1=\"-23.8\" y2=\"-23.8\" stroke=\"#36362F\" stroke-width=\"0.6124999999999999\"/><line x1=\"-19.25\" y1=\"-22.75\" x2=\"19.25\" y2=\"-43.75\" stroke=\"#8C8C86\" stroke-width=\"1.575\"/><circle cx=\"0\" cy=\"-33.25\" r=\"4.2\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"1.4000000000000001\"/><path d=\"M-21.0 -26.25 L-33.25 -26.25 L-33.25 -18.375 L-21.0 -18.375 Z\" fill=\"#3B3B38\" stroke=\"#36362F\" stroke-width=\"0.525\"/><path d=\"M-21.875 -28.699999999999996 L-32.550000000000004 -28.699999999999996\" stroke=\"#444\" stroke-width=\"1.4000000000000001\"/><path d=\"M21.0 -26.25 L33.25 -26.25 L33.25 -18.375 L21.0 -18.375 Z\" fill=\"#3B3B38\" stroke=\"#36362F\" stroke-width=\"0.525\"/><path d=\"M21.875 -28.699999999999996 L32.550000000000004 -28.699999999999996\" stroke=\"#444\" stroke-width=\"1.4000000000000001\"/><rect x=\"-35.0\" y=\"-15.75\" width=\"70.0\" height=\"5.25\" fill=\"#151514\"/><rect x=\"-42.875\" y=\"-68.25\" width=\"5.25\" height=\"15.75\" rx=\"1.4000000000000001\" fill=\"#1C1C1A\" stroke=\"#36362F\" stroke-width=\"0.7000000000000001\"/><rect x=\"37.625\" y=\"-68.25\" width=\"5.25\" height=\"15.75\" rx=\"1.4000000000000001\" fill=\"#1C1C1A\" stroke=\"#36362F\" stroke-width=\"0.7000000000000001\"/></g><rect x=\"8\" y=\"4.6\" width=\"69.0\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">CONTRA-PLONGÉE · TESTEIRA</text>",
+   "detalhe": "A testeira do caminhão se acende, revelando o logo de 100 anos. Câmera em contra-plongée, 3/4.",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 4,
+   "tc": "Plenária · INT",
+   "title": "Porta abre, logo no chão",
+   "color": "#7F93C2",
+   "desc": "Ainda na escuridão e no silêncio, a porta do caminhão se abre e projeta instantaneamente o logo de 100 anos no chão.",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#0B0B0A\"/><path d=\"M0 62 L160 62 L160 90 L0 90 Z\" fill=\"#141413\"/><path d=\"M0 62 L160 62\" stroke=\"#24241F\" stroke-width=\".5\"/><path d=\"M86 40 L70 86 L140 86 L112 40 Z\" fill=\"#F4E3B0\" opacity=\".12\"/><g transform=\"translate(30 66)\"><rect x=\"0\" y=\"-13.75\" width=\"65.0\" height=\"4.375\" fill=\"#151514\"/><path d=\"M37.5 -11.25 L37.5 -55.0 Q37.5 -58.75 41.25 -58.75 L60.0 -58.75 Q65.0 -58.75 65.625 -52.5 L67.5 -11.25 Z\" fill=\"#1E1E1C\" stroke=\"#4A4A46\" stroke-width=\"0.625\"/><path d=\"M53.75 -53.75 L63.75 -53.75 L65.625 -38.75 L53.75 -38.75 Z\" fill=\"#0B0B0A\"/><path d=\"M52.5 -38.75 L52.5 -15.0 L72.5 -17.5 L72.5 -41.25 Z\" fill=\"#1E1E1C\" stroke=\"#4A4A46\" stroke-width=\"0.625\"/><rect x=\"53.75 \" y=\"-38.125\" width=\"10.625\" height=\"22.5\" fill=\"#F7E7B8\" opacity=\".9\"/><rect x=\"66.875\" y=\"-18.75\" width=\"2.0\" height=\"5.0\" fill=\"#3B3B38\"/><circle cx=\"11.25\" cy=\"-6.875\" r=\"6.875\" fill=\"#111\"/><circle cx=\"11.25\" cy=\"-6.875\" r=\"3.0\" fill=\"#4A4A46\"/><circle cx=\"25.0\" cy=\"-6.875\" r=\"6.875\" fill=\"#111\"/><circle cx=\"25.0\" cy=\"-6.875\" r=\"3.0\" fill=\"#4A4A46\"/><circle cx=\"57.5\" cy=\"-6.875\" r=\"6.875\" fill=\"#111\"/><circle cx=\"57.5\" cy=\"-6.875\" r=\"3.0\" fill=\"#4A4A46\"/></g><ellipse cx=\"104\" cy=\"78\" rx=\"20\" ry=\"5\" fill=\"#F4E3B0\" opacity=\".85\"/><text x=\"104\" y=\"80\" text-anchor=\"middle\" font-family=\"Archivo,Arial,sans-serif\" font-weight=\"800\" font-size=\"5\" fill=\"#1E1E1C\">100 ANOS</text><rect x=\"8\" y=\"4.6\" width=\"69.0\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · PORTA + LOGO NO CHÃO</text>",
+   "detalhe": "Ainda na escuridão e no silêncio, a porta do caminhão se abre e projeta instantaneamente o logo de 100 anos no chão.",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 5,
+   "tc": "Plenária · INT",
+   "title": "Silhueta quebrada pela luz",
+   "color": "#7F93C2",
+   "desc": "Plano aberto: a silhueta é quebrada pelos faróis e pela testeira acesos, com forte luz frontal revelando o caminhão inteiro. Intercala o preto e o branco em matchcut.",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#0B0B0A\"/><path d=\"M0 62 L160 62 L160 90 L0 90 Z\" fill=\"#1A1A18\"/><path d=\"M80 0 L0 90 L160 90 Z\" fill=\"#FFF6DA\" opacity=\".07\"/><clipPath id=\"v5a\"><rect width=\"80\" height=\"90\"/></clipPath><clipPath id=\"v5b\"><rect x=\"80\" width=\"80\" height=\"90\"/></clipPath><g clip-path=\"url(#v5a)\"><ellipse cx=\"62.175\" cy=\"59.28\" rx=\"17.2\" ry=\"12.1\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"62.175\" cy=\"59.28\" rx=\"11.5\" ry=\"8.0\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"62.175\" cy=\"59.28\" rx=\"6.9\" ry=\"4.8\" fill=\"#FFE7A3\" opacity=\"0.36\"/><ellipse cx=\"97.825\" cy=\"59.28\" rx=\"17.2\" ry=\"12.1\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"97.825\" cy=\"59.28\" rx=\"11.5\" ry=\"8.0\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"97.825\" cy=\"59.28\" rx=\"6.9\" ry=\"4.8\" fill=\"#FFE7A3\" opacity=\"0.36\"/><g transform=\"translate(80 74)\"><rect x=\"-21.849999999999998\" y=\"-8.049999999999999\" width=\"9.2\" height=\"8.049999999999999\" rx=\"1.38\" fill=\"#111\"/><rect x=\"12.649999999999999\" y=\"-8.049999999999999\" width=\"9.2\" height=\"8.049999999999999\" rx=\"1.38\" fill=\"#111\"/><path d=\"M-23.0 -9.2 L-22.309999999999995 -48.3 Q-21.849999999999998 -52.9 -17.25 -52.9 L17.25 -52.9 Q21.849999999999998 -52.9 22.309999999999995 -48.3 L23.0 -9.2 Z\" fill=\"#222220\" stroke=\"#4A4A46\" stroke-width=\"0.575\"/><rect x=\"-17.25\" y=\"-51.519999999999996\" width=\"34.5\" height=\"3.6799999999999997\" rx=\"0.9199999999999999\" fill=\"#E2A400\"/><text x=\"0\" y=\"-48.644999999999996\" text-anchor=\"middle\" font-family=\"Archivo,Arial,sans-serif\" font-weight=\"800\" font-size=\"2.9899999999999998\" fill=\"#1E1E1C\">100</text><path d=\"M-19.549999999999997 -46.574999999999996 L19.549999999999997 -46.574999999999996 L20.7 -32.199999999999996 L-20.7 -32.199999999999996 Z\" fill=\"#0B0B0A\"/><path d=\"M-13.799999999999999 -45.425 L-4.6 -45.425 L-10.35 -33.349999999999994 L-17.25 -33.349999999999994 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-12.649999999999999\" y=\"-29.9\" width=\"25.299999999999997\" height=\"16.099999999999998\" rx=\"1.15\" fill=\"#1A1A19\" stroke=\"#4A4A46\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-27.6\" y2=\"-27.6\" stroke=\"#4A4A46\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-24.6\" y2=\"-24.6\" stroke=\"#4A4A46\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-21.6\" y2=\"-21.6\" stroke=\"#4A4A46\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-18.6\" y2=\"-18.6\" stroke=\"#4A4A46\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-15.6\" y2=\"-15.6\" stroke=\"#4A4A46\" stroke-width=\"0.40249999999999997\"/><line x1=\"-12.649999999999999\" y1=\"-14.95\" x2=\"12.649999999999999\" y2=\"-28.749999999999996\" stroke=\"#8C8C86\" stroke-width=\"1.035\"/><circle cx=\"0\" cy=\"-21.849999999999998\" r=\"2.76\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"0.9199999999999999\"/><path d=\"M-13.799999999999999 -17.25 L-21.849999999999998 -17.25 L-21.849999999999998 -12.075 L-13.799999999999999 -12.075 Z\" fill=\"#FFF6DA\" stroke=\"#4A4A46\" stroke-width=\"0.345\"/><path d=\"M-14.374999999999998 -18.859999999999996 L-21.39 -18.859999999999996\" stroke=\"#FFE7A3\" stroke-width=\"0.9199999999999999\"/><path d=\"M13.799999999999999 -17.25 L21.849999999999998 -17.25 L21.849999999999998 -12.075 L13.799999999999999 -12.075 Z\" fill=\"#FFF6DA\" stroke=\"#4A4A46\" stroke-width=\"0.345\"/><path d=\"M14.374999999999998 -18.859999999999996 L21.39 -18.859999999999996\" stroke=\"#FFE7A3\" stroke-width=\"0.9199999999999999\"/><rect x=\"-23.0\" y=\"-10.35\" width=\"46.0\" height=\"3.4499999999999997\" fill=\"#151514\"/><rect x=\"-28.174999999999997\" y=\"-44.849999999999994\" width=\"3.4499999999999997\" height=\"10.35\" rx=\"0.9199999999999999\" fill=\"#222220\" stroke=\"#4A4A46\" stroke-width=\"0.45999999999999996\"/><rect x=\"24.724999999999998\" y=\"-44.849999999999994\" width=\"3.4499999999999997\" height=\"10.35\" rx=\"0.9199999999999999\" fill=\"#222220\" stroke=\"#4A4A46\" stroke-width=\"0.45999999999999996\"/></g></g><g clip-path=\"url(#v5b)\"><ellipse cx=\"62.175\" cy=\"59.28\" rx=\"17.2\" ry=\"12.1\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"62.175\" cy=\"59.28\" rx=\"11.5\" ry=\"8.0\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"62.175\" cy=\"59.28\" rx=\"6.9\" ry=\"4.8\" fill=\"#FFE7A3\" opacity=\"0.36\"/><ellipse cx=\"97.825\" cy=\"59.28\" rx=\"17.2\" ry=\"12.1\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"97.825\" cy=\"59.28\" rx=\"11.5\" ry=\"8.0\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"97.825\" cy=\"59.28\" rx=\"6.9\" ry=\"4.8\" fill=\"#FFE7A3\" opacity=\"0.36\"/><g transform=\"translate(80 74)\"><rect x=\"-21.849999999999998\" y=\"-8.049999999999999\" width=\"9.2\" height=\"8.049999999999999\" rx=\"1.38\" fill=\"#111\"/><rect x=\"12.649999999999999\" y=\"-8.049999999999999\" width=\"9.2\" height=\"8.049999999999999\" rx=\"1.38\" fill=\"#111\"/><path d=\"M-23.0 -9.2 L-22.309999999999995 -48.3 Q-21.849999999999998 -52.9 -17.25 -52.9 L17.25 -52.9 Q21.849999999999998 -52.9 22.309999999999995 -48.3 L23.0 -9.2 Z\" fill=\"#E9E6DE\" stroke=\"#8E8B83\" stroke-width=\"0.575\"/><rect x=\"-17.25\" y=\"-51.519999999999996\" width=\"34.5\" height=\"3.6799999999999997\" rx=\"0.9199999999999999\" fill=\"#E2A400\"/><text x=\"0\" y=\"-48.644999999999996\" text-anchor=\"middle\" font-family=\"Archivo,Arial,sans-serif\" font-weight=\"800\" font-size=\"2.9899999999999998\" fill=\"#1E1E1C\">100</text><path d=\"M-19.549999999999997 -46.574999999999996 L19.549999999999997 -46.574999999999996 L20.7 -32.199999999999996 L-20.7 -32.199999999999996 Z\" fill=\"#2B2B29\"/><path d=\"M-13.799999999999999 -45.425 L-4.6 -45.425 L-10.35 -33.349999999999994 L-17.25 -33.349999999999994 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-12.649999999999999\" y=\"-29.9\" width=\"25.299999999999997\" height=\"16.099999999999998\" rx=\"1.15\" fill=\"#1A1A19\" stroke=\"#8E8B83\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-27.6\" y2=\"-27.6\" stroke=\"#8E8B83\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-24.6\" y2=\"-24.6\" stroke=\"#8E8B83\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-21.6\" y2=\"-21.6\" stroke=\"#8E8B83\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-18.6\" y2=\"-18.6\" stroke=\"#8E8B83\" stroke-width=\"0.40249999999999997\"/><line x1=\"-11.5\" x2=\"11.5\" y1=\"-15.6\" y2=\"-15.6\" stroke=\"#8E8B83\" stroke-width=\"0.40249999999999997\"/><line x1=\"-12.649999999999999\" y1=\"-14.95\" x2=\"12.649999999999999\" y2=\"-28.749999999999996\" stroke=\"#8C8C86\" stroke-width=\"1.035\"/><circle cx=\"0\" cy=\"-21.849999999999998\" r=\"2.76\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"0.9199999999999999\"/><path d=\"M-13.799999999999999 -17.25 L-21.849999999999998 -17.25 L-21.849999999999998 -12.075 L-13.799999999999999 -12.075 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.345\"/><path d=\"M-14.374999999999998 -18.859999999999996 L-21.39 -18.859999999999996\" stroke=\"#FFE7A3\" stroke-width=\"0.9199999999999999\"/><path d=\"M13.799999999999999 -17.25 L21.849999999999998 -17.25 L21.849999999999998 -12.075 L13.799999999999999 -12.075 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.345\"/><path d=\"M14.374999999999998 -18.859999999999996 L21.39 -18.859999999999996\" stroke=\"#FFE7A3\" stroke-width=\"0.9199999999999999\"/><rect x=\"-23.0\" y=\"-10.35\" width=\"46.0\" height=\"3.4499999999999997\" fill=\"#151514\"/><rect x=\"-28.174999999999997\" y=\"-44.849999999999994\" width=\"3.4499999999999997\" height=\"10.35\" rx=\"0.9199999999999999\" fill=\"#E9E6DE\" stroke=\"#8E8B83\" stroke-width=\"0.45999999999999996\"/><rect x=\"24.724999999999998\" y=\"-44.849999999999994\" width=\"3.4499999999999997\" height=\"10.35\" rx=\"0.9199999999999999\" fill=\"#E9E6DE\" stroke=\"#8E8B83\" stroke-width=\"0.45999999999999996\"/></g></g><line x1=\"80\" y1=\"0\" x2=\"80\" y2=\"90\" stroke=\"#E2A400\" stroke-width=\".6\" stroke-dasharray=\"2 1.6\"/><rect x=\"8\" y=\"4.6\" width=\"89.8\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG · LUZ FRONTAL · MATCHCUT P5↔B5</text>",
+   "detalhe": "Plano aberto: a silhueta é quebrada pelos faróis e pela testeira acesos, com forte luz frontal revelando o caminhão inteiro. Intercala o preto e o branco em matchcut.",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 6,
+   "tc": "Plenária · INT",
+   "title": "Câmera baixa, 3/4",
+   "color": "#7F93C2",
+   "desc": "Com a câmera baixa, o caminhão fica grandioso: design em 3/4, retrovisores e testeira 100 anos acesa. Inclui as cenas diversas de design.",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#0B0B0A\"/><path d=\"M0 62 L160 62 L160 90 L0 90 Z\" fill=\"#141413\"/><path d=\"M0 62 L160 62\" stroke=\"#24241F\" stroke-width=\".5\"/><path d=\"M52 24 L74 20 L74 80 L50 84 Z\" fill=\"#1B1B19\" stroke=\"#3A3A36\" stroke-width=\".5\"/><path d=\"M55 28 L71 25 L71 44 L55 47 Z\" fill=\"#0B0B0A\"/><circle cx=\"60\" cy=\"84\" r=\"7\" fill=\"#111\"/><circle cx=\"60\" cy=\"84\" r=\"3\" fill=\"#4A4A46\"/><ellipse cx=\"79.525\" cy=\"73.44\" rx=\"21.8\" ry=\"15.2\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"79.525\" cy=\"73.44\" rx=\"14.5\" ry=\"10.1\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"79.525\" cy=\"73.44\" rx=\"8.7\" ry=\"6.1\" fill=\"#FFE7A3\" opacity=\"0.36\"/><ellipse cx=\"124.475\" cy=\"73.44\" rx=\"21.8\" ry=\"15.2\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"124.475\" cy=\"73.44\" rx=\"14.5\" ry=\"10.1\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"124.475\" cy=\"73.44\" rx=\"8.7\" ry=\"6.1\" fill=\"#FFE7A3\" opacity=\"0.36\"/><g transform=\"translate(102 92)\"><rect x=\"-27.55\" y=\"-10.15\" width=\"11.6\" height=\"10.15\" rx=\"1.74\" fill=\"#111\"/><rect x=\"15.95\" y=\"-10.15\" width=\"11.6\" height=\"10.15\" rx=\"1.74\" fill=\"#111\"/><path d=\"M-29.0 -11.6 L-28.129999999999995 -60.9 Q-27.55 -66.7 -21.75 -66.7 L21.75 -66.7 Q27.55 -66.7 28.129999999999995 -60.9 L29.0 -11.6 Z\" fill=\"#262624\" stroke=\"#4A4A46\" stroke-width=\"0.725\"/><rect x=\"-21.75\" y=\"-64.96\" width=\"43.5\" height=\"4.64\" rx=\"1.16\" fill=\"#E2A400\"/><text x=\"0\" y=\"-61.334999999999994\" text-anchor=\"middle\" font-family=\"Archivo,Arial,sans-serif\" font-weight=\"800\" font-size=\"3.77\" fill=\"#1E1E1C\">100</text><path d=\"M-24.65 -58.725 L24.65 -58.725 L26.099999999999998 -40.6 L-26.099999999999998 -40.6 Z\" fill=\"#0B0B0A\"/><path d=\"M-17.4 -57.275 L-5.8 -57.275 L-13.049999999999999 -42.05 L-21.75 -42.05 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-15.95\" y=\"-37.699999999999996\" width=\"31.9\" height=\"20.3\" rx=\"1.45\" fill=\"#1A1A19\" stroke=\"#4A4A46\" stroke-width=\"0.5075\"/><line x1=\"-14.5\" x2=\"14.5\" y1=\"-34.8\" y2=\"-34.8\" stroke=\"#4A4A46\" stroke-width=\"0.5075\"/><line x1=\"-14.5\" x2=\"14.5\" y1=\"-31.0\" y2=\"-31.0\" stroke=\"#4A4A46\" stroke-width=\"0.5075\"/><line x1=\"-14.5\" x2=\"14.5\" y1=\"-27.3\" y2=\"-27.3\" stroke=\"#4A4A46\" stroke-width=\"0.5075\"/><line x1=\"-14.5\" x2=\"14.5\" y1=\"-23.5\" y2=\"-23.5\" stroke=\"#4A4A46\" stroke-width=\"0.5075\"/><line x1=\"-14.5\" x2=\"14.5\" y1=\"-19.7\" y2=\"-19.7\" stroke=\"#4A4A46\" stroke-width=\"0.5075\"/><line x1=\"-15.95\" y1=\"-18.849999999999998\" x2=\"15.95\" y2=\"-36.25\" stroke=\"#8C8C86\" stroke-width=\"1.305\"/><circle cx=\"0\" cy=\"-27.55\" r=\"3.48\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"1.16\"/><path d=\"M-17.4 -21.75 L-27.55 -21.75 L-27.55 -15.225 L-17.4 -15.225 Z\" fill=\"#FFF6DA\" stroke=\"#4A4A46\" stroke-width=\"0.435\"/><path d=\"M-18.125 -23.779999999999998 L-26.970000000000002 -23.779999999999998\" stroke=\"#FFE7A3\" stroke-width=\"1.16\"/><path d=\"M17.4 -21.75 L27.55 -21.75 L27.55 -15.225 L17.4 -15.225 Z\" fill=\"#FFF6DA\" stroke=\"#4A4A46\" stroke-width=\"0.435\"/><path d=\"M18.125 -23.779999999999998 L26.970000000000002 -23.779999999999998\" stroke=\"#FFE7A3\" stroke-width=\"1.16\"/><rect x=\"-29.0\" y=\"-13.049999999999999\" width=\"58.0\" height=\"4.35\" fill=\"#151514\"/><rect x=\"-35.525\" y=\"-56.55\" width=\"4.35\" height=\"13.049999999999999\" rx=\"1.16\" fill=\"#262624\" stroke=\"#4A4A46\" stroke-width=\"0.58\"/><rect x=\"31.175\" y=\"-56.55\" width=\"4.35\" height=\"13.049999999999999\" rx=\"1.16\" fill=\"#262624\" stroke=\"#4A4A46\" stroke-width=\"0.58\"/></g><rect x=\"8\" y=\"4.6\" width=\"63.8\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · CÂMERA BAIXA · 3/4</text>",
+   "detalhe": "Com a câmera baixa, o caminhão fica grandioso: design em 3/4, retrovisores e testeira 100 anos acesa. Inclui as cenas diversas de design.",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 7,
+   "tc": "Plenária → pista",
+   "title": "Da plenária para a pista",
+   "color": "var(--day)",
+   "desc": "Plano amplo frontal em travelling out; corte em matchcut da plenária para o caminhão branco rodando na pista de testes durante o dia.",
+   "ost": "",
+   "svg": "<clipPath id=\"v7a\"><rect width=\"80\" height=\"90\"/></clipPath><clipPath id=\"v7b\"><rect x=\"80\" width=\"80\" height=\"90\"/></clipPath><g clip-path=\"url(#v7a)\"><rect width=\"160\" height=\"90\" fill=\"#0B0B0A\"/><path d=\"M0 62 L160 62 L160 90 L0 90 Z\" fill=\"#141413\"/><path d=\"M0 62 L160 62\" stroke=\"#24241F\" stroke-width=\".5\"/><ellipse cx=\"61.400000000000006\" cy=\"60.64\" rx=\"18.0\" ry=\"12.6\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"61.400000000000006\" cy=\"60.64\" rx=\"12.0\" ry=\"8.4\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"61.400000000000006\" cy=\"60.64\" rx=\"7.2\" ry=\"5.0\" fill=\"#FFE7A3\" opacity=\"0.36\"/><ellipse cx=\"98.6\" cy=\"60.64\" rx=\"18.0\" ry=\"12.6\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"98.6\" cy=\"60.64\" rx=\"12.0\" ry=\"8.4\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"98.6\" cy=\"60.64\" rx=\"7.2\" ry=\"5.0\" fill=\"#FFE7A3\" opacity=\"0.36\"/><g transform=\"translate(80 76)\"><rect x=\"-22.8\" y=\"-8.4\" width=\"9.6\" height=\"8.4\" rx=\"1.44\" fill=\"#111\"/><rect x=\"13.2\" y=\"-8.4\" width=\"9.6\" height=\"8.4\" rx=\"1.44\" fill=\"#111\"/><path d=\"M-24.0 -9.6 L-23.279999999999998 -50.4 Q-22.8 -55.199999999999996 -18.0 -55.199999999999996 L18.0 -55.199999999999996 Q22.8 -55.199999999999996 23.279999999999998 -50.4 L24.0 -9.6 Z\" fill=\"#E9E6DE\" stroke=\"#8E8B83\" stroke-width=\"0.6\"/><rect x=\"-18.0\" y=\"-53.76\" width=\"36.0\" height=\"3.84\" rx=\"0.96\" fill=\"#E2A400\"/><text x=\"0\" y=\"-50.76\" text-anchor=\"middle\" font-family=\"Archivo,Arial,sans-serif\" font-weight=\"800\" font-size=\"3.12\" fill=\"#1E1E1C\">100</text><path d=\"M-20.4 -48.6 L20.4 -48.6 L21.599999999999998 -33.6 L-21.599999999999998 -33.6 Z\" fill=\"#2B2B29\"/><path d=\"M-14.399999999999999 -47.4 L-4.8 -47.4 L-10.799999999999999 -34.8 L-18.0 -34.8 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-13.2\" y=\"-31.2\" width=\"26.4\" height=\"16.8\" rx=\"1.2\" fill=\"#1A1A19\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-28.8\" y2=\"-28.8\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-25.7\" y2=\"-25.7\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-22.6\" y2=\"-22.6\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-19.4\" y2=\"-19.4\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-16.3\" y2=\"-16.3\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-13.2\" y1=\"-15.6\" x2=\"13.2\" y2=\"-30.0\" stroke=\"#8C8C86\" stroke-width=\"1.08\"/><circle cx=\"0\" cy=\"-22.8\" r=\"2.88\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"0.96\"/><path d=\"M-14.399999999999999 -18.0 L-22.8 -18.0 L-22.8 -12.6 L-14.399999999999999 -12.6 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.36\"/><path d=\"M-15.0 -19.679999999999996 L-22.32 -19.679999999999996\" stroke=\"#FFE7A3\" stroke-width=\"0.96\"/><path d=\"M14.399999999999999 -18.0 L22.8 -18.0 L22.8 -12.6 L14.399999999999999 -12.6 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.36\"/><path d=\"M15.0 -19.679999999999996 L22.32 -19.679999999999996\" stroke=\"#FFE7A3\" stroke-width=\"0.96\"/><rect x=\"-24.0\" y=\"-10.799999999999999\" width=\"48.0\" height=\"3.5999999999999996\" fill=\"#151514\"/><rect x=\"-29.4\" y=\"-46.8\" width=\"3.5999999999999996\" height=\"10.799999999999999\" rx=\"0.96\" fill=\"#E9E6DE\" stroke=\"#8E8B83\" stroke-width=\"0.48\"/><rect x=\"25.8\" y=\"-46.8\" width=\"3.5999999999999996\" height=\"10.799999999999999\" rx=\"0.96\" fill=\"#E9E6DE\" stroke=\"#8E8B83\" stroke-width=\"0.48\"/></g></g><g clip-path=\"url(#v7b)\"><rect width=\"160\" height=\"90\" fill=\"#DCE1D6\"/><path d=\"M0 46 Q20 34 40 42 Q60 30 82 40 Q104 30 126 40 Q144 33 160 40 L160 54 L0 54 Z\" fill=\"#9CA48F\"/><path d=\"M0 50 Q30 42 60 48 Q96 40 130 48 Q148 44 160 47 L160 56 L0 56 Z\" fill=\"#7E8772\"/><path d=\"M0 90 L66 54 L94 54 L160 90 Z\" fill=\"#9E9C95\"/><path d=\"M80 56 L80 62 M80 67 L80 75 M80 80 L80 90\" stroke=\"#F4F1EA\" stroke-width=\"1.2\"/><path d=\"M0 90 L66 54 M160 90 L94 54\" stroke=\"#C9C6BC\" stroke-width=\".6\"/><ellipse cx=\"61.400000000000006\" cy=\"60.64\" rx=\"18.0\" ry=\"12.6\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"61.400000000000006\" cy=\"60.64\" rx=\"12.0\" ry=\"8.4\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"61.400000000000006\" cy=\"60.64\" rx=\"7.2\" ry=\"5.0\" fill=\"#FFE7A3\" opacity=\"0.36\"/><ellipse cx=\"98.6\" cy=\"60.64\" rx=\"18.0\" ry=\"12.6\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"98.6\" cy=\"60.64\" rx=\"12.0\" ry=\"8.4\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"98.6\" cy=\"60.64\" rx=\"7.2\" ry=\"5.0\" fill=\"#FFE7A3\" opacity=\"0.36\"/><g transform=\"translate(80 76)\"><rect x=\"-22.8\" y=\"-8.4\" width=\"9.6\" height=\"8.4\" rx=\"1.44\" fill=\"#111\"/><rect x=\"13.2\" y=\"-8.4\" width=\"9.6\" height=\"8.4\" rx=\"1.44\" fill=\"#111\"/><path d=\"M-24.0 -9.6 L-23.279999999999998 -50.4 Q-22.8 -55.199999999999996 -18.0 -55.199999999999996 L18.0 -55.199999999999996 Q22.8 -55.199999999999996 23.279999999999998 -50.4 L24.0 -9.6 Z\" fill=\"#ECE9E1\" stroke=\"#8E8B83\" stroke-width=\"0.6\"/><rect x=\"-18.0\" y=\"-53.76\" width=\"36.0\" height=\"3.84\" rx=\"0.96\" fill=\"#3A3A37\"/><path d=\"M-20.4 -48.6 L20.4 -48.6 L21.599999999999998 -33.6 L-21.599999999999998 -33.6 Z\" fill=\"#3A3E44\"/><path d=\"M-14.399999999999999 -47.4 L-4.8 -47.4 L-10.799999999999999 -34.8 L-18.0 -34.8 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-13.2\" y=\"-31.2\" width=\"26.4\" height=\"16.8\" rx=\"1.2\" fill=\"#1A1A19\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-28.8\" y2=\"-28.8\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-25.7\" y2=\"-25.7\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-22.6\" y2=\"-22.6\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-19.4\" y2=\"-19.4\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-12.0\" x2=\"12.0\" y1=\"-16.3\" y2=\"-16.3\" stroke=\"#8E8B83\" stroke-width=\"0.42\"/><line x1=\"-13.2\" y1=\"-15.6\" x2=\"13.2\" y2=\"-30.0\" stroke=\"#8C8C86\" stroke-width=\"1.08\"/><circle cx=\"0\" cy=\"-22.8\" r=\"2.88\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"0.96\"/><path d=\"M-14.399999999999999 -18.0 L-22.8 -18.0 L-22.8 -12.6 L-14.399999999999999 -12.6 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.36\"/><path d=\"M-15.0 -19.679999999999996 L-22.32 -19.679999999999996\" stroke=\"#FFE7A3\" stroke-width=\"0.96\"/><path d=\"M14.399999999999999 -18.0 L22.8 -18.0 L22.8 -12.6 L14.399999999999999 -12.6 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.36\"/><path d=\"M15.0 -19.679999999999996 L22.32 -19.679999999999996\" stroke=\"#FFE7A3\" stroke-width=\"0.96\"/><rect x=\"-24.0\" y=\"-10.799999999999999\" width=\"48.0\" height=\"3.5999999999999996\" fill=\"#151514\"/><rect x=\"-29.4\" y=\"-46.8\" width=\"3.5999999999999996\" height=\"10.799999999999999\" rx=\"0.96\" fill=\"#ECE9E1\" stroke=\"#8E8B83\" stroke-width=\"0.48\"/><rect x=\"25.8\" y=\"-46.8\" width=\"3.5999999999999996\" height=\"10.799999999999999\" rx=\"0.96\" fill=\"#ECE9E1\" stroke=\"#8E8B83\" stroke-width=\"0.48\"/></g></g><line x1=\"80\" y1=\"0\" x2=\"80\" y2=\"90\" stroke=\"#E2A400\" stroke-width=\".6\" stroke-dasharray=\"2 1.6\"/><path d=\"M60 82 L46 84\" fill=\"none\" stroke=\"#1E1E1C\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 82 L46 84\" fill=\"none\" stroke=\"#E2A400\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polygon points=\"46.6,81 41,84.6 47,87\" fill=\"#E2A400\" stroke=\"#1E1E1C\" stroke-width=\".6\" stroke-linejoin=\"round\"/><rect x=\"8\" y=\"4.6\" width=\"84.6\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">TRAVELLING OUT · MATCHCUT B6↔W1</text>",
+   "detalhe": "Plano amplo frontal em travelling out; corte em matchcut da plenária para o caminhão branco rodando na pista de testes durante o dia.",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 8,
+   "tc": "Pista · EXT DIA",
+   "title": "FH 100 Anos Day na pista",
+   "color": "var(--day)",
+   "desc": "Caminhão branco rodando: frontal 100% que termina com a ultrapassagem do câmera car, e detalhes de testeira, adesivo da porta, faróis, iron mark e 3/4 baixo.",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#DCE1D6\"/><path d=\"M0 46 Q20 34 40 42 Q60 30 82 40 Q104 30 126 40 Q144 33 160 40 L160 54 L0 54 Z\" fill=\"#9CA48F\"/><path d=\"M0 50 Q30 42 60 48 Q96 40 130 48 Q148 44 160 47 L160 56 L0 56 Z\" fill=\"#7E8772\"/><path d=\"M0 90 L66 54 L94 54 L160 90 Z\" fill=\"#9E9C95\"/><path d=\"M80 56 L80 62 M80 67 L80 75 M80 80 L80 90\" stroke=\"#F4F1EA\" stroke-width=\"1.2\"/><path d=\"M0 90 L66 54 M160 90 L94 54\" stroke=\"#C9C6BC\" stroke-width=\".6\"/><ellipse cx=\"64.5\" cy=\"69.2\" rx=\"15.0\" ry=\"10.5\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"64.5\" cy=\"69.2\" rx=\"10.0\" ry=\"7.0\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"64.5\" cy=\"69.2\" rx=\"6.0\" ry=\"4.2\" fill=\"#FFE7A3\" opacity=\"0.36\"/><ellipse cx=\"95.5\" cy=\"69.2\" rx=\"15.0\" ry=\"10.5\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"95.5\" cy=\"69.2\" rx=\"10.0\" ry=\"7.0\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"95.5\" cy=\"69.2\" rx=\"6.0\" ry=\"4.2\" fill=\"#FFE7A3\" opacity=\"0.36\"/><g transform=\"translate(80 82)\"><rect x=\"-19.0\" y=\"-7.0\" width=\"8.0\" height=\"7.0\" rx=\"1.2\" fill=\"#111\"/><rect x=\"11.0\" y=\"-7.0\" width=\"8.0\" height=\"7.0\" rx=\"1.2\" fill=\"#111\"/><path d=\"M-20.0 -8.0 L-19.4 -42.0 Q-19.0 -46.0 -15.0 -46.0 L15.0 -46.0 Q19.0 -46.0 19.4 -42.0 L20.0 -8.0 Z\" fill=\"#ECE9E1\" stroke=\"#8E8B83\" stroke-width=\"0.5\"/><rect x=\"-15.0\" y=\"-44.8\" width=\"30.0\" height=\"3.2\" rx=\"0.8\" fill=\"#3A3A37\"/><path d=\"M-17.0 -40.5 L17.0 -40.5 L18.0 -28.0 L-18.0 -28.0 Z\" fill=\"#3A3E44\"/><path d=\"M-12.0 -39.5 L-4.0 -39.5 L-9.0 -29.0 L-15.0 -29.0 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-11.0\" y=\"-26.0\" width=\"22.0\" height=\"14.0\" rx=\"1.0\" fill=\"#1A1A19\" stroke=\"#8E8B83\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-24.0\" y2=\"-24.0\" stroke=\"#8E8B83\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-21.4\" y2=\"-21.4\" stroke=\"#8E8B83\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-18.8\" y2=\"-18.8\" stroke=\"#8E8B83\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-16.2\" y2=\"-16.2\" stroke=\"#8E8B83\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-13.6\" y2=\"-13.6\" stroke=\"#8E8B83\" stroke-width=\"0.35\"/><line x1=\"-11.0\" y1=\"-13.0\" x2=\"11.0\" y2=\"-25.0\" stroke=\"#8C8C86\" stroke-width=\"0.9\"/><circle cx=\"0\" cy=\"-19.0\" r=\"2.4\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"0.8\"/><path d=\"M-12.0 -15.0 L-19.0 -15.0 L-19.0 -10.5 L-12.0 -10.5 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.3\"/><path d=\"M-12.5 -16.4 L-18.6 -16.4\" stroke=\"#FFE7A3\" stroke-width=\"0.8\"/><path d=\"M12.0 -15.0 L19.0 -15.0 L19.0 -10.5 L12.0 -10.5 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.3\"/><path d=\"M12.5 -16.4 L18.6 -16.4\" stroke=\"#FFE7A3\" stroke-width=\"0.8\"/><rect x=\"-20.0\" y=\"-9.0\" width=\"40.0\" height=\"3.0\" fill=\"#151514\"/><rect x=\"-24.5\" y=\"-39.0\" width=\"3.0\" height=\"9.0\" rx=\"0.8\" fill=\"#ECE9E1\" stroke=\"#8E8B83\" stroke-width=\"0.4\"/><rect x=\"21.5\" y=\"-39.0\" width=\"3.0\" height=\"9.0\" rx=\"0.8\" fill=\"#ECE9E1\" stroke=\"#8E8B83\" stroke-width=\"0.4\"/></g><path d=\"M28 74 L40 70 M120 70 L132 74\" stroke=\"#5B5E63\" stroke-width=\".5\"/><path d=\"M80 88 L80 86\" fill=\"none\" stroke=\"#1E1E1C\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 88 L80 86\" fill=\"none\" stroke=\"#E2A400\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polygon points=\"77,86 80,82 83,86\" fill=\"#E2A400\" stroke=\"#1E1E1C\" stroke-width=\".6\" stroke-linejoin=\"round\"/><rect x=\"8\" y=\"4.6\" width=\"71.6\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">CAMERA CAR · FRONTAL · DAY</text>",
+   "detalhe": "Caminhão branco rodando: frontal 100% que termina com a ultrapassagem do câmera car, e detalhes de testeira, adesivo da porta, faróis, iron mark e 3/4 baixo.",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 9,
+   "tc": "Pista · EXT",
+   "title": "Day + Night lado a lado",
+   "color": "var(--dusk)",
+   "desc": "Os dois FH 100 Anos rodando lado a lado.",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#E7C9A8\"/><rect y=\"0\" width=\"160\" height=\"30\" fill=\"#C9A3A0\"/><circle cx=\"132\" cy=\"38\" r=\"9\" fill=\"#F6E2B8\"/><path d=\"M0 44 Q30 36 60 42 Q100 34 160 42 L160 56 L0 56 Z\" fill=\"#6E6A60\"/><path d=\"M0 90 L60 54 L100 54 L160 90 Z\" fill=\"#8F8A80\"/><ellipse cx=\"47.275\" cy=\"67.84\" rx=\"14.2\" ry=\"10.0\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"47.275\" cy=\"67.84\" rx=\"9.5\" ry=\"6.6\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"47.275\" cy=\"67.84\" rx=\"5.7\" ry=\"4.0\" fill=\"#FFE7A3\" opacity=\"0.36\"/><ellipse cx=\"76.725\" cy=\"67.84\" rx=\"14.2\" ry=\"10.0\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"76.725\" cy=\"67.84\" rx=\"9.5\" ry=\"6.6\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"76.725\" cy=\"67.84\" rx=\"5.7\" ry=\"4.0\" fill=\"#FFE7A3\" opacity=\"0.36\"/><g transform=\"translate(62 80)\"><rect x=\"-18.05\" y=\"-6.6499999999999995\" width=\"7.6\" height=\"6.6499999999999995\" rx=\"1.14\" fill=\"#111\"/><rect x=\"10.45\" y=\"-6.6499999999999995\" width=\"7.6\" height=\"6.6499999999999995\" rx=\"1.14\" fill=\"#111\"/><path d=\"M-19.0 -7.6 L-18.429999999999996 -39.9 Q-18.05 -43.699999999999996 -14.25 -43.699999999999996 L14.25 -43.699999999999996 Q18.05 -43.699999999999996 18.429999999999996 -39.9 L19.0 -7.6 Z\" fill=\"#ECE9E1\" stroke=\"#8E8B83\" stroke-width=\"0.475\"/><rect x=\"-14.25\" y=\"-42.559999999999995\" width=\"28.5\" height=\"3.04\" rx=\"0.76\" fill=\"#3A3A37\"/><path d=\"M-16.15 -38.475 L16.15 -38.475 L17.099999999999998 -26.599999999999998 L-17.099999999999998 -26.599999999999998 Z\" fill=\"#3A3E44\"/><path d=\"M-11.399999999999999 -37.525 L-3.8 -37.525 L-8.549999999999999 -27.549999999999997 L-14.25 -27.549999999999997 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-10.45\" y=\"-24.7\" width=\"20.9\" height=\"13.299999999999999\" rx=\"0.95\" fill=\"#1A1A19\" stroke=\"#8E8B83\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-22.8\" y2=\"-22.8\" stroke=\"#8E8B83\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-20.3\" y2=\"-20.3\" stroke=\"#8E8B83\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-17.9\" y2=\"-17.9\" stroke=\"#8E8B83\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-15.4\" y2=\"-15.4\" stroke=\"#8E8B83\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-12.9\" y2=\"-12.9\" stroke=\"#8E8B83\" stroke-width=\"0.33249999999999996\"/><line x1=\"-10.45\" y1=\"-12.35\" x2=\"10.45\" y2=\"-23.75\" stroke=\"#8C8C86\" stroke-width=\"0.855\"/><circle cx=\"0\" cy=\"-18.05\" r=\"2.28\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"0.76\"/><path d=\"M-11.399999999999999 -14.25 L-18.05 -14.25 L-18.05 -9.975 L-11.399999999999999 -9.975 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.285\"/><path d=\"M-11.875 -15.579999999999998 L-17.67 -15.579999999999998\" stroke=\"#FFE7A3\" stroke-width=\"0.76\"/><path d=\"M11.399999999999999 -14.25 L18.05 -14.25 L18.05 -9.975 L11.399999999999999 -9.975 Z\" fill=\"#FFF6DA\" stroke=\"#8E8B83\" stroke-width=\"0.285\"/><path d=\"M11.875 -15.579999999999998 L17.67 -15.579999999999998\" stroke=\"#FFE7A3\" stroke-width=\"0.76\"/><rect x=\"-19.0\" y=\"-8.549999999999999\" width=\"38.0\" height=\"2.8499999999999996\" fill=\"#151514\"/><rect x=\"-23.275\" y=\"-37.05\" width=\"2.8499999999999996\" height=\"8.549999999999999\" rx=\"0.76\" fill=\"#ECE9E1\" stroke=\"#8E8B83\" stroke-width=\"0.38\"/><rect x=\"20.425\" y=\"-37.05\" width=\"2.8499999999999996\" height=\"8.549999999999999\" rx=\"0.76\" fill=\"#ECE9E1\" stroke=\"#8E8B83\" stroke-width=\"0.38\"/></g><ellipse cx=\"87.275\" cy=\"67.84\" rx=\"14.2\" ry=\"10.0\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"87.275\" cy=\"67.84\" rx=\"9.5\" ry=\"6.6\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"87.275\" cy=\"67.84\" rx=\"5.7\" ry=\"4.0\" fill=\"#FFE7A3\" opacity=\"0.36\"/><ellipse cx=\"116.725\" cy=\"67.84\" rx=\"14.2\" ry=\"10.0\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"116.725\" cy=\"67.84\" rx=\"9.5\" ry=\"6.6\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"116.725\" cy=\"67.84\" rx=\"5.7\" ry=\"4.0\" fill=\"#FFE7A3\" opacity=\"0.36\"/><g transform=\"translate(102 80)\"><rect x=\"-18.05\" y=\"-6.6499999999999995\" width=\"7.6\" height=\"6.6499999999999995\" rx=\"1.14\" fill=\"#111\"/><rect x=\"10.45\" y=\"-6.6499999999999995\" width=\"7.6\" height=\"6.6499999999999995\" rx=\"1.14\" fill=\"#111\"/><path d=\"M-19.0 -7.6 L-18.429999999999996 -39.9 Q-18.05 -43.699999999999996 -14.25 -43.699999999999996 L14.25 -43.699999999999996 Q18.05 -43.699999999999996 18.429999999999996 -39.9 L19.0 -7.6 Z\" fill=\"#1F1F1D\" stroke=\"#4A4A46\" stroke-width=\"0.475\"/><rect x=\"-14.25\" y=\"-42.559999999999995\" width=\"28.5\" height=\"3.04\" rx=\"0.76\" fill=\"#E2A400\"/><text x=\"0\" y=\"-40.184999999999995\" text-anchor=\"middle\" font-family=\"Archivo,Arial,sans-serif\" font-weight=\"800\" font-size=\"2.4699999999999998\" fill=\"#1E1E1C\">100</text><path d=\"M-16.15 -38.475 L16.15 -38.475 L17.099999999999998 -26.599999999999998 L-17.099999999999998 -26.599999999999998 Z\" fill=\"#0B0B0A\"/><path d=\"M-11.399999999999999 -37.525 L-3.8 -37.525 L-8.549999999999999 -27.549999999999997 L-14.25 -27.549999999999997 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-10.45\" y=\"-24.7\" width=\"20.9\" height=\"13.299999999999999\" rx=\"0.95\" fill=\"#1A1A19\" stroke=\"#4A4A46\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-22.8\" y2=\"-22.8\" stroke=\"#4A4A46\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-20.3\" y2=\"-20.3\" stroke=\"#4A4A46\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-17.9\" y2=\"-17.9\" stroke=\"#4A4A46\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-15.4\" y2=\"-15.4\" stroke=\"#4A4A46\" stroke-width=\"0.33249999999999996\"/><line x1=\"-9.5\" x2=\"9.5\" y1=\"-12.9\" y2=\"-12.9\" stroke=\"#4A4A46\" stroke-width=\"0.33249999999999996\"/><line x1=\"-10.45\" y1=\"-12.35\" x2=\"10.45\" y2=\"-23.75\" stroke=\"#8C8C86\" stroke-width=\"0.855\"/><circle cx=\"0\" cy=\"-18.05\" r=\"2.28\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"0.76\"/><path d=\"M-11.399999999999999 -14.25 L-18.05 -14.25 L-18.05 -9.975 L-11.399999999999999 -9.975 Z\" fill=\"#FFF6DA\" stroke=\"#4A4A46\" stroke-width=\"0.285\"/><path d=\"M-11.875 -15.579999999999998 L-17.67 -15.579999999999998\" stroke=\"#FFE7A3\" stroke-width=\"0.76\"/><path d=\"M11.399999999999999 -14.25 L18.05 -14.25 L18.05 -9.975 L11.399999999999999 -9.975 Z\" fill=\"#FFF6DA\" stroke=\"#4A4A46\" stroke-width=\"0.285\"/><path d=\"M11.875 -15.579999999999998 L17.67 -15.579999999999998\" stroke=\"#FFE7A3\" stroke-width=\"0.76\"/><rect x=\"-19.0\" y=\"-8.549999999999999\" width=\"38.0\" height=\"2.8499999999999996\" fill=\"#151514\"/><rect x=\"-23.275\" y=\"-37.05\" width=\"2.8499999999999996\" height=\"8.549999999999999\" rx=\"0.76\" fill=\"#1F1F1D\" stroke=\"#4A4A46\" stroke-width=\"0.38\"/><rect x=\"20.425\" y=\"-37.05\" width=\"2.8499999999999996\" height=\"8.549999999999999\" rx=\"0.76\" fill=\"#1F1F1D\" stroke=\"#4A4A46\" stroke-width=\"0.38\"/></g><rect x=\"8\" y=\"4.6\" width=\"66.4\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">CAMERA CAR · DAY + NIGHT</text>",
+   "detalhe": "Os dois FH 100 Anos rodando lado a lado.",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 10,
+   "tc": "Pista · EXT NOITE",
+   "title": "FH 100 Anos Night na pista",
+   "color": "#7F93C2",
+   "desc": "Caminhão preto rodando à noite: frontal 100% em matchcut com o branco e a mesma série de detalhes.",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#141A24\"/><path d=\"M0 46 Q20 36 40 42 Q60 32 82 40 Q104 32 126 40 Q144 35 160 40 L160 56 L0 56 Z\" fill=\"#0C0F14\"/><path d=\"M0 90 L66 54 L94 54 L160 90 Z\" fill=\"#23262B\"/><path d=\"M80 56 L80 62 M80 67 L80 75 M80 80 L80 90\" stroke=\"#5B5E63\" stroke-width=\"1.2\"/><circle cx=\"132\" cy=\"16\" r=\"5\" fill=\"#C7CBD4\" opacity=\".6\"/><path d=\"M60 64 L0 90 L50 90 Z M100 64 L160 90 L110 90 Z\" fill=\"#FFF6DA\" opacity=\".08\"/><ellipse cx=\"64.5\" cy=\"69.2\" rx=\"15.0\" ry=\"10.5\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"64.5\" cy=\"69.2\" rx=\"10.0\" ry=\"7.0\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"64.5\" cy=\"69.2\" rx=\"6.0\" ry=\"4.2\" fill=\"#FFE7A3\" opacity=\"0.36\"/><ellipse cx=\"95.5\" cy=\"69.2\" rx=\"15.0\" ry=\"10.5\" fill=\"#FFE7A3\" opacity=\"0.06\"/><ellipse cx=\"95.5\" cy=\"69.2\" rx=\"10.0\" ry=\"7.0\" fill=\"#FFE7A3\" opacity=\"0.23\"/><ellipse cx=\"95.5\" cy=\"69.2\" rx=\"6.0\" ry=\"4.2\" fill=\"#FFE7A3\" opacity=\"0.36\"/><g transform=\"translate(80 82)\"><rect x=\"-19.0\" y=\"-7.0\" width=\"8.0\" height=\"7.0\" rx=\"1.2\" fill=\"#111\"/><rect x=\"11.0\" y=\"-7.0\" width=\"8.0\" height=\"7.0\" rx=\"1.2\" fill=\"#111\"/><path d=\"M-20.0 -8.0 L-19.4 -42.0 Q-19.0 -46.0 -15.0 -46.0 L15.0 -46.0 Q19.0 -46.0 19.4 -42.0 L20.0 -8.0 Z\" fill=\"#1C1C1B\" stroke=\"#3A3A36\" stroke-width=\"0.5\"/><rect x=\"-15.0\" y=\"-44.8\" width=\"30.0\" height=\"3.2\" rx=\"0.8\" fill=\"#E2A400\"/><text x=\"0\" y=\"-42.3\" text-anchor=\"middle\" font-family=\"Archivo,Arial,sans-serif\" font-weight=\"800\" font-size=\"2.6\" fill=\"#1E1E1C\">100</text><path d=\"M-17.0 -40.5 L17.0 -40.5 L18.0 -28.0 L-18.0 -28.0 Z\" fill=\"#08090A\"/><path d=\"M-12.0 -39.5 L-4.0 -39.5 L-9.0 -29.0 L-15.0 -29.0 Z\" fill=\"#FFFFFF\" opacity=\".07\"/><rect x=\"-11.0\" y=\"-26.0\" width=\"22.0\" height=\"14.0\" rx=\"1.0\" fill=\"#1A1A19\" stroke=\"#3A3A36\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-24.0\" y2=\"-24.0\" stroke=\"#3A3A36\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-21.4\" y2=\"-21.4\" stroke=\"#3A3A36\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-18.8\" y2=\"-18.8\" stroke=\"#3A3A36\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-16.2\" y2=\"-16.2\" stroke=\"#3A3A36\" stroke-width=\"0.35\"/><line x1=\"-10.0\" x2=\"10.0\" y1=\"-13.6\" y2=\"-13.6\" stroke=\"#3A3A36\" stroke-width=\"0.35\"/><line x1=\"-11.0\" y1=\"-13.0\" x2=\"11.0\" y2=\"-25.0\" stroke=\"#8C8C86\" stroke-width=\"0.9\"/><circle cx=\"0\" cy=\"-19.0\" r=\"2.4\" fill=\"none\" stroke=\"#8C8C86\" stroke-width=\"0.8\"/><path d=\"M-12.0 -15.0 L-19.0 -15.0 L-19.0 -10.5 L-12.0 -10.5 Z\" fill=\"#FFF6DA\" stroke=\"#3A3A36\" stroke-width=\"0.3\"/><path d=\"M-12.5 -16.4 L-18.6 -16.4\" stroke=\"#FFE7A3\" stroke-width=\"0.8\"/><path d=\"M12.0 -15.0 L19.0 -15.0 L19.0 -10.5 L12.0 -10.5 Z\" fill=\"#FFF6DA\" stroke=\"#3A3A36\" stroke-width=\"0.3\"/><path d=\"M12.5 -16.4 L18.6 -16.4\" stroke=\"#FFE7A3\" stroke-width=\"0.8\"/><rect x=\"-20.0\" y=\"-9.0\" width=\"40.0\" height=\"3.0\" fill=\"#151514\"/><rect x=\"-24.5\" y=\"-39.0\" width=\"3.0\" height=\"9.0\" rx=\"0.8\" fill=\"#1C1C1B\" stroke=\"#3A3A36\" stroke-width=\"0.4\"/><rect x=\"21.5\" y=\"-39.0\" width=\"3.0\" height=\"9.0\" rx=\"0.8\" fill=\"#1C1C1B\" stroke=\"#3A3A36\" stroke-width=\"0.4\"/></g><rect x=\"8\" y=\"4.6\" width=\"76.8\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">CAMERA CAR · FRONTAL · NIGHT</text>",
+   "detalhe": "Caminhão preto rodando à noite: frontal 100% em matchcut com o branco e a mesma série de detalhes.",
+   "texto": "",
+   "som": ""
+  },
+  {
+   "n": 11,
+   "tc": "Cabine · INT",
+   "title": "Detalhes internos",
+   "color": "var(--sound)",
+   "desc": "Detalhes dos bancos com a etiqueta 100 anos, costuras brancas, LED do painel e cortina personalizada.",
+   "ost": "",
+   "svg": "<rect width=\"160\" height=\"90\" fill=\"#2A2724\"/><path d=\"M0 66 Q80 56 160 66 L160 90 L0 90 Z\" fill=\"#1A1816\"/><rect x=\"18\" y=\"18\" width=\"50\" height=\"56\" rx=\"10\" fill=\"#3B3632\" stroke=\"#5A534C\" stroke-width=\".6\"/><path d=\"M24 26 L62 26 M24 34 L62 34 M24 42 L62 42 M24 50 L62 50\" stroke=\"#F4F1EA\" stroke-width=\".5\" stroke-dasharray=\"1.2 1\"/><rect x=\"34\" y=\"56\" width=\"18\" height=\"9\" rx=\"1.2\" fill=\"#E2A400\"/><text x=\"43\" y=\"62.5\" text-anchor=\"middle\" font-family=\"Archivo,Arial,sans-serif\" font-weight=\"800\" font-size=\"4.6\" fill=\"#1E1E1C\">100</text><rect x=\"84\" y=\"24\" width=\"64\" height=\"22\" rx=\"4\" fill=\"#141312\" stroke=\"#3E3A35\" stroke-width=\".6\"/><rect x=\"90\" y=\"31\" width=\"5\" height=\"8\" rx=\"1\" fill=\"#6FD3E8\" opacity=\"0.5\"/><rect x=\"99\" y=\"31\" width=\"5\" height=\"8\" rx=\"1\" fill=\"#6FD3E8\" opacity=\"0.6\"/><rect x=\"108\" y=\"31\" width=\"5\" height=\"8\" rx=\"1\" fill=\"#6FD3E8\" opacity=\"0.7\"/><rect x=\"117\" y=\"31\" width=\"5\" height=\"8\" rx=\"1\" fill=\"#6FD3E8\" opacity=\"0.8\"/><rect x=\"126\" y=\"31\" width=\"5\" height=\"8\" rx=\"1\" fill=\"#6FD3E8\" opacity=\"0.9\"/><rect x=\"135\" y=\"31\" width=\"5\" height=\"8\" rx=\"1\" fill=\"#6FD3E8\" opacity=\"1.0\"/><path d=\"M86 52 Q116 46 148 54\" fill=\"none\" stroke=\"#C9C4BA\" stroke-width=\"1.6\" stroke-dasharray=\"3 2\"/><rect x=\"8\" y=\"4.6\" width=\"37.8\" height=\"6.2\" rx=\"1.2\" fill=\"#1E1E1C\" opacity=\".85\"/><text x=\"10\" y=\"9\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PD · INTERNAS</text>",
+   "detalhe": "Detalhes dos bancos com a etiqueta 100 anos, costuras brancas, LED do painel e cortina personalizada.",
+   "texto": "",
+   "som": ""
+  }
+ ],
+ "day": [
+  {
+   "date": "2026-10-07",
+   "t": "08:15",
+   "title": "Integração na Volvo Group",
+   "note": "Somente integração: Av. Juscelino Kubitschek de Oliveira, 2600, Cidade Industrial.",
+   "shots": [],
+   "from": "08:15",
+   "to": "09:30"
+  },
+  {
+   "date": "2026-10-07",
+   "t": "09:30–11:00",
+   "title": "Montagem do câmera car e câmeras",
+   "note": "Chegada geral do time Catalunya às 09:30.",
+   "shots": [],
+   "from": "09:30",
+   "to": "11:15"
+  },
+  {
+   "date": "2026-10-07",
+   "t": "11:15",
+   "title": "Almoço (Volvo)",
+   "note": "",
+   "shots": [],
+   "from": "11:15",
+   "to": "12:45"
+  },
+  {
+   "date": "2026-10-07",
+   "t": "12:45–14:30",
+   "title": "Filme Jeseniel",
+   "note": "Cimentão, pista de teste, com 2 câmeras. A tabela de cenas da OD indica 12:00, mas o cronograma diz roda câmera às 12:45.",
+   "shots": [
+    "J1",
+    "J2"
+   ],
+   "from": "12:45",
+   "to": "14:30"
+  },
+  {
+   "date": "2026-10-07",
+   "t": "14:30–15:00",
+   "title": "Prepara o filme Day + Night",
+   "note": "Troca de setup para o câmera car frontal.",
+   "shots": [],
+   "from": "14:30",
+   "to": "15:00"
+  },
+  {
+   "date": "2026-10-07",
+   "t": "15:00–17:00",
+   "title": "Caminhão branco (Day)",
+   "note": "Comece pelo frontal 100% (W1): ele precisa casar com o K1 e com o B6 da plenária. Anote altura, lente e distância do câmera car.",
+   "shots": [
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "W5"
+   ],
+   "from": "15:00",
+   "to": "17:00"
+  },
+  {
+   "date": "2026-10-07",
+   "t": "17:15–17:45",
+   "title": "Day + Night lado a lado",
+   "note": "Golden hour começa às 17:50; o sol já estará baixo.",
+   "shots": [
+    "L1"
+   ],
+   "from": "17:15",
+   "to": "17:45"
+  },
+  {
+   "date": "2026-10-07",
+   "t": "18:00–19:00",
+   "title": "Caminhão preto (Night)",
+   "note": "Pôr do sol às 18:20 e noite de verdade só a partir de 18:44. Deixe o frontal de matchcut (K1) para o fim do bloco.",
+   "shots": [
+    "K2",
+    "K3",
+    "K4",
+    "K6",
+    "K1",
+    "K5"
+   ],
+   "from": "18:00",
+   "to": "19:00"
+  },
+  {
+   "date": "2026-10-09",
+   "t": "07:00–08:30",
+   "title": "Montagem de luz e câmera",
+   "note": "Chegada geral às 07:00; clientes chegam às 08:15.",
+   "shots": [],
+   "from": "07:00",
+   "to": "08:30"
+  },
+  {
+   "date": "2026-10-09",
+   "t": "08:30–12:30",
+   "title": "Plenária · caminhão preto",
+   "note": "Lado motorista. A plenária precisa estar em blackout total para a silhueta funcionar.",
+   "shots": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7"
+   ],
+   "from": "08:30",
+   "to": "12:30"
+  },
+  {
+   "date": "2026-10-09",
+   "t": "12:30",
+   "title": "Almoço (Volvo)",
+   "note": "",
+   "shots": [],
+   "from": "12:30",
+   "to": "13:30"
+  },
+  {
+   "date": "2026-10-09",
+   "t": "13:30–16:30",
+   "title": "Plenária · caminhão branco",
+   "note": "Lado passageiro. Repita a posição de câmera do P5 no B5 para o matchcut; o B6 casa com o W1 da pista.",
+   "shots": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8"
+   ],
+   "from": "13:30",
+   "to": "16:30"
+  },
+  {
+   "date": "2026-10-09",
+   "t": "16:30–17:30",
+   "title": "Internas",
+   "note": "Detalhes da cabine. Corta câmera às 17:30.",
+   "shots": [
+    "I1",
+    "I2",
+    "I3"
+   ],
+   "from": "16:30",
+   "to": "17:30"
+  }
+ ],
+ "dayNotes": [
+  "Integração às 08:15 na Volvo Group (Av. JK, 2600); a gravação é na Casa do Cliente.",
+  "Chegada geral 09:30 · almoço 11:15 · roda câmera 12:45 · corta câmera 19:00.",
+  "Bloco Night: pôr do sol às 18:20 e céu escuro só depois de 18:44. Sobram cerca de 15 minutos de noite real antes do corta câmera."
+ ],
+ "equip": [
+  {
+   "g": "Câmera e câmera car",
+   "items": [
+    [
+     "camcar",
+     "Câmera car montado e testado",
+     "Frontal 100% para os matchcuts W1/K1"
+    ],
+    [
+     "cam2",
+     "Segunda câmera",
+     "O filme Jeseniel pede 2 câmeras"
+    ],
+    [
+     "nd",
+     "Filtros ND",
+     "Pista de dia com sol"
+    ],
+    [
+     "midia",
+     "Mídias e baterias para 2 diárias",
+     "Diária 1 vai das 08:15 às 19:00"
+    ]
+   ]
+  },
+  {
+   "g": "Plenária",
+   "items": [
+    [
+     "blackout",
+     "Blackout da plenária",
+     "Silhuetas e farol acendendo dependem de escuridão total"
+    ],
+    [
+     "proj",
+     "Projeção do logo 100 anos",
+     "Testar o chão luminoso antes de rodar"
+    ],
+    [
+     "frontlight",
+     "Luz frontal forte",
+     "Quebra da silhueta (P5, B5)"
+    ]
+   ]
+  },
+  {
+   "g": "Produção",
+   "items": [
+    [
+     "fh",
+     "FH 100 Anos Day e Night",
+     "Os dois caminhões nas duas diárias"
+    ],
+    [
+     "outros",
+     "VM B100 e FM 8x2",
+     "Só para o filme Jeseniel (07/10)"
+    ],
+    [
+     "docs",
+     "Documentos de acesso e integração",
+     "Integração na Volvo Group às 08:15 do dia 07/10"
+    ]
+   ]
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Diretor",
+   "name": "João Bocuti",
+   "phone": ""
+  },
+  {
+   "role": "DOP",
+   "name": "Filipe Parolin",
+   "phone": ""
+  },
+  {
+   "role": "Atendimento",
+   "name": "Loriane Andrade",
+   "phone": ""
+  }
+ ],
+ "docs": [
+  {
+   "id": "sarpas",
+   "title": "Autorização SARPAS",
+   "org": "DECEA",
+   "number": "715E7EEZG",
+   "valid": "2026-10-09",
+   "detail": "VLOS, até 50 m, 07/10 a 09/10, das 06:00 às 23:59"
+  },
+  {
+   "id": "apr",
+   "title": "APR – Voo de drone na fábrica Volvo",
+   "org": "Produção",
+   "number": "",
+   "valid": "2026-10-09",
+   "detail": "Análise preliminar de risco do voo na pista de teste",
+   "url": "https://claude.ai/artifact/HrkMN38mmwSY2v4SsMnqmn"
+  }
+ ],
+ "links": [],
+ "reports": [],
+ "entregas": [
+  {
+   "titulo": "Filme Day + Night (FH 100 Anos)",
+   "formato": "Formato a definir",
+   "duracao": "Duração a definir",
+   "versao": "Plenária no escuro, matchcuts entre o preto e o branco e caminhões na pista de dia e de noite",
+   "itens": [
+    "Matchcut preto → branco na plenária (P5 ↔ B5)",
+    "Matchcut da plenária para a pista (B6 ↔ W1)",
+    "Matchcut branco → preto na pista (W1 ↔ K1)",
+    "Detalhes internos da cabine (I1–I3)"
+   ],
+   "shots": [
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "W5",
+    "L1",
+    "K1",
+    "K2",
+    "K3",
+    "K4",
+    "K6",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B8",
+    "I1",
+    "I2",
+    "I3"
+   ],
+   "pendencias": [
+    "A OD não define formato, duração nem trilha: confirmar com a direção ou o roteiro",
+    "K5 diz \"matchcut com caminhão preto\": confirmar se é com o branco"
+   ]
+  },
+  {
+   "titulo": "Filme Jeseniel",
+   "formato": "Formato a definir",
+   "duracao": "Duração a definir",
+   "versao": "Bloco de texto com o Jeseniel e cobertura dos caminhões",
+   "itens": [
+    "2 câmeras",
+    "FH 100 Anos, VM B100 e FM 8x2"
+   ],
+   "shots": [
+    "J1",
+    "J2"
+   ],
+   "pendencias": [
+    "A OD não traz o texto do Jeseniel nem a decupagem das cenas"
+   ]
+  }
+ ],
+ "planejamento": {
+  "recomendado": "2 diárias (como na OD)",
+  "minimo": "2 diárias: plenária e pista não cabem no mesmo dia",
+  "disponivel": "2 diárias (07/10 e 09/10)",
+  "resumo": "As 2 diárias da OD cobrem os planos. O ponto crítico é o bloco Night na pista: com o pôr do sol às 18:20, só há noite real a partir de 18:44, e o corta câmera é às 19:00. Os matchcuts também pedem tempo de marcação entre os planos-par.",
+  "blocos": [
+   {
+    "bloco": "Filme Jeseniel",
+    "planos": 2,
+    "tempo": "1h45",
+    "luz": "Dia",
+    "nota": "2 câmeras; texto não está na OD"
+   },
+   {
+    "bloco": "Pista Day",
+    "planos": 5,
+    "tempo": "2h",
+    "luz": "Dia",
+    "nota": "W1 define o enquadramento dos matchcuts"
+   },
+   {
+    "bloco": "Lado a lado",
+    "planos": 1,
+    "tempo": "30 min",
+    "luz": "Fim de tarde",
+    "nota": "Antes da golden hour (17:50)"
+   },
+   {
+    "bloco": "Pista Night",
+    "planos": 6,
+    "tempo": "1h",
+    "luz": "Noite a partir de 18:44",
+    "nota": "Só ~15 min de noite real antes das 19:00"
+   },
+   {
+    "bloco": "Plenária preto",
+    "planos": 7,
+    "tempo": "4h",
+    "luz": "Blackout",
+    "nota": "Silhuetas e luz frontal"
+   },
+   {
+    "bloco": "Plenária branco",
+    "planos": 8,
+    "tempo": "3h",
+    "luz": "Blackout",
+    "nota": "Repetir posições do preto para os matchcuts"
+   },
+   {
+    "bloco": "Internas",
+    "planos": 3,
+    "tempo": "1h",
+    "luz": "Interna",
+    "nota": "Detalhes da cabine"
+   }
+  ],
+  "totalCaptacao": "cerca de 13h de câmera rodando em 2 diárias",
+  "diarias": [
+   {
+    "titulo": "Diária 1 · 07/10",
+    "horario": "08:15–19:00",
+    "itens": [
+     "Jeseniel: J1, J2",
+     "Pista Day: W1–W5",
+     "Lado a lado: L1",
+     "Pista Night: K1–K6"
+    ]
+   },
+   {
+    "titulo": "Diária 2 · 09/10",
+    "horario": "07:00–17:30",
+    "itens": [
+     "Plenária preto: P1–P7",
+     "Plenária branco: B1–B8",
+     "Internas: I1–I3"
+    ]
+   }
+  ],
+  "riscos": [
+   "Bloco Night curto: estender o corta câmera para 19:30 dá cerca de 45 min de noite",
+   "Chuva na pista de teste reflete os faróis e muda o look dos detalhes",
+   "Matchcuts exigem anotar altura, lente e distância do primeiro plano de cada par"
+  ]
+ },
+ "storyboardImage": "storyboard.jpg"
+}
