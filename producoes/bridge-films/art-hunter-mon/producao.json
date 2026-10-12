@@ -1218,5 +1218,82 @@
   "from": "10:00",
   "to": "10:15",
   "maxWindKmh": 38
+ },
+ "planejamento": {
+  "recomendado": "2 diárias",
+  "minimo": "1 diária longa (05:00–19:00) com duas equipes: câmera e drone ao mesmo tempo no pôr do sol",
+  "disponivel": "2 horas (12/10, 10:00–12:00)",
+  "resumo": "O roteiro depende de duas janelas curtas de luz dourada (cerca de 45 minutos cada), de momentos espontâneos com uma família real e de aéreos no pôr do sol que disputam a mesma janela com os planos de chão do final. Por isso, o ideal são 2 diárias de cerca de 8 horas.",
+  "blocos": [
+   {
+    "bloco": "Amanhecer",
+    "planos": 7,
+    "tempo": "1h",
+    "luz": "Golden hour manhã (05:32–06:17)",
+    "nota": "Cabe numa manhã só se a família estiver pronta às 05:15"
+   },
+   {
+    "bloco": "Dia: a atividade",
+    "planos": 21,
+    "tempo": "4h",
+    "luz": "Qualquer hora; melhor manhã ou fim de tarde",
+    "nota": "Momentos espontâneos (B18–B19) pedem tempo para esperar a ação acontecer"
+   },
+   {
+    "bloco": "Entardecer: chão",
+    "planos": 4,
+    "tempo": "40 min",
+    "luz": "Golden hour tarde (17:52–18:37)",
+    "nota": "Disputa a mesma janela com os aéreos"
+   },
+   {
+    "bloco": "Aéreos",
+    "planos": 5,
+    "tempo": "45 min",
+    "luz": "Pôr do sol",
+    "nota": "Troca de bateria e reposicionamento; D1 precisa de 3 tomadas"
+   },
+   {
+    "bloco": "Versão case 16:9",
+    "planos": 4,
+    "tempo": "1h",
+    "luz": "Sombra, qualquer hora",
+    "nota": "Depoimento com lapela e b-roll do depoente"
+   },
+   {
+    "bloco": "Som",
+    "planos": 7,
+    "tempo": "40 min",
+    "luz": "—",
+    "nota": "Foley e ambiente sem equipe falando"
+   }
+  ],
+  "totalCaptacao": "cerca de 8h de captação, mais montagem, deslocamentos e intervalo",
+  "diarias": [
+   {
+    "titulo": "Diária 1",
+    "horario": "05:00–19:00 com intervalo",
+    "itens": [
+     "Amanhecer: A1–A7, S1",
+     "Atividade com a família protagonista e famílias reais: B1–B21, S2, S3, S6",
+     "Entardecer no chão: C1–C3, S4"
+    ]
+   },
+   {
+    "titulo": "Diária 2",
+    "horario": "10:00–19:00",
+    "itens": [
+     "Depoimento e b-roll: E1–E4",
+     "Foley e room tone: S5, S7",
+     "Aéreos no pôr do sol: D1–D5",
+     "Reserva para refazer amanhecer ou entardecer se o tempo falhar"
+    ]
+   }
+  ],
+  "riscos": [
+   "Previsão de chuva em Curitiba: a segunda diária serve de reserva de clima",
+   "Feriados e horário de funcionamento do MON limitam o acesso cedo e no fim do dia",
+   "Com uma diária só, os aéreos e os planos de chão do pôr do sol precisam de duas equipes"
+  ]
  }
 }
