@@ -671,7 +671,13 @@ function renderDocs(){
     ${P.format?`<dt>Formato</dt><dd>${esc(P.format)}</dd>`:''}
     ${sar?`<dt>SARPAS</dt><dd class="dnum">${esc(sar.number)}</dd>`:''}
     <dt>Piloto</dt><dd>${esc(KIT.piloto?.nome||'')}</dd></dl>
-    <a class="btn ghost" href="https://maps.apple.com/?ll=${L.lat},${L.lon}&q=${encodeURIComponent(L.name)}" target="_blank" rel="noopener">Abrir no Mapas</a></div>`;
+    <div style="margin-top:14px;border-radius:12px;overflow:hidden;background:var(--surface-2);aspect-ratio:16/10;max-width:100%;position:relative">
+      ${navigator.onLine?`<iframe title="Mapa do local" src="https://maps.google.com/maps?q=${L.lat},${L.lon}&z=17&hl=pt-BR&output=embed" style="border:0;width:100%;height:100%;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`:'<div class="hint" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;margin:0">Sem internet para carregar o mapa</div>'}
+    </div>
+    <div class="row2" style="margin-top:10px">
+      <a class="btn" style="margin:0;text-decoration:none" href="https://www.google.com/maps/dir/?api=1&destination=${L.lat},${L.lon}&travelmode=driving" target="_blank" rel="noopener">Como chegar</a>
+      <a class="btn ghost" style="margin:0;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=${L.lat},${L.lon}" target="_blank" rel="noopener">Abrir no Google Maps</a>
+    </div></div>`;
   html+=entregasCard();
   const contacts=[...(PT?.contatos||[]).map(c=>({...c,role:`${PT.nome} · ${c.role}`})),...(P.contacts||[])];
   html+=`<div class="card"><h3>Contatos</h3>${contacts.map(c=>`<div class="contact"><span><b>${esc(c.role)}</b>${c.name?`<br><span style="color:var(--muted)">${esc(c.name)}</span>`:''}</span>${c.phone?`<span class="ph">${esc(c.phone)}</span>`:'<span style="color:var(--faint);font-size:12.5px">preencher</span>'}</div>`).join('')}

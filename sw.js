@@ -1,5 +1,5 @@
 // Set Tool: com internet, sempre busca a versão mais nova (app e dados); sem internet, usa a cópia guardada
-const C='settool-v15';
+const C='settool-v16';
 const SHELL=['./','index.html','manifest.webmanifest','icon-180.png','icon-192.png','icon-512.png','kit.json','producoes/index.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(SHELL.map(u=>new Request(u,{cache:'reload'})))));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
