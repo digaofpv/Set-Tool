@@ -15,7 +15,7 @@ Crie `producoes/<produtora>/<producao>/producao.json` (use `bridge-films/art-hun
 
 ## Quando só houver Ordem do Dia (sem roteiro)
 
-Gere a produção do mesmo jeito, usando os blocos e descrições da OD como planos. Use `diarias` (data, label, window, location, notes) e `date` em cada bloco de `day` quando houver mais de uma diária, `aspect` para o formato do storyboard ("16:9" ou o padrão 9:16), `match` nos planos que formam matchcut, `lensNote` quando a OD não define lentes e `fonte` explicando de onde os dados vieram. O que a OD não define (texto de tela, trilha, formato, duração) vira pendência nas `entregas`, e incoerências da OD vão para as notas dos blocos.
+Gere a produção do mesmo jeito, usando os blocos e descrições da OD como planos. Use `diarias` (data, label, window, location, notes) também no `producoes/index.json` (label e date, para o submenu de diárias) e `date` em cada bloco de `day` quando houver mais de uma diária, `aspect` para o formato do storyboard ("16:9" ou o padrão 9:16), `match` nos planos que formam matchcut, `lensNote` quando a OD não define lentes e `fonte` explicando de onde os dados vieram. O que a OD não define (texto de tela, trilha, formato, duração) vira pendência nas `entregas`, e incoerências da OD vão para as notas dos blocos.
 
 ## Ao mudar o app
 

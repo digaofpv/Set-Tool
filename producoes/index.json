@@ -24,7 +24,17 @@
      "project": "Volvo",
      "client": "Volvo",
      "date": "2026-10-07",
-     "status": "gravado"
+     "status": "gravado",
+     "diarias": [
+      {
+       "label": "Diária 1 · Pista de teste",
+       "date": "2026-10-07"
+      },
+      {
+       "label": "Diária 2 · Plenária",
+       "date": "2026-10-09"
+      }
+     ]
     }
    ]
   }

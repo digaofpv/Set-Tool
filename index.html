@@ -202,6 +202,10 @@ nav button[aria-selected="true"]{color:var(--gold);background:var(--surface-2)}
 .sheet .panel{background:var(--surface);width:100%;max-width:640px;border-radius:18px 18px 0 0;padding:18px 16px calc(18px + env(safe-area-inset-bottom,0px));max-height:85%;overflow:auto}
 .prod{display:block;width:100%;text-align:left;padding:12px;border-radius:12px;border:1px solid var(--line);margin-top:10px}
 .prod[aria-current="true"]{border-color:var(--gold)}
+.subd{display:flex;flex-direction:column;margin-top:8px;border-top:1px solid var(--line)}
+.subd button{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:44px;padding:0 4px;text-align:left;font-size:14.5px;border-bottom:1px solid var(--line)}
+.subd button:last-child{border-bottom:0}
+.subd button[aria-current="true"]{color:var(--gold);font-weight:700}
 
 .slate{position:fixed;inset:0;z-index:30;background:#000;color:#fff;display:flex;flex-direction:column;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px))}
 .slate .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
@@ -285,7 +289,7 @@ const idb={db:null,open(){return new Promise((res,rej)=>{if(this.db)return res(t
 let FILEKEYS=new Set();
 
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.hidden=false;clearTimeout(toast._t);toast._t=setTimeout(()=>t.hidden=true,2000)}
-const shotById=id=>P.shots.find(s=>s.id===id);
+const shotById=id=>(P.shotsAll||P.shots).find(s=>s.id===id);
 const stats=list=>({d:list.filter(s=>S.done[s.id]).length,t:list.length});
 
 /* ---------- load ---------- */
@@ -308,7 +312,10 @@ async function boot(){
 async function openProd(path){
   const meta=PRODS.find(p=>p.path===path);
   P=await getJSON(`producoes/${path}/producao.json`); P.path=path;
-  if(P.diarias?.length){const t=new Date();const ti=`${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`;let i=P.diarias.findIndex(x=>x.date===ti);if(i<0)i=P.diarias.findIndex(x=>x.date>ti);if(i<0)i=0;applyDiaria(i)} WX.data=null; WX.at=null; WX.lastTry=0;
+  if(P.diarias?.length){P.shotsAll=P.shots;P.dayAll=P.day;P.scenesAll=P.scenes;P.groupsAll=P.groups;
+    const saved=(PREFS.dia||{})[path];let i;
+    if(typeof saved==='number'&&saved<P.diarias.length)i=saved;else{const t=new Date();const ti=`${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`;i=P.diarias.findIndex(x=>x.date===ti);if(i<0)i=P.diarias.findIndex(x=>x.date>ti);if(i<0)i=0}
+    applyDiaria(i)} WX.data=null; WX.at=null; WX.lastTry=0;
   PT=await getJSON(`producoes/${meta.ptSlug}/produtora.json`).catch(()=>({nome:meta.produtora,contatos:[]}));
   PREFS.slug=path;loadState();save();render();
   if(S.setCode) syncStart(S.setCode); else syncStop();
@@ -319,7 +326,7 @@ function renderHeader(){
   const {d,t}=stats(P.shots);
   document.getElementById('pct').textContent=Math.round(d/t*100)+'%';
   document.getElementById('ringArc').setAttribute('stroke-dashoffset',(138.2*(1-d/t)).toFixed(1));
-  document.getElementById('hEyebrow').textContent=`${PT?.nome||P.produtora||''} · ${P.client} · ${fmtDate(P.date)}`;
+  document.getElementById('hEyebrow').textContent=`${PT?.nome||P.produtora||''} · ${P.client} · ${P.diarias?esc(P.diarias[P.diaIdx].label.replace(/^Diária (\d+).*/,'Diária $1'))+' · ':''}${fmtDate(P.date)}`;
   document.getElementById('hTitle').textContent=P.title;
   const pendA=P.shots.filter(s=>s.pri==='A'&&!S.done[s.id]).length;
   const a=document.getElementById('alert');
@@ -604,7 +611,11 @@ function planCard(){
   </details>`;
 }
 
-function applyDiaria(i){const d=P.diarias[i];P.diaIdx=i;P.date=d.date;P.window=d.window;P.location=d.location;if(d.notes)P.dayNotes=d.notes;if(typeof WX!=='undefined'){WX.data=null;WX.at=null;WX.lastTry=0}}
+function applyDiaria(i){const d=P.diarias[i];P.diaIdx=i;P.date=d.date;P.window=d.window;P.location=d.location;if(d.notes)P.dayNotes=d.notes;
+  P.day=P.dayAll.filter(b=>!b.date||b.date===d.date);const ids=new Set(P.day.flatMap(b=>b.shots));
+  P.shots=P.shotsAll.filter(x=>ids.has(x.id));P.groups=P.groupsAll.filter(g=>P.shots.some(x=>x.g===g.id));
+  const sn=new Set(P.shots.flatMap(x=>x.scenes));P.scenes=P.scenesAll.filter(c=>sn.has(c.n));
+  PREFS.dia=Object.assign({},PREFS.dia,{[P.path]:i});save();if(typeof WX!=='undefined'){WX.data=null;WX.at=null;WX.lastTry=0}}
 function diariaChips(){if(!P.diarias||P.diarias.length<2)return '';return `<div class="chips" role="group" aria-label="Diária">${P.diarias.map((d,i)=>`<button class="chip" data-act="diaria" data-i="${i}" aria-pressed="${P.diaIdx===i}">${esc(d.label)} · ${fmtDate(d.date).slice(0,5)}</button>`).join('')}</div>`}
 /* ---------- set tools ---------- */
 function renderSet(){
@@ -614,7 +625,7 @@ function renderSet(){
   const now=new Date(); const pn=sunPos(now.getTime(),L.lat,L.lon);
   const winLen=w1-w0;
   loadWeather();
-  let html=diariaChips()+dayCard()+wxCard()+planCard()+syncCard()+`<div class="card"><h3>Claquete</h3><p class="hint" style="margin:0 0 4px">Cena, plano e take em letras grandes para marcar o início de cada plano. O take bom vai direto para a nota do plano.</p>
+  let html=dayCard()+wxCard()+planCard()+syncCard()+`<div class="card"><h3>Claquete</h3><p class="hint" style="margin:0 0 4px">Cena, plano e take em letras grandes para marcar o início de cada plano. O take bom vai direto para a nota do plano.</p>
     <button class="btn" data-act="slate">Abrir claquete</button></div>`;
   html+=`<div class="card"><h3>Sol do dia <span class="count">${fmtDate(P.date)}</span></h3>
     <div class="sun">
@@ -737,7 +748,9 @@ function renderProds(){
   document.getElementById('overlay').innerHTML=`<div class="sheet" data-act="closeov"><div class="panel" role="dialog" aria-label="Produções">
     <div class="eyebrow">Set Tool</div><h3 style="margin:4px 0 0;font-family:var(--f-display);font-size:20px">Produções</h3>
     ${INDEX.produtoras.map(pt=>`<div class="eyebrow" style="margin-top:18px">${esc(pt.nome)} · ${pt.producoes.length} produç${pt.producoes.length>1?'ões':'ão'}</div>
-      ${[...pt.producoes].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(p=>{const path=pt.slug+'/'+p.slug;return `<button class="prod" data-act="pick" data-slug="${path}" aria-current="${path===P.path}"><div style="font-weight:700">${esc(p.project?p.project+' · ':'')}${esc(p.title)}</div><div class="hint" style="margin:2px 0 0">${esc(p.client)} · ${fmtDate(p.date)} · ${esc(p.status||'')}</div></button>`}).join('')}`).join('')}
+      ${[...pt.producoes].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(p=>{const path=pt.slug+'/'+p.slug;const head=`<div style="font-weight:700">${esc(p.project?p.project+' · ':'')}${esc(p.title)}</div><div class="hint" style="margin:2px 0 0">${esc(p.client)} · ${fmtDate(p.date)} · ${esc(p.status||'')}</div>`;
+        if(!p.diarias?.length) return `<button class="prod" data-act="pick" data-slug="${path}" aria-current="${path===P.path}">${head}</button>`;
+        return `<div class="prod" style="padding-bottom:6px" aria-current="${path===P.path}">${head}<div class="subd">${p.diarias.map((d,i)=>`<button data-act="pick" data-slug="${path}" data-dia="${i}" aria-current="${path===P.path&&P.diaIdx===i}"><span>${esc(d.label)}</span><span class="count">${fmtDate(d.date).slice(0,5)}</span></button>`).join('')}</div></div>`}).join('')}`).join('')}
     <p class="hint">Produção nova: mande o roteiro para o Claude, dizendo a produtora. Ele cria a pasta e ela aparece aqui.</p>
     <button class="btn ghost" data-act="closeov">Fechar</button></div></div>`;
 }
@@ -904,7 +917,10 @@ document.addEventListener('click',async e=>{
     case 'reset': {const ids=new Set([...Object.keys(S.done),...Object.keys(S.takes),...Object.keys(S.notes),...Object.keys(S.good)]);const eqs=Object.keys(S.eq);S.done={};S.notes={};S.takes={};S.good={};S.eq={};UI.confirmReset=false;save();ids.forEach(x=>pushShot(x,true));eqs.forEach(pushEq);render();toast(S.setCode?'Marcações apagadas em todos os aparelhos':'Marcações apagadas'); break}
     case 'prods': if(INDEX) renderProds(); break;
     case 'closeov': document.getElementById('overlay').innerHTML=''; break;
-    case 'pick': document.getElementById('overlay').innerHTML=''; if(b.dataset.slug!==P.path){try{await openProd(b.dataset.slug)}catch(err){toast('Não consegui abrir essa produção')}} break;
+    case 'pick': {document.getElementById('overlay').innerHTML=''; const di=b.dataset.dia;
+      if(di!=null){PREFS.dia=Object.assign({},PREFS.dia,{[b.dataset.slug]:Number(di)});}
+      if(b.dataset.slug!==P.path){try{await openProd(b.dataset.slug)}catch(err){toast('Não consegui abrir essa produção')}}
+      else if(di!=null&&P.diarias){applyDiaria(Number(di));UI.open=null;render();window.scrollTo(0,0)} break}
     case 'slate': openSlate(id); break;
     case 'depo': openDepo(); break;
     case 'diaria': applyDiaria(Number(b.dataset.i)); render(); break;
