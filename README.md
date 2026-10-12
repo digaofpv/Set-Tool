@@ -11,10 +11,10 @@ No iPhone: Safari → Compartilhar → Adicionar à Tela de Início. Depois do p
 | --- | --- |
 | Ordem | Blocos de horário do dia, com os planos de cada um, a ordem das lentes e aviso de atraso |
 | Planos | Todos os planos, com filtro, lente sugerida, contador de takes e notas |
-| Board | Storyboard cena a cena, com os planos de cada cena |
+| Board | Storyboard cena a cena, com os planos e anotações de cada cena (sincronizadas entre aparelhos) |
 | Set | Claquete, sol do dia (nascer, pôr, golden hour, altura do sol na janela), mídia e bateria, checklist de equipamento |
 | Docs | Ficha da produção, contatos, documentos com validade (SARPAS, APR, RETA, SISANT, ANAC) e arquivos anexados |
-| Fim | Progresso por bloco, indispensáveis pendentes, relatório para copiar e histórico |
+| Fim | Progresso por bloco, indispensáveis pendentes, relatório para copiar e exportação da produção em PDF, CSV (planos e cenas), XML e JSON |
 
 ## Estrutura
 

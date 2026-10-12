@@ -277,7 +277,7 @@ const store={get(k,f){try{const v=localStorage.getItem(k);return v?JSON.parse(v)
 let PREFS=store.get('settool:prefs',{slug:null,tab:'dia',filter:'todos'});
 let INDEX=null, PRODS=[], PT=null, KIT=null, P=null, S=null, UI={open:null,confirmReset:false};
 function stateKey(){return 'settool:'+P.path}
-function loadState(){const old=store.get('settool:'+P.slug,null);if(old&&!store.get(stateKey(),null))store.set(stateKey(),old);S=Object.assign({done:{},notes:{},takes:{},good:{},eq:{},card:'',batMin:'',batQty:'',cardGb:'',preset:0,custom:''},store.get(stateKey(),{}))}
+function loadState(){const old=store.get('settool:'+P.slug,null);if(old&&!store.get(stateKey(),null))store.set(stateKey(),old);S=Object.assign({done:{},notes:{},takes:{},good:{},eq:{},sceneNotes:{},card:'',batMin:'',batQty:'',cardGb:'',preset:0,custom:''},store.get(stateKey(),{}))}
 function save(){store.set(stateKey(),S);store.set('settool:prefs',PREFS)}
 
 /* files for docs (IndexedDB, stays on this device) */
@@ -442,7 +442,7 @@ function openDetail(id){
     ${scenes.map(c=>`<div class="dsc${isWide()?' wide':''}"><div class="frame${isWide()?' wide':''}">${frameSvg(c.svg)}</div>
       <div style="min-width:0"><div class="sc-head"><span class="sc-num" style="color:${c.color};font-size:22px">${pad(c.n)}</span><span class="sc-tc">${esc(c.tc)}</span></div>
       <div class="sc-title">${esc(c.title)}</div>
-      ${sec('Cena',esc(c.detalhe||c.desc))}${sec('Texto na tela',esc(c.texto||c.ost))}${sec('Som',esc(c.som))}
+      ${sec('Cena',esc(c.detalhe||c.desc))}${sec('Texto na tela',esc(c.texto||c.ost))}${sec('Som',esc(c.som))}${sceneNoteBox(c.n)}
       ${c.adaptacao?`<div class="light" style="margin-top:12px">${esc(c.adaptacao)}</div>`:''}</div></div>`).join('')}
     ${!scenes.length?'<p class="hint">Plano extra, sem cena fixa no roteiro.</p>':''}
     ${S.notes[id]?sec('Sua nota',esc(S.notes[id])):''}
@@ -450,17 +450,23 @@ function openDetail(id){
 }
 function openDepo(){document.getElementById('overlay').innerHTML=`<div class="sheet" data-act="closeov"><div class="panel" role="dialog" aria-label="Depoimento">${depoHTML()}${roteiroHTML()}<button class="btn ghost" data-act="closeov">Fechar</button></div></div>`}
 
+/* ---------- notas de cena ---------- */
+function sceneNoteBox(n){const v=S.sceneNotes[n]||'';
+  return `<label class="f" for="sn-${n}" style="margin-top:10px">Anotações da cena${v?' <span style="color:var(--done)">· salva</span>':''}
+    <textarea id="sn-${n}" data-act="scenenote" data-n="${n}" placeholder="Luz, arte, continuidade, ajustes da direção…">${esc(v)}</textarea></label>`}
+
 /* ---------- storyboard ---------- */
 function renderBoard(){
   const sbUrl=P.storyboardImage?`producoes/${P.path}/${P.storyboardImage}`:'';
-  const shareCard=sbUrl?`<div class="card"><h3>Storyboard completo</h3><p class="hint" style="margin:0 0 4px">As 9 cenas numa imagem só, pronta para mandar pelo WhatsApp.</p>
+  const shareCard=sbUrl?`<div class="card"><h3>Storyboard completo</h3><p class="hint" style="margin:0 0 4px">As ${(P.scenesAll||P.scenes).length} cenas numa imagem só, pronta para mandar pelo WhatsApp.</p>
     <div class="row2"><button class="btn ghost" data-act="sbshare">Compartilhar storyboard</button><a class="btn ghost" href="${sbUrl}" target="_blank" rel="noopener" style="text-decoration:none">Ver imagem</a></div></div>`:'';
   document.getElementById('tab-board').innerHTML=roteiroHTML()+depoHTML()+P.scenes.map(sc=>{
     const items=P.shots.filter(s=>s.scenes.includes(sc.n)), st=stats(items);
     return `<div class="scene${isWide()?' wide':''}">
       <div class="frame${isWide()?' wide':''}">${frameSvg(sc.svg)}${sc.ost?`<div class="ost">${esc(sc.ost)}</div>`:''}</div>
       <div style="min-width:0"><div class="sc-head"><span class="sc-num" style="color:${sc.color}">${pad(sc.n)}</span><span class="sc-tc">${esc(sc.tc)} · ${st.d}/${st.t}</span></div>
-      <div class="sc-title">${esc(sc.title)}</div><p class="sc-desc">${esc(sc.desc)}</p>${miniList(items)}</div></div>`}).join('')+shareCard;
+      <div class="sc-title">${esc(sc.title)}</div><p class="sc-desc">${esc(sc.desc)}</p>${miniList(items)}
+      ${sceneNoteBox(sc.n)}</div></div>`}).join('')+shareCard;
 }
 
 /* ---------- sun ---------- */
@@ -736,11 +742,77 @@ function renderFim(){
     (pendB.length?`<p class="hint">Mais ${pendB.length} extras pendentes.</p>`:'')+`</div>`;
   html+=`<div class="card"><h3>Relatório do dia</h3><pre class="report" id="rep">${esc(report())}</pre>
     <button class="btn" data-act="copyrep">Copiar relatório</button>
-    <p class="hint">Cole no WhatsApp da equipe. Para guardar no histórico desta produção, cole na conversa com o Claude.</p></div>`;
-  html+=`<div class="card"><h3>Histórico <span class="count">${(P.reports||[]).length}</span></h3>${(P.reports||[]).length?P.reports.map(r=>`<a class="btn ghost" href="producoes/${P.path}/relatorios/${esc(r.file)}" target="_blank" rel="noopener">${fmtDate(r.date)} · ${esc(r.summary||r.file)}</a>`).join(''):'<p class="hint" style="margin:0">Nenhum relatório salvo ainda.</p>'}</div>`;
+    <p class="hint">Cole no WhatsApp da equipe.</p></div>`;
+  html+=`<div class="card"><h3>Exportar produção</h3><p class="hint" style="margin:0 0 6px">Tudo o que está no app, incluindo marcações, takes e anotações, para mandar à produção, à montagem ou à arte. Inclui as ${(P.diarias||[]).length>1?'duas diárias':'diárias'} da produção.</p>
+    <button class="btn" data-act="exp" data-fmt="pdf">PDF · relatório completo</button>
+    <div class="row2" style="margin-top:10px"><button class="btn ghost" style="margin:0" data-act="exp" data-fmt="csv">CSV · planos</button><button class="btn ghost" style="margin:0" data-act="exp" data-fmt="csvcenas">CSV · cenas</button></div>
+    <div class="row2" style="margin-top:10px"><button class="btn ghost" style="margin:0" data-act="exp" data-fmt="xml">XML</button><button class="btn ghost" style="margin:0" data-act="exp" data-fmt="json">JSON</button></div>
+    <p class="hint">CSV abre no Excel, Numbers e Google Planilhas. No PDF, use Imprimir → Salvar em PDF (ou compartilhar).</p></div>`;
   html+=`<div class="card"><h3>Recomeçar</h3><p class="hint" style="margin:0">Apaga marcações, takes, notas e checklist desta produção neste aparelho.</p>
     ${UI.confirmReset?`<div class="confirm"><button class="btn ghost" data-act="cancel">Cancelar</button><button class="btn danger" data-act="reset">Apagar tudo</button></div>`:`<button class="btn ghost" data-act="askreset">Limpar marcações</button>`}</div>`;
   document.getElementById('tab-fim').innerHTML=html;
+}
+
+
+/* ---------- exportação ---------- */
+const ALL=()=>({shots:P.shotsAll||P.shots,day:P.dayAll||P.day,scenes:P.scenesAll||P.scenes,groups:P.groupsAll||P.groups});
+const slugName=ext=>`${(P.project||P.slug).replace(/[^\w\-]+/g,'_')}_${P.slug}_${new Date().toISOString().slice(0,10)}.${ext}`;
+function blockOf(id){const A=ALL();return A.day.find(b=>b.shots.includes(id))}
+function shotRowData(s){const A=ALL(),g=A.groups.find(x=>x.id===s.g),b=blockOf(s.id);
+  return {diaria:b?.date?fmtDate(b.date):fmtDate(P.date),horario:b?.t||'',bloco:b?.title||'',plano:s.id,grupo:g?.name||'',titulo:s.title,enquadramento:s.frame,
+    lente:s.lens?`${s.lens[0]} · ${s.lens[1]}`:(P.lensNote||''),cenas:s.scenes.map(pad).join(' '),prioridade:s.pri==='A'?'indispensável':'extra',
+    matchcut:s.match||'',formatos:s.dual?'9:16 + 16:9':'',gravado:S.done[s.id]?'sim':'não',takes:S.takes[s.id]||0,take_bom:S.good[s.id]||'',nota:S.notes[s.id]||''}}
+const csvCell=v=>{v=String(v??'');return /[";\n,]/.test(v)?`"${v.replace(/"/g,'""')}"`:v};
+function toCSV(rows){if(!rows.length)return '';const k=Object.keys(rows[0]);return '﻿'+[k.join(';'),...rows.map(r=>k.map(x=>csvCell(r[x])).join(';'))].join('\r\n')}
+const xe=v=>String(v??'').replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]));
+function toXML(){const A=ALL();
+  const shot=s=>{const r=shotRowData(s);return `    <plano id="${xe(s.id)}" grupo="${xe(s.g)}" prioridade="${xe(r.prioridade)}" gravado="${r.gravado}" takes="${r.takes}"${r.take_bom?` take_bom="${r.take_bom}"`:''}>\n      <titulo>${xe(s.title)}</titulo>\n      <enquadramento>${xe(s.frame)}</enquadramento>\n      <lente>${xe(r.lente)}</lente>\n      <cenas>${xe(r.cenas)}</cenas>${s.match?`\n      <matchcut>${xe(s.match)}</matchcut>`:''}${s.dual?`\n      <formatos>9:16 + 16:9</formatos>`:''}${r.nota?`\n      <nota>${xe(r.nota)}</nota>`:''}\n    </plano>`};
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<producao slug="${xe(P.slug)}" exportado="${new Date().toISOString()}">\n  <titulo>${xe(P.title)}</titulo>\n  <projeto>${xe(P.project||'')}</projeto>\n  <produtora>${xe(PT?.nome||P.produtora||'')}</produtora>\n  <cliente>${xe(P.client)}</cliente>\n`+
+  `  <diarias>\n${(P.diarias||[{date:P.date,label:'Diária',window:P.window,location:P.location}]).map(d=>`    <diaria data="${d.date}" inicio="${d.window.from}" fim="${d.window.to}">\n      <nome>${xe(d.label)}</nome>\n      <local>${xe(d.location.name)}</local>\n      <endereco>${xe(d.location.address)}</endereco>\n    </diaria>`).join('\n')}\n  </diarias>\n`+
+  `  <ordem>\n${A.day.map(b=>`    <bloco${b.date?` data="${b.date}"`:''} horario="${xe(b.t)}">\n      <titulo>${xe(b.title)}</titulo>\n      <nota>${xe(b.note)}</nota>\n      <planos>${xe(b.shots.join(' '))}</planos>\n    </bloco>`).join('\n')}\n  </ordem>\n`+
+  `  <planos>\n${A.shots.map(shot).join('\n')}\n  </planos>\n`+
+  `  <cenas>\n${A.scenes.map(c=>`    <cena n="${c.n}">\n      <titulo>${xe(c.title)}</titulo>\n      <tempo>${xe(c.tc)}</tempo>\n      <descricao>${xe(c.detalhe||c.desc)}</descricao>${(c.texto||c.ost)?`\n      <texto_tela>${xe(c.texto||c.ost)}</texto_tela>`:''}${c.som?`\n      <som>${xe(c.som)}</som>`:''}${S.sceneNotes[c.n]?`\n      <anotacoes>${xe(S.sceneNotes[c.n])}</anotacoes>`:''}\n    </cena>`).join('\n')}\n  </cenas>\n`+
+  `  <entregas>\n${(P.entregas||[]).map(e=>`    <entrega formato="${xe(e.formato)}" duracao="${xe(e.duracao)}">\n      <titulo>${xe(e.titulo)}</titulo>\n${e.itens.map(i=>`      <item>${xe(i)}</item>`).join('\n')}\n${(e.pendencias||[]).map(i=>`      <pendencia>${xe(i)}</pendencia>`).join('\n')}\n    </entrega>`).join('\n')}\n  </entregas>\n`+
+  `  <contatos>\n${(P.contacts||[]).map(c=>`    <contato funcao="${xe(c.role)}" nome="${xe(c.name)}" telefone="${xe(c.phone)}"/>`).join('\n')}\n  </contatos>\n</producao>\n`}
+function toJSONExport(){const A=ALL();return JSON.stringify({exportado:new Date().toISOString(),producao:{slug:P.slug,title:P.title,project:P.project,client:P.client,produtora:PT?.nome||P.produtora,diarias:P.diarias||null,date:P.date,location:P.location,entregas:P.entregas||[],contacts:P.contacts||[],docs:P.docs||[]},
+  ordem:A.day,planos:A.shots.map(shotRowData),cenas:A.scenes.map(c=>({n:c.n,titulo:c.title,tempo:c.tc,descricao:c.detalhe||c.desc,texto_tela:c.texto||c.ost||'',som:c.som||'',anotacoes:S.sceneNotes[c.n]||''})),equipamento:{checklist:S.eq}},null,1)}
+async function shareFile(name,type,text){
+  const blob=new Blob([text],{type});const file=new File([blob],name,{type});
+  try{if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:name});return}}catch(e){if(e&&e.name==='AbortError')return}
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),30000);toast('Arquivo baixado');
+}
+function reportHTML(){const A=ALL();const wide=isWide();const tot=stats(A.shots);
+  const st=`<style>@page{size:A4;margin:14mm}*{box-sizing:border-box}body{font-family:-apple-system,Helvetica,Arial,sans-serif;color:#1B1E1A;font-size:10pt;line-height:1.4;margin:0}
+  h1{font-size:22pt;margin:0 0 4px}h2{font-size:13pt;margin:22px 0 8px;padding-bottom:4px;border-bottom:2px solid #1B1E1A;break-after:avoid}.mut{color:#5B6158}
+  table{width:100%;border-collapse:collapse;font-size:8.6pt}th{text-align:left;font-size:7.4pt;text-transform:uppercase;letter-spacing:.05em;color:#5B6158;border-bottom:1.5px solid #1B1E1A;padding:5px 4px}td{border-bottom:1px solid #DDD;padding:5px 4px;vertical-align:top}tr{break-inside:avoid}
+  .ok{color:#2F7D4F;font-weight:700}.no{color:#B3261E}.sb{display:grid;grid-template-columns:repeat(${wide?2:3},1fr);gap:12px}.sc{break-inside:avoid}.sc svg{width:100%;display:block;border-radius:6px}
+  .n{font-weight:800;font-size:12pt}.note{background:#FBF1DC;padding:6px 8px;border-radius:6px;margin-top:4px;font-size:8.6pt}.blk{break-inside:avoid;margin-bottom:8px}.kv td:first-child{width:28%;color:#5B6158}</style>`;
+  const rows=A.shots.map(s=>{const r=shotRowData(s);return `<tr><td><b>${xe(r.plano)}</b></td><td>${xe(r.titulo)}<div class="mut">${xe(r.enquadramento)}</div>${r.nota?`<div class="note">${xe(r.nota)}</div>`:''}</td><td>${xe(r.lente)}</td><td>${xe(r.diaria)} ${xe(r.horario)}</td><td>${r.matchcut?'matchcut: '+xe(r.matchcut):''}${r.formatos?' '+r.formatos:''}</td><td class="${r.gravado==='sim'?'ok':'no'}">${r.gravado==='sim'?'✓':'—'}</td><td>${r.takes||''}${r.take_bom?` (bom: ${r.take_bom})`:''}</td></tr>`}).join('');
+  const sb=A.scenes.map(c=>`<div class="sc">${frameSvg(c.svg)}<div><span class="n">${pad(c.n)}</span> <b>${xe(c.title)}</b> <span class="mut">${xe(c.tc)}</span></div><div class="mut" style="font-size:8.6pt">${xe(c.detalhe||c.desc)}</div>${(c.texto||c.ost)?`<div style="font-size:8.6pt"><i>Texto: ${xe(c.texto||c.ost)}</i></div>`:''}${S.sceneNotes[c.n]?`<div class="note"><b>Anotação:</b> ${xe(S.sceneNotes[c.n])}</div>`:''}</div>`).join('');
+  const ordem=A.day.map(b=>`<div class="blk"><b>${b.date?fmtDate(b.date)+' · ':''}${xe(b.t)} · ${xe(b.title)}</b>${b.note?`<div class="mut">${xe(b.note)}</div>`:''}${b.shots.length?`<div>${b.shots.map(id=>`${S.done[id]?'✓':'○'} ${id}`).join(' &nbsp; ')}</div>`:''}</div>`).join('');
+  const ent=(P.entregas||[]).map(e=>{const it=(e.shots||[]).map(shotById).filter(Boolean),s2=stats(it);return `<div class="blk"><b>${xe(e.titulo)}</b> · ${xe(e.formato)} · ${xe(e.duracao)} · planos ${s2.d}/${s2.t}<div class="mut">${xe(e.versao)}</div><ul>${e.itens.map(i=>`<li>${xe(i)}</li>`).join('')}</ul>${(e.pendencias||[]).length?`<div><b>Pendências:</b> ${e.pendencias.map(xe).join(' · ')}</div>`:''}</div>`}).join('');
+  const dias=(P.diarias||[{date:P.date,label:'Diária',window:P.window,location:P.location}]).map(d=>`<tr><td>${xe(d.label)}</td><td>${fmtDate(d.date)}, ${d.window.from}–${d.window.to} · ${xe(d.location.name)}<div class="mut">${xe(d.location.address)}</div></td></tr>`).join('');
+  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>${xe(P.title)}</title>${st}</head><body>
+  <div class="mut" style="text-transform:uppercase;letter-spacing:.1em;font-size:8pt">${xe(PT?.nome||P.produtora||'')} · ${xe(P.client)} · Set Tool</div><h1>${xe(P.project?P.project+' · ':'')}${xe(P.title)}</h1>
+  <div class="mut">Exportado em ${new Date().toLocaleString('pt-BR')} · ${tot.d} de ${tot.t} planos gravados</div>
+  <h2>Ficha</h2><table class="kv">${dias}${P.fonte?`<tr><td>Fonte</td><td>${xe(P.fonte)}</td></tr>`:''}${(P.contacts||[]).map(c=>`<tr><td>${xe(c.role)}</td><td>${xe(c.name)} ${xe(c.phone)}</td></tr>`).join('')}</table>
+  ${ent?`<h2>Entregas</h2>${ent}`:''}
+  <h2>Ordem do dia</h2>${ordem}
+  <h2>Planos</h2><table><thead><tr><th>#</th><th>Plano</th><th>Lente</th><th>Quando</th><th>Obs.</th><th>Grav.</th><th>Takes</th></tr></thead><tbody>${rows}</tbody></table>
+  <h2>Storyboard e anotações</h2><div class="sb">${sb}</div></body></html>`;
+}
+function exportPDF(){
+  const html=reportHTML();
+  const fr=document.createElement('iframe');fr.style.cssText='position:fixed;right:0;bottom:0;width:0;height:0;border:0';document.body.appendChild(fr);
+  const d=fr.contentWindow.document;d.open();d.write(html);d.close();
+  setTimeout(()=>{try{fr.contentWindow.focus();fr.contentWindow.print()}catch(e){shareFile(slugName('html'),'text/html',html)}setTimeout(()=>fr.remove(),60000)},400);
+}
+async function doExport(fmt){const A=ALL();
+  if(fmt==='pdf') return exportPDF();
+  if(fmt==='csv') return shareFile(slugName('csv').replace('.csv','_planos.csv'),'text/csv',toCSV(A.shots.map(shotRowData)));
+  if(fmt==='csvcenas') return shareFile(slugName('csv').replace('.csv','_cenas.csv'),'text/csv',toCSV(A.scenes.map(c=>({cena:pad(c.n),titulo:c.title,tempo:c.tc,descricao:c.detalhe||c.desc,texto_tela:c.texto||c.ost||'',som:c.som||'',planos:A.shots.filter(s=>s.scenes.includes(c.n)).map(s=>s.id).join(' '),anotacoes:S.sceneNotes[c.n]||''}))));
+  if(fmt==='xml') return shareFile(slugName('xml'),'application/xml',toXML());
+  if(fmt==='json') return shareFile(slugName('json'),'application/json',toJSONExport());
 }
 
 /* ---------- overlays ---------- */
@@ -824,6 +896,13 @@ async function syncStart(code){
       if(firstEq){firstEq=false;Object.keys(S.eq).forEach(k=>{if(!remote.has(k))pushEq(k)})}
       save(); softRender();
     },()=>{}));
+    let firstSc=true;
+    SYNC.unsubs.push(fs.onSnapshot(fs.collection(db,'sets',code,'scenes'),snap=>{
+      const remote=new Set();
+      snap.forEach(d=>{remote.add(d.id);const typing=document.activeElement&&document.activeElement.id===`sn-${d.id}`;if(!typing){const v=d.data().note;if(v)S.sceneNotes[d.id]=v;else delete S.sceneNotes[d.id]}});
+      if(firstSc){firstSc=false;Object.keys(S.sceneNotes).forEach(k=>{if(!remote.has(k))pushScene(k)})}
+      save(); softRender();
+    },()=>{}));
     const devRef=fs.doc(db,'sets',code,'devices',SYNC.uid);
     const beat=()=>fs.setDoc(devRef,{name:deviceName(),at:fs.serverTimestamp()},{merge:true}).catch(()=>{});
     beat(); SYNC.beat=setInterval(beat,60000);
@@ -848,6 +927,7 @@ function pushShot(id,now){
   const go=()=>{const fs=SYNC.fs;fs.setDoc(fs.doc(SYNC.db,'sets',SYNC.code,'marks',id),{done:!!S.done[id],takes:S.takes[id]||0,good:S.good[id]||null,note:S.notes[id]||'',by:deviceName(),at:fs.serverTimestamp()}).catch(e=>{SYNC.status='erro';SYNC.err=e.code||e.message;softRender()})};
   if(now) go(); else SYNC.timers[id]=setTimeout(go,500);
 }
+function pushScene(n){if(!SYNC.on||!SYNC.fs||!SYNC.uid)return;clearTimeout(SYNC.timers['sc'+n]);SYNC.timers['sc'+n]=setTimeout(()=>{const fs=SYNC.fs;fs.setDoc(fs.doc(SYNC.db,'sets',SYNC.code,'scenes',String(n)),{note:S.sceneNotes[n]||'',by:deviceName(),at:fs.serverTimestamp()}).catch(()=>{})},600)}
 function pushEq(k){if(!SYNC.on||!SYNC.fs||!SYNC.uid)return;const fs=SYNC.fs;fs.setDoc(fs.doc(SYNC.db,'sets',SYNC.code,'eq',k),{v:!!S.eq[k],by:deviceName(),at:fs.serverTimestamp()}).catch(()=>{})}
 window.addEventListener('online',()=>{if(S&&S.setCode&&(SYNC.status==='erro'||SYNC.status==='offline'))syncStart(S.setCode)});
 function syncBadge(){
@@ -914,7 +994,7 @@ document.addEventListener('click',async e=>{
     case 'copy': copyText(b.dataset.text,'Número copiado'); break;
     case 'askreset': UI.confirmReset=true; render(); break;
     case 'cancel': UI.confirmReset=false; render(); break;
-    case 'reset': {const ids=new Set([...Object.keys(S.done),...Object.keys(S.takes),...Object.keys(S.notes),...Object.keys(S.good)]);const eqs=Object.keys(S.eq);S.done={};S.notes={};S.takes={};S.good={};S.eq={};UI.confirmReset=false;save();ids.forEach(x=>pushShot(x,true));eqs.forEach(pushEq);render();toast(S.setCode?'Marcações apagadas em todos os aparelhos':'Marcações apagadas'); break}
+    case 'reset': {const ids=new Set([...Object.keys(S.done),...Object.keys(S.takes),...Object.keys(S.notes),...Object.keys(S.good)]);const eqs=Object.keys(S.eq);const scs=Object.keys(S.sceneNotes);S.done={};S.notes={};S.takes={};S.good={};S.eq={};S.sceneNotes={};UI.confirmReset=false;save();scs.forEach(pushScene);ids.forEach(x=>pushShot(x,true));eqs.forEach(pushEq);render();toast(S.setCode?'Marcações apagadas em todos os aparelhos':'Marcações apagadas'); break}
     case 'prods': if(INDEX) renderProds(); break;
     case 'closeov': document.getElementById('overlay').innerHTML=''; break;
     case 'pick': {document.getElementById('overlay').innerHTML=''; const di=b.dataset.dia;
@@ -923,6 +1003,7 @@ document.addEventListener('click',async e=>{
       else if(di!=null&&P.diarias){applyDiaria(Number(di));UI.open=null;render();window.scrollTo(0,0)} break}
     case 'slate': openSlate(id); break;
     case 'depo': openDepo(); break;
+    case 'exp': doExport(b.dataset.fmt); break;
     case 'diaria': applyDiaria(Number(b.dataset.i)); render(); break;
     case 'wxreload': loadWeather(true); render(); break;
     case 'sbshare': {const url=`producoes/${P.path}/${P.storyboardImage}`; const name=`Storyboard - ${P.project||P.title}.jpg`;
@@ -948,6 +1029,7 @@ document.addEventListener('click',async e=>{
 });
 document.addEventListener('input',e=>{
   const t=e.target;
+  if(t.dataset.act==='scenenote'){const n=t.dataset.n; if(t.value) S.sceneNotes[n]=t.value; else delete S.sceneNotes[n]; save(); pushScene(n)}
   if(t.dataset.act==='note'){const id=t.closest('[data-id]').dataset.id; if(t.value) S.notes[id]=t.value; else delete S.notes[id]; save(); pushShot(id)}
   if(t.dataset.pref==='device'){PREFS.device=t.value.trim();save()}
   if(t.dataset.field==='card'){S.card=t.value;save()}
@@ -955,7 +1037,7 @@ document.addEventListener('input',e=>{
 document.addEventListener('toggle',e=>{if(e.target.matches&&e.target.matches('details[data-act=planToggle]'))UI.planOpen=e.target.open},true);
 document.addEventListener('change',async e=>{
   const t=e.target;
-  if(t.dataset.act==='note'||SYNC.pendingRender){SYNC.pendingRender=false;render()}
+  if(t.dataset.act==='note'||t.dataset.act==='scenenote'||SYNC.pendingRender){SYNC.pendingRender=false;render()}
   if(t.dataset.pref==='device'&&SYNC.on){syncStart(S.setCode)}
   if(t.dataset.field&&t.dataset.field!=='card'){S[t.dataset.field]=t.value; if(t.dataset.field==='cam'){delete S.res;delete S.codec;delete S.cardGb} if(t.dataset.field==='res')delete S.codec; save(); render()}
   if(t.dataset.act==='slateshot'){SLATE={id:t.value,take:(S.takes[t.value]||0)+1};renderSlate()}
