@@ -5,12 +5,20 @@
    "nome": "Bridge Films",
    "producoes": [
     {
+     "slug": "art-hunter-exploradores",
+     "title": "Exploradores de arte",
+     "project": "Art Hunter",
+     "client": "Museu Oscar Niemeyer",
+     "date": "2026-10-19",
+     "status": "pré-produção"
+    },
+    {
      "slug": "art-hunter-mon",
      "title": "Onde a arte nos leva",
      "project": "Art Hunter",
      "client": "Museu Oscar Niemeyer",
      "date": "2026-10-12",
-     "status": "em gravação"
+     "status": "gravado"
     }
    ]
   },
