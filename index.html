@@ -219,6 +219,22 @@ nav button[aria-selected="true"]{color:var(--gold);background:var(--surface-2)}
 .slate .acts button{min-height:56px;border-radius:12px;background:#222;font-weight:700;font-size:16px}
 .slate .acts .good{background:var(--done);color:#0D1A12}
 .slate select{background:#111;border-color:#444}
+.tp{position:fixed;inset:0;z-index:30;background:#000;color:#fff;display:flex;flex-direction:column}
+.tp .tpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px;background:#0d0d0d;border-bottom:1px solid #222}
+.tp .tpbar button{min-height:40px;min-width:40px;padding:0 10px;border-radius:10px;background:#222;color:#fff;font-weight:700;font-size:15px}
+.tp .tpbar button[aria-pressed="true"]{background:var(--gold);color:#141613}
+.tp .tpbar select{background:#111;color:#fff;border:1px solid #333;border-radius:10px;min-height:40px;padding:0 8px;font-size:15px;flex:1 1 100px;min-width:0;max-width:100%}
+.tp .tpscroll{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 22px}
+.tp .tpscroll.mirror{transform:scaleX(-1)}
+.tp .txt{font-family:var(--f-display);font-weight:700;line-height:1.3;max-width:900px;margin:0 auto}
+.tp .txt p{margin:0 0 .9em}
+.tp .ttl{font-family:var(--f-mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin-bottom:18px}
+.tp .guide{position:fixed;left:0;right:0;top:38%;height:0;border-top:2px dashed rgba(242,194,48,.45);pointer-events:none}
+.tp .tpfoot{display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:#0d0d0d;border-top:1px solid #222}
+.tp .tpfoot button{flex:1;min-height:52px;border-radius:12px;background:#222;color:#fff;font-weight:700;font-size:16px}
+.tp .tpfoot .go{background:var(--done);color:#0D1A12}
+.tplist button{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:48px;padding:6px 2px;text-align:left;border-bottom:1px solid var(--line);font-size:14.5px}
+.tplist button:last-child{border-bottom:0}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(86px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);font-weight:600;font-size:14px;padding:10px 16px;border-radius:999px;z-index:40;max-width:90%}
 .loading{padding:60px 0;text-align:center;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -405,7 +421,7 @@ function renderPlanos(){
     const items=list.filter(s=>s.g===g.id); if(!items.length) continue;
     const st=stats(P.shots.filter(s=>s.g===g.id));
     html+=`<div class="group"><div class="ghead"><h2><span class="dot" style="background:${g.color}"></span>${esc(g.name)}</h2><span class="count">${st.d}/${st.t}</span></div>
-      <div class="bar"><i style="width:${st.d/st.t*100}%;background:${g.color}"></i></div><div class="gsub">${esc(g.sub)}</div>${items.map(shotRow).join('')}</div>`;
+      <div class="tpbar"><i style="width:${st.d/st.t*100}%;background:${g.color}"></i></div><div class="gsub">${esc(g.sub)}</div>${items.map(shotRow).join('')}</div>`;
   }
   if(!list.length) html+=`<div class="card"><h3>Nada por aqui</h3><p class="hint">Nenhum plano neste filtro.</p></div>`;
   document.getElementById('tab-planos').innerHTML=html;
@@ -696,7 +712,7 @@ function docCard(doc,scope){
 }
 function renderDocs(){
   const L=P.location, sar=(P.docs||[]).find(d=>d.id==='sarpas');
-  let html=`<div class="card"><h3>Ficha da produção</h3><dl class="kv">
+  let html=tpCardHTML()+`<div class="card"><h3>Ficha da produção</h3><dl class="kv">
     <dt>Projeto</dt><dd>${esc(P.project||'')} · ${esc(P.title)}</dd>
     <dt>Produtora</dt><dd>${esc(PT?.nome||'')}</dd>
     <dt>Cliente</dt><dd>${esc(P.client)}</dd>
@@ -736,7 +752,7 @@ function report(){
 }
 function renderFim(){
   const pendA=P.shots.filter(s=>s.pri==='A'&&!S.done[s.id]), pendB=P.shots.filter(s=>s.pri==='B'&&!S.done[s.id]);
-  let html=`<div class="card"><h3>Por bloco</h3>${P.groups.map(g=>{const st=stats(P.shots.filter(s=>s.g===g.id));return `<div class="brow"><span>${esc(g.short)}</span><div class="bar"><i style="width:${st.d/st.t*100}%;background:${g.color}"></i></div><span class="count">${st.d}/${st.t}</span></div>`}).join('')}</div>`;
+  let html=`<div class="card"><h3>Por bloco</h3>${P.groups.map(g=>{const st=stats(P.shots.filter(s=>s.g===g.id));return `<div class="brow"><span>${esc(g.short)}</span><div class="tpbar"><i style="width:${st.d/st.t*100}%;background:${g.color}"></i></div><span class="count">${st.d}/${st.t}</span></div>`}).join('')}</div>`;
   html+=`<div class="card"><h3>${pendA.length?`Não saia sem estes (${pendA.length})`:'Indispensáveis: tudo gravado'}</h3>`+
     (pendA.length?`<ul class="pend">${pendA.map(s=>`<li><span class="code">${s.id}</span><span>${esc(s.title)}</span></li>`).join('')}</ul>`:`<p class="hint">Todos os planos indispensáveis estão marcados.</p>`)+
     (pendB.length?`<p class="hint">Mais ${pendB.length} extras pendentes.</p>`:'')+`</div>`;
@@ -850,6 +866,62 @@ function renderSlate(){
   </div>`;
 }
 
+
+/* ---------- teleprompter ---------- */
+let TP=null;
+function tpCardHTML(){
+  const T=P.teleprompter; if(!T?.length) return '';
+  return `<div class="card"><h3>Teleprompter <span class="count">${T.length} fala${T.length>1?'s':''}</span></h3>
+    <div class="tplist">${T.map((t,i)=>`<button data-act="tpopen" data-i="${i}"><span><b>${esc(t.titulo)}</b>${t.sub?`<br><span class="hint" style="margin:0">${esc(t.sub)}</span>`:''}</span><span class="hint" style="margin:0;white-space:nowrap">${t.duracao?esc(t.duracao)+' · ':''}abrir</span></button>`).join('')}</div></div>`;
+}
+function tpPrefs(){PREFS.tp=Object.assign({size:40,speed:40,mirror:false},PREFS.tp||{});return PREFS.tp}
+async function tpWake(on){try{if(on&&'wakeLock' in navigator){TP.lock=await navigator.wakeLock.request('screen')}else if(!on&&TP?.lock){await TP.lock.release();TP.lock=null}}catch(e){}}
+function openTP(i){TP={i:Number(i)||0,play:false,raf:0,last:0,acc:0,lock:null};renderTP();tpWake(true)}
+function closeTP(){if(!TP)return;cancelAnimationFrame(TP.raf);tpWake(false);TP=null;document.getElementById('overlay').innerHTML=''}
+function renderTP(){
+  const T=P.teleprompter, t=T[TP.i], pr=tpPrefs();
+  document.getElementById('overlay').innerHTML=`<div class="tp" role="dialog" aria-label="Teleprompter">
+    <div class="tpbar">
+      <select data-act="tpsel" id="tpSel" aria-label="Fala">${T.map((x,k)=>`<option value="${k}" ${k===TP.i?'selected':''}>${esc(x.titulo)}</option>`).join('')}</select>
+      <button data-act="tpfont" data-d="-4" aria-label="Diminuir letra">A−</button><button data-act="tpfont" data-d="4" aria-label="Aumentar letra">A+</button>
+      <button data-act="tpmirror" aria-pressed="${pr.mirror}">Espelhar</button>
+      <button data-act="tpclose">Fechar</button>
+    </div>
+    <div class="tpscroll${pr.mirror?' mirror':''}" id="tpScroll"><div class="txt" style="font-size:${pr.size}px">
+      <div style="height:30vh"></div><div class="ttl">${esc(t.titulo)}${t.sub?' · '+esc(t.sub):''}</div>
+      ${t.falas.map(f=>`<p>${esc(f)}</p>`).join('')}<div style="height:60vh"></div></div></div>
+    <div class="guide"></div>
+    <div class="tpfoot">
+      <button data-act="tpspeed" data-d="-10" aria-label="Mais devagar">− vel.</button>
+      <button class="go" data-act="tpplay">${TP.play?'Pausar':'Rolar'} · ${pr.speed}</button>
+      <button data-act="tpspeed" data-d="10" aria-label="Mais rápido">+ vel.</button>
+      <button data-act="tptop" aria-label="Voltar ao início">Início</button>
+    </div></div>`;
+}
+function tpLoop(ts){
+  if(!TP||!TP.play) return;
+  const el=document.getElementById('tpScroll'); if(!el) return;
+  if(TP.last){TP.acc+=(ts-TP.last)/1000*tpPrefs().speed; const px=Math.floor(TP.acc); if(px){el.scrollTop+=px;TP.acc-=px}}
+  TP.last=ts;
+  if(el.scrollTop+el.clientHeight>=el.scrollHeight-2){TP.play=false;renderTPKeep();return}
+  TP.raf=requestAnimationFrame(tpLoop);
+}
+function renderTPKeep(){const el=document.getElementById('tpScroll');const y=el?el.scrollTop:0;renderTP();const n=document.getElementById('tpScroll');if(n)n.scrollTop=y}
+document.addEventListener('change',e=>{if(e.target.id==='tpSel'&&TP){cancelAnimationFrame(TP.raf);TP.i=Number(e.target.value);TP.play=false;renderTP()}});
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]'); if(!b) return; const a=b.dataset.act; if(!a.startsWith('tp')) return;
+  const pr=tpPrefs();
+  switch(a){
+    case 'tpopen': openTP(b.dataset.i); break;
+    case 'tpclose': closeTP(); break;
+    case 'tpfont': pr.size=Math.min(96,Math.max(20,pr.size+Number(b.dataset.d))); save(); renderTPKeep(); break;
+    case 'tpmirror': pr.mirror=!pr.mirror; save(); renderTPKeep(); break;
+    case 'tpspeed': pr.speed=Math.min(200,Math.max(10,pr.speed+Number(b.dataset.d))); save(); renderTPKeep(); break;
+    case 'tptop': {TP.play=false;cancelAnimationFrame(TP.raf);renderTP();break}
+    case 'tpplay': TP.play=!TP.play; renderTPKeep(); if(TP.play){TP.last=0;TP.acc=0;TP.raf=requestAnimationFrame(tpLoop)} else cancelAnimationFrame(TP.raf); break;
+  }
+});
+document.addEventListener('visibilitychange',()=>{if(TP&&document.visibilityState==='visible')tpWake(true)});
 
 /* ---------- sincronização da equipe (Firebase) ---------- */
 const FB_V='10.14.1';

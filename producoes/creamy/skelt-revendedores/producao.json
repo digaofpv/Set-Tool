@@ -1230,6 +1230,71 @@
   "Roteiro 4: não mostrar plataformas ou canais de venda sem autorização da empresa.",
   "Roteiro 5: lucratividade e frete grátis sujeitos às condições vigentes do programa de revenda (nota na tela)."
  ],
+ "teleprompter": [
+  {
+   "titulo": "Roteiro 1 · Pequenas lojistas",
+   "sub": "Amplie o mix da sua loja",
+   "duracao": "cerca de 0:30",
+   "falas": [
+    "Você tem uma loja e quer trazer novidades que chamem a atenção dos seus clientes?",
+    "Então, precisa conhecer a oportunidade de revender Skelt Cosméticos!",
+    "São produtos de beleza que vão dos nossos autobronzeadores aos bodycreams e bodysplashes, perfeitos para quem quer ampliar o mix de produtos da loja.",
+    "Imagine oferecer fragrâncias e cuidados corporais que seus clientes podem conhecer, experimentar e querer levar para casa.",
+    "Quer saber como se tornar revendedora ou revendedor Skelt? Clique aqui e cadastre seu interesse!"
+   ]
+  },
+  {
+   "titulo": "Roteiro 2 · Quem já vende beleza",
+   "sub": "Amplie seu portfólio com Skelt",
+   "duracao": "cerca de 0:30",
+   "falas": [
+    "Você já trabalha com beleza e quer ampliar seu portfólio?",
+    "Conheça a oportunidade de revender Skelt Cosméticos!",
+    "Temos autobronzeadores, bodycreams e bodysplashes para quem quer oferecer mais opções de beleza e cuidado corporal aos seus clientes.",
+    "E olha esse destaque: o Amalfi Sunset, nosso bodycream que conquistou espaço nas conversas das redes sociais.",
+    "Se você já tem clientes que compram produtos de beleza, vale conhecer essa oportunidade e descobrir como incluir Skelt nas suas vendas.",
+    "Clique no botão e saiba como revender!"
+   ]
+  },
+  {
+   "titulo": "Roteiro 3 · Quem vende nas redes sociais",
+   "sub": "Transforme seu conteúdo em oportunidade comercial",
+   "duracao": "cerca de 0:31",
+   "falas": [
+    "Você vive indicando produtos de beleza nos Stories, mostrando novidades ou compartilhando suas descobertas?",
+    "Já pensou em transformar esse interesse em uma oportunidade de renda extra?",
+    "Com a revenda Skelt, você pode apresentar nossos autobronzeadores, bodycreams e bodysplashes para o público que já acompanha você.",
+    "Imagine gravar um vídeo mostrando uma fragrância, apresentar o Amalfi Sunset ou compartilhar sua experiência com um produto Skelt.",
+    "Se você gosta de beleza e quer empreender usando suas redes sociais, clique aqui e conheça a oportunidade de revenda!"
+   ]
+  },
+  {
+   "titulo": "Roteiro 4 · Quem vende online e em marketplaces",
+   "sub": "Amplie seu catálogo digital",
+   "duracao": "cerca de 0:29",
+   "falas": [
+    "Você já vende pela internet e está procurando novas oportunidades para ampliar seu catálogo?",
+    "Conheça a possibilidade de revender Skelt Cosméticos!",
+    "Nossa linha tem produtos de beleza e cuidado corporal, com destaque para autobronzeadores, bodycreams e bodysplashes.",
+    "São diferentes categorias para você avaliar como podem complementar seu negócio e atender aos interesses dos seus clientes.",
+    "Quer descobrir como funciona a revenda Skelt e quais são as condições para começar?",
+    "Clique aqui, cadastre seu interesse e conheça nossa oportunidade!"
+   ]
+  },
+  {
+   "titulo": "Roteiro 5 · Renda extra trabalhando de casa",
+   "sub": "Lucratividade, frete grátis e produtos com forte apelo",
+   "duracao": "cerca de 0:40",
+   "falas": [
+    "Quer ganhar até 40% de lucratividade revendendo produtos de beleza, sem sair de casa e com frete grátis?",
+    "Conheça a oportunidade de revender Skelt Cosméticos!",
+    "Você pode trabalhar com os autobronzeadores de uma das marcas mais conhecidas do Brasil, o bodycream Amalfi Sunset, que conquistou a internet, e nossos bodysplashes com fragrâncias irresistíveis.",
+    "São produtos que despertam desejo e que você pode apresentar aos seus clientes pelas redes sociais, pelo WhatsApp ou pelos canais de venda autorizados.",
+    "E tem mais: você conta com frete grátis, conforme as condições da revenda.",
+    "Quer saber como funciona e começar a revender Skelt? Clique no botão, cadastre seu interesse e conheça as condições!"
+   ]
+  }
+ ],
  "entregas": [
   {
    "titulo": "Criativo 1 · Pequenas lojistas",
