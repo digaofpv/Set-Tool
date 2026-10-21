@@ -1,0 +1,1482 @@
+{
+ "slug": "skelt-revendedores",
+ "title": "Revenda Skelt · 5 criativos",
+ "client": "Skelt Cosméticos",
+ "project": "Creamy",
+ "produtora": "Direto com o cliente",
+ "date": "2026-10-27",
+ "window": {
+  "from": "08:00",
+  "to": "17:45"
+ },
+ "location": {
+  "name": "Locação a definir (loja e estúdio)",
+  "address": "Curitiba – PR (a confirmar)",
+  "lat": -25.4284,
+  "lon": -49.2733,
+  "tz": -3
+ },
+ "format": "9:16 · 5 vídeos de 25 a 35 s para Meta Ads",
+ "lightNote": "<b>Tudo em interior, luz clara.</b> Chave grande e difusa a 45° do apresentador, preenchimento suave e um contra nos produtos. Balanço de branco fixo por cenário e polarizador contra o brilho das embalagens.",
+ "framingTip": "Grave a Pocket na horizontal em 6K e recorte o 9:16: apresentador no centro, olhos no terço de cima, espaço no topo para o texto de tela e embaixo para as legendas. Produtos na altura do peito, dentro da área segura.",
+ "fonte": "Roteiros para gravação de anúncios · Captação de revendedores Skelt Cosméticos (estratégia a partir dos criativos da Creamy Skincare). Sem Ordem do Dia: horários, locação e apresentador estimados.",
+ "groups": [
+  {
+   "id": "A",
+   "name": "Roteiro 1 · Pequenas lojistas",
+   "short": "R1 Lojistas",
+   "sub": "Loja física · produtos nas prateleiras",
+   "color": "var(--dawn)"
+  },
+  {
+   "id": "B",
+   "name": "Roteiro 2 · Já vende beleza",
+   "short": "R2 Beleza",
+   "sub": "Balcão de cosméticos · Amalfi Sunset",
+   "color": "var(--day)"
+  },
+  {
+   "id": "C",
+   "name": "Roteiro 3 · Redes sociais",
+   "short": "R3 Redes",
+   "sub": "Bancada moderna · celular e tripé",
+   "color": "var(--dusk)"
+  },
+  {
+   "id": "D",
+   "name": "Roteiro 4 · Online e marketplaces",
+   "short": "R4 Online",
+   "sub": "Estação de trabalho · notebook",
+   "color": "var(--aerial)"
+  },
+  {
+   "id": "E",
+   "name": "Roteiro 5 · Renda extra",
+   "short": "R5 Renda",
+   "sub": "Bancada repleta · gancho dos 40%",
+   "color": "#D98BB0"
+  },
+  {
+   "id": "P",
+   "name": "Produtos (packshots)",
+   "short": "Produtos",
+   "sub": "Closes que servem aos 5 vídeos",
+   "color": "#C9CCC4"
+  },
+  {
+   "id": "S",
+   "name": "Som",
+   "short": "Som",
+   "sub": "Room tone e foley dos produtos",
+   "color": "var(--sound)"
+  }
+ ],
+ "shots": [
+  {
+   "id": "A1",
+   "g": "A",
+   "title": "Abertura 1: segurando bodycream e bodysplash, já falando",
+   "frame": "Plano médio, fixo no tripé, olhar na lente",
+   "scenes": [
+    1
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "A2",
+   "g": "A",
+   "title": "Abertura 2: entra no quadro pelo lado da prateleira",
+   "frame": "Plano médio, fixo; ação começa fora de quadro",
+   "scenes": [
+    1
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "A3",
+   "g": "A",
+   "title": "Fala completa na loja (2 câmeras)",
+   "frame": "Câmera A em plano médio, câmera B em close lateral",
+   "scenes": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "A4",
+   "g": "A",
+   "title": "Produtos organizados nas prateleiras e no balcão",
+   "frame": "Geral e médio, travelling lateral no gimbal",
+   "scenes": [
+    2
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "18–24 mm no RS2, passada lenta ao longo da prateleira"
+   ]
+  },
+  {
+   "id": "A5",
+   "g": "A",
+   "title": "Closes das embalagens na loja; mão tira produto da prateleira",
+   "frame": "Detalhe, foco raso",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2–2.8, foco na embalagem; segure o rótulo de frente para a lente"
+   ]
+  },
+  {
+   "id": "A6",
+   "g": "A",
+   "title": "Chamada final em plano mais fechado",
+   "frame": "Primeiro plano, olhar na lente, pausa de 1 s no fim",
+   "scenes": [
+    4
+   ],
+   "pri": "B",
+   "lens": [
+    "Sigma 18–35",
+    "35 mm, f/2"
+   ]
+  },
+  {
+   "id": "B1",
+   "g": "B",
+   "title": "Abertura 1: organizando os produtos no balcão e olhando para cima",
+   "frame": "Plano médio, fixo",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "B2",
+   "g": "B",
+   "title": "Abertura 2: já de frente, produtos na mão",
+   "frame": "Plano médio, fixo",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "B3",
+   "g": "B",
+   "title": "Fala completa no balcão (2 câmeras)",
+   "frame": "Câmera A em plano médio, câmera B em close lateral",
+   "scenes": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "B4",
+   "g": "B",
+   "title": "Amalfi Sunset em destaque na mão, perto da lente",
+   "frame": "Close do produto com o rosto desfocado atrás",
+   "scenes": [
+    7
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2, foco no rótulo; luz de recorte no pote"
+   ]
+  },
+  {
+   "id": "B5",
+   "g": "B",
+   "title": "Cortes rápidos: autobronzeadores e bodysplashes",
+   "frame": "Detalhes curtos, 2–3 s cada, deslizando no balcão",
+   "scenes": [
+    6
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2–2.8, foco na embalagem; segure o rótulo de frente para a lente"
+   ]
+  },
+  {
+   "id": "B6",
+   "g": "B",
+   "title": "Todos os produtos reunidos em cena",
+   "frame": "Geral do balcão com o apresentador ao fundo",
+   "scenes": [
+    8
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "18–24 mm, f/4 para segurar a linha toda em foco"
+   ]
+  },
+  {
+   "id": "C1",
+   "g": "C",
+   "title": "Abertura 1: gravando Story em selfie e virando para a câmera",
+   "frame": "Plano médio, fixo; celular na mão",
+   "scenes": [
+    9
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "C2",
+   "g": "C",
+   "title": "Abertura 2: por cima do ombro, vendo a tela do Story",
+   "frame": "Over the shoulder, foco passa da tela para o rosto",
+   "scenes": [
+    9
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2, rack focus da tela para o rosto"
+   ]
+  },
+  {
+   "id": "C3",
+   "g": "C",
+   "title": "Fala completa: celular no tripé e produtos no mesmo quadro",
+   "frame": "Câmera A em plano médio, câmera B em close",
+   "scenes": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "C4",
+   "g": "C",
+   "title": "Bodysplash borrifado em contraluz",
+   "frame": "Detalhe, fundo escuro, luz atrás da névoa",
+   "scenes": [
+    11
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2.8; luz de contra para a névoa aparecer, 50 ou 60 fps"
+   ]
+  },
+  {
+   "id": "C5",
+   "g": "C",
+   "title": "Textura do Amalfi Sunset na mão",
+   "frame": "Detalhe, dedo pegando o creme do pote",
+   "scenes": [
+    11
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2–2.8, foco na embalagem; segure o rótulo de frente para a lente"
+   ]
+  },
+  {
+   "id": "C6",
+   "g": "C",
+   "title": "Final: celular e produtos na mão",
+   "frame": "Plano médio, olhar na lente",
+   "scenes": [
+    12
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "C7",
+   "g": "C",
+   "title": "Insert da tela do celular gravando o Story",
+   "frame": "Gravação de tela ou close da tela, sem marca de rede social",
+   "scenes": [
+    9,
+    10
+   ],
+   "pri": "B",
+   "lens": [
+    "Celular",
+    "gravação de tela do próprio celular do apresentador; interface neutra"
+   ]
+  },
+  {
+   "id": "D1",
+   "g": "D",
+   "title": "Abertura 1: digitando no notebook e virando para a câmera",
+   "frame": "Plano médio, fixo",
+   "scenes": [
+    13
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "D2",
+   "g": "D",
+   "title": "Abertura 2: das mãos no teclado até o rosto",
+   "frame": "Tilt up no gimbal, termina em plano médio",
+   "scenes": [
+    13
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24 mm no RS2"
+   ]
+  },
+  {
+   "id": "D3",
+   "g": "D",
+   "title": "Fala completa na estação de trabalho (2 câmeras)",
+   "frame": "Câmera A em plano médio, câmera B em close",
+   "scenes": [
+    13,
+    14,
+    15,
+    16
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "D4",
+   "g": "D",
+   "title": "Produtos organizados ao lado do computador",
+   "frame": "Geral da bancada, leve travelling",
+   "scenes": [
+    14
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "18–24 mm no RS2"
+   ]
+  },
+  {
+   "id": "D5",
+   "g": "D",
+   "title": "Closes das embalagens: produto entrando na caixa de envio",
+   "frame": "Detalhe de cima ou a 45°",
+   "scenes": [
+    15
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2–2.8, foco na embalagem; segure o rótulo de frente para a lente"
+   ]
+  },
+  {
+   "id": "D6",
+   "g": "D",
+   "title": "Tela do notebook sem marketplace",
+   "frame": "Detalhe da tela com planilha ou catálogo neutro",
+   "scenes": [
+    13,
+    15
+   ],
+   "pri": "B",
+   "lens": [
+    "Zeiss 50",
+    "f/2.8; nada de logo de plataforma na tela"
+   ]
+  },
+  {
+   "id": "E1",
+   "g": "E",
+   "title": "Abertura 1: segurando os produtos, fala começa no 1º frame",
+   "frame": "Plano médio, fixo; espaço no topo para “ATÉ 40%”",
+   "scenes": [
+    17
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "E2",
+   "g": "E",
+   "title": "Abertura 2: mais fechada, produto entrando na frente da lente",
+   "frame": "Primeiro plano, produto passa perto da lente",
+   "scenes": [
+    17
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "35 mm, f/2"
+   ]
+  },
+  {
+   "id": "E3",
+   "g": "E",
+   "title": "Fala completa na bancada repleta (2 câmeras)",
+   "frame": "Câmera A em plano médio, câmera B em close",
+   "scenes": [
+    17,
+    18,
+    19,
+    20
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–30 mm, f/2.8; 6K horizontal com recorte 9:16, cabeça no terço de cima"
+   ]
+  },
+  {
+   "id": "E4",
+   "g": "E",
+   "title": "Sequência: autobronzeador, Amalfi Sunset e bodysplashes",
+   "frame": "Detalhes na ordem da fala, mão apresentando cada um",
+   "scenes": [
+    18
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2–2.8, foco na embalagem; segure o rótulo de frente para a lente"
+   ]
+  },
+  {
+   "id": "E5",
+   "g": "E",
+   "title": "Caixa de envio fechada com produtos (apoio do frete grátis)",
+   "frame": "Detalhe, fita fechando a caixa",
+   "scenes": [
+    19
+   ],
+   "pri": "B",
+   "lens": [
+    "Zeiss 50",
+    "f/2–2.8, foco na embalagem; segure o rótulo de frente para a lente"
+   ]
+  },
+  {
+   "id": "E6",
+   "g": "E",
+   "title": "Produtos reunidos na bancada para o fechamento",
+   "frame": "Geral, apresentador ao centro, bancada cheia",
+   "scenes": [
+    20
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "18 mm, f/4"
+   ]
+  },
+  {
+   "id": "P1",
+   "g": "P",
+   "title": "Packshot Amalfi Sunset",
+   "frame": "Fundo limpo, giro lento ou slide",
+   "scenes": [
+    7,
+    18
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/4, luz de recorte; também serve aos roteiros 3 e 5"
+   ]
+  },
+  {
+   "id": "P2",
+   "g": "P",
+   "title": "Packshot dos bodysplashes (linha de fragrâncias)",
+   "frame": "Fileira de frascos, foco puxando de um para o outro",
+   "scenes": [
+    6,
+    18
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2.8, rack focus"
+   ]
+  },
+  {
+   "id": "P3",
+   "g": "P",
+   "title": "Packshot dos autobronzeadores",
+   "frame": "Fundo limpo, frente e verso do rótulo",
+   "scenes": [
+    6,
+    18
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/4"
+   ]
+  },
+  {
+   "id": "P4",
+   "g": "P",
+   "title": "Linha completa vista de cima",
+   "frame": "Top-down de todos os produtos, para tela final",
+   "scenes": [
+    4,
+    8,
+    20
+   ],
+   "pri": "B",
+   "lens": [
+    "Sigma 18–35",
+    "18 mm no tripé em plongée"
+   ]
+  },
+  {
+   "id": "S1",
+   "g": "S",
+   "title": "Room tone da loja",
+   "frame": "30 s de silêncio, mesmo ponto do microfone",
+   "scenes": [],
+   "pri": "A",
+   "lens": [
+    "Áudio",
+    "lapela ligada no apresentador parado"
+   ]
+  },
+  {
+   "id": "S2",
+   "g": "S",
+   "title": "Room tone do estúdio",
+   "frame": "30 s de silêncio",
+   "scenes": [],
+   "pri": "A",
+   "lens": [
+    "Áudio",
+    "mesmo ponto do microfone"
+   ]
+  },
+  {
+   "id": "S3",
+   "g": "S",
+   "title": "Borrifo do bodysplash, tampa do pote e caixa",
+   "frame": "Foley perto dos produtos",
+   "scenes": [
+    11,
+    19
+   ],
+   "pri": "B",
+   "lens": [
+    "Áudio",
+    "microfone perto, set em silêncio"
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "n": 1,
+   "tc": "0:00–0:06",
+   "title": "R1 · Gancho na loja",
+   "color": "var(--dawn)",
+   "desc": "Apresentador segura um bodycream e um bodysplash e fala direto para a câmera.",
+   "ost": "Você tem uma loja?",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E9E4D6\"/><rect x=\"4\" y=\"40\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 40.0 L24.6 40.0 L25.1 33.5 L20.9 33.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"40.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 40.0 L45.6 40.0 L46.1 33.5 L41.9 33.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"40.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 40.0 L66.6 40.0 L67.1 33.5 L62.9 33.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"40.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"4\" y=\"60\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"55.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"54.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"52.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"51.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"55.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 60.0 L24.6 60.0 L25.1 53.5 L20.9 53.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"60.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"55.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"54.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"52.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"51.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"55.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 60.0 L45.6 60.0 L46.1 53.5 L41.9 53.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"60.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"55.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"54.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"52.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"51.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"55.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 60.0 L66.6 60.0 L67.1 53.5 L62.9 53.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"60.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"55.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"54.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"52.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"51.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"55.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"4\" y=\"80\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"75.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"74.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"72.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"71.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"75.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 80.0 L24.6 80.0 L25.1 73.5 L20.9 73.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"80.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"75.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"74.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"72.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"71.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"75.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 80.0 L45.6 80.0 L46.1 73.5 L41.9 73.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"80.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"75.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"74.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"72.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"71.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"75.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 80.0 L66.6 80.0 L67.1 73.5 L62.9 73.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"80.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"75.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"74.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"72.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"71.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"75.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><g fill=\"#23211F\"><ellipse cx=\"45\" cy=\"62\" rx=\"8.0\" ry=\"8.8\"/><path d=\"M28.0 98.8 Q29.0 74.8 45.0 72.8 Q61.0 74.8 62.0 98.8 L62.0 160 L28.0 160 Z\"/></g><path d=\"M37.8 60.4 Q45.0 50.0 52.2 60.4\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><path d=\"M33 98 L30 92\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><path d=\"M57 98 L61 90\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><rect x=\"25.3\" y=\"83.6\" width=\"9.5\" height=\"8.4\" rx=\"1.3\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"24.8\" y=\"81.1\" width=\"10.5\" height=\"2.7\" rx=\"0.6\" fill=\"#23211F\"/><rect x=\"58.0\" y=\"75.0\" width=\"6.0\" height=\"15.0\" rx=\"1.4\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"59.6\" y=\"72.0\" width=\"2.8\" height=\"3.0\" fill=\"#23211F\"/><rect x=\"59.0\" y=\"81.8\" width=\"4.0\" height=\"3.0\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"0\" y=\"112\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"115\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><rect x=\"8\" y=\"11.4\" width=\"29.2\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · FIXO</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Apresentador segura um bodycream e um bodysplash e fala direto para a câmera. Cenário: Loja física com os produtos Skelt nas prateleiras ou sobre o balcão.",
+   "texto": "Você tem uma loja?",
+   "som": "Fala para a câmera: “Você tem uma loja e quer trazer novidades que chamem a atenção dos seus clientes?”",
+   "adaptacao": "Abrir já falando, com os dois produtos na altura do peito. Gravar duas aberturas (A1 e A2)."
+  },
+  {
+   "n": 2,
+   "tc": "0:06–0:18",
+   "title": "R1 · A oportunidade e os produtos na loja",
+   "color": "var(--dawn)",
+   "desc": "Produtos Skelt organizados na loja, em prateleiras e no balcão.",
+   "ost": "Amplie seu mix de produtos.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E9E4D6\"/><rect x=\"4\" y=\"44\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"39.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"38.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"36.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"35.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"39.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 44.0 L24.6 44.0 L25.1 37.5 L20.9 37.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"44.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"39.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"38.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"36.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"35.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"39.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 44.0 L45.6 44.0 L46.1 37.5 L41.9 37.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"44.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"39.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"38.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"36.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"35.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"39.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 44.0 L66.6 44.0 L67.1 37.5 L62.9 37.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"44.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"39.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"38.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"36.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"35.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"39.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"4\" y=\"66\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"61.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"60.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"58.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"57.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"61.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 66.0 L24.6 66.0 L25.1 59.5 L20.9 59.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"66.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"61.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"60.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"58.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"57.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"61.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 66.0 L45.6 66.0 L46.1 59.5 L41.9 59.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"66.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"61.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"60.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"58.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"57.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"61.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 66.0 L66.6 66.0 L67.1 59.5 L62.9 59.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"66.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"61.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"60.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"58.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"57.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"61.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"4\" y=\"88\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"83.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"82.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"80.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"79.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"83.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 88.0 L24.6 88.0 L25.1 81.5 L20.9 81.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"88.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"83.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"82.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"80.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"79.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"83.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 88.0 L45.6 88.0 L46.1 81.5 L41.9 81.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"88.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"83.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"82.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"80.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"79.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"83.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 88.0 L66.6 88.0 L67.1 81.5 L62.9 81.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"88.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"83.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"82.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"80.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"79.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"83.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"0\" y=\"104\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"107\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><rect x=\"25.5\" y=\"96.0\" width=\"9.0\" height=\"8.0\" rx=\"1.2\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"25.0\" y=\"93.6\" width=\"10.0\" height=\"2.6\" rx=\"0.6\" fill=\"#23211F\"/><rect x=\"42.0\" y=\"89.0\" width=\"6.0\" height=\"15.0\" rx=\"1.4\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"43.6\" y=\"86.0\" width=\"2.8\" height=\"3.0\" fill=\"#23211F\"/><rect x=\"43.0\" y=\"95.8\" width=\"4.0\" height=\"3.0\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M56.8 104.0 L63.2 104.0 L64.2 91.0 L55.8 91.0 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.4\" y=\"104.0\" width=\"5.2\" height=\"2.4\" rx=\".5\" fill=\"#23211F\"/><path d=\"M12 30 L35.0 30.0\" stroke=\"#23211F\" stroke-width=\"2.8\" stroke-linecap=\"round\"/><path d=\"M12 30 L35.0 30.0\" stroke=\"#E2A400\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><polygon points=\"40,30 35.0,27.0 35.0,33.0\" fill=\"#E2A400\" stroke=\"#23211F\" stroke-width=\".7\" stroke-linejoin=\"round\"/><rect x=\"8\" y=\"11.4\" width=\"56.8\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG · GIMBAL LATERAL</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Produtos Skelt organizados na loja, em prateleiras e no balcão. Cenário: Loja física com os produtos Skelt nas prateleiras ou sobre o balcão.",
+   "texto": "Amplie seu mix de produtos.",
+   "som": "Fala para a câmera: “Então, precisa conhecer a oportunidade de revender Skelt Cosméticos! São produtos de beleza que vão dos nossos autobronzeadores aos bodycreams e bodysplashes, perfeitos para quem quer ampliar o mix de produtos da loja.”",
+   "adaptacao": "A fala segue em off sobre os planos de loja; o corpo da fala (A3) cobre o trecho se precisar."
+  },
+  {
+   "n": 3,
+   "tc": "0:18–0:24",
+   "title": "R1 · Closes das embalagens",
+   "color": "var(--dawn)",
+   "desc": "Closes das embalagens enquanto a fala continua: o cliente conhece, experimenta e leva.",
+   "ost": "Conheça a revenda Skelt.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E6E0D2\"/><path d=\"M22 160 L28 118 Q45 112 62 118 L68 160 Z\" fill=\"#23211F\"/><rect x=\"33.3\" y=\"91.2\" width=\"23.4\" height=\"20.8\" rx=\"3.1\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"32.0\" y=\"85.0\" width=\"26.0\" height=\"6.8\" rx=\"1.6\" fill=\"#23211F\"/><path d=\"M28 118 Q24 100 30 92 Q33 90 34 94 L33 112\" fill=\"#23211F\"/><path d=\"M62 118 Q66 102 60 96 Q57 95 57 99 L58 112\" fill=\"#23211F\"/><rect x=\"4\" y=\"40\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 40.0 L24.6 40.0 L25.1 33.5 L20.9 33.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"40.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 40.0 L45.6 40.0 L46.1 33.5 L41.9 33.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"40.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 40.0 L66.6 40.0 L67.1 33.5 L62.9 33.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"40.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"8\" y=\"11.4\" width=\"59.5\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PD · CLOSE EMBALAGEM</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Closes das embalagens enquanto a fala continua: o cliente conhece, experimenta e leva. Cenário: Loja física com os produtos Skelt nas prateleiras ou sobre o balcão.",
+   "texto": "Conheça a revenda Skelt.",
+   "som": "Fala para a câmera: “Imagine oferecer fragrâncias e cuidados corporais que seus clientes podem conhecer, experimentar e querer levar para casa.”",
+   "adaptacao": "Mão tirando o produto da prateleira reforça a ideia de experimentar."
+  },
+  {
+   "n": 4,
+   "tc": "0:24–0:30",
+   "title": "R1 · Chamada final",
+   "color": "var(--dawn)",
+   "desc": "Apresentador olha direto para a câmera e faz o convite.",
+   "ost": "Cadastre seu interesse.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E9E4D6\"/><rect x=\"4\" y=\"40\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 40.0 L24.6 40.0 L25.1 33.5 L20.9 33.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"40.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 40.0 L45.6 40.0 L46.1 33.5 L41.9 33.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"40.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 40.0 L66.6 40.0 L67.1 33.5 L62.9 33.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"40.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"35.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"34.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"32.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"31.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"35.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"4\" y=\"60\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"55.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"54.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"52.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"51.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"55.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 60.0 L24.6 60.0 L25.1 53.5 L20.9 53.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"60.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"55.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"54.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"52.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"51.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"55.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 60.0 L45.6 60.0 L46.1 53.5 L41.9 53.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"60.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"55.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"54.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"52.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"51.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"55.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 60.0 L66.6 60.0 L67.1 53.5 L62.9 53.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"60.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"55.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"54.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"52.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"51.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"55.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"4\" y=\"80\" width=\"82\" height=\"2\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".3\"/><rect x=\"7.0\" y=\"75.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"6.8\" y=\"74.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"14.5\" y=\"72.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.3\" y=\"71.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"15.0\" y=\"75.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M21.4 80.0 L24.6 80.0 L25.1 73.5 L20.9 73.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.7\" y=\"80.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"28.0\" y=\"75.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"27.8\" y=\"74.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"35.5\" y=\"72.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"36.3\" y=\"71.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"75.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M42.4 80.0 L45.6 80.0 L46.1 73.5 L41.9 73.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"42.7\" y=\"80.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"49.0\" y=\"75.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"48.8\" y=\"74.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"56.5\" y=\"72.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.3\" y=\"71.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"57.0\" y=\"75.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M63.4 80.0 L66.6 80.0 L67.1 73.5 L62.9 73.5 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"63.7\" y=\"80.0\" width=\"2.6\" height=\"1.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"75.6\" width=\"5.0\" height=\"4.4\" rx=\"0.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"74.3\" width=\"5.5\" height=\"1.4\" rx=\"0.3\" fill=\"#23211F\"/><rect x=\"77.5\" y=\"72.5\" width=\"3.0\" height=\"7.5\" rx=\"0.7\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.3\" y=\"71.0\" width=\"1.4\" height=\"1.5\" fill=\"#23211F\"/><rect x=\"78.0\" y=\"75.9\" width=\"2.0\" height=\"1.5\" fill=\"#23211F\" opacity=\".18\"/><g fill=\"#23211F\"><ellipse cx=\"45\" cy=\"60\" rx=\"8.8\" ry=\"9.7\"/><path d=\"M26.3 100.5 Q27.4 74.1 45.0 71.9 Q62.6 74.1 63.7 100.5 L63.7 160 L26.3 160 Z\"/></g><path d=\"M37.1 58.2 Q45.0 46.8 52.9 58.2\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><rect x=\"0\" y=\"116\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"119\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><rect x=\"17.9\" y=\"108.8\" width=\"8.1\" height=\"7.2\" rx=\"1.1\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"17.5\" y=\"106.6\" width=\"9.0\" height=\"2.3\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"65.3\" y=\"102.5\" width=\"5.4\" height=\"13.5\" rx=\"1.3\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"66.7\" y=\"99.8\" width=\"2.5\" height=\"2.7\" fill=\"#23211F\"/><rect x=\"66.2\" y=\"108.6\" width=\"3.6\" height=\"2.7\" fill=\"#23211F\" opacity=\".18\"/><circle cx=\"45\" cy=\"50\" r=\"22\" fill=\"none\" stroke=\"#E8BE3A\" stroke-width=\".6\" stroke-dasharray=\"1.5 1.5\"/><rect x=\"8\" y=\"11.4\" width=\"59.5\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · OLHAR NA CÂMERA</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Apresentador olha direto para a câmera e faz o convite. Cenário: Loja física com os produtos Skelt nas prateleiras ou sobre o balcão.",
+   "texto": "Cadastre seu interesse.",
+   "som": "Fala para a câmera: “Quer saber como se tornar revendedora ou revendedor Skelt? Clique aqui e cadastre seu interesse!”",
+   "adaptacao": "Terminar com o olhar na câmera e uma pausa de 1 s antes do corte."
+  },
+  {
+   "n": 5,
+   "tc": "0:00–0:06",
+   "title": "R2 · Organizando o balcão",
+   "color": "var(--day)",
+   "desc": "Apresentador organiza os produtos no balcão e levanta o olhar para a câmera.",
+   "ost": "Já vende produtos de beleza?",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#ECE8DF\"/><g fill=\"#23211F\"><ellipse cx=\"45\" cy=\"56\" rx=\"8.0\" ry=\"8.8\"/><path d=\"M28.0 92.8 Q29.0 68.8 45.0 66.8 Q61.0 68.8 62.0 92.8 L62.0 160 L28.0 160 Z\"/></g><path d=\"M37.8 54.4 Q45.0 44.0 52.2 54.4\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><path d=\"M33 94 L24 99\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><path d=\"M57 94 L64 99\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><rect x=\"0\" y=\"100\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"103\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M14.8 100.0 L21.2 100.0 L22.2 87.0 L13.8 87.0 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.4\" y=\"100.0\" width=\"5.2\" height=\"2.4\" rx=\".5\" fill=\"#23211F\"/><rect x=\"25.5\" y=\"92.0\" width=\"9.0\" height=\"8.0\" rx=\"1.2\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"25.0\" y=\"89.6\" width=\"10.0\" height=\"2.6\" rx=\"0.6\" fill=\"#23211F\"/><rect x=\"39.0\" y=\"85.0\" width=\"6.0\" height=\"15.0\" rx=\"1.4\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"40.6\" y=\"82.0\" width=\"2.8\" height=\"3.0\" fill=\"#23211F\"/><rect x=\"40.0\" y=\"91.8\" width=\"4.0\" height=\"3.0\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"50.5\" y=\"92.0\" width=\"9.0\" height=\"8.0\" rx=\"1.2\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"50.0\" y=\"89.6\" width=\"10.0\" height=\"2.6\" rx=\"0.6\" fill=\"#23211F\"/><rect x=\"64.0\" y=\"85.0\" width=\"6.0\" height=\"15.0\" rx=\"1.4\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"65.6\" y=\"82.0\" width=\"2.8\" height=\"3.0\" fill=\"#23211F\"/><rect x=\"65.0\" y=\"91.8\" width=\"4.0\" height=\"3.0\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M74.8 100.0 L81.2 100.0 L82.2 87.0 L73.8 87.0 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"75.4\" y=\"100.0\" width=\"5.2\" height=\"2.4\" rx=\".5\" fill=\"#23211F\"/><path d=\"M70 40 L70.0 55.0\" stroke=\"#23211F\" stroke-width=\"2.8\" stroke-linecap=\"round\"/><path d=\"M70 40 L70.0 55.0\" stroke=\"#E2A400\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><polygon points=\"70,60 73.0,55.0 67.0,55.0\" fill=\"#E2A400\" stroke=\"#23211F\" stroke-width=\".7\" stroke-linejoin=\"round\"/><rect x=\"8\" y=\"11.4\" width=\"59.5\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · ORGANIZA E OLHA</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Apresentador organiza os produtos no balcão e levanta o olhar para a câmera. Cenário: Balcão ou espaço de exposição de cosméticos, com bodycreams, bodysplashes e autobronzeadores em destaque.",
+   "texto": "Já vende produtos de beleza?",
+   "som": "Fala para a câmera: “Você já trabalha com beleza e quer ampliar seu portfólio? Conheça a oportunidade de revender Skelt Cosméticos!”",
+   "adaptacao": "Duas aberturas: organizando e olhando para cima (B1) ou já de frente (B2)."
+  },
+  {
+   "n": 6,
+   "tc": "0:06–0:13",
+   "title": "R2 · A linha em cortes rápidos",
+   "color": "var(--day)",
+   "desc": "Cortes rápidos dos autobronzeadores e bodysplashes.",
+   "ost": "Amplie seu portfólio.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E6E3D8\"/><rect x=\"0\" y=\"96\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"99\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M14.9 96.0 L25.1 96.0 L26.7 75.2 L13.3 75.2 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.8\" y=\"96.0\" width=\"8.3\" height=\"3.8\" rx=\".5\" fill=\"#23211F\"/><path d=\"M28.9 96.0 L39.1 96.0 L40.7 75.2 L27.3 75.2 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"29.8\" y=\"96.0\" width=\"8.3\" height=\"3.8\" rx=\".5\" fill=\"#23211F\"/><rect x=\"51.2\" y=\"72.0\" width=\"9.6\" height=\"24.0\" rx=\"2.2\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"53.8\" y=\"67.2\" width=\"4.5\" height=\"4.8\" fill=\"#23211F\"/><rect x=\"52.8\" y=\"82.8\" width=\"6.4\" height=\"4.8\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"67.2\" y=\"72.0\" width=\"9.6\" height=\"24.0\" rx=\"2.2\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"69.8\" y=\"67.2\" width=\"4.5\" height=\"4.8\" fill=\"#23211F\"/><rect x=\"68.8\" y=\"82.8\" width=\"6.4\" height=\"4.8\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M6 40 H14 M4 46 H12\" stroke=\"#F8F5EE\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><rect x=\"8\" y=\"11.4\" width=\"56.8\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PD · CORTES RÁPIDOS</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Cortes rápidos dos autobronzeadores e bodysplashes. Cenário: Balcão ou espaço de exposição de cosméticos, com bodycreams, bodysplashes e autobronzeadores em destaque.",
+   "texto": "Amplie seu portfólio.",
+   "som": "Fala para a câmera: “Temos autobronzeadores, bodycreams e bodysplashes para quem quer oferecer mais opções de beleza e cuidado corporal aos seus clientes.”"
+  },
+  {
+   "n": 7,
+   "tc": "0:13–0:20",
+   "title": "R2 · Destaque: Amalfi Sunset",
+   "color": "var(--day)",
+   "desc": "O Amalfi Sunset ganha destaque visual no momento em que é citado.",
+   "ost": "Conheça o Amalfi Sunset.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#F0E6D6\"/><circle cx=\"45\" cy=\"80\" r=\"34\" fill=\"#F6E2C6\"/><path d=\"M24 160 L30 112 Q45 106 60 112 L66 160 Z\" fill=\"#23211F\"/><rect x=\"31.5\" y=\"86.0\" width=\"27.0\" height=\"24.0\" rx=\"3.6\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"30.0\" y=\"78.8\" width=\"30.0\" height=\"7.8\" rx=\"1.8\" fill=\"#23211F\"/><text x=\"45\" y=\"95\" text-anchor=\"middle\" font-family=\"Inter,Helvetica,sans-serif\" font-size=\"3.4\" font-weight=\"700\" fill=\"#23211F\">AMALFI SUNSET</text><rect x=\"8\" y=\"11.4\" width=\"54.0\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PD · AMALFI SUNSET</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "O Amalfi Sunset ganha destaque visual no momento em que é citado. Cenário: Balcão ou espaço de exposição de cosméticos, com bodycreams, bodysplashes e autobronzeadores em destaque.",
+   "texto": "Conheça o Amalfi Sunset.",
+   "som": "Fala para a câmera: “E olha esse destaque: o Amalfi Sunset, nosso bodycream que conquistou espaço nas conversas das redes sociais.”",
+   "adaptacao": "Produto na mão do apresentador, perto da lente; repetir em close (B4)."
+  },
+  {
+   "n": 8,
+   "tc": "0:20–0:30",
+   "title": "R2 · Linha reunida e chamada",
+   "color": "var(--day)",
+   "desc": "Todos os produtos reunidos em cena; o apresentador fecha com a chamada.",
+   "ost": "Seja revendedor Skelt.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#ECE8DF\"/><g fill=\"#23211F\"><ellipse cx=\"45\" cy=\"54\" rx=\"7.6\" ry=\"8.4\"/><path d=\"M28.9 89.0 Q29.8 66.2 45.0 64.3 Q60.2 66.2 61.1 89.0 L61.1 160 L28.9 160 Z\"/></g><path d=\"M38.2 52.5 Q45.0 42.6 51.8 52.5\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><rect x=\"0\" y=\"98\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"101\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M14.8 98.0 L21.2 98.0 L22.2 85.0 L13.8 85.0 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"15.4\" y=\"98.0\" width=\"5.2\" height=\"2.4\" rx=\".5\" fill=\"#23211F\"/><rect x=\"25.5\" y=\"90.0\" width=\"9.0\" height=\"8.0\" rx=\"1.2\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"25.0\" y=\"87.6\" width=\"10.0\" height=\"2.6\" rx=\"0.6\" fill=\"#23211F\"/><rect x=\"39.0\" y=\"83.0\" width=\"6.0\" height=\"15.0\" rx=\"1.4\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"40.6\" y=\"80.0\" width=\"2.8\" height=\"3.0\" fill=\"#23211F\"/><rect x=\"40.0\" y=\"89.8\" width=\"4.0\" height=\"3.0\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"50.5\" y=\"90.0\" width=\"9.0\" height=\"8.0\" rx=\"1.2\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"50.0\" y=\"87.6\" width=\"10.0\" height=\"2.6\" rx=\"0.6\" fill=\"#23211F\"/><rect x=\"64.0\" y=\"83.0\" width=\"6.0\" height=\"15.0\" rx=\"1.4\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"65.6\" y=\"80.0\" width=\"2.8\" height=\"3.0\" fill=\"#23211F\"/><rect x=\"65.0\" y=\"89.8\" width=\"4.0\" height=\"3.0\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M74.8 98.0 L81.2 98.0 L82.2 85.0 L73.8 85.0 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"75.4\" y=\"98.0\" width=\"5.2\" height=\"2.4\" rx=\".5\" fill=\"#23211F\"/><rect x=\"8\" y=\"11.4\" width=\"54.0\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG · LINHA REUNIDA</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Todos os produtos reunidos em cena; o apresentador fecha com a chamada. Cenário: Balcão ou espaço de exposição de cosméticos, com bodycreams, bodysplashes e autobronzeadores em destaque.",
+   "texto": "Seja revendedor Skelt.",
+   "som": "Fala para a câmera: “Se você já tem clientes que compram produtos de beleza, vale conhecer essa oportunidade e descobrir como incluir Skelt nas suas vendas. Clique no botão e saiba como revender!”"
+  },
+  {
+   "n": 9,
+   "tc": "0:00–0:05",
+   "title": "R3 · Gravando um Story",
+   "color": "var(--dusk)",
+   "desc": "Apresentador grava um Story no celular e se vira para a câmera.",
+   "ost": "Você já indica produtos nas redes?",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#EEEBE4\"/><rect x=\"58\" y=\"20\" width=\"26\" height=\"40\" rx=\"2\" fill=\"#E2DED5\" stroke=\"#B8B1A4\" stroke-width=\".5\"/><path d=\"M62 56 Q64 40 70 36 Q76 40 78 56\" fill=\"#C9D1C0\" stroke=\"#B8B1A4\" stroke-width=\".4\"/><g fill=\"#23211F\"><ellipse cx=\"40\" cy=\"62\" rx=\"8.0\" ry=\"8.8\"/><path d=\"M23.0 98.8 Q24.0 74.8 40.0 72.8 Q56.0 74.8 57.0 98.8 L57.0 160 L23.0 160 Z\"/></g><path d=\"M32.8 60.4 Q40.0 50.0 47.2 60.4\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><path d=\"M52 98 L62 72\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><g transform=\"rotate(-8 62.5 66.0)\"><rect x=\"57\" y=\"56\" width=\"11\" height=\"20\" rx=\"2\" fill=\"#23211F\"/><rect x=\"58\" y=\"57.6\" width=\"9\" height=\"16.8\" rx=\"1\" fill=\"#C9C2B4\"/></g><rect x=\"0\" y=\"118\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"121\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><rect x=\"11.9\" y=\"110.8\" width=\"8.1\" height=\"7.2\" rx=\"1.1\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"11.5\" y=\"108.6\" width=\"9.0\" height=\"2.3\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"23.3\" y=\"104.5\" width=\"5.4\" height=\"13.5\" rx=\"1.3\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"24.7\" y=\"101.8\" width=\"2.5\" height=\"2.7\" fill=\"#23211F\"/><rect x=\"24.2\" y=\"110.6\" width=\"3.6\" height=\"2.7\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"8\" y=\"11.4\" width=\"62.2\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · STORY NO CELULAR</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Apresentador grava um Story no celular e se vira para a câmera. Cenário: Ambiente moderno e iluminado, com celular, tripé e produtos Skelt sobre uma bancada.",
+   "texto": "Você já indica produtos nas redes?",
+   "som": "Fala para a câmera: “Você vive indicando produtos de beleza nos Stories, mostrando novidades ou compartilhando suas descobertas?”",
+   "adaptacao": "Duas aberturas: em selfie com o celular (C1) e por cima do ombro, vendo a tela (C2)."
+  },
+  {
+   "n": 10,
+   "tc": "0:05–0:17",
+   "title": "R3 · Celular e produtos no quadro",
+   "color": "var(--dusk)",
+   "desc": "Celular no tripé e produtos no mesmo enquadramento.",
+   "ost": "Transforme conteúdo em oportunidade.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#EEEBE4\"/><rect x=\"58\" y=\"20\" width=\"26\" height=\"40\" rx=\"2\" fill=\"#E2DED5\" stroke=\"#B8B1A4\" stroke-width=\".5\"/><path d=\"M62 56 Q64 40 70 36 Q76 40 78 56\" fill=\"#C9D1C0\" stroke=\"#B8B1A4\" stroke-width=\".4\"/><rect x=\"0\" y=\"98\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"101\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M60 70 L60 90 M60 90 L54 98 M60 90 L66 98 M60 90 L60 98\" stroke=\"#23211F\" stroke-width=\".9\" fill=\"none\"/><g transform=\"rotate(0 60.0 62.0)\"><rect x=\"54\" y=\"52\" width=\"12\" height=\"20\" rx=\"2\" fill=\"#23211F\"/><rect x=\"55\" y=\"53.6\" width=\"10\" height=\"16.8\" rx=\"1\" fill=\"#B8B1A4\"/></g><g fill=\"#23211F\"><ellipse cx=\"30\" cy=\"50\" rx=\"7.2\" ry=\"7.9\"/><path d=\"M14.7 83.1 Q15.6 61.5 30.0 59.7 Q44.4 61.5 45.3 83.1 L45.3 160 L14.7 160 Z\"/></g><path d=\"M23.5 48.6 Q30.0 39.2 36.5 48.6\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><rect x=\"69.0\" y=\"83.0\" width=\"6.0\" height=\"15.0\" rx=\"1.4\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"70.6\" y=\"80.0\" width=\"2.8\" height=\"3.0\" fill=\"#23211F\"/><rect x=\"70.0\" y=\"89.8\" width=\"4.0\" height=\"3.0\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"78.0\" y=\"90.8\" width=\"8.1\" height=\"7.2\" rx=\"1.1\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"77.5\" y=\"88.6\" width=\"9.0\" height=\"2.3\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"8\" y=\"11.4\" width=\"67.8\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · CELULAR + PRODUTOS</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Celular no tripé e produtos no mesmo enquadramento. Cenário: Ambiente moderno e iluminado, com celular, tripé e produtos Skelt sobre uma bancada.",
+   "texto": "Transforme conteúdo em oportunidade.",
+   "som": "Fala para a câmera: “Já pensou em transformar esse interesse em uma oportunidade de renda extra? Com a revenda Skelt, você pode apresentar nossos autobronzeadores, bodycreams e bodysplashes para o público que já acompanha você.”"
+  },
+  {
+   "n": 11,
+   "tc": "0:17–0:24",
+   "title": "R3 · Demonstração",
+   "color": "var(--dusk)",
+   "desc": "Demonstração visual de um bodysplash e do Amalfi Sunset.",
+   "ost": "Conheça a revenda Skelt.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E8E4DB\"/><rect x=\"24.2\" y=\"81.0\" width=\"15.6\" height=\"39.0\" rx=\"3.6\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"28.4\" y=\"73.2\" width=\"7.3\" height=\"7.8\" fill=\"#23211F\"/><rect x=\"26.8\" y=\"98.5\" width=\"10.4\" height=\"7.8\" fill=\"#23211F\" opacity=\".18\"/><circle cx=\"41\" cy=\"67\" r=\"0.9\" fill=\"#FBF7EE\" stroke=\"#8F897E\" stroke-width=\".2\"/><circle cx=\"44\" cy=\"66\" r=\"0.8\" fill=\"#FBF7EE\" stroke=\"#8F897E\" stroke-width=\".2\"/><circle cx=\"44\" cy=\"69\" r=\"0.7\" fill=\"#FBF7EE\" stroke=\"#8F897E\" stroke-width=\".2\"/><circle cx=\"47\" cy=\"65\" r=\"0.7\" fill=\"#FBF7EE\" stroke=\"#8F897E\" stroke-width=\".2\"/><circle cx=\"48\" cy=\"68\" r=\"0.6\" fill=\"#FBF7EE\" stroke=\"#8F897E\" stroke-width=\".2\"/><circle cx=\"50\" cy=\"66.5\" r=\"0.5\" fill=\"#FBF7EE\" stroke=\"#8F897E\" stroke-width=\".2\"/><circle cx=\"51\" cy=\"70\" r=\"0.5\" fill=\"#FBF7EE\" stroke=\"#8F897E\" stroke-width=\".2\"/><circle cx=\"53\" cy=\"65\" r=\"0.4\" fill=\"#FBF7EE\" stroke=\"#8F897E\" stroke-width=\".2\"/><rect x=\"57.9\" y=\"107.6\" width=\"16.2\" height=\"14.4\" rx=\"2.2\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"57.0\" y=\"103.3\" width=\"18.0\" height=\"4.7\" rx=\"1.1\" fill=\"#23211F\"/><path d=\"M14 72 L26 70\" stroke=\"#23211F\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"8\" y=\"11.4\" width=\"51.2\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PD · DEMONSTRAÇÃO</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Demonstração visual de um bodysplash e do Amalfi Sunset. Cenário: Ambiente moderno e iluminado, com celular, tripé e produtos Skelt sobre uma bancada.",
+   "texto": "Conheça a revenda Skelt.",
+   "som": "Fala para a câmera: “Imagine gravar um vídeo mostrando uma fragrância, apresentar o Amalfi Sunset ou compartilhar sua experiência com um produto Skelt.”",
+   "adaptacao": "Borrifo do bodysplash em contraluz e textura do creme na mão."
+  },
+  {
+   "n": 12,
+   "tc": "0:24–0:31",
+   "title": "R3 · Celular e produtos na mão",
+   "color": "var(--dusk)",
+   "desc": "Apresentador encerra segurando o celular e os produtos.",
+   "ost": "Saiba como participar.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#EEEBE4\"/><rect x=\"58\" y=\"20\" width=\"26\" height=\"40\" rx=\"2\" fill=\"#E2DED5\" stroke=\"#B8B1A4\" stroke-width=\".5\"/><path d=\"M62 56 Q64 40 70 36 Q76 40 78 56\" fill=\"#C9D1C0\" stroke=\"#B8B1A4\" stroke-width=\".4\"/><g fill=\"#23211F\"><ellipse cx=\"45\" cy=\"58\" rx=\"8.0\" ry=\"8.8\"/><path d=\"M28.0 94.8 Q29.0 70.8 45.0 68.8 Q61.0 70.8 62.0 94.8 L62.0 160 L28.0 160 Z\"/></g><path d=\"M37.8 56.4 Q45.0 46.0 52.2 56.4\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><path d=\"M33 96 L26 88\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><path d=\"M57 96 L64 86\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><g transform=\"rotate(6 63.0 81.0)\"><rect x=\"58\" y=\"72\" width=\"10\" height=\"18\" rx=\"2\" fill=\"#23211F\"/><rect x=\"59\" y=\"73.6\" width=\"8\" height=\"14.8\" rx=\"1\" fill=\"#C9C2B4\"/></g><rect x=\"21.5\" y=\"80.0\" width=\"9.0\" height=\"8.0\" rx=\"1.2\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"21.0\" y=\"77.6\" width=\"10.0\" height=\"2.6\" rx=\"0.6\" fill=\"#23211F\"/><rect x=\"0\" y=\"116\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"119\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><rect x=\"8\" y=\"11.4\" width=\"56.8\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · CELULAR NA MÃO</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Apresentador encerra segurando o celular e os produtos. Cenário: Ambiente moderno e iluminado, com celular, tripé e produtos Skelt sobre uma bancada.",
+   "texto": "Saiba como participar.",
+   "som": "Fala para a câmera: “Se você gosta de beleza e quer empreender usando suas redes sociais, clique aqui e conheça a oportunidade de revenda!”"
+  },
+  {
+   "n": 13,
+   "tc": "0:00–0:05",
+   "title": "R4 · Trabalhando no notebook",
+   "color": "var(--aerial)",
+   "desc": "Apresentador trabalha no notebook e se vira para a câmera.",
+   "ost": "Você vende online?",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E6E3DC\"/><rect x=\"8\" y=\"24\" width=\"20\" height=\"14\" fill=\"#DCD7CC\" stroke=\"#B8B1A4\" stroke-width=\".4\"/><g fill=\"#23211F\"><ellipse cx=\"32\" cy=\"60\" rx=\"8.0\" ry=\"8.8\"/><path d=\"M15.0 96.8 Q16.0 72.8 32.0 70.8 Q48.0 72.8 49.0 96.8 L49.0 160 L15.0 160 Z\"/></g><path d=\"M24.8 58.4 Q32.0 48.0 39.2 58.4\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><path d=\"M44 98 L52 104\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><rect x=\"0\" y=\"104\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"107\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M46 104 L82 104 L79 83.12 L49 83.12 Z\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".6\"/><path d=\"M51 102 L77 102 L75.5 86.12 L52.5 86.12 Z\" fill=\"#9C978D\"/><path d=\"M42 104 L86 104 L84 107 L44 107 Z\" fill=\"#23211F\"/><rect x=\"8\" y=\"11.4\" width=\"48.5\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · NO NOTEBOOK</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Apresentador trabalha no notebook e se vira para a câmera. Cenário: Estação de trabalho com notebook, celular, embalagens e produtos Skelt.",
+   "texto": "Você vende online?",
+   "som": "Fala para a câmera: “Você já vende pela internet e está procurando novas oportunidades para ampliar seu catálogo?”",
+   "adaptacao": "Duas aberturas: digitando e virando (D1) ou subindo das mãos no teclado (D2). Tela sem marketplace."
+  },
+  {
+   "n": 14,
+   "tc": "0:05–0:14",
+   "title": "R4 · Produtos ao lado do computador",
+   "color": "var(--aerial)",
+   "desc": "Produtos organizados ao lado do computador.",
+   "ost": "Amplie seu catálogo.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E6E3DC\"/><rect x=\"8\" y=\"24\" width=\"20\" height=\"14\" fill=\"#DCD7CC\" stroke=\"#B8B1A4\" stroke-width=\".4\"/><rect x=\"0\" y=\"100\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"103\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M10 100 L44 100 L41 80.28 L13 80.28 Z\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".6\"/><path d=\"M15 98 L39 98 L37.5 83.28 L16.5 83.28 Z\" fill=\"#9C978D\"/><path d=\"M6 100 L48 100 L46 103 L8 103 Z\" fill=\"#23211F\"/><rect x=\"50.0\" y=\"92.8\" width=\"8.1\" height=\"7.2\" rx=\"1.1\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"49.5\" y=\"90.6\" width=\"9.0\" height=\"2.3\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"61.3\" y=\"86.5\" width=\"5.4\" height=\"13.5\" rx=\"1.3\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"62.7\" y=\"83.8\" width=\"2.5\" height=\"2.7\" fill=\"#23211F\"/><rect x=\"62.2\" y=\"92.6\" width=\"3.6\" height=\"2.7\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M71.1 100.0 L76.9 100.0 L77.8 88.3 L70.2 88.3 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"71.7\" y=\"100.0\" width=\"4.7\" height=\"2.2\" rx=\".5\" fill=\"#23211F\"/><rect x=\"52\" y=\"76\" width=\"18\" height=\"10\" fill=\"#C8B28E\" stroke=\"#23211F\" stroke-width=\".5\"/><path d=\"M61.0 76 V86\" stroke=\"#23211F\" stroke-width=\".4\" opacity=\".6\"/><rect x=\"8\" y=\"11.4\" width=\"37.5\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG · BANCADA</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Produtos organizados ao lado do computador. Cenário: Estação de trabalho com notebook, celular, embalagens e produtos Skelt.",
+   "texto": "Amplie seu catálogo.",
+   "som": "Fala para a câmera: “Conheça a possibilidade de revender Skelt Cosméticos! Nossa linha tem produtos de beleza e cuidado corporal, com destaque para autobronzeadores, bodycreams e bodysplashes.”"
+  },
+  {
+   "n": 15,
+   "tc": "0:14–0:20",
+   "title": "R4 · Apresentador e closes",
+   "color": "var(--aerial)",
+   "desc": "Alterna o apresentador com closes das embalagens.",
+   "ost": "Revenda Skelt Cosméticos.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E2DED5\"/><rect x=\"14\" y=\"94\" width=\"46\" height=\"30\" fill=\"#C8B28E\" stroke=\"#23211F\" stroke-width=\".5\"/><path d=\"M37.0 94 V124\" stroke=\"#23211F\" stroke-width=\".4\" opacity=\".6\"/><path d=\"M14 94 L22 82 L68 82 L60 94\" fill=\"#D8C29C\" stroke=\"#23211F\" stroke-width=\".5\"/><path d=\"M64.2 124.0 L75.8 124.0 L77.6 100.6 L62.4 100.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"65.3\" y=\"124.0\" width=\"9.4\" height=\"4.3\" rx=\".5\" fill=\"#23211F\"/><rect x=\"35.7\" y=\"96.8\" width=\"12.6\" height=\"11.2\" rx=\"1.7\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"35.0\" y=\"93.4\" width=\"14.0\" height=\"3.6\" rx=\"0.8\" fill=\"#23211F\"/><rect x=\"8\" y=\"11.4\" width=\"45.8\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PD · EMBALAGENS</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Alterna o apresentador com closes das embalagens. Cenário: Estação de trabalho com notebook, celular, embalagens e produtos Skelt.",
+   "texto": "Revenda Skelt Cosméticos.",
+   "som": "Fala para a câmera: “São diferentes categorias para você avaliar como podem complementar seu negócio e atender aos interesses dos seus clientes.”",
+   "adaptacao": "Caixas de envio e produtos em detalhe."
+  },
+  {
+   "n": 16,
+   "tc": "0:20–0:29",
+   "title": "R4 · Chamada final",
+   "color": "var(--aerial)",
+   "desc": "Apresentador fecha com a chamada para conhecer as condições.",
+   "ost": "Consulte as condições.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#E6E3DC\"/><rect x=\"8\" y=\"24\" width=\"20\" height=\"14\" fill=\"#DCD7CC\" stroke=\"#B8B1A4\" stroke-width=\".4\"/><g fill=\"#23211F\"><ellipse cx=\"45\" cy=\"58\" rx=\"8.4\" ry=\"9.2\"/><path d=\"M27.1 96.6 Q28.2 71.4 45.0 69.3 Q61.8 71.4 62.9 96.6 L62.9 160 L27.1 160 Z\"/></g><path d=\"M37.4 56.3 Q45.0 45.4 52.6 56.3\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><rect x=\"0\" y=\"114\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"117\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M6 114 L32 114 L29 98.92 L9 98.92 Z\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".6\"/><path d=\"M11 112 L27 112 L25.5 101.92 L12.5 101.92 Z\" fill=\"#9C978D\"/><path d=\"M2 114 L36 114 L34 117 L4 117 Z\" fill=\"#23211F\"/><rect x=\"71.3\" y=\"100.5\" width=\"5.4\" height=\"13.5\" rx=\"1.3\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"72.7\" y=\"97.8\" width=\"2.5\" height=\"2.7\" fill=\"#23211F\"/><rect x=\"72.2\" y=\"106.6\" width=\"3.6\" height=\"2.7\" fill=\"#23211F\" opacity=\".18\"/><rect x=\"8\" y=\"11.4\" width=\"26.5\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · CTA</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Apresentador fecha com a chamada para conhecer as condições. Cenário: Estação de trabalho com notebook, celular, embalagens e produtos Skelt.",
+   "texto": "Consulte as condições.",
+   "som": "Fala para a câmera: “Quer descobrir como funciona a revenda Skelt e quais são as condições para começar? Clique aqui, cadastre seu interesse e conheça nossa oportunidade!”",
+   "adaptacao": "Não mostrar plataformas ou canais de venda sem autorização da empresa."
+  },
+  {
+   "n": 17,
+   "tc": "0:00–0:09",
+   "title": "R5 · Gancho: até 40%",
+   "color": "#D98BB0",
+   "desc": "Começa imediatamente com o apresentador segurando os produtos e falando para a câmera.",
+   "ost": "Até 40% de lucratividade.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#EDE6D8\"/><g fill=\"#23211F\"><ellipse cx=\"45\" cy=\"60\" rx=\"8.0\" ry=\"8.8\"/><path d=\"M28.0 96.8 Q29.0 72.8 45.0 70.8 Q61.0 72.8 62.0 96.8 L62.0 160 L28.0 160 Z\"/></g><path d=\"M37.8 58.4 Q45.0 48.0 52.2 58.4\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><path d=\"M33 98 L32 90\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><path d=\"M57 98 L60 88\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><path d=\"M28.8 90.0 L35.2 90.0 L36.2 77.0 L27.8 77.0 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"29.4\" y=\"90.0\" width=\"5.2\" height=\"2.4\" rx=\".5\" fill=\"#23211F\"/><rect x=\"55.5\" y=\"80.0\" width=\"9.0\" height=\"8.0\" rx=\"1.2\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"55.0\" y=\"77.6\" width=\"10.0\" height=\"2.6\" rx=\"0.6\" fill=\"#23211F\"/><rect x=\"0\" y=\"106\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"109\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M5.4 106.0 L10.6 106.0 L11.4 95.6 L4.6 95.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"5.9\" y=\"106.0\" width=\"4.2\" height=\"1.9\" rx=\".5\" fill=\"#23211F\"/><rect x=\"12.4\" y=\"99.6\" width=\"7.2\" height=\"6.4\" rx=\"1.0\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"12.0\" y=\"97.7\" width=\"8.0\" height=\"2.1\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"21.6\" y=\"94.0\" width=\"4.8\" height=\"12.0\" rx=\"1.1\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"22.9\" y=\"91.6\" width=\"2.2\" height=\"2.4\" fill=\"#23211F\"/><rect x=\"22.4\" y=\"99.4\" width=\"3.2\" height=\"2.4\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M29.4 106.0 L34.6 106.0 L35.4 95.6 L28.6 95.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"29.9\" y=\"106.0\" width=\"4.2\" height=\"1.9\" rx=\".5\" fill=\"#23211F\"/><rect x=\"54.4\" y=\"99.6\" width=\"7.2\" height=\"6.4\" rx=\"1.0\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"54.0\" y=\"97.7\" width=\"8.0\" height=\"2.1\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"63.6\" y=\"94.0\" width=\"4.8\" height=\"12.0\" rx=\"1.1\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"64.9\" y=\"91.6\" width=\"2.2\" height=\"2.4\" fill=\"#23211F\"/><rect x=\"64.4\" y=\"99.4\" width=\"3.2\" height=\"2.4\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M71.4 106.0 L76.6 106.0 L77.4 95.6 L70.6 95.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"71.9\" y=\"106.0\" width=\"4.2\" height=\"1.9\" rx=\".5\" fill=\"#23211F\"/><rect x=\"78.4\" y=\"99.6\" width=\"7.2\" height=\"6.4\" rx=\"1.0\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.0\" y=\"97.7\" width=\"8.0\" height=\"2.1\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"10\" y=\"22\" width=\"70\" height=\"11\" rx=\"1.5\" fill=\"#E8BE3A\" stroke=\"#23211F\" stroke-width=\".6\"/><text x=\"45\" y=\"29.6\" text-anchor=\"middle\" font-family=\"Inter,Helvetica,sans-serif\" font-size=\"4.6\" font-weight=\"800\" fill=\"#23211F\" textLength=\"64\" lengthAdjust=\"spacingAndGlyphs\">ATÉ 40% DE LUCRATIVIDADE</text><rect x=\"8\" y=\"11.4\" width=\"65.0\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · FALA JÁ NO 1º SEG</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Começa imediatamente com o apresentador segurando os produtos e falando para a câmera. Cenário: Loja Skelt ou ambiente visualmente impactante, com uma bancada repleta de produtos.",
+   "texto": "Até 40% de lucratividade.",
+   "som": "Fala para a câmera: “Quer ganhar até 40% de lucratividade revendendo produtos de beleza, sem sair de casa e com frete grátis? Conheça a oportunidade de revender Skelt Cosméticos!”",
+   "adaptacao": "Texto “ATÉ 40% DE LUCRATIVIDADE” já no primeiro segundo: deixe espaço no topo do quadro. Duas aberturas (E1 e E2)."
+  },
+  {
+   "n": 18,
+   "tc": "0:09–0:20",
+   "title": "R5 · Autobronzeador, Amalfi e bodysplashes",
+   "color": "#D98BB0",
+   "desc": "Os três produtos em sequência: autobronzeador, Amalfi Sunset e bodysplashes.",
+   "ost": "",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#EDE6D8\"/><rect x=\"0\" y=\"110\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"113\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M15.6 110.0 L28.4 110.0 L30.4 84.0 L13.6 84.0 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"16.8\" y=\"110.0\" width=\"10.4\" height=\"4.8\" rx=\".5\" fill=\"#23211F\"/><rect x=\"36.0\" y=\"94.0\" width=\"18.0\" height=\"16.0\" rx=\"2.4\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"35.0\" y=\"89.2\" width=\"20.0\" height=\"5.2\" rx=\"1.2\" fill=\"#23211F\"/><rect x=\"62.0\" y=\"80.0\" width=\"12.0\" height=\"30.0\" rx=\"2.8\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"65.2\" y=\"74.0\" width=\"5.6\" height=\"6.0\" fill=\"#23211F\"/><rect x=\"64.0\" y=\"93.5\" width=\"8.0\" height=\"6.0\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M14 44 L71.0 44.0\" stroke=\"#23211F\" stroke-width=\"2.8\" stroke-linecap=\"round\"/><path d=\"M14 44 L71.0 44.0\" stroke=\"#E2A400\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><polygon points=\"76,44 71.0,41.0 71.0,47.0\" fill=\"#E2A400\" stroke=\"#23211F\" stroke-width=\".7\" stroke-linejoin=\"round\"/><rect x=\"8\" y=\"11.4\" width=\"43.0\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PD · SEQUÊNCIA</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Os três produtos em sequência: autobronzeador, Amalfi Sunset e bodysplashes. Cenário: Loja Skelt ou ambiente visualmente impactante, com uma bancada repleta de produtos.",
+   "texto": "Sem texto novo (mantém nomes dos produtos em destaque).",
+   "som": "Fala para a câmera: “Você pode trabalhar com os autobronzeadores de uma das marcas mais conhecidas do Brasil, o bodycream Amalfi Sunset, que conquistou a internet, e nossos bodysplashes com fragrâncias irresistíveis.”",
+   "adaptacao": "Gravar os inserts na ordem da fala para facilitar a edição."
+  },
+  {
+   "n": 19,
+   "tc": "0:20–0:33",
+   "title": "R5 · Canais de venda e frete grátis",
+   "color": "#D98BB0",
+   "desc": "Apresentador fala dos canais de venda; frete grátis destacado na tela.",
+   "ost": "Frete grátis*",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#EDE6D8\"/><g fill=\"#23211F\"><ellipse cx=\"38\" cy=\"58\" rx=\"8.0\" ry=\"8.8\"/><path d=\"M21.0 94.8 Q22.0 70.8 38.0 68.8 Q54.0 70.8 55.0 94.8 L55.0 160 L21.0 160 Z\"/></g><path d=\"M30.8 56.4 Q38.0 46.0 45.2 56.4\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><path d=\"M50 96 L60 82\" stroke=\"#23211F\" stroke-width=\"5.0\" stroke-linecap=\"round\"/><g transform=\"rotate(4 62.0 79.0)\"><rect x=\"57\" y=\"70\" width=\"10\" height=\"18\" rx=\"2\" fill=\"#23211F\"/><rect x=\"58\" y=\"71.6\" width=\"8\" height=\"14.8\" rx=\"1\" fill=\"#C9C2B4\"/></g><rect x=\"0\" y=\"112\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"115\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M5.4 112.0 L10.6 112.0 L11.4 101.6 L4.6 101.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"5.9\" y=\"112.0\" width=\"4.2\" height=\"1.9\" rx=\".5\" fill=\"#23211F\"/><rect x=\"12.4\" y=\"105.6\" width=\"7.2\" height=\"6.4\" rx=\"1.0\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"12.0\" y=\"103.7\" width=\"8.0\" height=\"2.1\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"21.6\" y=\"100.0\" width=\"4.8\" height=\"12.0\" rx=\"1.1\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"22.9\" y=\"97.6\" width=\"2.2\" height=\"2.4\" fill=\"#23211F\"/><rect x=\"22.4\" y=\"105.4\" width=\"3.2\" height=\"2.4\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M29.4 112.0 L34.6 112.0 L35.4 101.6 L28.6 101.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"29.9\" y=\"112.0\" width=\"4.2\" height=\"1.9\" rx=\".5\" fill=\"#23211F\"/><rect x=\"54.4\" y=\"105.6\" width=\"7.2\" height=\"6.4\" rx=\"1.0\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"54.0\" y=\"103.7\" width=\"8.0\" height=\"2.1\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"63.6\" y=\"100.0\" width=\"4.8\" height=\"12.0\" rx=\"1.1\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"64.9\" y=\"97.6\" width=\"2.2\" height=\"2.4\" fill=\"#23211F\"/><rect x=\"64.4\" y=\"105.4\" width=\"3.2\" height=\"2.4\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M71.4 112.0 L76.6 112.0 L77.4 101.6 L70.6 101.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"71.9\" y=\"112.0\" width=\"4.2\" height=\"1.9\" rx=\".5\" fill=\"#23211F\"/><rect x=\"78.4\" y=\"105.6\" width=\"7.2\" height=\"6.4\" rx=\"1.0\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.0\" y=\"103.7\" width=\"8.0\" height=\"2.1\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"64\" y=\"102\" width=\"16\" height=\"10\" fill=\"#C8B28E\" stroke=\"#23211F\" stroke-width=\".5\"/><path d=\"M72.0 102 V112\" stroke=\"#23211F\" stroke-width=\".4\" opacity=\".6\"/><text x=\"72\" y=\"45\" text-anchor=\"middle\" font-family=\"Inter,Helvetica,sans-serif\" font-size=\"4.4\" font-weight=\"800\" fill=\"#23211F\">FRETE</text><text x=\"72\" y=\"51\" text-anchor=\"middle\" font-family=\"Inter,Helvetica,sans-serif\" font-size=\"4.4\" font-weight=\"800\" fill=\"#23211F\">GRÁTIS*</text><rect x=\"8\" y=\"11.4\" width=\"59.5\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · CANAIS DE VENDA</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Apresentador fala dos canais de venda; frete grátis destacado na tela. Cenário: Loja Skelt ou ambiente visualmente impactante, com uma bancada repleta de produtos.",
+   "texto": "Frete grátis*",
+   "som": "Fala para a câmera: “São produtos que despertam desejo e que você pode apresentar aos seus clientes pelas redes sociais, pelo WhatsApp ou pelos canais de venda autorizados. E tem mais: você conta com frete grátis, conforme as condições da revenda.”",
+   "adaptacao": "Nota legal na tela: percentual de lucratividade e frete grátis sujeitos às condições vigentes do programa de revenda."
+  },
+  {
+   "n": 20,
+   "tc": "0:33–0:40",
+   "title": "R5 · Produtos reunidos e chamada",
+   "color": "#D98BB0",
+   "desc": "Fecha com os produtos reunidos e a chamada para ação.",
+   "ost": "Conheça a revenda Skelt. · Cadastre seu interesse.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#EDE6D8\"/><g fill=\"#23211F\"><ellipse cx=\"45\" cy=\"56\" rx=\"7.6\" ry=\"8.4\"/><path d=\"M28.9 91.0 Q29.8 68.2 45.0 66.3 Q60.2 68.2 61.1 91.0 L61.1 160 L28.9 160 Z\"/></g><path d=\"M38.2 54.5 Q45.0 44.6 51.8 54.5\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".6\" opacity=\".7\"/><rect x=\"0\" y=\"104\" width=\"90\" height=\"3\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"0\" y=\"107\" width=\"90\" height=\"60\" fill=\"#C9C2B4\"/><path d=\"M5.4 104.0 L10.6 104.0 L11.4 93.6 L4.6 93.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"5.9\" y=\"104.0\" width=\"4.2\" height=\"1.9\" rx=\".5\" fill=\"#23211F\"/><rect x=\"12.4\" y=\"97.6\" width=\"7.2\" height=\"6.4\" rx=\"1.0\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"12.0\" y=\"95.7\" width=\"8.0\" height=\"2.1\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"21.6\" y=\"92.0\" width=\"4.8\" height=\"12.0\" rx=\"1.1\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"22.9\" y=\"89.6\" width=\"2.2\" height=\"2.4\" fill=\"#23211F\"/><rect x=\"22.4\" y=\"97.4\" width=\"3.2\" height=\"2.4\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M29.4 104.0 L34.6 104.0 L35.4 93.6 L28.6 93.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"29.9\" y=\"104.0\" width=\"4.2\" height=\"1.9\" rx=\".5\" fill=\"#23211F\"/><rect x=\"54.4\" y=\"97.6\" width=\"7.2\" height=\"6.4\" rx=\"1.0\" fill=\"#E39A5B\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"54.0\" y=\"95.7\" width=\"8.0\" height=\"2.1\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"63.6\" y=\"92.0\" width=\"4.8\" height=\"12.0\" rx=\"1.1\" fill=\"#E6DECD\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"64.9\" y=\"89.6\" width=\"2.2\" height=\"2.4\" fill=\"#23211F\"/><rect x=\"64.4\" y=\"97.4\" width=\"3.2\" height=\"2.4\" fill=\"#23211F\" opacity=\".18\"/><path d=\"M71.4 104.0 L76.6 104.0 L77.4 93.6 L70.6 93.6 Z\" fill=\"#D9C7A8\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"71.9\" y=\"104.0\" width=\"4.2\" height=\"1.9\" rx=\".5\" fill=\"#23211F\"/><rect x=\"78.4\" y=\"97.6\" width=\"7.2\" height=\"6.4\" rx=\"1.0\" fill=\"#F4F1EA\" stroke=\"#23211F\" stroke-width=\".5\"/><rect x=\"78.0\" y=\"95.7\" width=\"8.0\" height=\"2.1\" rx=\"0.5\" fill=\"#23211F\"/><rect x=\"8\" y=\"11.4\" width=\"65.0\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG · PRODUTOS REUNIDOS</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Fecha com os produtos reunidos e a chamada para ação. Cenário: Loja Skelt ou ambiente visualmente impactante, com uma bancada repleta de produtos.",
+   "texto": "Conheça a revenda Skelt. · Cadastre seu interesse.",
+   "som": "Fala para a câmera: “Quer saber como funciona e começar a revender Skelt? Clique no botão, cadastre seu interesse e conheça as condições!”"
+  }
+ ],
+ "day": [
+  {
+   "t": "08:00–09:00",
+   "title": "Montagem na loja e briefing",
+   "from": "08:00",
+   "to": "09:00",
+   "shots": [],
+   "note": "Montar a luz (chave grande e difusa), duas câmeras, lapela e teleprompter. Limpar e alinhar os produtos (rótulos de frente). Passar as 5 falas com o apresentador; termos de imagem assinados."
+  },
+  {
+   "t": "09:00–10:15",
+   "title": "Roteiro 5 · Renda extra (bancada repleta)",
+   "from": "09:00",
+   "to": "10:15",
+   "lens": "Sigma + A7 IV → Zeiss",
+   "shots": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+   ],
+   "note": "Primeiro o roteiro de maior apelo, com o apresentador descansado. Gancho com a fala no 1º frame e espaço no topo para o “ATÉ 40%”. Inserts na ordem da fala."
+  },
+  {
+   "t": "10:15–11:20",
+   "title": "Roteiro 1 · Pequenas lojistas",
+   "from": "10:15",
+   "to": "11:20",
+   "lens": "Sigma + A7 IV → Zeiss",
+   "shots": [
+    "A1",
+    "A2",
+    "A3",
+    "A6",
+    "A4",
+    "A5"
+   ],
+   "note": "Trocar a bancada repleta por prateleiras e balcão com cara de loja multimarca. Fala primeiro, depois o travelling nas prateleiras e os closes."
+  },
+  {
+   "t": "11:20–12:25",
+   "title": "Roteiro 2 · Já vende beleza (balcão)",
+   "from": "11:20",
+   "to": "12:25",
+   "lens": "Sigma + A7 IV → Zeiss",
+   "shots": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+   ],
+   "note": "Amalfi Sunset na frente do balcão. Fechar com a linha toda reunida (B6)."
+  },
+  {
+   "t": "12:25–13:00",
+   "title": "Packshots e room tone da loja",
+   "from": "12:25",
+   "to": "13:00",
+   "lens": "Zeiss",
+   "shots": [
+    "P1",
+    "P2",
+    "P3",
+    "S1"
+   ],
+   "note": "Fundo limpo, luz de recorte. Room tone antes de desmontar."
+  },
+  {
+   "t": "13:00–14:15",
+   "title": "Almoço, deslocamento e montagem do estúdio",
+   "from": "13:00",
+   "to": "14:15",
+   "shots": [],
+   "note": "Se tudo for no mesmo endereço, use este tempo para trocar o cenário e ganhe 30 min."
+  },
+  {
+   "t": "14:15–15:25",
+   "title": "Roteiro 3 · Redes sociais",
+   "from": "14:15",
+   "to": "15:25",
+   "lens": "Sigma + A7 IV → Zeiss",
+   "shots": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7"
+   ],
+   "note": "Celular no tripé dentro do quadro. Borrifo do bodysplash em contraluz (C4) com várias passadas."
+  },
+  {
+   "t": "15:25–16:35",
+   "title": "Roteiro 4 · Online e marketplaces",
+   "from": "15:25",
+   "to": "16:35",
+   "lens": "Sigma + A7 IV → Zeiss",
+   "shots": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+   ],
+   "note": "Mesma bancada, agora com notebook e caixas de envio. Tela do notebook sem marketplace nem marca de plataforma."
+  },
+  {
+   "t": "16:35–17:15",
+   "title": "Packshot de cima, foley e room tone",
+   "from": "16:35",
+   "to": "17:15",
+   "lens": "Sigma + Zeiss",
+   "shots": [
+    "P4",
+    "S3",
+    "S2"
+   ],
+   "note": "Top-down da linha completa para a tela final. Som do borrifo e da tampa com o set em silêncio."
+  },
+  {
+   "t": "17:15–17:45",
+   "title": "Backup e desmontagem",
+   "from": "17:15",
+   "to": "17:45",
+   "shots": [],
+   "note": "Dois backups do material antes de sair; conferir se cada roteiro tem as duas aberturas."
+  },
+  {
+   "t": "Se sobrar tempo",
+   "title": "Variações para teste",
+   "extra": true,
+   "shots": [
+    "A6",
+    "C7",
+    "D6",
+    "E5"
+   ],
+   "note": "Mais uma abertura por roteiro com outra frase de gancho, se o cliente quiser testar mais versões curtas."
+  }
+ ],
+ "equip": [
+  {
+   "g": "Câmeras e lentes",
+   "items": [
+    [
+     "cam",
+     "Blackmagic Pocket 6K",
+     "Câmera A: 6K horizontal, recorte 9:16 na edição (1944×3456 sobra para 1080×1920)"
+    ],
+    [
+     "cam2",
+     "Sony A7 IV",
+     "Câmera B: close lateral durante as falas, para cortes sem repetir takes"
+    ],
+    [
+     "bat",
+     "Baterias V-mount BP95 + placa V-mount",
+     "Diária longa: 5 falas, inserts e packshots"
+    ],
+    [
+     "midia",
+     "SSD 500 GB + cartões da A7 IV",
+     "Formatados; conferir tempo de gravação na calculadora"
+    ],
+    [
+     "sig",
+     "Sigma 18–35 f/1.8",
+     "Falas, gerais da loja e da bancada"
+    ],
+    [
+     "zei",
+     "Zeiss Planar 50 f/1.4",
+     "Closes das embalagens, Amalfi Sunset, borrifo, textura"
+    ]
+   ]
+  },
+  {
+   "g": "Estabilização e apoio",
+   "items": [
+    [
+     "tri",
+     "Dois tripés",
+     "Câmeras A e B nas falas"
+    ],
+    [
+     "rs2",
+     "DJI Ronin RS2 + baterias",
+     "Travelling nas prateleiras e na bancada"
+    ],
+    [
+     "tp",
+     "Teleprompter (celular ou tablet com app)",
+     "As falas têm 30 a 40 s; o apresentador não precisa decorar"
+    ]
+   ]
+  },
+  {
+   "g": "Produtos e arte (cliente)",
+   "items": [
+    [
+     "prod",
+     "Produtos Skelt: autobronzeadores, bodycreams (com Amalfi Sunset) e bodysplashes",
+     "Unidades novas e limpas, várias de cada para encher a bancada"
+    ],
+    [
+     "prod2",
+     "Um Amalfi Sunset aberto para a textura",
+     "Cena de demonstração (C5)"
+    ],
+    [
+     "cel",
+     "Celular do apresentador + suporte de tripé",
+     "Roteiro 3"
+    ],
+    [
+     "note",
+     "Notebook com tela neutra (planilha ou catálogo)",
+     "Roteiro 4, sem marketplace"
+    ],
+    [
+     "cx",
+     "Caixas de envio e fita",
+     "Roteiros 4 e 5"
+    ],
+    [
+     "limp",
+     "Flanela e álcool",
+     "Tirar digitais das embalagens entre os takes"
+    ]
+   ]
+  },
+  {
+   "g": "Faltando no kit",
+   "gap": true,
+   "items": [
+    [
+     "aud",
+     "Gravador + lapela (de preferência duas)",
+     "Áudio limpo é exigência do roteiro"
+    ],
+    [
+     "luz",
+     "Dois painéis de LED com difusor + um de contra",
+     "Luz clara no rosto e brilho controlado nas embalagens"
+    ],
+    [
+     "pol",
+     "Filtro polarizador",
+     "Reflexo nos frascos e potes"
+    ]
+   ]
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Cliente · Creamy / Skelt",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "Apresentador(a)",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "Responsável pela locação",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "SAMU",
+   "name": "",
+   "phone": "192"
+  },
+  {
+   "role": "Corpo de Bombeiros",
+   "name": "",
+   "phone": "193"
+  },
+  {
+   "role": "Polícia Militar",
+   "name": "",
+   "phone": "190"
+  }
+ ],
+ "docs": [
+  {
+   "id": "imagem",
+   "title": "Autorização de uso de imagem",
+   "org": "Apresentador(es)",
+   "number": "",
+   "valid": "",
+   "detail": "Uso em anúncios pagos no Meta Ads"
+  },
+  {
+   "id": "locacao",
+   "title": "Autorização da locação",
+   "org": "Loja / estúdio",
+   "number": "",
+   "valid": "2026-10-27",
+   "detail": "Gravação no espaço e uso da imagem do local"
+  },
+  {
+   "id": "claims",
+   "title": "Aprovação dos claims comerciais",
+   "org": "Skelt Cosméticos",
+   "number": "",
+   "valid": "",
+   "detail": "Até 40% de lucratividade, frete grátis e nota legal das condições da revenda"
+  }
+ ],
+ "links": [],
+ "reports": [],
+ "roteiro": {
+  "telas": [
+   "R1 · Você tem uma loja?",
+   "R1 · Amplie seu mix de produtos.",
+   "R1 · Conheça a revenda Skelt.",
+   "R1 · Cadastre seu interesse.",
+   "R2 · Já vende produtos de beleza?",
+   "R2 · Amplie seu portfólio.",
+   "R2 · Conheça o Amalfi Sunset.",
+   "R2 · Seja revendedor Skelt.",
+   "R3 · Você já indica produtos nas redes?",
+   "R3 · Transforme conteúdo em oportunidade.",
+   "R3 · Conheça a revenda Skelt.",
+   "R3 · Saiba como participar.",
+   "R4 · Você vende online?",
+   "R4 · Amplie seu catálogo.",
+   "R4 · Revenda Skelt Cosméticos.",
+   "R4 · Consulte as condições.",
+   "R5 · Até 40% de lucratividade.",
+   "R5 · Frete grátis*",
+   "R5 · Conheça a revenda Skelt. · Cadastre seu interesse."
+  ]
+ },
+ "dayNotes": [
+  "Terça-feira, 27/10. Sem Ordem do Dia: horários estimados, confirmar locação, apresentador e horário com o cliente.",
+  "Contratação direta com o cliente (sem produtora).",
+  "5 roteiros, cada um com duas aberturas, fala completa em duas câmeras e inserts dos produtos.",
+  "Manhã no cenário de loja (roteiros 5, 1 e 2); tarde na bancada de estúdio (roteiros 3 e 4).",
+  "Roteiro 4: não mostrar plataformas ou canais de venda sem autorização da empresa.",
+  "Roteiro 5: lucratividade e frete grátis sujeitos às condições vigentes do programa de revenda (nota na tela)."
+ ],
+ "entregas": [
+  {
+   "titulo": "Criativo 1 · Pequenas lojistas",
+   "formato": "Vertical 9:16",
+   "duracao": "25 a 35 s",
+   "versao": "Amplie o mix da sua loja · fala direta para a câmera",
+   "itens": [
+    "Duas opções de abertura",
+    "Legendas legíveis e sincronizadas",
+    "Textos na tela: Você tem uma loja? · Amplie seu mix de produtos. · Conheça a revenda Skelt. · Cadastre seu interesse.",
+    "Destaque visual para benefícios e nomes dos produtos",
+    "Chamada final para cadastro de interesse"
+   ],
+   "shots": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "P4"
+   ],
+   "pendencias": [
+    "Trilha não definida no roteiro",
+    "Tela final (logo Skelt, botão de cadastro) não definida"
+   ]
+  },
+  {
+   "titulo": "Criativo 2 · Quem já vende beleza",
+   "formato": "Vertical 9:16",
+   "duracao": "25 a 35 s",
+   "versao": "Amplie seu portfólio com Skelt · fala direta para a câmera",
+   "itens": [
+    "Duas opções de abertura",
+    "Legendas legíveis e sincronizadas",
+    "Textos na tela: Já vende produtos de beleza? · Amplie seu portfólio. · Conheça o Amalfi Sunset. · Seja revendedor Skelt.",
+    "Destaque visual para benefícios e nomes dos produtos",
+    "Chamada final para cadastro de interesse"
+   ],
+   "shots": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+   ],
+   "pendencias": [
+    "Confirmar se o claim do Amalfi Sunset nas redes pode ser usado como está",
+    "Trilha não definida no roteiro",
+    "Tela final (logo Skelt, botão de cadastro) não definida"
+   ]
+  },
+  {
+   "titulo": "Criativo 3 · Quem vende nas redes sociais",
+   "formato": "Vertical 9:16",
+   "duracao": "25 a 35 s",
+   "versao": "Transforme seu conteúdo em oportunidade comercial · fala direta para a câmera",
+   "itens": [
+    "Duas opções de abertura",
+    "Legendas legíveis e sincronizadas",
+    "Textos na tela: Você já indica produtos nas redes? · Transforme conteúdo em oportunidade. · Conheça a revenda Skelt. · Saiba como participar.",
+    "Destaque visual para benefícios e nomes dos produtos",
+    "Chamada final para cadastro de interesse"
+   ],
+   "shots": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "P1",
+    "P2",
+    "S3"
+   ],
+   "pendencias": [
+    "Trilha não definida no roteiro",
+    "Tela final (logo Skelt, botão de cadastro) não definida"
+   ]
+  },
+  {
+   "titulo": "Criativo 4 · Quem vende online e em marketplaces",
+   "formato": "Vertical 9:16",
+   "duracao": "25 a 35 s",
+   "versao": "Amplie seu catálogo digital · fala direta para a câmera",
+   "itens": [
+    "Duas opções de abertura",
+    "Legendas legíveis e sincronizadas",
+    "Textos na tela: Você vende online? · Amplie seu catálogo. · Revenda Skelt Cosméticos. · Consulte as condições.",
+    "Destaque visual para benefícios e nomes dos produtos",
+    "Chamada final para cadastro de interesse"
+   ],
+   "shots": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "P4"
+   ],
+   "pendencias": [
+    "Confirmar com o cliente quais canais de venda podem aparecer (o roteiro proíbe mostrar plataformas sem autorização)",
+    "Trilha não definida no roteiro",
+    "Tela final (logo Skelt, botão de cadastro) não definida"
+   ]
+  },
+  {
+   "titulo": "Criativo 5 · Renda extra trabalhando de casa",
+   "formato": "Vertical 9:16",
+   "duracao": "25 a 35 s",
+   "versao": "Lucratividade, frete grátis e produtos com forte apelo · fala direta para a câmera",
+   "itens": [
+    "Duas opções de abertura",
+    "Legendas legíveis e sincronizadas",
+    "Textos na tela: Até 40% de lucratividade. · Frete grátis* · Conheça a revenda Skelt. · Cadastre seu interesse.",
+    "Destaque visual para benefícios e nomes dos produtos",
+    "Chamada final para cadastro de interesse"
+   ],
+   "shots": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "S3"
+   ],
+   "pendencias": [
+    "A fala lida em ritmo normal dá cerca de 0:40: acima dos 35 s do briefing. Acelerar a leitura ou enxugar o texto com o cliente.",
+    "Texto da nota legal na tela (lucratividade e frete grátis sujeitos às condições vigentes)",
+    "Cliente confirmar os claims “até 40% de lucratividade”, “frete grátis” e “uma das marcas mais conhecidas do Brasil” antes de veicular",
+    "Trilha não definida no roteiro",
+    "Tela final (logo Skelt, botão de cadastro) não definida"
+   ]
+  },
+  {
+   "titulo": "Versões curtas para teste",
+   "formato": "Vertical 9:16",
+   "duracao": "A definir (curtas)",
+   "versao": "Cortes curtos dos 5 criativos para teste de desempenho no Meta Ads",
+   "itens": [
+    "Combinações de abertura × corpo de cada roteiro",
+    "Mesmas legendas e chamada final"
+   ],
+   "shots": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2",
+    "D1",
+    "D2",
+    "E1",
+    "E2"
+   ],
+   "pendencias": [
+    "Definir quantas versões curtas e qual duração",
+    "Definir quais aberturas entram em cada teste"
+   ]
+  }
+ ],
+ "planejamento": {
+  "recomendado": "1 diária de 10 horas",
+  "minimo": "1 diária de 8 horas, com tudo no mesmo endereço e a câmera B fazendo os inserts em paralelo",
+  "disponivel": "1 diária (27/10), horário a confirmar",
+  "resumo": "São 5 vídeos curtos de fala para a câmera, todos em interior e sem depender de luz natural. O que pesa é a troca de cenário: loja (roteiros 1, 2 e 5) e bancada de estúdio (roteiros 3 e 4). Cada roteiro leva cerca de 1h com duas aberturas, fala completa em duas câmeras e inserts. Com um só endereço e um só apresentador, 1 diária resolve.",
+  "blocos": [
+   {
+    "bloco": "Roteiro 5 · Renda extra",
+    "planos": 6,
+    "tempo": "1h15",
+    "luz": "Interior com LED",
+    "nota": "Gancho mais importante: gravar primeiro"
+   },
+   {
+    "bloco": "Roteiro 1 · Lojistas",
+    "planos": 6,
+    "tempo": "1h05",
+    "luz": "Interior com LED",
+    "nota": "Loja com cara de multimarca"
+   },
+   {
+    "bloco": "Roteiro 2 · Já vende beleza",
+    "planos": 6,
+    "tempo": "1h05",
+    "luz": "Interior com LED",
+    "nota": "Amalfi Sunset em destaque"
+   },
+   {
+    "bloco": "Roteiro 3 · Redes sociais",
+    "planos": 7,
+    "tempo": "1h10",
+    "luz": "Interior com LED + contra",
+    "nota": "Borrifo em contraluz pede várias passadas"
+   },
+   {
+    "bloco": "Roteiro 4 · Online",
+    "planos": 6,
+    "tempo": "1h10",
+    "luz": "Interior com LED",
+    "nota": "Tela neutra no notebook"
+   },
+   {
+    "bloco": "Packshots",
+    "planos": 4,
+    "tempo": "1h",
+    "luz": "Luz de recorte",
+    "nota": "Servem aos 5 vídeos"
+   },
+   {
+    "bloco": "Som",
+    "planos": 3,
+    "tempo": "15 min",
+    "luz": "—",
+    "nota": "Room tone em cada cenário"
+   }
+  ],
+  "totalCaptacao": "cerca de 7h de captação, mais montagem, troca de cenário e almoço",
+  "diarias": [
+   {
+    "titulo": "Diária 1 · 27/10",
+    "horario": "08:00–17:45 (estimado)",
+    "itens": [
+     "Manhã na loja: roteiros 5, 1 e 2, packshots",
+     "Tarde no estúdio: roteiros 3 e 4, packshot de cima e foley"
+    ]
+   }
+  ],
+  "riscos": [
+   "Apresentador sem as falas na ponta da língua: sem teleprompter cada roteiro dobra de tempo",
+   "Cenários em endereços diferentes custam cerca de 1h de deslocamento e remontagem",
+   "Produtos insuficientes deixam a bancada do roteiro 5 vazia",
+   "Reflexo nas embalagens brilhantes: prever polarizador e tempo de ajuste de luz",
+   "Claims (40%, frete grátis) mudando depois da gravação obrigam regravar a fala do roteiro 5"
+  ]
+ },
+ "storyboardImage": "storyboard.jpg"
+}

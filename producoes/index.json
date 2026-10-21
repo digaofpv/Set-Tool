@@ -45,6 +45,20 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "creamy",
+   "nome": "Creamy · direto com o cliente",
+   "producoes": [
+    {
+     "slug": "skelt-revendedores",
+     "title": "Revenda Skelt · 5 criativos",
+     "project": "Creamy",
+     "client": "Skelt Cosméticos",
+     "date": "2026-10-27",
+     "status": "pré-produção"
+    }
+   ]
   }
  ]
 }
