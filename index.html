@@ -421,7 +421,7 @@ function renderPlanos(){
     const items=list.filter(s=>s.g===g.id); if(!items.length) continue;
     const st=stats(P.shots.filter(s=>s.g===g.id));
     html+=`<div class="group"><div class="ghead"><h2><span class="dot" style="background:${g.color}"></span>${esc(g.name)}</h2><span class="count">${st.d}/${st.t}</span></div>
-      <div class="tpbar"><i style="width:${st.d/st.t*100}%;background:${g.color}"></i></div><div class="gsub">${esc(g.sub)}</div>${items.map(shotRow).join('')}</div>`;
+      <div class="bar"><i style="width:${st.d/st.t*100}%;background:${g.color}"></i></div><div class="gsub">${esc(g.sub)}</div>${items.map(shotRow).join('')}</div>`;
   }
   if(!list.length) html+=`<div class="card"><h3>Nada por aqui</h3><p class="hint">Nenhum plano neste filtro.</p></div>`;
   document.getElementById('tab-planos').innerHTML=html;
@@ -752,13 +752,14 @@ function report(){
 }
 function renderFim(){
   const pendA=P.shots.filter(s=>s.pri==='A'&&!S.done[s.id]), pendB=P.shots.filter(s=>s.pri==='B'&&!S.done[s.id]);
-  let html=`<div class="card"><h3>Por bloco</h3>${P.groups.map(g=>{const st=stats(P.shots.filter(s=>s.g===g.id));return `<div class="brow"><span>${esc(g.short)}</span><div class="tpbar"><i style="width:${st.d/st.t*100}%;background:${g.color}"></i></div><span class="count">${st.d}/${st.t}</span></div>`}).join('')}</div>`;
+  let html=`<div class="card"><h3>Por bloco</h3>${P.groups.map(g=>{const st=stats(P.shots.filter(s=>s.g===g.id));return `<div class="brow"><span>${esc(g.short)}</span><div class="bar"><i style="width:${st.d/st.t*100}%;background:${g.color}"></i></div><span class="count">${st.d}/${st.t}</span></div>`}).join('')}</div>`;
   html+=`<div class="card"><h3>${pendA.length?`Não saia sem estes (${pendA.length})`:'Indispensáveis: tudo gravado'}</h3>`+
     (pendA.length?`<ul class="pend">${pendA.map(s=>`<li><span class="code">${s.id}</span><span>${esc(s.title)}</span></li>`).join('')}</ul>`:`<p class="hint">Todos os planos indispensáveis estão marcados.</p>`)+
     (pendB.length?`<p class="hint">Mais ${pendB.length} extras pendentes.</p>`:'')+`</div>`;
   html+=`<div class="card"><h3>Relatório do dia</h3><pre class="report" id="rep">${esc(report())}</pre>
     <button class="btn" data-act="copyrep">Copiar relatório</button>
     <p class="hint">Cole no WhatsApp da equipe.</p></div>`;
+  html+=editCardHTML();
   html+=`<div class="card"><h3>Exportar produção</h3><p class="hint" style="margin:0 0 6px">Tudo o que está no app, incluindo marcações, takes e anotações, para mandar à produção, à montagem ou à arte. Inclui as ${(P.diarias||[]).length>1?'duas diárias':'diárias'} da produção.</p>
     <button class="btn" data-act="exp" data-fmt="pdf">PDF · relatório completo</button>
     <div class="row2" style="margin-top:10px"><button class="btn ghost" style="margin:0" data-act="exp" data-fmt="csv">CSV · planos</button><button class="btn ghost" style="margin:0" data-act="exp" data-fmt="csvcenas">CSV · cenas</button></div>
@@ -829,6 +830,8 @@ async function doExport(fmt){const A=ALL();
   if(fmt==='csvcenas') return shareFile(slugName('csv').replace('.csv','_cenas.csv'),'text/csv',toCSV(A.scenes.map(c=>({cena:pad(c.n),titulo:c.title,tempo:c.tc,descricao:c.detalhe||c.desc,texto_tela:c.texto||c.ost||'',som:c.som||'',planos:A.shots.filter(s=>s.scenes.includes(c.n)).map(s=>s.id).join(' '),anotacoes:S.sceneNotes[c.n]||''}))));
   if(fmt==='xml') return shareFile(slugName('xml'),'application/xml',toXML());
   if(fmt==='json') return shareFile(slugName('json'),'application/json',toJSONExport());
+  if(fmt==='editjson') return shareFile(slugName('json').replace('.json','_edicao.json'),'application/json',JSON.stringify(editPackage(),null,1));
+  if(fmt==='editmd') return shareFile(slugName('json').replace('.json','_edicao.md'),'text/markdown',editMarkdown());
 }
 
 /* ---------- overlays ---------- */
@@ -866,6 +869,50 @@ function renderSlate(){
   </div>`;
 }
 
+
+/* ---------- briefing de edição (pacote para o DaVinci Resolve) ---------- */
+function editCardHTML(){
+  const E=P.edicao||{}, tl=E.montagem?.timelines||[], pend=(E.pendencias||[]).length;
+  return `<div class="card"><h3>Briefing de edição <span class="count">${tl.length?tl.length+' timeline'+(tl.length>1?'s':''):'sem montagem'}</span></h3>
+    <p class="hint" style="margin:0 0 6px">Roteiro, montagem e identidade visual num pacote só, para a edição no DaVinci Resolve. O JSON é lido pelo Claude para montar o projeto; o texto serve para mandar a outro editor.${pend?` <b style="color:var(--gold)">${pend} pendência${pend>1?'s':''} de edição.</b>`:''}</p>
+    ${pend?`<ul class="pend" style="margin-top:8px">${E.pendencias.map(x=>`<li><span>${esc(x)}</span></li>`).join('')}</ul>`:''}
+    <div class="row2" style="margin-top:10px"><button class="btn" style="margin:0" data-act="exp" data-fmt="editjson">JSON · Resolve</button><button class="btn ghost" style="margin:0" data-act="exp" data-fmt="editmd">Texto</button></div></div>`;
+}
+function editPackage(){
+  const E=P.edicao||{}, A=ALL();
+  const sceneShots=n=>A.shots.filter(s=>s.scenes.includes(n)).map(s=>s.id);
+  return {
+    formato:'settool-edit-v1', exportado:new Date().toISOString(),
+    producao:{path:P.path,slug:P.slug,titulo:P.title,projeto:P.project||'',cliente:P.client,produtora:PT?.nome||P.produtora||'',
+      data:P.date,diarias:P.diarias||null,formato:P.format||'',aspecto:P.aspect||'9:16',fonte:P.fonte||'',local:P.location?.name||''},
+    identidade:E.identidade||{}, montagem:E.montagem||{}, pendencias:E.pendencias||[],
+    entregas:P.entregas||[],
+    roteiro:P.roteiro||null, teleprompter:P.teleprompter||[], depoimento:P.depoimento||null,
+    cenas:A.scenes.map(c=>({n:c.n,tc:c.tc,titulo:c.title,descricao:c.detalhe||c.desc,texto:c.texto||c.ost||'',som:c.som||'',adaptacao:c.adaptacao||'',planos:sceneShots(c.n),nota:S.sceneNotes[c.n]||''})),
+    planos:A.shots.map(s=>({id:s.id,grupo:(P.groups.find(g=>g.id===s.g)||{}).name||s.g,titulo:s.title,quadro:s.frame||'',lente:lensOf(s)||'',cenas:s.scenes,prioridade:s.pri==='A'?'indispensável':'extra',
+      dual:!!s.dual,match:s.match||null,set:{gravado:!!S.done[s.id],takes:S.takes[s.id]||0,takeBom:S.good[s.id]||null,nota:S.notes[s.id]||''}})),
+  };
+}
+function editMarkdown(){
+  const K=editPackage(), I=K.identidade, M=K.montagem, g=M.geral||{};
+  const li=(k,v)=>v&&(!Array.isArray(v)||v.length)?`- **${k}:** ${Array.isArray(v)?v.join(', '):v}\n`:'';
+  let t=`# Briefing de edição · ${K.producao.projeto?K.producao.projeto+' · ':''}${K.producao.titulo}\n\n${K.producao.cliente} · ${K.producao.produtora} · gravação ${fmtDate(K.producao.data)}\n\n`;
+  const vazio=x=>x.trim()?x:'_Ainda não preenchido._\n';
+  t+=`## Identidade visual\n\n`+vazio(li('Marca',I.marca)+li('Cores',I.cores)+li('Fontes',I.fontes)+li('Logo',I.logo)+li('Lettering',I.lettering)+li('Legendas',I.legendas)+li('Área segura',I.areaSegura)+li('Nota legal',I.notaLegal)+li('Trilha',I.trilha)+li('Cor',I.cor)+li('Referências',I.referencias)+li('Links',(I.links||[]).map(l=>l.url||l)))+'\n';
+  t+=`## Montagem\n\n`+vazio(li('Formato',g.formato)+li('Resolução',g.resolucao)+li('fps',g.fps)+li('Ritmo',g.ritmo)+li('Gancho',g.gancho)+li('Legendas',g.legendas)+li('Destaques',g.destaques)+li('Chamada',g.cta)+li('Versões curtas',g.versoesCurtas)+li('Material',g.material))+'\n';
+  if(!(M.timelines||[]).length){
+    for(const e of K.entregas) t+=`### ${e.titulo}\n\n${[e.formato,e.duracao,e.versao].filter(Boolean).join(' · ')}\n${(e.itens||[]).map(i=>`- ${i}\n`).join('')}\n`;
+    if(K.cenas.length){t+=`### Cenas\n\n`;for(const c of K.cenas) t+=`${pad(c.n)} · ${c.tc} · **${c.titulo}** (${c.planos.join(', ')})\n${c.texto?`  - Texto: ${c.texto}\n`:''}${c.som?`  - Som: ${c.som}\n`:''}`;t+='\n'}
+  }
+  for(const tl of M.timelines||[]){
+    t+=`### ${tl.entrega}\n\nTimeline \`${tl.nome}\` · alvo ${tl.duracaoAlvo}${tl.duracaoEstimada?` · fala estimada ${tl.duracaoEstimada}`:''}${tl.aberturas?.length?` · aberturas ${tl.aberturas.join(' / ')}`:''}\n\n`;
+    for(const c of tl.estrutura||[]) t+=`${pad(c.cena)} · ${c.tc} · **${c.titulo}** (${c.planos.join(', ')})\n${c.texto?`  - Texto: ${c.texto}\n`:''}${c.fala?`  - Fala: ${c.fala}\n`:''}`;
+    t+='\n';
+  }
+  const ep=K.entregas.filter(e=>e.pendencias?.length);
+  if(K.pendencias.length||ep.length){t+=`## Pendências\n\n`+K.pendencias.map(x=>`- ${x}\n`).join('')+ep.map(e=>e.pendencias.map(x=>`- ${e.titulo}: ${x}\n`).join('')).join('')}
+  return t;
+}
 
 /* ---------- teleprompter ---------- */
 let TP=null;

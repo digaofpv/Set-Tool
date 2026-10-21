@@ -1295,6 +1295,348 @@
    ]
   }
  ],
+ "edicao": {
+  "montagem": {
+   "geral": {
+    "formato": "Vertical 9:16",
+    "resolucao": "1080×1920",
+    "fps": "",
+    "ritmo": "Cortes dinâmicos, sem excesso de transições",
+    "gancho": "Duas opções de abertura por vídeo; o texto principal entra já no primeiro segundo quando o roteiro pede",
+    "legendas": "Legíveis e sincronizadas com toda a fala",
+    "destaques": "Benefícios e nomes dos produtos destacados visualmente na tela",
+    "cta": "Chamada final para cadastro de interesse em todos os vídeos",
+    "versoesCurtas": "Preparar versões curtas para teste de desempenho nos anúncios",
+    "material": "Pocket 6K gravada em 6K horizontal: reenquadrar em 9:16 na timeline; A7 IV como câmera B (close) nas falas"
+   },
+   "timelines": [
+    {
+     "entrega": "Criativo 1 · Pequenas lojistas",
+     "nome": "SKELT_R1_LOJISTAS_9x16",
+     "duracaoAlvo": "25 a 35 s",
+     "duracaoEstimada": "0:30",
+     "aberturas": [
+      "A1",
+      "A2"
+     ],
+     "estrutura": [
+      {
+       "cena": 1,
+       "tc": "0:00–0:06",
+       "titulo": "Gancho na loja",
+       "planos": [
+        "A1",
+        "A2",
+        "A3"
+       ],
+       "texto": "Você tem uma loja?",
+       "fala": "Você tem uma loja e quer trazer novidades que chamem a atenção dos seus clientes?"
+      },
+      {
+       "cena": 2,
+       "tc": "0:06–0:18",
+       "titulo": "A oportunidade e os produtos na loja",
+       "planos": [
+        "A3",
+        "A4"
+       ],
+       "texto": "Amplie seu mix de produtos.",
+       "fala": "Então, precisa conhecer a oportunidade de revender Skelt Cosméticos! São produtos de beleza que vão dos nossos autobronzeadores aos bodycreams e bodysplashes, perfeitos para quem quer ampliar o mix de produtos da loja."
+      },
+      {
+       "cena": 3,
+       "tc": "0:18–0:24",
+       "titulo": "Closes das embalagens",
+       "planos": [
+        "A3",
+        "A5"
+       ],
+       "texto": "Conheça a revenda Skelt.",
+       "fala": "Imagine oferecer fragrâncias e cuidados corporais que seus clientes podem conhecer, experimentar e querer levar para casa."
+      },
+      {
+       "cena": 4,
+       "tc": "0:24–0:30",
+       "titulo": "Chamada final",
+       "planos": [
+        "A3",
+        "A6",
+        "P4"
+       ],
+       "texto": "Cadastre seu interesse.",
+       "fala": "Quer saber como se tornar revendedora ou revendedor Skelt? Clique aqui e cadastre seu interesse!"
+      }
+     ]
+    },
+    {
+     "entrega": "Criativo 2 · Quem já vende beleza",
+     "nome": "SKELT_R2_BELEZA_9x16",
+     "duracaoAlvo": "25 a 35 s",
+     "duracaoEstimada": "0:30",
+     "aberturas": [
+      "B1",
+      "B2"
+     ],
+     "estrutura": [
+      {
+       "cena": 5,
+       "tc": "0:00–0:06",
+       "titulo": "Organizando o balcão",
+       "planos": [
+        "B1",
+        "B2",
+        "B3"
+       ],
+       "texto": "Já vende produtos de beleza?",
+       "fala": "Você já trabalha com beleza e quer ampliar seu portfólio? Conheça a oportunidade de revender Skelt Cosméticos!"
+      },
+      {
+       "cena": 6,
+       "tc": "0:06–0:13",
+       "titulo": "A linha em cortes rápidos",
+       "planos": [
+        "B3",
+        "B5",
+        "P2",
+        "P3"
+       ],
+       "texto": "Amplie seu portfólio.",
+       "fala": "Temos autobronzeadores, bodycreams e bodysplashes para quem quer oferecer mais opções de beleza e cuidado corporal aos seus clientes."
+      },
+      {
+       "cena": 7,
+       "tc": "0:13–0:20",
+       "titulo": "Destaque: Amalfi Sunset",
+       "planos": [
+        "B3",
+        "B4",
+        "P1"
+       ],
+       "texto": "Conheça o Amalfi Sunset.",
+       "fala": "E olha esse destaque: o Amalfi Sunset, nosso bodycream que conquistou espaço nas conversas das redes sociais."
+      },
+      {
+       "cena": 8,
+       "tc": "0:20–0:30",
+       "titulo": "Linha reunida e chamada",
+       "planos": [
+        "B3",
+        "B6",
+        "P4"
+       ],
+       "texto": "Seja revendedor Skelt.",
+       "fala": "Se você já tem clientes que compram produtos de beleza, vale conhecer essa oportunidade e descobrir como incluir Skelt nas suas vendas. Clique no botão e saiba como revender!"
+      }
+     ]
+    },
+    {
+     "entrega": "Criativo 3 · Quem vende nas redes sociais",
+     "nome": "SKELT_R3_REDES_9x16",
+     "duracaoAlvo": "25 a 35 s",
+     "duracaoEstimada": "0:31",
+     "aberturas": [
+      "C1",
+      "C2"
+     ],
+     "estrutura": [
+      {
+       "cena": 9,
+       "tc": "0:00–0:05",
+       "titulo": "Gravando um Story",
+       "planos": [
+        "C1",
+        "C2",
+        "C3",
+        "C7"
+       ],
+       "texto": "Você já indica produtos nas redes?",
+       "fala": "Você vive indicando produtos de beleza nos Stories, mostrando novidades ou compartilhando suas descobertas?"
+      },
+      {
+       "cena": 10,
+       "tc": "0:05–0:17",
+       "titulo": "Celular e produtos no quadro",
+       "planos": [
+        "C3",
+        "C7"
+       ],
+       "texto": "Transforme conteúdo em oportunidade.",
+       "fala": "Já pensou em transformar esse interesse em uma oportunidade de renda extra? Com a revenda Skelt, você pode apresentar nossos autobronzeadores, bodycreams e bodysplashes para o público que já acompanha você."
+      },
+      {
+       "cena": 11,
+       "tc": "0:17–0:24",
+       "titulo": "Demonstração",
+       "planos": [
+        "C3",
+        "C4",
+        "C5",
+        "S3"
+       ],
+       "texto": "Conheça a revenda Skelt.",
+       "fala": "Imagine gravar um vídeo mostrando uma fragrância, apresentar o Amalfi Sunset ou compartilhar sua experiência com um produto Skelt."
+      },
+      {
+       "cena": 12,
+       "tc": "0:24–0:31",
+       "titulo": "Celular e produtos na mão",
+       "planos": [
+        "C3",
+        "C6"
+       ],
+       "texto": "Saiba como participar.",
+       "fala": "Se você gosta de beleza e quer empreender usando suas redes sociais, clique aqui e conheça a oportunidade de revenda!"
+      }
+     ]
+    },
+    {
+     "entrega": "Criativo 4 · Quem vende online e em marketplaces",
+     "nome": "SKELT_R4_ONLINE_9x16",
+     "duracaoAlvo": "25 a 35 s",
+     "duracaoEstimada": "0:29",
+     "aberturas": [
+      "D1",
+      "D2"
+     ],
+     "estrutura": [
+      {
+       "cena": 13,
+       "tc": "0:00–0:05",
+       "titulo": "Trabalhando no notebook",
+       "planos": [
+        "D1",
+        "D2",
+        "D3",
+        "D6"
+       ],
+       "texto": "Você vende online?",
+       "fala": "Você já vende pela internet e está procurando novas oportunidades para ampliar seu catálogo?"
+      },
+      {
+       "cena": 14,
+       "tc": "0:05–0:14",
+       "titulo": "Produtos ao lado do computador",
+       "planos": [
+        "D3",
+        "D4"
+       ],
+       "texto": "Amplie seu catálogo.",
+       "fala": "Conheça a possibilidade de revender Skelt Cosméticos! Nossa linha tem produtos de beleza e cuidado corporal, com destaque para autobronzeadores, bodycreams e bodysplashes."
+      },
+      {
+       "cena": 15,
+       "tc": "0:14–0:20",
+       "titulo": "Apresentador e closes",
+       "planos": [
+        "D3",
+        "D5",
+        "D6"
+       ],
+       "texto": "Revenda Skelt Cosméticos.",
+       "fala": "São diferentes categorias para você avaliar como podem complementar seu negócio e atender aos interesses dos seus clientes."
+      },
+      {
+       "cena": 16,
+       "tc": "0:20–0:29",
+       "titulo": "Chamada final",
+       "planos": [
+        "D3"
+       ],
+       "texto": "Consulte as condições.",
+       "fala": "Quer descobrir como funciona a revenda Skelt e quais são as condições para começar? Clique aqui, cadastre seu interesse e conheça nossa oportunidade!"
+      }
+     ]
+    },
+    {
+     "entrega": "Criativo 5 · Renda extra trabalhando de casa",
+     "nome": "SKELT_R5_RENDA_EXTRA_9x16",
+     "duracaoAlvo": "25 a 35 s",
+     "duracaoEstimada": "0:40",
+     "aberturas": [
+      "E1",
+      "E2"
+     ],
+     "estrutura": [
+      {
+       "cena": 17,
+       "tc": "0:00–0:09",
+       "titulo": "Gancho: até 40%",
+       "planos": [
+        "E1",
+        "E2",
+        "E3"
+       ],
+       "texto": "Até 40% de lucratividade.",
+       "fala": "Quer ganhar até 40% de lucratividade revendendo produtos de beleza, sem sair de casa e com frete grátis? Conheça a oportunidade de revender Skelt Cosméticos!"
+      },
+      {
+       "cena": 18,
+       "tc": "0:09–0:20",
+       "titulo": "Autobronzeador, Amalfi e bodysplashes",
+       "planos": [
+        "E3",
+        "E4",
+        "P1",
+        "P2",
+        "P3"
+       ],
+       "texto": "",
+       "fala": "Você pode trabalhar com os autobronzeadores de uma das marcas mais conhecidas do Brasil, o bodycream Amalfi Sunset, que conquistou a internet, e nossos bodysplashes com fragrâncias irresistíveis."
+      },
+      {
+       "cena": 19,
+       "tc": "0:20–0:33",
+       "titulo": "Canais de venda e frete grátis",
+       "planos": [
+        "E3",
+        "E5",
+        "S3"
+       ],
+       "texto": "Frete grátis*",
+       "fala": "São produtos que despertam desejo e que você pode apresentar aos seus clientes pelas redes sociais, pelo WhatsApp ou pelos canais de venda autorizados. E tem mais: você conta com frete grátis, conforme as condições da revenda."
+      },
+      {
+       "cena": 20,
+       "tc": "0:33–0:40",
+       "titulo": "Produtos reunidos e chamada",
+       "planos": [
+        "E3",
+        "E6",
+        "P4"
+       ],
+       "texto": "Conheça a revenda Skelt. · Cadastre seu interesse.",
+       "fala": "Quer saber como funciona e começar a revender Skelt? Clique no botão, cadastre seu interesse e conheça as condições!"
+      }
+     ]
+    }
+   ]
+  },
+  "identidade": {
+   "marca": "Skelt Cosméticos",
+   "cores": [],
+   "fontes": [],
+   "logo": "",
+   "lettering": "Textos de tela curtos, uma frase por vez, sincronizados com a fala (lista em cada timeline)",
+   "legendas": "Legíveis e sincronizadas (estilo a definir)",
+   "areaSegura": "Textos e legendas longe do topo e da base do quadro, onde a interface do Reels e dos Stories cobre o vídeo",
+   "notaLegal": "Percentual de lucratividade e frete grátis sujeitos às condições vigentes do programa de revenda (roteiro 5)",
+   "trilha": "",
+   "cor": "",
+   "referencias": [
+    "Os três vídeos de melhor desempenho da Creamy Skincare na captação de revendedores (base da estratégia)"
+   ],
+   "links": []
+  },
+  "pendencias": [
+   "Cores, fontes e logo da Skelt (pedir o manual de marca e guardar só o link aqui)",
+   "Estilo das legendas e do lettering",
+   "Trilha: o roteiro não define",
+   "fps do projeto",
+   "Tela final: logo, botão e texto de cadastro",
+   "Quantidade e duração das versões curtas",
+   "Arquivos dos três vídeos de referência da Creamy"
+  ]
+ },
  "entregas": [
   {
    "titulo": "Criativo 1 · Pequenas lojistas",
