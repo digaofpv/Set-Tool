@@ -5,6 +5,14 @@
    "nome": "Bridge Films",
    "producoes": [
     {
+     "slug": "alok-mon-24-anos",
+     "title": "Alok no MON",
+     "project": "MON 24 anos",
+     "client": "Museu Oscar Niemeyer",
+     "date": "2026-11-18",
+     "status": "pré-produção"
+    },
+    {
      "slug": "art-hunter-exploradores",
      "title": "Exploradores de arte",
      "project": "Art Hunter",

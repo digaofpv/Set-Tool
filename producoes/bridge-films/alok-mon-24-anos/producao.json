@@ -1,0 +1,1103 @@
+{
+ "slug": "alok-mon-24-anos",
+ "title": "Alok no MON",
+ "client": "Museu Oscar Niemeyer",
+ "project": "MON 24 anos",
+ "produtora": "Bridge Films",
+ "date": "2026-11-18",
+ "window": {
+  "from": "15:30",
+  "to": "20:30"
+ },
+ "location": {
+  "name": "Museu Oscar Niemeyer",
+  "address": "R. Mal. Hermes, 999, Centro Cívico, Curitiba – PR",
+  "lat": -25.4101,
+  "lon": -49.267,
+  "tz": -3
+ },
+ "format": "9:16 · Reels de 35 s com legenda embutida",
+ "lightNote": "<b>Pôr do sol às 18:44, crepúsculo até 19:09.</b> A silhueta de Alok (A2) pede esse céu azul. No show e na fala: Pocket em ISO 3200 (nativo alto), 1/50, f/1.8, expondo para as luzes dos drones. Tirar o ND ao anoitecer.",
+ "framingTip": "Grave a Pocket na horizontal em 6K e recorte o 9:16: Alok no centro, espaço no topo para o texto de tela e embaixo para a legenda. Nos planos-chave, deixe ar nas laterais para um eventual 16:9.",
+ "fonte": "Roteiro “Alok no MON (35 segundos)” da Bridge Films. Sem Ordem do Dia: horários e janela estimados pelo roteiro e pelo pôr do sol.",
+ "groups": [
+  {
+   "id": "A",
+   "name": "Gancho: aéreo e silhueta",
+   "short": "Gancho",
+   "sub": "Anoitecer · Alok caminha até o Olho",
+   "color": "var(--aerial)"
+  },
+  {
+   "id": "B",
+   "name": "Chegada",
+   "short": "Chegada",
+   "sub": "Hall · recepção da diretoria",
+   "color": "var(--day)"
+  },
+  {
+   "id": "C",
+   "name": "Visita guiada",
+   "short": "Visita",
+   "sub": "Salas, rampa e obras · câmera lenta, luz natural",
+   "color": "var(--dawn)"
+  },
+  {
+   "id": "D",
+   "name": "Clímax: show de drones",
+   "short": "Show",
+   "sub": "Acontece uma vez só · 2 câmeras",
+   "color": "var(--dusk)"
+  },
+  {
+   "id": "E",
+   "name": "Fala de Alok",
+   "short": "Fala",
+   "sub": "Logo depois do show, ao ar livre",
+   "color": "#D98BB0"
+  },
+  {
+   "id": "F",
+   "name": "Assinatura",
+   "short": "Final",
+   "sub": "Museu iluminado + logo MON",
+   "color": "#C9CCC4"
+  },
+  {
+   "id": "S",
+   "name": "Som",
+   "short": "Som",
+   "sub": "Fala limpa e reação do público",
+   "color": "var(--sound)"
+  }
+ ],
+ "shots": [
+  {
+   "id": "A1",
+   "g": "A",
+   "title": "Aéreo do MON ao anoitecer",
+   "frame": "Recuo + subida revelando o Olho; luz de fim de tarde",
+   "scenes": [
+    1
+   ],
+   "pri": "B",
+   "lens": [
+    "Neo 2",
+    "câmera do drone; só antes do show, com SARPAS e aval do MON. Alternativa: aéreos do Art Hunter (12/10)"
+   ],
+   "dual": "Gancho: aéreo do museu"
+  },
+  {
+   "id": "A2",
+   "g": "A",
+   "title": "Silhueta de Alok caminhando em direção ao Olho",
+   "frame": "De costas, contraluz do céu; plano geral baixo, gimbal seguindo ou fixo",
+   "scenes": [
+    1
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "18–24 mm f/2.8, câmera baixa; expor para o céu e deixar Alok em silhueta"
+   ],
+   "dual": "Gancho: silhueta"
+  },
+  {
+   "id": "A3",
+   "g": "A",
+   "title": "O Olho contra o céu do anoitecer",
+   "frame": "Plano de corte, fixo; ponte entre aéreo e silhueta",
+   "scenes": [
+    1
+   ],
+   "pri": "B",
+   "lens": [
+    "Tokina 11–16",
+    "11 mm, tripé baixo"
+   ]
+  },
+  {
+   "id": "B1",
+   "g": "B",
+   "title": "Alok chega ao hall",
+   "frame": "Plano geral, gimbal recuando à frente dele",
+   "scenes": [
+    2
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "18 mm f/2 no RS2"
+   ]
+  },
+  {
+   "id": "B2",
+   "g": "B",
+   "title": "Recebido pela diretoria: aperto de mão e abraço",
+   "frame": "Plano médio; câmera B em close do rosto de Alok",
+   "scenes": [
+    2
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "24–35 mm f/2 · câmera B com a lente da A7 IV no rosto"
+   ],
+   "dual": "Chegada: recepção"
+  },
+  {
+   "id": "B3",
+   "g": "B",
+   "title": "Sorrisos e reações em close",
+   "frame": "Close, câmera B na mão ou monopé",
+   "scenes": [
+    2
+   ],
+   "pri": "A",
+   "lens": [
+    "A7 IV (câmera B)",
+    "tele/close; recorte vertical já no enquadramento"
+   ]
+  },
+  {
+   "id": "B4",
+   "g": "B",
+   "title": "Detalhe do aperto de mão",
+   "frame": "Plano detalhe, foco raso",
+   "scenes": [
+    2
+   ],
+   "pri": "B",
+   "lens": [
+    "Zeiss 50",
+    "f/1.8–2"
+   ]
+  },
+  {
+   "id": "C1",
+   "g": "C",
+   "title": "Caminhada pelas salas",
+   "frame": "Travelling lateral no gimbal, câmera lenta",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "18–24 mm f/2; 4K DCI 50–60 fps para a câmera lenta"
+   ]
+  },
+  {
+   "id": "C2",
+   "g": "C",
+   "title": "Alok na rampa curva",
+   "frame": "Plano geral, fixo ou gimbal; a curva de Niemeyer conduz o olhar",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": [
+    "Tokina 11–16",
+    "11–16 mm f/2.8"
+   ],
+   "dual": "Visita: rampa"
+  },
+  {
+   "id": "C3",
+   "g": "C",
+   "title": "Detalhes de obras",
+   "frame": "Detalhes com foco raso e luz natural; pode gravar antes de Alok chegar",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/2; recorte do 6K para chegar mais perto"
+   ]
+  },
+  {
+   "id": "C4",
+   "g": "C",
+   "title": "O olhar de Alok diante das obras",
+   "frame": "Close de perfil, câmera lenta; momento-chave",
+   "scenes": [
+    3
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/1.8, 4K DCI 60 fps (2,5× em 24 fps); recorte 9:16 ainda dá 1215×2160"
+   ],
+   "dual": "Visita: o olhar"
+  },
+  {
+   "id": "C5",
+   "g": "C",
+   "title": "Curvas da arquitetura",
+   "frame": "Linhas e curvas do prédio, contraluz; planos de corte",
+   "scenes": [
+    3
+   ],
+   "pri": "B",
+   "lens": [
+    "Tokina 11–16",
+    "11 mm, ângulo baixo"
+   ]
+  },
+  {
+   "id": "C6",
+   "g": "C",
+   "title": "Por cima do ombro de Alok para a obra",
+   "frame": "Plano médio, ponto de vista dele",
+   "scenes": [
+    3
+   ],
+   "pri": "B",
+   "lens": [
+    "Sigma 18–35",
+    "35 mm f/2"
+   ]
+  },
+  {
+   "id": "D1",
+   "g": "D",
+   "title": "Plano aberto: museu e drones formando o Olho",
+   "frame": "Fixo no tripé, do início ao fim do show, sem mexer",
+   "scenes": [
+    4
+   ],
+   "pri": "A",
+   "lens": [
+    "A7 IV (câmera B)",
+    "grande-angular fixa; ISO alto, 1/50, expor para as luzes dos drones"
+   ],
+   "dual": "Clímax: o show"
+  },
+  {
+   "id": "D2",
+   "g": "D",
+   "title": "Reação do público",
+   "frame": "Gimbal no meio do público, rostos iluminados pelo show",
+   "scenes": [
+    4
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "18 mm f/1.8, ISO 3200 (nativo alto da Pocket)"
+   ]
+  },
+  {
+   "id": "D3",
+   "g": "D",
+   "title": "Alok assistindo ao show",
+   "frame": "De costas ou perfil, drones ao fundo",
+   "scenes": [
+    4
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "18–24 mm f/1.8, ISO 3200"
+   ]
+  },
+  {
+   "id": "D4",
+   "g": "D",
+   "title": "Drones formam “MON” sobre o museu",
+   "frame": "Plano aberto, continuação do D1",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "A7 IV (câmera B)",
+    "mesmo quadro do D1"
+   ],
+   "dual": "Homenagem: MON no céu"
+  },
+  {
+   "id": "D5",
+   "g": "D",
+   "title": "Close de Alok olhando para cima",
+   "frame": "Close, luz do show no rosto",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Zeiss 50",
+    "f/1.4–2, ISO 3200"
+   ]
+  },
+  {
+   "id": "E1",
+   "g": "E",
+   "title": "Alok fala para a câmera",
+   "frame": "Plano médio/close, olhar na lente, museu iluminado ao fundo",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "35 mm f/1.8 + câmera B em close lateral; LED de bolso no rosto"
+   ],
+   "dual": "Homenagem: fala"
+  },
+  {
+   "id": "E2",
+   "g": "E",
+   "title": "Respostas às perguntas de desfecho",
+   "frame": "Mesmo enquadramento do E1",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": [
+    "Sigma 18–35",
+    "35 mm f/1.8"
+   ]
+  },
+  {
+   "id": "F1",
+   "g": "F",
+   "title": "Museu iluminado, plano final",
+   "frame": "Fixo no tripé, 10 s parado para o logo entrar",
+   "scenes": [
+    6
+   ],
+   "pri": "A",
+   "lens": [
+    "Tokina 11–16",
+    "11–16 mm; ISO 3200, 1/50"
+   ],
+   "dual": "Assinatura"
+  },
+  {
+   "id": "S1",
+   "g": "S",
+   "title": "Fala de Alok",
+   "frame": "Lapela + backup no microfone da câmera",
+   "scenes": [
+    5
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "S2",
+   "g": "S",
+   "title": "Público reagindo ao show",
+   "frame": "Ambiente estéreo: aplausos e reação",
+   "scenes": [
+    4,
+    5
+   ],
+   "pri": "A",
+   "lens": null
+  },
+  {
+   "id": "S3",
+   "g": "S",
+   "title": "Room tone do hall e da área externa",
+   "frame": "1 min de silêncio por ponto",
+   "scenes": [],
+   "pri": "B",
+   "lens": null
+  }
+ ],
+ "scenes": [
+  {
+   "n": 1,
+   "tc": "0:00–0:04",
+   "title": "Gancho: rumo ao Olho",
+   "color": "var(--aerial)",
+   "desc": "Aéreo do museu ao anoitecer; corte para a silhueta de Alok caminhando em direção ao Olho.",
+   "ost": "Nas retinas do MON, a visita de Alok.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#B8B1A4\"/><rect width=\"90\" height=\"70\" fill=\"#8F897E\"/><rect y=\"70\" width=\"90\" height=\"30\" fill=\"#CFC6B6\"/><g transform=\"translate(46,60) scale(0.95) translate(-46,-58)\"><path d=\"M40.6 65.6 L51.4 65.6 L50.2 114.0 L41.8 114.0 Z\" fill=\"#C9AE55\" stroke=\"#23211F\" stroke-width=\".5\"/><path d=\"M47.2 65.6 L51.4 65.6 L50.2 114.0 L47.8 114.0 Z\" fill=\"#23211F\" opacity=\".25\"/><path d=\"M16.0 58.0 Q46.0 31.0 76.0 58.0 Q46.0 80.7 16.0 58.0 Z\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".6\"/><path d=\"M19.6 58.0 Q46.0 36.4 72.4 58.0 Q46.0 76.4 19.6 58.0 Z\" fill=\"#23211F\"/><path d=\"M28.0 52.0 Q46.0 40.3 64.0 52.0\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\".7\" opacity=\".35\"/></g><rect y=\"112\" width=\"90\" height=\"48\" fill=\"#625D55\"/><path d=\"M0 112 L90 112\" stroke=\"#23211F\" stroke-width=\".6\"/><path d=\"M38.5 128.0 Q38.5 106.9 46.0 104.2 Q53.5 106.9 53.5 128.0 Z\" fill=\"#23211F\"/><circle cx=\"46.0\" cy=\"97.7\" r=\"3.7\" fill=\"#23211F\"/><rect x=\"8\" y=\"11.4\" width=\"39.8\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG · SILHUETA</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Plano aéreo (drone) do museu ao amanhecer ou anoitecer, se tivermos. Corte para a silhueta de Alok caminhando em direção ao Olho.",
+   "texto": "Nas retinas do MON, a visita de Alok.",
+   "som": "Trilha: batida suave.",
+   "adaptacao": "A silhueta pede céu claro: melhor entre 18:44 (pôr do sol) e 19:09 (fim do crepúsculo). Se Alok chegar depois disso, faça a silhueta contra o museu iluminado. O aéreo é opcional: sem voo hoje, use os aéreos do Art Hunter (12/10)."
+  },
+  {
+   "n": 2,
+   "tc": "0:04–0:09",
+   "title": "Chegada",
+   "color": "var(--day)",
+   "desc": "Alok chega e é recebido pela diretoria no hall: aperto de mão, abraço, sorrisos.",
+   "ost": "",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#ECE8DF\"/><path d=\"M0 30 Q45 18 90 30 L90 34 Q45 22 0 34 Z\" fill=\"#B8B1A4\"/><rect x=\"6\" y=\"44\" width=\"16\" height=\"22\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"68\" y=\"46\" width=\"14\" height=\"18\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".4\"/><rect y=\"112\" width=\"90\" height=\"48\" fill=\"#D7D1C5\"/><path d=\"M0 112 L90 112\" stroke=\"#B8B1A4\" stroke-width=\".8\"/><path d=\"M17.2 124.0 Q17.2 88.0 30.0 83.4 Q42.8 88.0 42.8 124.0 Z\" fill=\"#23211F\"/><circle cx=\"30.0\" cy=\"72.4\" r=\"6.4\" fill=\"#23211F\"/><path d=\"M38.9 92.1 L55.5 97.9\" stroke=\"#23211F\" stroke-width=\"4.1\" stroke-linecap=\"round\"/><path d=\"M48.1 124.0 Q48.1 90.5 60.0 86.2 Q71.9 90.5 71.9 124.0 Z\" fill=\"#625D55\"/><circle cx=\"60.0\" cy=\"75.9\" r=\"5.9\" fill=\"#625D55\"/><path d=\"M51.7 94.3 L36.2 99.7\" stroke=\"#625D55\" stroke-width=\"3.8\" stroke-linecap=\"round\"/><circle cx=\"45\" cy=\"92\" r=\"2.4\" fill=\"#F7F4EC\" stroke=\"#23211F\" stroke-width=\".4\"/><path d=\"M69.2 120.0 Q69.2 95.2 78.0 92.0 Q86.8 95.2 86.8 120.0 Z\" fill=\"#8F897E\"/><circle cx=\"78.0\" cy=\"84.4\" r=\"4.4\" fill=\"#8F897E\"/><rect x=\"8\" y=\"11.4\" width=\"34.2\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PM · GIMBAL</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Alok chega e é recebido pela diretoria no hall. Aperto de mão, abraço, sorrisos.",
+   "texto": "",
+   "som": "Trilha segue com a batida suave.",
+   "adaptacao": "Acontece uma vez só: câmera A no gimbal no plano médio, câmera B no close dos rostos."
+  },
+  {
+   "n": 3,
+   "tc": "0:09–0:17",
+   "title": "Visita",
+   "color": "var(--dawn)",
+   "desc": "Visita guiada pelas salas e pela rampa; detalhes de obras e da arquitetura e o olhar de Alok diante delas.",
+   "ost": "Entre obras e curvas de Niemeyer, um novo jeito de ver a arte.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#F2EEE6\"/><path d=\"M-5 70 Q45 40 95 64\" fill=\"none\" stroke=\"#B8B1A4\" stroke-width=\"7\"/><path d=\"M-5 70 Q45 40 95 64\" fill=\"none\" stroke=\"#23211F\" stroke-width=\".5\"/><path d=\"M-5 77 Q45 47 95 71\" fill=\"none\" stroke=\"#23211F\" stroke-width=\".4\"/><rect x=\"44\" y=\"78\" width=\"34\" height=\"26\" fill=\"#D7D1C5\" stroke=\"#23211F\" stroke-width=\".7\"/><path d=\"M48 98 Q56 84 62 94 Q68 86 74 98 Z\" fill=\"#8F897E\"/><circle cx=\"66\" cy=\"86\" r=\"3\" fill=\"#C9AE55\"/><rect y=\"118\" width=\"90\" height=\"42\" fill=\"#D7D1C5\"/><path d=\"M10.4 140.0 Q10.4 101.6 24.0 96.6 Q37.6 101.6 37.6 140.0 Z\" fill=\"#23211F\"/><circle cx=\"24.0\" cy=\"84.8\" r=\"6.8\" fill=\"#23211F\"/><rect x=\"8\" y=\"11.4\" width=\"50.8\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PD · CÂMERA LENTA</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Visita guiada pelas salas e pela rampa. Detalhes de obras e da arquitetura, e o olhar de Alok diante delas. Câmera lenta, luz natural.",
+   "texto": "Entre obras e curvas de Niemeyer, um novo jeito de ver a arte.",
+   "som": "Trilha: sobe aos poucos.",
+   "adaptacao": "Detalhes de obras e arquitetura (C3, C5) podem ser gravados antes de Alok chegar. Com ele, priorize o olhar (C4) em 4K 60 fps."
+  },
+  {
+   "n": 4,
+   "tc": "0:17–0:27",
+   "title": "Clímax: o show",
+   "color": "var(--dusk)",
+   "desc": "Anoitecer em frente ao museu. Os drones sobem e formam desenhos no céu (o Olho). Plano aberto e reação do público.",
+   "ost": "Quando a arte ocupa o céu.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#2B2926\"/><rect width=\"90\" height=\"60\" fill=\"#23211F\"/><circle cx=\"18.0\" cy=\"46.0\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"18.0\" cy=\"46.0\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"21.9\" cy=\"42.6\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"21.9\" cy=\"42.6\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"21.9\" cy=\"48.7\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"21.9\" cy=\"48.7\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"25.7\" cy=\"39.4\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"25.7\" cy=\"39.4\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"25.7\" cy=\"51.2\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"25.7\" cy=\"51.2\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"29.6\" cy=\"36.6\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"29.6\" cy=\"36.6\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"29.6\" cy=\"53.5\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"29.6\" cy=\"53.5\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"33.4\" cy=\"34.2\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"33.4\" cy=\"34.2\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"33.4\" cy=\"55.5\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"33.4\" cy=\"55.5\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"37.3\" cy=\"32.4\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"37.3\" cy=\"32.4\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"37.3\" cy=\"56.9\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"37.3\" cy=\"56.9\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"41.1\" cy=\"31.3\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"41.1\" cy=\"31.3\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"41.1\" cy=\"57.8\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"41.1\" cy=\"57.8\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"45.0\" cy=\"30.9\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"45.0\" cy=\"30.9\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"45.0\" cy=\"58.1\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"45.0\" cy=\"58.1\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"48.9\" cy=\"31.3\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"48.9\" cy=\"31.3\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"48.9\" cy=\"57.8\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"48.9\" cy=\"57.8\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"52.7\" cy=\"32.4\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"52.7\" cy=\"32.4\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"52.7\" cy=\"56.9\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"52.7\" cy=\"56.9\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"56.6\" cy=\"34.2\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"56.6\" cy=\"34.2\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"56.6\" cy=\"55.5\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"56.6\" cy=\"55.5\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"60.4\" cy=\"36.6\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"60.4\" cy=\"36.6\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"60.4\" cy=\"53.5\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"60.4\" cy=\"53.5\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"64.3\" cy=\"39.4\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"64.3\" cy=\"39.4\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"64.3\" cy=\"51.2\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"64.3\" cy=\"51.2\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"68.1\" cy=\"42.6\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"68.1\" cy=\"42.6\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"68.1\" cy=\"48.7\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"68.1\" cy=\"48.7\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"72.0\" cy=\"46.0\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"72.0\" cy=\"46.0\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"51.5\" cy=\"46.0\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"51.5\" cy=\"46.0\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"50.2\" cy=\"49.8\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"50.2\" cy=\"49.8\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"47.0\" cy=\"52.2\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"47.0\" cy=\"52.2\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"43.0\" cy=\"52.2\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"43.0\" cy=\"52.2\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"39.8\" cy=\"49.8\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"39.8\" cy=\"49.8\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"38.5\" cy=\"46.0\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"38.5\" cy=\"46.0\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"39.8\" cy=\"42.2\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"39.8\" cy=\"42.2\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"43.0\" cy=\"39.8\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"43.0\" cy=\"39.8\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"47.0\" cy=\"39.8\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"47.0\" cy=\"39.8\" r=\"0.8\" fill=\"#F7F4EC\"/><circle cx=\"50.2\" cy=\"42.2\" r=\"1.7\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"50.2\" cy=\"42.2\" r=\"0.8\" fill=\"#F7F4EC\"/><rect y=\"118\" width=\"90\" height=\"42\" fill=\"#1B1A18\"/><rect x=\"0\" y=\"112\" width=\"90\" height=\"6\" fill=\"#3A3733\"/><g transform=\"translate(45,96) scale(0.42) translate(-46,-58)\"><path d=\"M40.6 65.6 L51.4 65.6 L50.2 114.0 L41.8 114.0 Z\" fill=\"#C9AE55\" stroke=\"#23211F\" stroke-width=\".5\"/><path d=\"M47.2 65.6 L51.4 65.6 L50.2 114.0 L47.8 114.0 Z\" fill=\"#23211F\" opacity=\".25\"/><path d=\"M16.0 58.0 Q46.0 31.0 76.0 58.0 Q46.0 80.7 16.0 58.0 Z\" fill=\"#5A554D\" stroke=\"#23211F\" stroke-width=\".6\"/><path d=\"M19.6 58.0 Q46.0 36.4 72.4 58.0 Q46.0 76.4 19.6 58.0 Z\" fill=\"#0F0E0D\"/><path d=\"M28.0 52.0 Q46.0 40.3 64.0 52.0\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\".7\" opacity=\".35\"/></g><path d=\"M0.4 136.0 Q0.4 128.6 3.0 127.7 Q5.6 128.6 5.6 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"3.0\" cy=\"125.4\" r=\"1.3\" fill=\"#0F0E0D\"/><path d=\"M8.5 136.0 Q8.5 127.9 11.4 126.8 Q14.3 127.9 14.3 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"11.4\" cy=\"124.3\" r=\"1.4\" fill=\"#0F0E0D\"/><path d=\"M16.7 136.0 Q16.7 127.1 19.8 126.0 Q22.9 127.1 22.9 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"19.8\" cy=\"123.3\" r=\"1.6\" fill=\"#0F0E0D\"/><path d=\"M24.8 136.0 Q24.8 126.4 28.2 125.2 Q31.6 126.4 31.6 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"28.2\" cy=\"122.2\" r=\"1.7\" fill=\"#0F0E0D\"/><path d=\"M33.9 136.0 Q33.9 128.2 36.6 127.2 Q39.4 128.2 39.4 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"36.6\" cy=\"124.9\" r=\"1.4\" fill=\"#0F0E0D\"/><path d=\"M42.0 136.0 Q42.0 127.5 45.0 126.4 Q48.0 127.5 48.0 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"45.0\" cy=\"123.8\" r=\"1.5\" fill=\"#0F0E0D\"/><path d=\"M50.1 136.0 Q50.1 126.8 53.4 125.6 Q56.7 126.8 56.7 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"53.4\" cy=\"122.7\" r=\"1.6\" fill=\"#0F0E0D\"/><path d=\"M59.2 136.0 Q59.2 128.6 61.8 127.7 Q64.4 128.6 64.4 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"61.8\" cy=\"125.4\" r=\"1.3\" fill=\"#0F0E0D\"/><path d=\"M67.3 136.0 Q67.3 127.9 70.2 126.8 Q73.1 127.9 73.1 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"70.2\" cy=\"124.3\" r=\"1.4\" fill=\"#0F0E0D\"/><path d=\"M75.5 136.0 Q75.5 127.1 78.6 126.0 Q81.7 127.1 81.7 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"78.6\" cy=\"123.3\" r=\"1.6\" fill=\"#0F0E0D\"/><path d=\"M83.6 136.0 Q83.6 126.4 87.0 125.2 Q90.4 126.4 90.4 136.0 Z\" fill=\"#0F0E0D\"/><circle cx=\"87.0\" cy=\"122.2\" r=\"1.7\" fill=\"#0F0E0D\"/><rect x=\"8\" y=\"11.4\" width=\"45.2\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG · FIXO TRIPÉ</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Anoitecer em frente ao museu. Os drones sobem e formam desenhos no céu (o Olho). Plano aberto e reação do público.",
+   "texto": "Quando a arte ocupa o céu.",
+   "som": "Trilha: pico.",
+   "adaptacao": "O show não se repete: câmera B fixa no plano aberto (D1/D4) do primeiro ao último drone; câmera A livre entre público e Alok."
+  },
+  {
+   "n": 5,
+   "tc": "0:27–0:32",
+   "title": "Homenagem",
+   "color": "#D98BB0",
+   "desc": "Os drones formam “MON” sobre o museu. Close em Alok olhando para cima, depois falando para a câmera.",
+   "ost": "Parabéns, MON. Obrigado por abrir tantos olhares.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#2B2926\"/><rect width=\"90\" height=\"56\" fill=\"#23211F\"/><circle cx=\"12.5\" cy=\"30.0\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"12.5\" cy=\"30.0\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"27.7\" cy=\"30.0\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"27.7\" cy=\"30.0\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"12.5\" cy=\"33.8\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"12.5\" cy=\"33.8\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"16.3\" cy=\"33.8\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"16.3\" cy=\"33.8\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"23.9\" cy=\"33.8\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"23.9\" cy=\"33.8\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"27.7\" cy=\"33.8\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"27.7\" cy=\"33.8\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"12.5\" cy=\"37.6\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"12.5\" cy=\"37.6\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"20.1\" cy=\"37.6\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"20.1\" cy=\"37.6\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"27.7\" cy=\"37.6\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"27.7\" cy=\"37.6\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"12.5\" cy=\"41.4\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"12.5\" cy=\"41.4\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"27.7\" cy=\"41.4\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"27.7\" cy=\"41.4\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"12.5\" cy=\"45.2\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"12.5\" cy=\"45.2\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"27.7\" cy=\"45.2\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"27.7\" cy=\"45.2\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"39.1\" cy=\"30.0\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"39.1\" cy=\"30.0\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"42.9\" cy=\"30.0\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"42.9\" cy=\"30.0\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"46.7\" cy=\"30.0\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"46.7\" cy=\"30.0\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"35.3\" cy=\"33.8\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"35.3\" cy=\"33.8\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"50.5\" cy=\"33.8\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"50.5\" cy=\"33.8\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"35.3\" cy=\"37.6\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"35.3\" cy=\"37.6\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"50.5\" cy=\"37.6\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"50.5\" cy=\"37.6\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"35.3\" cy=\"41.4\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"35.3\" cy=\"41.4\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"50.5\" cy=\"41.4\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"50.5\" cy=\"41.4\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"39.1\" cy=\"45.2\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"39.1\" cy=\"45.2\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"42.9\" cy=\"45.2\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"42.9\" cy=\"45.2\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"46.7\" cy=\"45.2\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"46.7\" cy=\"45.2\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"58.1\" cy=\"30.0\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"58.1\" cy=\"30.0\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"73.3\" cy=\"30.0\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"73.3\" cy=\"30.0\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"58.1\" cy=\"33.8\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"58.1\" cy=\"33.8\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"61.9\" cy=\"33.8\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"61.9\" cy=\"33.8\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"73.3\" cy=\"33.8\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"73.3\" cy=\"33.8\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"58.1\" cy=\"37.6\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"58.1\" cy=\"37.6\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"65.7\" cy=\"37.6\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"65.7\" cy=\"37.6\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"73.3\" cy=\"37.6\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"73.3\" cy=\"37.6\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"58.1\" cy=\"41.4\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"58.1\" cy=\"41.4\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"69.5\" cy=\"41.4\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"69.5\" cy=\"41.4\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"73.3\" cy=\"41.4\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"73.3\" cy=\"41.4\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"58.1\" cy=\"45.2\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"58.1\" cy=\"45.2\" r=\"0.7\" fill=\"#F7F4EC\"/><circle cx=\"73.3\" cy=\"45.2\" r=\"1.5\" fill=\"#E2A400\" opacity=\".18\"/><circle cx=\"73.3\" cy=\"45.2\" r=\"0.7\" fill=\"#F7F4EC\"/><rect y=\"98\" width=\"90\" height=\"62\" fill=\"#1B1A18\"/><rect x=\"0\" y=\"92\" width=\"90\" height=\"6\" fill=\"#3A3733\"/><g transform=\"translate(45,76) scale(0.42) translate(-46,-58)\"><path d=\"M40.6 65.6 L51.4 65.6 L50.2 114.0 L41.8 114.0 Z\" fill=\"#C9AE55\" stroke=\"#23211F\" stroke-width=\".5\"/><path d=\"M47.2 65.6 L51.4 65.6 L50.2 114.0 L47.8 114.0 Z\" fill=\"#23211F\" opacity=\".25\"/><path d=\"M16.0 58.0 Q46.0 31.0 76.0 58.0 Q46.0 80.7 16.0 58.0 Z\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".6\"/><path d=\"M19.6 58.0 Q46.0 36.4 72.4 58.0 Q46.0 76.4 19.6 58.0 Z\" fill=\"#23211F\"/><path d=\"M28.0 52.0 Q46.0 40.3 64.0 52.0\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\".7\" opacity=\".35\"/></g><ellipse cx=\"45\" cy=\"74\" rx=\"20\" ry=\"9\" fill=\"#E2A400\" opacity=\".18\"/><ellipse cx=\"56\" cy=\"140\" rx=\"24\" ry=\"30\" fill=\"#E2A400\" opacity=\".07\"/><circle cx=\"58\" cy=\"118\" r=\"11\" fill=\"#0F0E0D\"/><path d=\"M34 160 Q36 132 58 130 Q80 132 82 160 Z\" fill=\"#0F0E0D\"/><path d=\"M64 113 Q68 116 67 121\" fill=\"none\" stroke=\"#8F897E\" stroke-width=\".7\"/><rect x=\"8\" y=\"11.4\" width=\"45.2\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG → CLOSE ALOK</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Os drones formam “MON” sobre o museu. Close em Alok olhando para cima, depois falando para a câmera.",
+   "texto": "Legenda: transcrição da fala.",
+   "som": "Trilha baixa para segundo plano. Alok (fala): “Parabéns, MON. Obrigado por abrir tantos olhares.”",
+   "adaptacao": "Grave a fala logo depois do show, ao ar livre, ainda com a emoção do momento (não numa sala fria). Lapela e LED de bolso."
+  },
+  {
+   "n": 6,
+   "tc": "0:32–0:35",
+   "title": "Assinatura",
+   "color": "#C9CCC4",
+   "desc": "Museu iluminado. Fecha com o logotipo do MON.",
+   "ost": "MON 24 anos.",
+   "svg": "<rect width=\"90\" height=\"160\" fill=\"#23211F\"/><ellipse cx=\"45\" cy=\"70\" rx=\"40\" ry=\"20\" fill=\"#E2A400\" opacity=\".10\"/><g transform=\"translate(45,66) scale(0.9) translate(-46,-58)\"><path d=\"M40.6 65.6 L51.4 65.6 L50.2 114.0 L41.8 114.0 Z\" fill=\"#C9AE55\" stroke=\"#23211F\" stroke-width=\".5\"/><path d=\"M47.2 65.6 L51.4 65.6 L50.2 114.0 L47.8 114.0 Z\" fill=\"#23211F\" opacity=\".25\"/><path d=\"M16.0 58.0 Q46.0 31.0 76.0 58.0 Q46.0 80.7 16.0 58.0 Z\" fill=\"#B8B1A4\" stroke=\"#23211F\" stroke-width=\".6\"/><path d=\"M19.6 58.0 Q46.0 36.4 72.4 58.0 Q46.0 76.4 19.6 58.0 Z\" fill=\"#23211F\"/><path d=\"M28.0 52.0 Q46.0 40.3 64.0 52.0\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\".7\" opacity=\".35\"/></g><rect y=\"112\" width=\"90\" height=\"48\" fill=\"#1B1A18\"/><path d=\"M8 116 Q45 112 82 116\" fill=\"none\" stroke=\"#C9AE55\" stroke-width=\".6\" opacity=\".6\"/><rect x=\"31\" y=\"20\" width=\"28\" height=\"9\" rx=\"1\" fill=\"none\" stroke=\"#F4F1EA\" stroke-width=\".5\" stroke-dasharray=\"1.5 1\"/><text x=\"45\" y=\"26.4\" text-anchor=\"middle\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"3.6\" fill=\"#F4F1EA\">LOGO MON</text><rect x=\"8\" y=\"11.4\" width=\"42.5\" height=\"6.4\" rx=\"1.2\" fill=\"#23211F\" opacity=\".82\"/><text x=\"10\" y=\"16\" font-family=\"ui-monospace,Menlo,monospace\" font-size=\"4.2\" font-weight=\"700\" fill=\"#F4F1EA\" letter-spacing=\".2\">PG · FIXO 10 s</text><rect y=\"128\" width=\"90\" height=\"32\" fill=\"#23211F\" opacity=\".5\"/>",
+   "detalhe": "Museu iluminado. Fecha com o logotipo do MON.",
+   "texto": "MON 24 anos.",
+   "som": "Trilha: última nota e silêncio.",
+   "adaptacao": "Plano fixo de 10 s sem movimento para o logo entrar com calma."
+  }
+ ],
+ "day": [
+  {
+   "t": "15:30–16:15",
+   "title": "Chegada, montagem e briefing",
+   "from": "15:30",
+   "to": "16:15",
+   "shots": [],
+   "note": "Montar Pocket e A7 IV, balancear o RS2, lapela e timecode. Briefing com a Bridge, o MON e a assessoria do Alok: horários de chegada, visita, show e os 2 minutos da fala. Escolher já a posição do tripé do show."
+  },
+  {
+   "t": "16:15–17:00",
+   "title": "Obras e arquitetura sem Alok",
+   "from": "16:15",
+   "to": "17:00",
+   "lens": "Zeiss → Tokina",
+   "shots": [
+    "C3",
+    "C5",
+    "S3"
+   ],
+   "note": "Detalhes de obras e curvas com luz natural enquanto as salas estão calmas. Room tone do hall."
+  },
+  {
+   "t": "17:00–17:20",
+   "title": "Chegada de Alok",
+   "from": "17:00",
+   "to": "17:20",
+   "lens": "Sigma + A7 IV",
+   "shots": [
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+   ],
+   "note": "Horário depende da agenda dele. Câmera A no gimbal recuando à frente; câmera B no close da recepção."
+  },
+  {
+   "t": "17:20–18:15",
+   "title": "Visita guiada",
+   "from": "17:20",
+   "to": "18:15",
+   "lens": "Sigma → Zeiss → Tokina",
+   "shots": [
+    "C1",
+    "C2",
+    "C4",
+    "C6"
+   ],
+   "note": "4K DCI 60 fps nos planos de câmera lenta. Priorize o olhar de Alok diante das obras (C4) e a rampa (C2)."
+  },
+  {
+   "t": "18:15–19:10",
+   "title": "Anoitecer: gancho e silhueta",
+   "from": "18:15",
+   "to": "19:10",
+   "lens": "Sigma + Tokina · Neo 2",
+   "shots": [
+    "A1",
+    "A3",
+    "A2"
+   ],
+   "note": "Pôr do sol 18:44, fim do crepúsculo 19:09. Aéreo (A1) só antes do público chegar e com SARPAS. Silhueta de Alok (A2) no céu azul: pedir 2 passadas a ele."
+  },
+  {
+   "t": "19:10–19:30",
+   "title": "Posição para o show",
+   "from": "19:10",
+   "to": "19:30",
+   "lens": "A7 IV fixa + Pocket no gimbal",
+   "shots": [],
+   "note": "A7 IV no tripé com o museu e o céu no quadro, REC antes do primeiro drone subir. Pocket em ISO 3200, 1/50, f/1.8. Baterias e mídia novas."
+  },
+  {
+   "t": "19:30–19:50",
+   "title": "Show de drones",
+   "from": "19:30",
+   "to": "19:50",
+   "lens": "A7 IV fixa + Sigma/Zeiss",
+   "shots": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "S2"
+   ],
+   "note": "Horário do show a confirmar. Câmera B não para. Câmera A: público, Alok assistindo, e close dele olhando para cima quando o “MON” aparecer."
+  },
+  {
+   "t": "19:50–20:05",
+   "title": "Fala de Alok",
+   "from": "19:50",
+   "to": "20:05",
+   "lens": "Sigma 35 mm + A7 IV close",
+   "shots": [
+    "E1",
+    "E2",
+    "S1"
+   ],
+   "note": "Logo depois do show, ao ar livre, museu iluminado ao fundo. Fala do roteiro primeiro, depois as perguntas de desfecho."
+  },
+  {
+   "t": "20:05–20:30",
+   "title": "Assinatura e backup",
+   "from": "20:05",
+   "to": "20:30",
+   "lens": "Tokina",
+   "shots": [
+    "F1"
+   ],
+   "note": "Museu iluminado, 10 s parado. Dois backups do material antes de sair."
+  },
+  {
+   "t": "Se sobrar tempo",
+   "title": "Extras",
+   "extra": true,
+   "shots": [
+    "A3",
+    "C5",
+    "C6",
+    "B4"
+   ],
+   "note": "Mais planos de corte do Olho iluminado e da arquitetura à noite."
+  }
+ ],
+ "equip": [
+  {
+   "g": "Câmeras e lentes",
+   "items": [
+    [
+     "cam",
+     "Blackmagic Pocket 6K",
+     "Câmera A. ISO nativo alto 3200 para o show; 4K DCI 60 fps para a câmera lenta"
+    ],
+    [
+     "camb",
+     "Sony A7 IV",
+     "Câmera B: close na chegada e plano fixo do show do início ao fim"
+    ],
+    [
+     "bat",
+     "Baterias V-mount BP95 + baterias da A7 IV",
+     "Evento longo, até 20:30: levar todas carregadas"
+    ],
+    [
+     "midia",
+     "SSD 500 GB + cartões da A7 IV",
+     "O show em plano contínuo ocupa bastante; confira na calculadora"
+    ],
+    [
+     "sig",
+     "Sigma 18–35 f/1.8",
+     "Lente de trabalho: gimbal, silhueta e público"
+    ],
+    [
+     "zei",
+     "Zeiss Planar 50 f/1.4",
+     "Olhar de Alok, closes e detalhes de obras"
+    ],
+    [
+     "tok",
+     "Tokina 11–16 f/2.8",
+     "Rampa, arquitetura e museu iluminado"
+    ],
+    [
+     "nd",
+     "Filtros ND",
+     "Só para a tarde; à noite, tirar"
+    ]
+   ]
+  },
+  {
+   "g": "Estabilização e apoio",
+   "items": [
+    [
+     "rs2",
+     "DJI Ronin RS2 + baterias",
+     "Chegada, visita e público"
+    ],
+    [
+     "tri",
+     "2 tripés",
+     "Um para a câmera B fixa no show, outro para a fala e o plano final"
+    ],
+    [
+     "led",
+     "LED de bolso",
+     "Luz suave no rosto de Alok na fala depois do show"
+    ]
+   ]
+  },
+  {
+   "g": "Drone (opcional)",
+   "items": [
+    [
+     "neo",
+     "DJI Neo 2 + baterias",
+     "Só para o aéreo do gancho, antes do show e sem público embaixo"
+    ],
+    [
+     "docs",
+     "SARPAS + autorização do MON",
+     "Sem os dois, não voar: usar os aéreos do Art Hunter"
+    ]
+   ]
+  },
+  {
+   "g": "Faltando no kit",
+   "gap": true,
+   "items": [
+    [
+     "aud",
+     "Lapela + gravador",
+     "Fala de Alok (S1): confirmar com a Bridge quem leva"
+    ],
+    [
+     "tc",
+     "Sincronismo de timecode",
+     "Pocket + A7 IV: claquete ou palma no início de cada bloco se não houver TC"
+    ]
+   ]
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Produção Bridge",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "Direção Bridge",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "Responsável do MON",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "Assessoria do Alok",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "Empresa do show de drones",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "Segurança do MON",
+   "name": "",
+   "phone": ""
+  },
+  {
+   "role": "SAMU",
+   "name": "",
+   "phone": "192"
+  },
+  {
+   "role": "Corpo de Bombeiros",
+   "name": "",
+   "phone": "193"
+  },
+  {
+   "role": "Polícia Militar",
+   "name": "",
+   "phone": "190"
+  }
+ ],
+ "docs": [
+  {
+   "id": "imagem",
+   "title": "Autorização de uso de imagem do Alok",
+   "org": "Assessoria do Alok",
+   "number": "",
+   "valid": "",
+   "detail": "Uso no Reels do MON e nas redes da Bridge"
+  },
+  {
+   "id": "mon",
+   "title": "Autorização do MON",
+   "org": "Museu Oscar Niemeyer",
+   "number": "",
+   "valid": "2026-11-18",
+   "detail": "Filmagem no evento, nas salas e na rampa"
+  },
+  {
+   "id": "credencial",
+   "title": "Credenciamento da equipe",
+   "org": "Produção do evento",
+   "number": "",
+   "valid": "2026-11-18",
+   "detail": "Acesso à área do show e ao hall durante a recepção"
+  },
+  {
+   "id": "sarpas",
+   "title": "Autorização SARPAS",
+   "org": "DECEA",
+   "number": "",
+   "valid": "2026-11-18",
+   "detail": "Só se houver voo próprio para o aéreo do gancho; nunca durante o show de drones"
+  }
+ ],
+ "links": [],
+ "reports": [],
+ "roteiro": {
+  "telas": [
+   "Nas retinas do MON, a visita de Alok.",
+   "Entre obras e curvas de Niemeyer, um novo jeito de ver a arte.",
+   "Quando a arte ocupa o céu.",
+   "MON 24 anos."
+  ]
+ },
+ "depoimento": {
+  "objetivo": "Fala de desfecho de Alok para a câmera, gravada logo depois do show, com a emoção do momento. A fala do roteiro entra na cena 05; as respostas às perguntas são reserva para a edição.",
+  "ideias": [
+   "Desejo ao MON para os próximos anos",
+   "O que ele leva da visita de hoje",
+   "Recado para quem ainda não visitou o museu"
+  ],
+  "perguntas": [
+   "Em uma frase: o que você deseja ao MON nos próximos anos?",
+   "O que você leva do MON hoje?",
+   "Que recado você deixa para quem ainda não visitou?"
+  ],
+  "dicas": [
+   "Fazer depois do show, ao ar livre, em vez de numa sala fria",
+   "Primeiro a fala do roteiro: “Parabéns, MON. Obrigado por abrir tantos olhares.”",
+   "Peça respostas curtas, em uma frase; se ficar longo, peça de novo de forma mais direta",
+   "Museu iluminado ao fundo, lapela e LED de bolso suave",
+   "A assessoria costuma limitar o tempo: combine os 2 minutos antes do show"
+  ]
+ },
+ "dayNotes": [
+  "Quarta-feira, 18/11. Sem Ordem do Dia: horários estimados pelo roteiro e pelo pôr do sol (18:44). Confirmar com a Bridge a chegada do Alok e o horário do show.",
+  "O show de drones acontece uma vez só: câmera B fixa no plano aberto (D1/D4) do primeiro ao último drone; câmera A livre para público e Alok.",
+  "Fala de Alok logo depois do show, ao ar livre, não numa sala fria. Combinar com a assessoria uns 2 minutos com ele.",
+  "Nenhum voo próprio durante o show nem sobre o público. Aéreo do gancho só antes, com SARPAS e aval do MON; senão, usar os aéreos do Art Hunter (12/10).",
+  "Tom de campanha, emocional e sensorial: ponto final em vez de exclamação nos textos.",
+  "Legenda embutida com a transcrição da fala de Alok."
+ ],
+ "droneBlock": {
+  "from": "18:15",
+  "to": "18:40",
+  "maxWindKmh": 38
+ },
+ "teleprompter": [
+  {
+   "titulo": "Fala de Alok · desfecho",
+   "sub": "Para a câmera, logo depois do show",
+   "duracao": "cerca de 0:05",
+   "falas": [
+    "Parabéns, MON.",
+    "Obrigado por abrir tantos olhares."
+   ]
+  },
+  {
+   "titulo": "Perguntas para o desfecho",
+   "sub": "Fazer ao ar livre, com a emoção do show",
+   "duracao": "cerca de 2 min",
+   "falas": [
+    "Em uma frase: o que você deseja ao MON nos próximos anos?",
+    "O que você leva do MON hoje?",
+    "Que recado você deixa para quem ainda não visitou?"
+   ]
+  }
+ ],
+ "edicao": {
+  "montagem": {
+   "geral": {
+    "formato": "Vertical 9:16",
+    "resolucao": "1080×1920",
+    "fps": "",
+    "ritmo": "Campanha emocional e sensorial: começa suave, acelera com a trilha até o pico no show e respira na fala de Alok",
+    "gancho": "Aéreo do museu e silhueta de Alok caminhando até o Olho, com o primeiro texto já nos 4 s iniciais",
+    "legendas": "Embutidas, com a transcrição da fala de Alok",
+    "destaques": "Desenhos dos drones no céu (o Olho e o “MON”) e o olhar de Alok diante das obras",
+    "cta": "Sem chamada: fecha com “MON 24 anos.” e o logotipo",
+    "versoesCurtas": "",
+    "material": "Pocket 6K (6K e 4K DCI 60 fps nos planos lentos) reenquadrada em 9:16; A7 IV como câmera B (closes e plano fixo contínuo do show)"
+   },
+   "timelines": [
+    {
+     "entrega": "Alok no MON · Reels",
+     "nome": "MON_ALOK_24ANOS_9x16",
+     "duracaoAlvo": "35 s",
+     "duracaoEstimada": "0:35",
+     "aberturas": [
+      "A1",
+      "A2"
+     ],
+     "estrutura": [
+      {
+       "cena": 1,
+       "tc": "0:00–0:04",
+       "titulo": "Gancho",
+       "planos": [
+        "A1",
+        "A3",
+        "A2"
+       ],
+       "texto": "Nas retinas do MON, a visita de Alok.",
+       "fala": ""
+      },
+      {
+       "cena": 2,
+       "tc": "0:04–0:09",
+       "titulo": "Chegada",
+       "planos": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+       ],
+       "texto": "",
+       "fala": ""
+      },
+      {
+       "cena": 3,
+       "tc": "0:09–0:17",
+       "titulo": "Visita",
+       "planos": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+       ],
+       "texto": "Entre obras e curvas de Niemeyer, um novo jeito de ver a arte.",
+       "fala": ""
+      },
+      {
+       "cena": 4,
+       "tc": "0:17–0:27",
+       "titulo": "Clímax: o show",
+       "planos": [
+        "D1",
+        "D2",
+        "D3"
+       ],
+       "texto": "Quando a arte ocupa o céu.",
+       "fala": ""
+      },
+      {
+       "cena": 5,
+       "tc": "0:27–0:32",
+       "titulo": "Homenagem",
+       "planos": [
+        "D4",
+        "D5",
+        "E1"
+       ],
+       "texto": "",
+       "fala": "Parabéns, MON. Obrigado por abrir tantos olhares."
+      },
+      {
+       "cena": 6,
+       "tc": "0:32–0:35",
+       "titulo": "Assinatura",
+       "planos": [
+        "F1"
+       ],
+       "texto": "MON 24 anos.",
+       "fala": ""
+      }
+     ]
+    }
+   ]
+  },
+  "identidade": {
+   "marca": "Museu Oscar Niemeyer (MON)",
+   "cores": [],
+   "fontes": [],
+   "logo": "",
+   "lettering": "Textos curtos, um por vez, com ponto final em vez de exclamação",
+   "legendas": "Embutidas, com a transcrição da fala de Alok",
+   "areaSegura": "Textos e legendas longe do topo e da base, onde a interface do Reels cobre o vídeo",
+   "notaLegal": "",
+   "trilha": "Instrumental eletrônico que cresce até o show de drones e baixa no final para a fala de Alok; última nota e silêncio no logo",
+   "cor": "",
+   "referencias": [],
+   "links": []
+  },
+  "pendencias": [
+   "Logotipo, cores e fontes do MON (guardar só o link aqui)",
+   "Trilha específica",
+   "fps do projeto",
+   "Estilo da legenda embutida",
+   "Aéreo do gancho: material de hoje ou arquivo do Art Hunter"
+  ]
+ },
+ "entregas": [
+  {
+   "titulo": "Alok no MON · Reels",
+   "formato": "Vertical 9:16",
+   "duracao": "35 s",
+   "versao": "Campanha, emocional e sensorial, com legenda embutida",
+   "itens": [
+    "Legenda embutida com a transcrição da fala de Alok",
+    "Textos na tela: Nas retinas do MON, a visita de Alok. · Entre obras e curvas de Niemeyer, um novo jeito de ver a arte. · Quando a arte ocupa o céu.",
+    "Ponto final em vez de exclamação em todos os textos",
+    "Trilha: instrumental eletrônico que cresce até o show e baixa para a fala de Alok",
+    "Tela final: logotipo do MON · MON 24 anos."
+   ],
+   "shots": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "B3",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "E1",
+    "F1",
+    "S1",
+    "S2"
+   ],
+   "pendencias": [
+    "Aéreo do gancho: confirmar se haverá voo hoje ou se entram os aéreos do Art Hunter (12/10)",
+    "Trilha específica não definida (só o estilo)",
+    "Arquivo do logotipo do MON",
+    "Autorização de uso de imagem do Alok pela assessoria"
+   ]
+  }
+ ],
+ "planejamento": {
+  "recomendado": "1 diária (tarde e noite) com 2 câmeras",
+  "minimo": "1 câmera operada + 1 câmera fixa no plano aberto do show",
+  "disponivel": "1 evento (18/11), horários a confirmar com a Bridge",
+  "resumo": "O vídeo é de um evento ao vivo: chegada, visita, show e fala só acontecem uma vez e no ritmo da agenda do Alok. Por isso o que pesa não é o tempo, e sim cobrir cada momento com duas câmeras. A silhueta do gancho depende do céu entre 18:44 e 19:09, e o show precisa de céu escuro. Uma diária de tarde e noite resolve, adiantando antes de Alok chegar os detalhes de obras e arquitetura.",
+  "blocos": [
+   {
+    "bloco": "Obras e arquitetura (sem Alok)",
+    "planos": 3,
+    "tempo": "45 min",
+    "luz": "Luz natural da tarde",
+    "nota": "Pode ser feito antes de ele chegar"
+   },
+   {
+    "bloco": "Chegada",
+    "planos": 4,
+    "tempo": "20 min",
+    "luz": "Interior do hall",
+    "nota": "Acontece uma vez: duas câmeras"
+   },
+   {
+    "bloco": "Visita guiada",
+    "planos": 4,
+    "tempo": "55 min",
+    "luz": "Luz natural",
+    "nota": "Câmera lenta 4K 60 fps"
+   },
+   {
+    "bloco": "Gancho: aéreo e silhueta",
+    "planos": 3,
+    "tempo": "25 min",
+    "luz": "Pôr do sol 18:44 · crepúsculo até 19:09",
+    "nota": "Aéreo só antes do show e com SARPAS"
+   },
+   {
+    "bloco": "Show de drones",
+    "planos": 5,
+    "tempo": "20 min",
+    "luz": "Noite",
+    "nota": "Sem repetição: câmera B fixa do início ao fim"
+   },
+   {
+    "bloco": "Fala de Alok",
+    "planos": 2,
+    "tempo": "15 min",
+    "luz": "Noite + LED de bolso",
+    "nota": "Logo depois do show"
+   },
+   {
+    "bloco": "Assinatura e som",
+    "planos": 4,
+    "tempo": "25 min",
+    "luz": "Museu iluminado",
+    "nota": "Plano fixo de 10 s"
+   }
+  ],
+  "totalCaptacao": "cerca de 3h30 de captação dentro de cerca de 5h de evento",
+  "diarias": [
+   {
+    "titulo": "Diária 1 · 18/11",
+    "horario": "15:30–20:30 (estimado)",
+    "itens": [
+     "Tarde: obras e arquitetura, chegada e visita guiada",
+     "Anoitecer: gancho e silhueta",
+     "Noite: show de drones, fala de Alok e assinatura"
+    ]
+   }
+  ],
+  "riscos": [
+   "Agenda do Alok atrasa ou encurta a visita: priorizar C4 (o olhar) e C2 (rampa)",
+   "Show de drones não se repete: se a câmera B falhar, perde-se o plano aberto",
+   "Vento ou chuva podem cancelar o show: ter o museu iluminado (F1) e a fala como plano B do clímax",
+   "Assessoria limita o tempo da fala: combinar antes do show",
+   "Voo próprio perto do show ou sobre o público é proibido: aéreo só antes, ou arquivo do Art Hunter",
+   "Pouca luz na fala noturna: LED de bolso e ISO 3200"
+  ]
+ },
+ "storyboardImage": "storyboard.jpg"
+}
